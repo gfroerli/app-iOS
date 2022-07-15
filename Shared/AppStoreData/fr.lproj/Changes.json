@@ -1,0 +1,25 @@
+[
+    {
+        "version": "1.2",
+        "changes": ["Le graphique est maintenant interactif","Support pour Fahrenheit et les fuseaux horaires"],
+        "fixes" : ["Tap in Widget n'affiche pas la vue détaillée", "Bug du fuseau horaire", "Ajout de localisations manquantes" , "interface utilisateur plus accessible"]
+    
+    },{
+        "version": "1.1",
+        "changes": ["Ce Changelog", "Horodatage de la dernière mesure", "Possibilité de changer la durée du graphique","Image du sponsor dans l'Info-Box","Refonte complète Réglages-Tab", "Plus de liens au Réglages-Tab", "bouton \"Réessayer\" en cas d'échec du chargement", "Modifié : Sélectionnez l'emplacement directement à partir du widget en appuyant dessus",],
+        "fixes": ["La vue des favoris ne peut pas défiler","Les sponsors ne se chargent pas", "Les éléments de la vue \"À propos\" ne peuvent pas être touchés", "Une tonne d'ajustements de l'interface "]
+    
+    },
+    {
+        "version": "1.01",
+        "changes": [],
+        "fixes": ["Les emplacements ne sont pas chargés"]
+    
+    },
+    {
+        "version": "1.0",
+        "changes": ["Version initiale! 🎉"],
+        "fixes": []
+    
+    }
+]

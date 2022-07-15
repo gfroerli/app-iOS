@@ -1,0 +1,25 @@
+[
+    {
+        "version": "1.2",
+        "changes": ["Aggiunto: Il grafico è ora interattivo","Aggiunto: Supporto per Fahrenheit e fusi orari"],
+        "fixes" : ["Tap in Widget che non mostra la Vista Dettagliata", "Bug sul fuso orario", "aggiunte localizzazioni mancanti", "l'UI è più accessibile"]
+    },
+    {
+        "version": "1.1",
+        "changes": ["Aggiunto: Questo Changelog", "Aggiunto: Timestamp dell'ultima misurazione", "Aggiunto: Possibilità di cambiare la durata del grafico","Aggiunto: Immagine dello sponsor a Info-Box dello sponsor","Revisione completa delle impostazioni", "Aggiunto: più link a impostazioni", "Aggiunto: pulsante \"Prova di nuovo\" se il caricamento non riesce", "Cambiato: Selezionare la posizione direttamente dal widget tenendo premuto",],
+        "fixes": ["La vista dei preferiti non è scorrevole","gli sponsor non si caricano", "Gli elementi in About-View non possono essere toccati", "Una tonnellata di regolazioni dell'interfaccia utente"]
+        
+    },
+    {
+        "version": "1.01",
+        "changes": [],
+        "fixes": ["Le posizioni non vengono caricate"]
+        
+    },
+    {
+        "version": "1.0",
+        "changes": ["Rilascio iniziale! 🎉"],
+        "fixes": []
+        
+    }
+]

@@ -14,6 +14,7 @@
     </a>
 </p>
 
+#This README and this Branch are deprecated and will be replaced once V3.0 is ready. Please refer to the respective branch to see the work-in-progress code.
 Gfrör.li is a project that allows people to see local watertemperatures in real-time.
 We use self-built sensors, that measure the local temperature every 15 minutes and send them to our back-end using the The Things Network. From there we request the aggregated data to present them to the user.
 

@@ -1,0 +1,186 @@
+/* No comment provided by engineer. */
+"A1_String" = "D'Wassertemperatur isch für vieli Mensche en wichtige Wert, zum Bispiel für Schwümmer, Taucher, Fischer und vieli anderi. Aber bis jetzt hets kei verlässlichi Methode gäh, um Echtziit-Temperaturinformatione i dinere Gegend z'gseh. Es git bereits hüt es paar Wassertemperatur-Sensor-Netzwerk, aber meistens hend die nur ein Sensor pro See, dur das werded die lokale Temperaturunterschied (z.B. anere Flussmündig) ignoriert. Vieli Sensor-Wert werded zudem nur ein mal pro Tag publiziert. Mir baued es Netzwerk von chostengünstige Wassertemperatur-Sensore mit sehr gringem Energieverbruch uf. Das ermöglicht eus, d'Wassertemperatur lokal z'messe und sie dir chostelos in Quasi-Echtziit bereit z'stelle!";
+
+/* No comment provided by engineer. */
+"A2_String" = "Das App, d'Server-Infrastruktur wie au d'Sensor-Hardware werded vom Coredump Hackerspace in Rapperswil-Jona entwicklet. Meh Informatione über eus gfinsch du auf eusere Website:";
+
+/* No comment provided by engineer. */
+"About" = "Über";
+
+/* No comment provided by engineer. */
+"All time:" = "Insgesamt:";
+
+/* No comment provided by engineer. */
+"Average" = "Durchschnitt";
+
+/* No comment provided by engineer. */
+"Average:" = "Durchschnitt";
+
+/* No comment provided by engineer. */
+"by Marc & Niklas\nfor Coredump Rapperswil" = "vom Marc\nfür Coredump Rapperswil";
+
+/* No comment provided by engineer. */
+"Change Language" = "Sprach wechsle";
+
+/* No comment provided by engineer. */
+"Changelog" = "Änderige";
+
+/* No comment provided by engineer. */
+"Close" = "Schlüsse";
+
+/* No comment provided by engineer. */
+"Code on Github" = "Code uf Github";
+
+/* No comment provided by engineer. */
+"Contact" = "Kontatkiere";
+
+/* No comment provided by engineer. */
+"Continue" = "Fortfahre";
+
+/* No comment provided by engineer. */
+"Could not decode Measurements." = "Konnte Messungen nicht verarbeiten.";
+
+/* No comment provided by engineer. */
+"Could not decode Sensors." = "Konnte Standorte nicht verarbeiten.";
+
+/* No comment provided by engineer. */
+"Could not decode Sponsor." = "Konnte Sponsoren nicht verarbeiten.";
+
+/* No comment provided by engineer. */
+"Day" = "Tag";
+
+/* No comment provided by engineer. */
+"Directions" = "Route";
+
+/* No comment provided by engineer. */
+"email_text" = "Bitte schreibe deinen Text oberhalb 👆🏻</br>Falls du einen Fehler entdeckt hasst, notiere bitte die Schritte die zu ihm geführt haben!</br> Wir versuchen dir schnellstmöglich zu antworten!";
+
+/* No comment provided by engineer. */
+"Error" = "Fehler";
+
+/* No comment provided by engineer. */
+"FAQ" = "FAQ";
+
+/* No comment provided by engineer. */
+"Favorites" = "Favorite";
+
+/* No comment provided by engineer. */
+"General" = "Allgemein";
+
+/* No comment provided by engineer. */
+"Highest:" = "Höchsti:";
+
+/* No comment provided by engineer. */
+"History" = "Verlauf";
+
+/* No comment provided by engineer. */
+"Info:" = "Info:";
+
+/* No comment provided by engineer. */
+"Invalid server response." = "Ungültige Serverantwort";
+
+/* No comment provided by engineer. */
+"Lake of Zurich" = "Zürisee";
+
+/* No comment provided by engineer. */
+"Latest" = "Neusti";
+
+/* No comment provided by engineer. */
+"Links" = "Links";
+
+/* No comment provided by engineer. */
+"LOADING" = "Lade...";
+
+/* No comment provided by engineer. */
+"Loading Location failed. Reason:" = "Laden fehlgeschlagen. Grund:";
+
+/* No comment provided by engineer. */
+"Loading Sponsor failed. Reason:" = "Laden fehlgeschlagen. Grund:";
+
+/* No comment provided by engineer. */
+"Location" = "Standort";
+
+/* No comment provided by engineer. */
+"Location or Temperature" = "Standort oder Temperatur";
+
+/* No comment provided by engineer. */
+"Locations" = "Standort";
+
+/* No comment provided by engineer. */
+"Lowest:" = "Tüüfsti:";
+
+/* No comment provided by engineer. */
+"Map" = "Charte";
+
+/* No comment provided by engineer. */
+"Maximum" = "Maximum";
+
+/* No comment provided by engineer. */
+"Minimum" = "Minimum";
+
+/* No comment provided by engineer. */
+"Month" = "Monat";
+
+/* Test comment */
+"More locations will follow very soon, stay tuned!" = "Neui Standort werded bald hinzuegfüegt.";
+
+/* No comment provided by engineer. */
+"New Location:" = "Neue Standort:";
+
+/* No comment provided by engineer. */
+"Newest Measurement" = "Neusti Messig";
+
+/* No comment provided by engineer. */
+"No data available" = "Kei Date verfüegbar";
+
+/* No comment provided by engineer. */
+"No Favorites" = "Kei Favorite";
+
+/* No comment provided by engineer. */
+"No internet connection." = "Kei Internetverbindig";
+
+/* No comment provided by engineer. */
+"Overview" = "Übersicht";
+
+/* No comment provided by engineer. */
+"Privacy Policy" = "Dateschutzerchlärig";
+
+/* No comment provided by engineer. */
+"Q1_String" = "Warum das App?";
+
+/* No comment provided by engineer. */
+"Q2_String" = "Wer hät das App entwickelt?";
+
+/* No comment provided by engineer. */
+"Random" = "Zuefällig";
+
+/* No comment provided by engineer. */
+"Rate" = "Bewerte";
+
+/* No comment provided by engineer. */
+"Recently Added" = "Neu";
+
+/* No comment provided by engineer. */
+"Search" = "Sueche";
+
+/* No comment provided by engineer. */
+"Settings" = "Istellige";
+
+/* No comment provided by engineer. */
+"Sponsored by:" = "Gpsonseret vo:";
+
+/* Test comment */
+"This Location was recently added and measurements will be available very soon." = "De Standort isch neu hinzuegfüegt worde und Temperatur mässige chömed bald.";
+
+/* No comment provided by engineer. */
+"Try again" = "Erneut versuche";
+
+/* No comment provided by engineer. */
+"Waterbodies" = "Gwässer";
+
+/* No comment provided by engineer. */
+"Week" = "Wuche";
+
+/* No comment provided by engineer. */
+"What's New to Gfrör.li" = "Was isch neu?";
+

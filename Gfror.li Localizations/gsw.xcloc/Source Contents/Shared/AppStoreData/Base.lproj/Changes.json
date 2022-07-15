@@ -1,0 +1,26 @@
+[
+    {
+        "version": "1.2",
+        "changes": ["Added: Graph is now interactive", "Added: Support for Fahrenheit and Time-Zones"],
+        "fixes": ["Tap in Widget not showing Detail-View", "Time-Zone Bug", "Added missing localizations", "UI is more Accessible"]
+    
+    },
+    {
+        "version": "1.1",
+        "changes": ["Added: This Changelog", "Added: Timestamp of latest Measurement", "Added: Ability to change Timespan of Graph","Added: Sponsor Image to Sponsor Info-Box","Complete Settings-View Overhaul", "Added: More Links to Settings-View", "Added:\"Try again\"-Button if loading fails", "Changed: Select Location directly from Widget by holding & pressing it",],
+        "fixes": ["Favorites-View not being Scrollable","Sponsors not loading", "Items in About-View not being tappable", "A ton of UI adjustments"]
+    
+    },
+    {
+        "version": "1.01",
+        "changes": [],
+        "fixes": ["Locations not being loaded"]
+    
+    },
+    {
+        "version": "1.0",
+        "changes": ["Initial release! 🎉"],
+        "fixes": []
+    
+    }
+]

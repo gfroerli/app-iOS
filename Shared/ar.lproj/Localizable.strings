@@ -1,0 +1,110 @@
+/* 
+  Localizable.strings
+  Gfror.li
+
+  Created by Marc Kramer on 06.10.20.
+  
+*/
+
+//Other
+"Loading" = "Loading";
+"Error while fetching data" = "Error while fetching data";
+"Close" = "Close";
+
+//MainView
+"Overview" = "Overview";
+"All" = "All";
+"Favorites" = "Favorites";
+"Settings" = "Settings";
+
+//Overview
+"Gfrör.li" = "Gfrör.li";
+"Water Bodies" = "Water Bodies";
+"Sensors" = "Sensors";
+"Featured" = "Featured";
+"Recently Added" = "Recently Added";
+"Last Updated" = "Last Updated";
+"Random" = "Random";
+
+//About View
+"About" = "About";
+
+//AllSensorsView
+"All Sensors" = "All Sensors";
+"Search Sensors here" = "Search Sensors here";
+
+//WaterBodyOverview
+"Locations" = "Locations";
+"Sensors:" = "Sensors:";
+
+//SensorsOverview
+//Top Box
+"All time:" = "All time:";
+"Average:" = "Average:";
+"Highest:" = "Highest:";
+"Lowest:" = "Lowest:";
+"Latest" = "Latest";
+"Measured at " = "Measured at "; //new
+
+//Graph Box
+"History" = "History";
+"Day" = "Day";
+"Week" = "Week";
+"Month" = "Month";
+"Average" = "Average";
+"Minimum" = "Minimum";
+"Maximum" = "Maximum";
+"No data available" = "No data available";
+"Tap to show:" = "Tap to show:";
+
+// Location Box
+"Location" = "Location";
+"Directions" = "Directions";
+
+//Sponsor Box
+"Sponsored by:" = "Sponsored by:";
+
+//FavoritesView
+"Favorites" = "Favorites";
+"No Favorites" = "No Favorites";
+
+//Settings
+"Settings" = "Settings";
+"General" = "General";
+"Contact" = "Contact";
+"by Marc & Niklas\nfor Coredump Rapperswil" = "by Marc & Niklas\nfor Coredump Rapperswil";
+"Rate" = "Rate";
+"Change Language" = "Change Language";
+"Privacy Policy" = "Privacy Policy";
+"Do you want to reset the app?" = "Do you want to reset the app?.";
+"Are you sure?" = "Are you sure";
+"Reset App" = "Reset App";
+"Reset" = "Reset";
+"Cancel" = "Cancel";
+"Version:" = "Version:";
+"Changelog" = "Changelog";
+"Changes" = "Changes";
+"Fixes" = "Fixes";
+"What's new?" = "What's new?";
+"Continue" = "Continue";
+
+//WaterBodies
+"Lake of Zurich" = "Lake of Zurich";
+
+//Widget
+"Press and hold to select location" = "Press and hold to select location";
+"No internet connection" = "No internet connection";
+"Single Location" = "Single Location";
+"Displays the latest temperature." = "Displays the latest temperature.";
+"Single Location with Graph" = "Single Location with Graph";
+"Displays the temperature history of a location." = "Displays the temperature history of a location.";
+
+//Email: DO NOT REMOVE </br> and add no space before and after it
+"email_text" = "Please provide your feedback above 👆🏻</br>If you encountered a bug, please tell us the interactions that lead to it!</br> We try to get back to you as soon as possible!";
+
+// About/FAQ
+"Q1_String" = "Why this App?";
+"A1_String" = "Water temperature is an important value for a lot of people, e.g. swimmers, divers, fishermen and more. Until now, there was no reliable way of looking up real-time water temperature information. There are some sensor networks today, but they often don't provide multiple locations in one waterbody, or they just publish their measurements once a day. Now, we are building a network of cheap watertemperature sensors with very low engergy usage. This allows us to measure the temperatures locally and to provide them to you in real-time!";
+"Q2_String" = "Who is developping this project?";
+"A2_String" = "This App, the server infrastructure as well as the hardware of our sensors, are developped by the members of the Coredump Hackerspace in Rapperswil-Jona in their freetime. For more information visit:";
+

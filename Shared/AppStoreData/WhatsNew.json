@@ -1,0 +1,19 @@
+[
+    {
+        "imageName": "sparkles",
+        "title": "New Design",
+        "text": "The design has been completely overhauled to enhance the user experience."
+    
+    },
+    {
+        "imageName": "map.fill",
+        "title": "Map View",
+        "text": "You can now quickly look at locations by selecting them via the all new map-view."
+    
+    },
+    {
+        "imageName": "magnifyingglass",
+        "title": "Improved Search",
+        "text": "In addition to location names, you can now search for temperatures. Additionally you can sort the results by name, most recent update or temperature."
+    }
+]

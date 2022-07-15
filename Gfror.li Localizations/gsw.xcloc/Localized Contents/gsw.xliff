@@ -1,0 +1,654 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.2" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 http://docs.oasis-open.org/xliff/v1.2/os/xliff-core-1.2-strict.xsd">
+  <file original="gfroerliWidgetExtension/Base.lproj/SelectSensor.intentdefinition" source-language="en" target-language="gsw" datatype="plaintext">
+    <header>
+      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="13.2.1" build-num="13C100"/>
+    </header>
+    <body>
+      <trans-unit id="31X339" xml:space="preserve">
+        <source>Intent for fetching Sensor data</source>
+        <target>Intent for fetching Sensor data</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="BvxrmE" xml:space="preserve">
+        <source>Single Sensor</source>
+        <target>Einzelne Ort</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="CnjWia" xml:space="preserve">
+        <source>Time Frame</source>
+        <target>Ziitruum</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="G0EwFZ" xml:space="preserve">
+        <source>Sensor</source>
+        <target>Standort</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="IruFuB" xml:space="preserve">
+        <source>Sensor</source>
+        <target>Standort</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="OcZOP9" xml:space="preserve">
+        <source>day</source>
+        <target>Tag</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="Qyezjw" xml:space="preserve">
+        <source>Time Frame Value</source>
+        <note/>
+      </trans-unit>
+      <trans-unit id="WfEGRn-OcZOP9" xml:space="preserve">
+        <source>Just to confirm, you wanted ‘day’?</source>
+        <note/>
+      </trans-unit>
+      <trans-unit id="WfEGRn-kKPpmt" xml:space="preserve">
+        <source>Just to confirm, you wanted ‘week’?</source>
+        <note/>
+      </trans-unit>
+      <trans-unit id="WfEGRn-l30VYQ" xml:space="preserve">
+        <source>Just to confirm, you wanted ‘month’?</source>
+        <note/>
+      </trans-unit>
+      <trans-unit id="iYDYHb" xml:space="preserve">
+        <source>Intent for fetching Sensor data with Graph</source>
+        <note/>
+      </trans-unit>
+      <trans-unit id="kKPpmt" xml:space="preserve">
+        <source>week</source>
+        <target>Wuche</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="kaXucb-OcZOP9" xml:space="preserve">
+        <source>There are ${count} options matching ‘day’.</source>
+        <note/>
+      </trans-unit>
+      <trans-unit id="kaXucb-kKPpmt" xml:space="preserve">
+        <source>There are ${count} options matching ‘week’.</source>
+        <note/>
+      </trans-unit>
+      <trans-unit id="kaXucb-l30VYQ" xml:space="preserve">
+        <source>There are ${count} options matching ‘month’.</source>
+        <note/>
+      </trans-unit>
+      <trans-unit id="l0X50R" xml:space="preserve">
+        <source>Single Sensor Graph</source>
+        <target>Einzelne Standort mit Verlauf</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="l30VYQ" xml:space="preserve">
+        <source>month</source>
+        <target>Monat</target>
+        <note/>
+      </trans-unit>
+      <trans-unit id="mJkM5O" xml:space="preserve">
+        <source>Selectable Sensor</source>
+        <target>Uswählbare Standort</target>
+        <note/>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="gfroerliWidgetExtension/en.lproj/InfoPlist.strings" datatype="plaintext" source-language="en" target-language="gsw">
+    <header>
+      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="13.2.1" build-num="13C100"/>
+    </header>
+    <body>
+      <trans-unit id="CFBundleDisplayName" xml:space="preserve">
+        <source>gfroerliWidgetExtension</source>
+        <note>Bundle display name</note>
+      </trans-unit>
+      <trans-unit id="CFBundleName" xml:space="preserve">
+        <source>gfroerliWidgetExtensionExtension</source>
+        <note>Bundle name</note>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="gfroerliWidgetExtension/en.lproj/Localizable.strings" source-language="en" target-language="gsw" datatype="plaintext">
+    <header>
+      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="13.2.1" build-num="13C100"/>
+    </header>
+    <body>
+      <trans-unit id="%.2f°" xml:space="preserve">
+        <source>%.2f°</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="0.00" xml:space="preserve">
+        <source>0.00</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="00.0°C" xml:space="preserve">
+        <source>00.0°C</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="00:00" xml:space="preserve">
+        <source>00:00</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="12:00" xml:space="preserve">
+        <source>12:00</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="24:00" xml:space="preserve">
+        <source>24:00</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Could not decode Measurements." xml:space="preserve">
+        <source>Could not decode Measurements.</source>
+        <target>Konnte Messungen nicht verarbeiten.</target>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Could not decode Sensors." xml:space="preserve">
+        <source>Could not decode Sensors.</source>
+        <target>Konnte Standorte nicht verarbeiten.</target>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Could not decode Sponsor." xml:space="preserve">
+        <source>Could not decode Sponsor.</source>
+        <target>Konnte Sponsor nicht verarbeiten.</target>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Displays the latest temperature." xml:space="preserve">
+        <source>Displays the latest temperature.</source>
+        <target>Zeigt die neust Massig ah.</target>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Displays the temperature history of a location." xml:space="preserve">
+        <source>Displays the temperature history of a location.</source>
+        <target>Zeigt de Temperaturverlauf vomene Standort ah.</target>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Invalid server response." xml:space="preserve">
+        <source>Invalid server response.</source>
+        <target>Ungültige Serverantwort.</target>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Lake of Zurich" xml:space="preserve">
+        <source>Lake of Zurich</source>
+        <target>Zürisee</target>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Measured at: " xml:space="preserve">
+        <source>Measured at: </source>
+        <target>Gmesse um:</target>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="No data available" xml:space="preserve">
+        <source>No data available</source>
+        <target>Kei Date verfüegbar</target>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="No internet connection." xml:space="preserve">
+        <source>No internet connection.</source>
+        <target>Kei Internetverbinding</target>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Press and hold to select location" xml:space="preserve">
+        <source>Press and hold to select location</source>
+        <target>Tippe und halte um en Standort uuszwähle.</target>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Single Location" xml:space="preserve">
+        <source>Single Location</source>
+        <target>Einzelne Standort</target>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Single Location with Graph" xml:space="preserve">
+        <source>Single Location with History</source>
+        <target>Einzelne Standort mit Verlauf</target>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="email_text" xml:space="preserve">
+        <source>Please provide your feedback above 👆🏻&lt;/br&gt;If you encountered a bug, please tell us the interactions that lead to it!&lt;/br&gt; We try to get back to you as soon as possible!</source>
+        <target>Bitte schreibe deinen Text oberhalb 👆🏻&lt;/br&gt;Falls du einen Fehler entdeckt hast, notiere bitte die Schritte die zu ihm geführt haben!&lt;/br&gt; Wir versuchen dir schnellstmöglich zu antworten!</target>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="iOS/en.lproj/InfoPlist.strings" datatype="plaintext" source-language="en" target-language="gsw">
+    <header>
+      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="13.2.1" build-num="13C100"/>
+    </header>
+    <body>
+      <trans-unit id="CFBundleDisplayName" xml:space="preserve">
+        <source>Gfrör.li</source>
+        <note>Bundle display name</note>
+      </trans-unit>
+      <trans-unit id="CFBundleName" xml:space="preserve">
+        <source>Gfrör.li</source>
+        <note>Bundle name</note>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="iOS/en.lproj/Localizable.strings" source-language="en" target-language="gsw" datatype="plaintext">
+    <header>
+      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="13.2.1" build-num="13C100"/>
+    </header>
+    <body>
+      <trans-unit id="%.2f°" xml:space="preserve">
+        <source>%.2f°</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="%lld " xml:space="preserve">
+        <source>%lld </source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="0.00" xml:space="preserve">
+        <source>0.00</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="00.0°C" xml:space="preserve">
+        <source>00.0°C</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="00:00" xml:space="preserve">
+        <source>00:00</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="12:00" xml:space="preserve">
+        <source>12:00</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="24:00" xml:space="preserve">
+        <source>24:00</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="@coredump_ch" xml:space="preserve">
+        <source>@coredump_ch</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="A1_String" xml:space="preserve">
+        <source>Water temperature is an important value for a lot of people, e.g. swimmers, divers, fishermen and more. Until now, there was no reliable way of looking up real-time water temperature information. There are some sensor networks today, but they often don't provide multiple locations in one waterbody, or they just publish their measurements once a day. Now, we are building a network of cheap watertemperature sensors with very low engergy usage. This allows us to measure the temperatures locally and to provide them to you in real-time!</source>
+        <target>D'Wassertemperatur isch für vieli Mensche en wichtige Wert, zum Bispiel für Schwümmer, Taucher, Fischer und vieli anderi. Aber bis jetzt hets kei verlässlichi Methode gäh, um Echtziit-Temperaturinformatione i dinere Gegend z'gseh. Es git bereits hüt es paar Wassertemperatur-Sensor-Netzwerk, aber meistens hend die nur ein Sensor pro See, dur das werded die lokale Temperaturunterschied (z.B. anere Flussmündig) ignoriert. Vieli Sensor-Wert werded zudem nur ein mal pro Tag publiziert. Mir baued es Netzwerk von chostengünstige Wassertemperatur-Sensore mit sehr gringem Energieverbruch uf. Das ermöglicht eus, d'Wassertemperatur lokal z'messe und sie dir chostelos in Quasi-Echtziit bereit z'stelle!</target>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="A2_String" xml:space="preserve">
+        <source>This App, the server infrastructure as well as the hardware of our sensors, are developped by the members of the Coredump Hackerspace in Rapperswil-Jona in their freetime. For more information visit:</source>
+        <target>Das App, d'Server-Infrastruktur wie au d'Sensor-Hardware werded vom Coredump Hackerspace in Rapperswil-Jona entwicklet. Meh Informatione über eus gfinsch du auf eusere Website:</target>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="About" xml:space="preserve">
+        <source>About</source>
+        <target>Über</target>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="All time:" xml:space="preserve">
+        <source>All time:</source>
+        <target>Insgesamt:</target>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Average" xml:space="preserve">
+        <source>Average</source>
+        <target>Durchschnitt</target>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Average:" xml:space="preserve">
+        <source>Average:</source>
+        <target>Durchschnitt</target>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Change Language" xml:space="preserve">
+        <source>Change Language</source>
+        <target>Sprach wechsle</target>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Changelog" xml:space="preserve">
+        <source>Changelog</source>
+        <target>Änderige</target>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Close" xml:space="preserve">
+        <source>Close</source>
+        <target>Schlüsse</target>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Code on Github" xml:space="preserve">
+        <source>Code on Github</source>
+        <target>Code uf Github</target>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Contact" xml:space="preserve">
+        <source>Contact</source>
+        <target>Kontatkiere</target>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Continue" xml:space="preserve">
+        <source>Continue</source>
+        <target>Fortfahre</target>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Could not decode Measurements." xml:space="preserve">
+        <source>Could not decode Measurements.</source>
+        <target>Konnte Messungen nicht verarbeiten.</target>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Could not decode Sensors." xml:space="preserve">
+        <source>Could not decode Sensors.</source>
+        <target>Konnte Standorte nicht verarbeiten.</target>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Could not decode Sponsor." xml:space="preserve">
+        <source>Could not decode Sponsor.</source>
+        <target>Konnte Sponsoren nicht verarbeiten.</target>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Day" xml:space="preserve">
+        <source>Day</source>
+        <target>Tag</target>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Directions" xml:space="preserve">
+        <source>Directions</source>
+        <target>Route</target>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Error" xml:space="preserve">
+        <source>Error</source>
+        <target>Fehler</target>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="FAQ" xml:space="preserve">
+        <source>FAQ</source>
+        <target>FAQ</target>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Favorites" xml:space="preserve">
+        <source>Favorites</source>
+        <target>Favorite</target>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="General" xml:space="preserve">
+        <source>General</source>
+        <target>Allgemein</target>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Gfrör.li" xml:space="preserve">
+        <source>Gfrör.li</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Hello, World!" xml:space="preserve">
+        <source>Hello, World!</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Highest:" xml:space="preserve">
+        <source>Highest:</source>
+        <target>Höchsti:</target>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="History" xml:space="preserve">
+        <source>History</source>
+        <target>Verlauf</target>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Info:" xml:space="preserve">
+        <source>Info:</source>
+        <target>Info:</target>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Invalid server response." xml:space="preserve">
+        <source>Invalid server response.</source>
+        <target>Ungültige Serverantwort</target>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="LOADING" xml:space="preserve">
+        <source>Loading...</source>
+        <target>Lade...</target>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Lake of Zurich" xml:space="preserve">
+        <source>Lake of Zurich</source>
+        <target>Zürisee</target>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Latest" xml:space="preserve">
+        <source>Latest</source>
+        <target>Neusti</target>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Links" xml:space="preserve">
+        <source>Links</source>
+        <target>Links</target>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Loading Location failed. Reason:" xml:space="preserve">
+        <source>Loading Location failed. Reason:</source>
+        <target>Laden fehlgeschlagen. Grund:</target>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Loading Sponsor failed. Reason:" xml:space="preserve">
+        <source>Loading Sponsor failed. Reason:</source>
+        <target>Laden fehlgeschlagen. Grund:</target>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Location" xml:space="preserve">
+        <source>Location</source>
+        <target>Standort</target>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Location or Temperature" xml:space="preserve">
+        <source>Location or Temperature</source>
+        <target>Standort oder Temperatur</target>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Locations" xml:space="preserve">
+        <source>Locations</source>
+        <target>Standort</target>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Lowest:" xml:space="preserve">
+        <source>Lowest:</source>
+        <target>Tüüfsti:</target>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Map" xml:space="preserve">
+        <source>Map</source>
+        <target>Charte</target>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Maximum" xml:space="preserve">
+        <source>Maximum</source>
+        <target>Maximum</target>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Minimum" xml:space="preserve">
+        <source>Minimum</source>
+        <target>Minimum</target>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Month" xml:space="preserve">
+        <source>Month</source>
+        <target>Monat</target>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="More locations will follow very soon, stay tuned!" xml:space="preserve">
+        <source>More locations will follow very soon, stay tuned!</source>
+        <target>Neui Standort chömed bald.</target>
+        <note>Test comment</note>
+      </trans-unit>
+      <trans-unit id="New Location:" xml:space="preserve">
+        <source>New Location:</source>
+        <target>Neue Standort:</target>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Newest Measurement" xml:space="preserve">
+        <source>Newest Measurement</source>
+        <target>Neusti Messig</target>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="No Favorites" xml:space="preserve">
+        <source>No Favorites</source>
+        <target>Kei Favorite</target>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="No data available" xml:space="preserve">
+        <source>No data available</source>
+        <target>Kei Date verfüegbar</target>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="No internet connection." xml:space="preserve">
+        <source>No internet connection.</source>
+        <target>Kei Internetverbindig</target>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="OWO" xml:space="preserve">
+        <source>OWO</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Overview" xml:space="preserve">
+        <source>Overview</source>
+        <target>Übersicht</target>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Privacy Policy" xml:space="preserve">
+        <source>Privacy Policy</source>
+        <target>Dateschutzerchlärig</target>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Q1_String" xml:space="preserve">
+        <source>Why this App?</source>
+        <target>Warum das App?</target>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Q2_String" xml:space="preserve">
+        <source>Who is developping this project?</source>
+        <target>Wer hat das App entwickelt?</target>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Random" xml:space="preserve">
+        <source>Random</source>
+        <target>Zuerfällig</target>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Rate" xml:space="preserve">
+        <source>Rate</source>
+        <target>Bewerte</target>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Recently Added" xml:space="preserve">
+        <source>Recently Added</source>
+        <target>Neu</target>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Search" xml:space="preserve">
+        <source>Search</source>
+        <target>Sueche</target>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Settings" xml:space="preserve">
+        <source>Settings</source>
+        <target>Istellige</target>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Sponsored by:" xml:space="preserve">
+        <source>Sponsored by:</source>
+        <target>Gpsonsert vo:</target>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="This Location was recently added and measurements will be available very soon." xml:space="preserve">
+        <source>This Location was recently added and measurements will be available very soon.</source>
+        <target>De Standort isch neu hinzuegfüegt worde und Temperatur mässige chömed bald.</target>
+        <note>Test comment</note>
+      </trans-unit>
+      <trans-unit id="Try again" xml:space="preserve">
+        <source>Try again</source>
+        <target>Erneut versuche</target>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Version: %@" xml:space="preserve">
+        <source>Version: %@</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Waterbodies" xml:space="preserve">
+        <source>Waterbodies</source>
+        <target>Gwässer</target>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Week" xml:space="preserve">
+        <source>Week</source>
+        <target>Wuche</target>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="What's New to Gfrör.li" xml:space="preserve">
+        <source>What's New to Gfrör.li</source>
+        <target>Was isch neu?</target>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="by Marc &amp; Niklas&#10;for Coredump Rapperswil" xml:space="preserve">
+        <source>by Marc
+for Coredump Rapperswil</source>
+        <target>vom Marc
+für Coredump Rapperswil</target>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="coredump.ch" xml:space="preserve">
+        <source>coredump.ch</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="email_text" xml:space="preserve">
+        <source>Please provide your feedback above 👆🏻&lt;/br&gt;If you encountered a bug, please tell us the interactions that lead to it!&lt;/br&gt; We try to get back to you as soon as possible!</source>
+        <target>Bitte schreibe deinen Text oberhalb 👆🏻&lt;/br&gt;Falls du einen Fehler entdeckt hasst, notiere bitte die Schritte die zu ihm geführt haben!&lt;/br&gt; Wir versuchen dir schnellstmöglich zu antworten!</target>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="gfrör.li" xml:space="preserve">
+        <source>gfrör.li</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="www.gfrör.li" xml:space="preserve">
+        <source>www.gfrör.li</source>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="SelectSensorIntentExtension/en.lproj/InfoPlist.strings" datatype="plaintext" source-language="en" target-language="gsw">
+    <header>
+      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="13.2.1" build-num="13C100"/>
+    </header>
+    <body>
+      <trans-unit id="CFBundleDisplayName" xml:space="preserve">
+        <source>SelectSensorIntentExtension</source>
+        <note>Bundle display name</note>
+      </trans-unit>
+      <trans-unit id="CFBundleName" xml:space="preserve">
+        <source>SelectSensorIntentExtension</source>
+        <note>Bundle name</note>
+      </trans-unit>
+    </body>
+  </file>
+  <file original="SelectSensorIntentExtension/en.lproj/Localizable.strings" source-language="en" target-language="gsw" datatype="plaintext">
+    <header>
+      <tool tool-id="com.apple.dt.xcode" tool-name="Xcode" tool-version="13.2.1" build-num="13C100"/>
+    </header>
+    <body>
+      <trans-unit id="Could not decode Measurements." xml:space="preserve">
+        <source>Could not decode Measurements.</source>
+        <target>Konnte Messungen nicht verarbeiten.</target>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Could not decode Sensors." xml:space="preserve">
+        <source>Could not decode Sensors.</source>
+        <target>Konnte Standorte nicht verarbeiten.</target>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Could not decode Sponsor." xml:space="preserve">
+        <source>Could not decode Sponsor.</source>
+        <target>Konnte Sponsor nicht verarbeiten.</target>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Invalid server response." xml:space="preserve">
+        <source>Invalid server response.</source>
+        <target>Ungültigi Serverantwort</target>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="Lake of Zurich" xml:space="preserve">
+        <source>Lake of Zurich</source>
+        <target>Zürisee</target>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+      <trans-unit id="No internet connection." xml:space="preserve">
+        <source>No internet connection.</source>
+        <target>Kei Internetverbindig</target>
+        <note>No comment provided by engineer.</note>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

@@ -1,0 +1,30 @@
+"31X339" = "Intent for fetching Sensor data";
+
+"BNBBRB" = "Periodo";
+
+"BvxrmE" = "Luogo singolo";
+
+"G0EwFZ" = "Luogo";
+
+"JFLFjs" = "Settimana";
+
+"WmbpFs" = "Mese";
+
+"bivj1a" = "Giorno";
+
+"do2zOR-JFLFjs" = "There are ${count} options matching ‘week’.";
+
+"do2zOR-WmbpFs" = "There are ${count} options matching ‘month’.";
+
+"do2zOR-bivj1a" = "There are ${count} options matching ‘day’.";
+
+"mJkM5O" = "Luogo selezionabile";
+
+"tdN4nf-JFLFjs" = "Just to confirm, you wanted ‘week’?";
+
+"tdN4nf-WmbpFs" = "Just to confirm, you wanted ‘month’?";
+
+"tdN4nf-bivj1a" = "Just to confirm, you wanted ‘day’?";
+
+"zgFWAQ" = "Periodo";
+
