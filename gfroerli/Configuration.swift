@@ -1,0 +1,74 @@
+//
+//  Configuration.swift
+//  gfroerli
+//
+//  Created by Marc Kramer on 16.06.22.
+//
+
+import Foundation
+import UIKit
+
+/// Contains all the configuration values for layout
+enum AppConfiguration {
+    
+    enum Dashboard {
+        /// Height of the location tile in grid view
+        static let gridTileHeight = 250.0
+        /// Width of the location tile in grid view
+        static let gridTileWidth = 325.0
+        /// Horizontal and vertical spacing between grid items
+        static let gridSpacing = 25.0
+    }
+    
+    enum LoacationDetails {
+        /// Height of the top boxes in location details view
+        static let topBoxHeight = 180.0
+    }
+    
+    enum Settings {
+        /// String containing current version number, e.g. 1.0
+        static let lastVersion = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as! String
+        
+        /// URL opening review in appstore
+        static let reviewURL: URL = {
+            var components = URLComponents(
+                url: URL(string: "https://apps.apple.com/us/app/gfr%C3%B6r-li/id1451431723")!,
+                resolvingAgainstBaseURL: false
+            )
+            
+            components?.queryItems = [
+                URLQueryItem(name: "action", value: "write-review")
+            ]
+            return components!.url!
+        }()
+        
+        /// URL opening feedback email, containing body
+        static let emailURL: URL = {
+            let email = "appdev@coredump.ch"
+            let subject = "Feedback iOS Version: \(lastVersion)"
+            let body = emailBody
+
+            return URL(string: "mailto:\(email)?subject=\(subject.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? "")&body=\(body.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed)!)")!
+        }()
+        
+        /// Email body
+        private static let emailBody: String = {
+            let version = ("App-Version: \(Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String ?? "unkown")")
+            let systemVersion = "OS-Version: \(UIDevice.current.systemName) \(UIDevice.current.systemVersion)"
+            let lang = "Language: \(Locale.current.languageCode ?? "unkown")"
+            let str = NSLocalizedString("email_text", comment: "")
+            return "</br></br></br></br></br>\(str)</br></br>Info:</br>\(version)</br>\(systemVersion)</br>\(lang)"
+        }()
+        
+        /// URL to open privacy policy
+        static let privacyPolicyURL = URL(string: "https://xn--gfrr-7qa.li/about")!
+        /// URL to open gfroerli website
+        static let gfroerliURL = URL(string: "https://xn--gfrr-7qa.li")!
+        /// URL to open coredump website
+        static let coredumpURL = URL(string: "https://www.coredump.ch/")!
+        /// URL to open coredump twitter
+        static let twitterURL = URL(string: "https://twitter.com/coredump_ch")!
+        /// URL to open GitHub
+        static let githubURL = URL(string: "https://github.com/gfroerli")!
+    }
+}
