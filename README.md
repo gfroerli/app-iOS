@@ -14,7 +14,7 @@
     </a>
 </p>
 
-# _IMPORTANT: This README and the main branch are deprecated and will be replaced once V3.0 is ready. Please refer to the [V3.0 branch](V3.0-iOS-16-rewrite) to see the work-in-progress code._
+# _IMPORTANT: This README and the main branch are deprecated and will be replaced once V3.0 is ready. Please refer to the [V3.0 branch](https://github.com/gfroerli/app-iOS/tree/V3.0-iOS-16-rewrite) to see the work-in-progress code._
 
 
 Gfrör.li is a project that allows people to see local watertemperatures in real-time.
