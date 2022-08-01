@@ -63,6 +63,6 @@ struct LocationTile: View {
 
 struct SwiftUIView_Previews: PreviewProvider {
     static var previews: some View {
-        LocationTile(location: Location.example())
+        LocationTile(location: Location.exampleLocation())
     }
 }

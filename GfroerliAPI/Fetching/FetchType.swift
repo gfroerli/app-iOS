@@ -49,7 +49,7 @@ public enum FetchType {
             
         case .hourlyTemperatures(locationID: let locationID, from: let startDate, to: let endDate):
             
-            // Due to the sensors not being in GMT, We also must fetch the day before to be able to show all the hourly values in a given day. Therefore we substrac one day from startDate.
+            // Due to the sensors not being Located in GMT timezones, we also must fetch the day before to be able to show all the hourly values in a given day. Therefore we substract one day from startDate.
             let startDateString = Configuration.preprocessDate(subtractingDays: 1, from: startDate)
             let endDateString = Configuration.preprocessDate(subtractingDays: 0, from: endDate)
             

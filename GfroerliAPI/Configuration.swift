@@ -21,8 +21,7 @@ public class Configuration {
     /// - Returns: String in `dateFormat` style
     public static func preprocessDate(subtractingDays: Int, from date: Date) -> String {
         
-        let subtract = -subtractingDays
-        guard let offsetDate = Calendar.current.date(byAdding: .day, value: subtract, to: date) else {
+        guard let offsetDate = Calendar.current.date(byAdding: .day, value: -subtractingDays, to: date) else {
             fatalError("Could not reduce hours from date")
         }
         

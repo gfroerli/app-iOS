@@ -13,7 +13,7 @@ class SingleLocationsViewModel: ObservableObject {
     @Published var location: Location
     
     init(id: Int) {
-        location = Location.example()
+        location = Location.exampleLocation()
         Task {
             self.location = try! await loadInitialLocation(for: id)
         }

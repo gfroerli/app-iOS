@@ -49,6 +49,6 @@ struct LatestTemperatureView: View {
 // MARK: - Preview
 struct LatestTemperatureView_Previews: PreviewProvider {
     static var previews: some View {
-        LatestTemperatureView(location: Binding.constant(Location.example()))
+        LatestTemperatureView(location: Binding.constant(Location.exampleLocation()))
     }
 }

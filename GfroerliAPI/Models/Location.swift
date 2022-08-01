@@ -58,7 +58,7 @@ extension Location {
         jDescription ?? "No Description"
     }
     
-    /// Assembled CLLocation where Location is located
+    /// Created CLLocation of Location
     public var coordinates: CLLocation? {
         guard let lat = jLatitude,
               let long = jLongitude else {
@@ -67,6 +67,7 @@ extension Location {
         return CLLocation(latitude: lat, longitude: long)
     }
     
+    /// String of  date of last measurement relative to now
     public var lastTemperatureDateString: String {
         guard let lastTemperatureDate else {
             return "Unkown"
@@ -140,7 +141,7 @@ extension Location: Codable {
 
 // MARK: - Example
 extension Location {
-    public static func example() -> Location {
+    public static func exampleLocation() -> Location {
         Location(id: 0, jName: "Test Location", jDescription: "This is just a description for the test location", jLatitude: 47.0, jLongitude: 8.0, creationDate: Date.now, sponsorID: 0, latestTemperature: 20.5, lastTemperatureDate: Date.now, highestTemperature: 20.0, lowestTemperature: 10.5, averageTemperature: 15.5)
     }
 }

@@ -49,6 +49,6 @@ struct TemperatureSummaryView: View {
 
 struct TemperatureSummaryView_Previews: PreviewProvider {
     static var previews: some View {
-        TemperatureSummaryView(location: Binding.constant(Location.example()))
+        TemperatureSummaryView(location: Binding.constant(Location.exampleLocation()))
     }
 }
