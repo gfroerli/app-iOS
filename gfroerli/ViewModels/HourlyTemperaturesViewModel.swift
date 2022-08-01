@@ -13,7 +13,7 @@ class HourlyTemperaturesViewModel: ObservableObject {
     @Published var hourlyMeasurements: [TemperatureMeasurement] = [TemperatureMeasurement]()
 
     public func loadHourlyMeasurements(locationID: Int) async throws {
-        guard let measurements = try? await GfroerliAPI().load(type: [TemperatureMeasurement].self, fetchType: .hourlyTemperatures(locationID: locationID, from: Date.now.addingTimeInterval(-86000), to: Date.now)) else {
+        guard let measurements: [TemperatureMeasurement] = try? await GfroerliAPI().load(fetchType: .hourlyTemperatures(locationID: locationID, from: Date.now.addingTimeInterval(-86000), to: Date.now)) else {
             fatalError("")
         }
         hourlyMeasurements = measurements

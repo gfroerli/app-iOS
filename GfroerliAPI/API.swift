@@ -22,7 +22,7 @@ public class GfroerliAPI {
     ///   - type: Type to load
     ///   - types: FetchType
     /// - Returns: Type
-    public func load<T: Decodable>(type: T.Type, fetchType: FetchType) async throws -> T {
+    public func load<T: Decodable>(fetchType: FetchType) async throws -> T {
         let data = try? await Fetcher.fetch(type: fetchType)
         
         guard let data else {

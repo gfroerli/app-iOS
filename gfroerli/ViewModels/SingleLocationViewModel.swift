@@ -19,15 +19,15 @@ class SingleLocationsViewModel: ObservableObject {
         }
     }
 
-    private func loadInitialLocation(for id: Int) async throws -> Location{
-        guard let fetchedLocation = try? await GfroerliAPI().load(type: Location.self, fetchType: .singleLocation(id: id)) else {
+    private func loadInitialLocation(for id: Int) async throws -> Location {
+        guard let fetchedLocation: Location = try? await GfroerliAPI().load(fetchType: .singleLocation(id: id)) else {
             fatalError("")
         }
         return fetchedLocation
     }
     
     public func loadLocation(for id: Int) async throws {
-        guard let fetchedLocation = try? await GfroerliAPI().load(type: Location.self, fetchType: .singleLocation(id: id)) else {
+        guard let fetchedLocation: Location = try? await GfroerliAPI().load(fetchType: .singleLocation(id: id)) else {
             fatalError("")
         }
         location = fetchedLocation
