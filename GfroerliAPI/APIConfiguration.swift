@@ -1,5 +1,5 @@
 //
-//  Configuration.swift
+//  APIConfiguration.swift
 //  
 //
 //  Created by Marc Kramer on 12.06.22.
@@ -8,7 +8,7 @@
 import Foundation
 
 /// Contains predefined parameters used during the fetching process
-public class Configuration {
+public class APIConfiguration {
     
     // MARK: Date handling
     static var formatter = DateFormatter()

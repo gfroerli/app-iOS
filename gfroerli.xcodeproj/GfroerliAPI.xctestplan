@@ -1,0 +1,25 @@
+{
+  "configurations" : [
+    {
+      "id" : "21E312DB-DF06-4884-B6F7-5C3E205D21EF",
+      "name" : "Configuration 1",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "region" : "CH"
+  },
+  "testTargets" : [
+    {
+      "parallelizable" : true,
+      "target" : {
+        "containerPath" : "container:gfroerli.xcodeproj",
+        "identifier" : "8D5557E82881F23C008C1BE3",
+        "name" : "GfroerliAPITests"
+      }
+    }
+  ],
+  "version" : 1
+}

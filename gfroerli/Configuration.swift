@@ -47,7 +47,7 @@ enum AppConfiguration {
             let email = "appdev@coredump.ch"
             let subject = "Feedback iOS Version: \(lastVersion)"
             let body = emailBody
-
+            
             return URL(string: "mailto:\(email)?subject=\(subject.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? "")&body=\(body.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed)!)")!
         }()
         
@@ -55,7 +55,7 @@ enum AppConfiguration {
         private static let emailBody: String = {
             let version = ("App-Version: \(Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String ?? "unkown")")
             let systemVersion = "OS-Version: \(UIDevice.current.systemName) \(UIDevice.current.systemVersion)"
-            let lang = "Language: \(Locale.current.languageCode ?? "unkown")"
+            let lang = "Language: \(Locale.current.language.languageCode?.identifier ?? "unkown")"
             let str = NSLocalizedString("email_text", comment: "")
             return "</br></br></br></br></br>\(str)</br></br>Info:</br>\(version)</br>\(systemVersion)</br>\(lang)"
         }()

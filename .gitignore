@@ -1,3 +1,4 @@
 DerivedData
-gfroerli.xcodeproj/xcuserdata/marckramer.xcuserdatad
-GfroerliAPI/BearerToken.swift
+**/BearerToken.swift
+**/xcuserdata
+**/.DS_Store

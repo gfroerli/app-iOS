@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2411AAFA28BA47D200D5B59D /* FetchTypeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2411AAF928BA47D100D5B59D /* FetchTypeTests.swift */; };
+		2411AAFD28BA4E8D00D5B59D /* MeasurementUtilsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2411AAFC28BA4E8D00D5B59D /* MeasurementUtilsTests.swift */; };
+		24E6F03E28BA43A000815A3E /* APIConfigurationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E6F03D28BA43A000815A3E /* APIConfigurationTests.swift */; };
 		8D31E32F286601950095622E /* HourlyTemperaturesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D31E32E286601950095622E /* HourlyTemperaturesViewModel.swift */; };
 		8D31E332286604450095622E /* LocationDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D31E331286604450095622E /* LocationDetailView.swift */; };
 		8D3C681B285B672100DC8CA4 /* LocationTile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D3C681A285B672100DC8CA4 /* LocationTile.swift */; };
@@ -20,11 +23,10 @@
 		8D54892B2856315D007253FE /* gfroerliUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D54892A2856315D007253FE /* gfroerliUITestsLaunchTests.swift */; };
 		8D5557E42881F23C008C1BE3 /* GfroerliAPI.docc in Sources */ = {isa = PBXBuildFile; fileRef = 8D5557E32881F23C008C1BE3 /* GfroerliAPI.docc */; };
 		8D5557EA2881F23C008C1BE3 /* GfroerliAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D5557E02881F23C008C1BE3 /* GfroerliAPI.framework */; };
-		8D5557F12881F23C008C1BE3 /* GfroerliAPITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D5557F02881F23C008C1BE3 /* GfroerliAPITests.swift */; };
 		8D5557F22881F23C008C1BE3 /* GfroerliAPI.h in Headers */ = {isa = PBXBuildFile; fileRef = 8D5557E22881F23C008C1BE3 /* GfroerliAPI.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8D5557F52881F23C008C1BE3 /* GfroerliAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D5557E02881F23C008C1BE3 /* GfroerliAPI.framework */; };
 		8D5557F62881F23C008C1BE3 /* GfroerliAPI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8D5557E02881F23C008C1BE3 /* GfroerliAPI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		8D5558162881F430008C1BE3 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D5558112881F430008C1BE3 /* Configuration.swift */; };
+		8D5558162881F430008C1BE3 /* APIConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D5558112881F430008C1BE3 /* APIConfiguration.swift */; };
 		8D5558252881F4E4008C1BE3 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D55581D2881F4E4008C1BE3 /* Location.swift */; };
 		8D5558262881F4E4008C1BE3 /* Sponsor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D55581E2881F4E4008C1BE3 /* Sponsor.swift */; };
 		8D5558272881F4E4008C1BE3 /* TemperatureMeasurement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D55581F2881F4E4008C1BE3 /* TemperatureMeasurement.swift */; };
@@ -104,6 +106,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		2411AAF928BA47D100D5B59D /* FetchTypeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchTypeTests.swift; sourceTree = "<group>"; };
+		2411AAFB28BA4D7D00D5B59D /* GfroerliAPI.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = file; name = GfroerliAPI.xctestplan; path = gfroerli.xcodeproj/GfroerliAPI.xctestplan; sourceTree = SOURCE_ROOT; };
+		2411AAFC28BA4E8D00D5B59D /* MeasurementUtilsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MeasurementUtilsTests.swift; path = GfroerliAPITests/MeasurementUtilsTests.swift; sourceTree = SOURCE_ROOT; };
+		24E6F03D28BA43A000815A3E /* APIConfigurationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConfigurationTests.swift; sourceTree = "<group>"; };
 		8D31E32E286601950095622E /* HourlyTemperaturesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HourlyTemperaturesViewModel.swift; sourceTree = "<group>"; };
 		8D31E331286604450095622E /* LocationDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationDetailView.swift; sourceTree = "<group>"; };
 		8D3C681A285B672100DC8CA4 /* LocationTile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationTile.swift; sourceTree = "<group>"; };
@@ -124,8 +130,7 @@
 		8D5557E22881F23C008C1BE3 /* GfroerliAPI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GfroerliAPI.h; sourceTree = "<group>"; };
 		8D5557E32881F23C008C1BE3 /* GfroerliAPI.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = GfroerliAPI.docc; sourceTree = "<group>"; };
 		8D5557E92881F23C008C1BE3 /* GfroerliAPITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GfroerliAPITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		8D5557F02881F23C008C1BE3 /* GfroerliAPITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GfroerliAPITests.swift; sourceTree = "<group>"; };
-		8D5558112881F430008C1BE3 /* Configuration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
+		8D5558112881F430008C1BE3 /* APIConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIConfiguration.swift; sourceTree = "<group>"; };
 		8D55581D2881F4E4008C1BE3 /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		8D55581E2881F4E4008C1BE3 /* Sponsor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sponsor.swift; sourceTree = "<group>"; };
 		8D55581F2881F4E4008C1BE3 /* TemperatureMeasurement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TemperatureMeasurement.swift; sourceTree = "<group>"; };
@@ -218,9 +223,9 @@
 			isa = PBXGroup;
 			children = (
 				8D54890B2856315C007253FE /* gfroerli */,
+				8D5557E12881F23C008C1BE3 /* GfroerliAPI */,
 				8D54891D2856315D007253FE /* gfroerliTests */,
 				8D5489272856315D007253FE /* gfroerliUITests */,
-				8D5557E12881F23C008C1BE3 /* GfroerliAPI */,
 				8D5557EF2881F23C008C1BE3 /* GfroerliAPITests */,
 				8D54890A2856315C007253FE /* Products */,
 				8D5489372856317E007253FE /* Packages */,
@@ -303,7 +308,7 @@
 				8D5558202881F4E4008C1BE3 /* Fetching */,
 				8D55581C2881F4E4008C1BE3 /* Models */,
 				8D5558232881F4E4008C1BE3 /* Utils */,
-				8D5558112881F430008C1BE3 /* Configuration.swift */,
+				8D5558112881F430008C1BE3 /* APIConfiguration.swift */,
 				8D55582D2881F58A008C1BE3 /* BearerToken.swift */,
 				8D5557E22881F23C008C1BE3 /* GfroerliAPI.h */,
 				8D5557E32881F23C008C1BE3 /* GfroerliAPI.docc */,
@@ -314,7 +319,10 @@
 		8D5557EF2881F23C008C1BE3 /* GfroerliAPITests */ = {
 			isa = PBXGroup;
 			children = (
-				8D5557F02881F23C008C1BE3 /* GfroerliAPITests.swift */,
+				2411AAFB28BA4D7D00D5B59D /* GfroerliAPI.xctestplan */,
+				24E6F03D28BA43A000815A3E /* APIConfigurationTests.swift */,
+				2411AAF928BA47D100D5B59D /* FetchTypeTests.swift */,
+				2411AAFC28BA4E8D00D5B59D /* MeasurementUtilsTests.swift */,
 			);
 			path = GfroerliAPITests;
 			sourceTree = "<group>";
@@ -678,7 +686,7 @@
 				8D5558272881F4E4008C1BE3 /* TemperatureMeasurement.swift in Sources */,
 				8D55582E2881F58A008C1BE3 /* BearerToken.swift in Sources */,
 				8D5558262881F4E4008C1BE3 /* Sponsor.swift in Sources */,
-				8D5558162881F430008C1BE3 /* Configuration.swift in Sources */,
+				8D5558162881F430008C1BE3 /* APIConfiguration.swift in Sources */,
 				8D5558252881F4E4008C1BE3 /* Location.swift in Sources */,
 				8D55582C2881F542008C1BE3 /* API.swift in Sources */,
 				8D5557E42881F23C008C1BE3 /* GfroerliAPI.docc in Sources */,
@@ -689,7 +697,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8D5557F12881F23C008C1BE3 /* GfroerliAPITests.swift in Sources */,
+				2411AAFA28BA47D200D5B59D /* FetchTypeTests.swift in Sources */,
+				2411AAFD28BA4E8D00D5B59D /* MeasurementUtilsTests.swift in Sources */,
+				24E6F03E28BA43A000815A3E /* APIConfigurationTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

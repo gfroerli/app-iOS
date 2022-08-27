@@ -50,14 +50,14 @@ public enum FetchType {
         case .hourlyTemperatures(locationID: let locationID, from: let startDate, to: let endDate):
             
             // Due to the sensors not being Located in GMT timezones, we also must fetch the day before to be able to show all the hourly values in a given day. Therefore we substract one day from startDate.
-            let startDateString = Configuration.preprocessDate(subtractingDays: 1, from: startDate)
-            let endDateString = Configuration.preprocessDate(subtractingDays: 0, from: endDate)
+            let startDateString = APIConfiguration.preprocessDate(subtractingDays: 1, from: startDate)
+            let endDateString = APIConfiguration.preprocessDate(subtractingDays: 0, from: endDate)
             
             return Foundation.URL(string: "https://watertemp-api.coredump.ch/api/mobile_app/sensors/\(locationID)/hourly_temperatures?from=\(startDateString)&to=\(endDateString)&limit=100")!
             
         case .dailyTemperatures(locationID: let locationID, from: let startDate, to: let endDate):
-            let startDateString = Configuration.preprocessDate(subtractingDays: 0, from: startDate)
-            let endDateString = Configuration.preprocessDate(subtractingDays: 0, from: endDate)
+            let startDateString = APIConfiguration.preprocessDate(subtractingDays: 0, from: startDate)
+            let endDateString = APIConfiguration.preprocessDate(subtractingDays: 0, from: endDate)
             
             return Foundation.URL(string: "https://watertemp-api.coredump.ch/api/mobile_app/sensors/\(locationID)/daily_temperatures?from=\(startDateString)&to=\(endDateString)&limit=100")!
         }
