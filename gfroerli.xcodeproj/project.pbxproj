@@ -9,6 +9,11 @@
 /* Begin PBXBuildFile section */
 		2411AAFA28BA47D200D5B59D /* FetchTypeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2411AAF928BA47D100D5B59D /* FetchTypeTests.swift */; };
 		2411AAFD28BA4E8D00D5B59D /* MeasurementUtilsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2411AAFC28BA4E8D00D5B59D /* MeasurementUtilsTests.swift */; };
+		2411AAFF28BA53D900D5B59D /* LocationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2411AAFE28BA53D900D5B59D /* LocationTests.swift */; };
+		24DAD5FF28BA5D29002E5785 /* JsonLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24DAD5FE28BA5D29002E5785 /* JsonLoader.swift */; };
+		24DAD60228BA5E82002E5785 /* LocationFull.json in Resources */ = {isa = PBXBuildFile; fileRef = 24DAD60128BA5E82002E5785 /* LocationFull.json */; };
+		24DAD60428BA62C8002E5785 /* LocationMissing.json in Resources */ = {isa = PBXBuildFile; fileRef = 24DAD60328BA62C7002E5785 /* LocationMissing.json */; };
+		24DAD60628BA62CE002E5785 /* LocationAdditional.json in Resources */ = {isa = PBXBuildFile; fileRef = 24DAD60528BA62CE002E5785 /* LocationAdditional.json */; };
 		24E6F03E28BA43A000815A3E /* APIConfigurationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E6F03D28BA43A000815A3E /* APIConfigurationTests.swift */; };
 		8D31E32F286601950095622E /* HourlyTemperaturesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D31E32E286601950095622E /* HourlyTemperaturesViewModel.swift */; };
 		8D31E332286604450095622E /* LocationDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D31E331286604450095622E /* LocationDetailView.swift */; };
@@ -107,8 +112,13 @@
 
 /* Begin PBXFileReference section */
 		2411AAF928BA47D100D5B59D /* FetchTypeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchTypeTests.swift; sourceTree = "<group>"; };
-		2411AAFB28BA4D7D00D5B59D /* GfroerliAPI.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = file; name = GfroerliAPI.xctestplan; path = gfroerli.xcodeproj/GfroerliAPI.xctestplan; sourceTree = SOURCE_ROOT; };
+		2411AAFB28BA4D7D00D5B59D /* GfroerliAPI.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; name = GfroerliAPI.xctestplan; path = gfroerli.xcodeproj/GfroerliAPI.xctestplan; sourceTree = SOURCE_ROOT; };
 		2411AAFC28BA4E8D00D5B59D /* MeasurementUtilsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MeasurementUtilsTests.swift; path = GfroerliAPITests/MeasurementUtilsTests.swift; sourceTree = SOURCE_ROOT; };
+		2411AAFE28BA53D900D5B59D /* LocationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationTests.swift; sourceTree = "<group>"; };
+		24DAD5FE28BA5D29002E5785 /* JsonLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonLoader.swift; sourceTree = "<group>"; };
+		24DAD60128BA5E82002E5785 /* LocationFull.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = LocationFull.json; sourceTree = "<group>"; };
+		24DAD60328BA62C7002E5785 /* LocationMissing.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = LocationMissing.json; sourceTree = "<group>"; };
+		24DAD60528BA62CE002E5785 /* LocationAdditional.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = LocationAdditional.json; sourceTree = "<group>"; };
 		24E6F03D28BA43A000815A3E /* APIConfigurationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConfigurationTests.swift; sourceTree = "<group>"; };
 		8D31E32E286601950095622E /* HourlyTemperaturesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HourlyTemperaturesViewModel.swift; sourceTree = "<group>"; };
 		8D31E331286604450095622E /* LocationDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationDetailView.swift; sourceTree = "<group>"; };
@@ -198,6 +208,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		24DAD5FD28BA5D06002E5785 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				24DAD5FE28BA5D29002E5785 /* JsonLoader.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		24DAD60028BA5E4E002E5785 /* TestJSONFiles */ = {
+			isa = PBXGroup;
+			children = (
+				24DAD60128BA5E82002E5785 /* LocationFull.json */,
+				24DAD60328BA62C7002E5785 /* LocationMissing.json */,
+				24DAD60528BA62CE002E5785 /* LocationAdditional.json */,
+			);
+			path = TestJSONFiles;
+			sourceTree = "<group>";
+		};
 		8D31E3302866041A0095622E /* LocationDetail */ = {
 			isa = PBXGroup;
 			children = (
@@ -227,6 +255,8 @@
 				8D54891D2856315D007253FE /* gfroerliTests */,
 				8D5489272856315D007253FE /* gfroerliUITests */,
 				8D5557EF2881F23C008C1BE3 /* GfroerliAPITests */,
+				24DAD5FD28BA5D06002E5785 /* Helpers */,
+				24DAD60028BA5E4E002E5785 /* TestJSONFiles */,
 				8D54890A2856315C007253FE /* Products */,
 				8D5489372856317E007253FE /* Packages */,
 				8D54893A2856318C007253FE /* Frameworks */,
@@ -321,6 +351,7 @@
 			children = (
 				2411AAFB28BA4D7D00D5B59D /* GfroerliAPI.xctestplan */,
 				24E6F03D28BA43A000815A3E /* APIConfigurationTests.swift */,
+				2411AAFE28BA53D900D5B59D /* LocationTests.swift */,
 				2411AAF928BA47D100D5B59D /* FetchTypeTests.swift */,
 				2411AAFC28BA4E8D00D5B59D /* MeasurementUtilsTests.swift */,
 			);
@@ -624,6 +655,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				24DAD60628BA62CE002E5785 /* LocationAdditional.json in Resources */,
+				24DAD60428BA62C8002E5785 /* LocationMissing.json in Resources */,
+				24DAD60228BA5E82002E5785 /* LocationFull.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -699,7 +733,9 @@
 			files = (
 				2411AAFA28BA47D200D5B59D /* FetchTypeTests.swift in Sources */,
 				2411AAFD28BA4E8D00D5B59D /* MeasurementUtilsTests.swift in Sources */,
+				2411AAFF28BA53D900D5B59D /* LocationTests.swift in Sources */,
 				24E6F03E28BA43A000815A3E /* APIConfigurationTests.swift in Sources */,
+				24DAD5FF28BA5D29002E5785 /* JsonLoader.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

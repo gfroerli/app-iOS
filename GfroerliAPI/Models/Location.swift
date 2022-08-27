@@ -17,9 +17,9 @@ public struct Location: Equatable, Identifiable, Hashable {
     let jLatitude: Double?
     let jLongitude: Double?
     public let creationDate: Date?
-
+    
     public let sponsorID: Int?
-
+    
     public let latestTemperature: Double?
     public let lastTemperatureDate: Date?
     
@@ -28,7 +28,7 @@ public struct Location: Equatable, Identifiable, Hashable {
     public let averageTemperature: Double?
     
     // MARK: Lifecycle
-    init(id: Int, jName: String?, jDescription: String?, jLatitude: Double?, jLongitude: Double?, creationDate: Date?, sponsorID: Int?, latestTemperature: Double?, lastTemperatureDate: Date?, highestTemperature: Double?, lowestTemperature: Double?, averageTemperature: Double?) {
+    init(id: Int, jName: String? = nil, jDescription: String? = nil, jLatitude: Double? = nil, jLongitude: Double? = nil, creationDate: Date? = nil, sponsorID: Int? = nil, latestTemperature: Double? = nil, lastTemperatureDate: Date? = nil, highestTemperature: Double? = nil, lowestTemperature: Double? = nil, averageTemperature: Double? = nil) {
         self.id = id
         self.jName = jName
         self.jDescription = jDescription
@@ -70,7 +70,7 @@ extension Location {
     /// String of  date of last measurement relative to now
     public var lastTemperatureDateString: String {
         guard let lastTemperatureDate else {
-            return "Unkown"
+            return "Unknown"
         }
         let formatter = RelativeDateTimeFormatter()
         formatter.dateTimeStyle = .named
@@ -105,12 +105,12 @@ extension Location: Codable {
         case jLatitude = "latitude"
         case jLongitude = "longitude"
         case creationDate = "created_at"
-
+        
         case sponsorID = "sponsor_id"
         
         case latestTemperature = "latest_temperature"
         case lastTemperatureDate = "latest_measurement_at"
-
+        
         case highestTemperature = "maximum_temperature"
         case lowestTemperature = "minimum_temperature"
         case averageTemperature = "average_temperature"
@@ -132,7 +132,7 @@ extension Location: Codable {
         
         self.latestTemperature = try container.decodeIfPresent(Double.self, forKey: .latestTemperature)
         self.lastTemperatureDate = try container.decodeIfPresent(Date.self, forKey: .lastTemperatureDate)
-
+        
         self.highestTemperature = try container.decodeIfPresent(Double.self, forKey: .highestTemperature)
         self.lowestTemperature = try container.decodeIfPresent(Double.self, forKey: .lowestTemperature)
         self.averageTemperature = try container.decodeIfPresent(Double.self, forKey: .averageTemperature)
