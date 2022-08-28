@@ -78,19 +78,19 @@ extension Location {
     }
     
     public var latestTemperatureString: String {
-        MeasurementUtils().temperatureString(from: latestTemperature)
+        MeasurementUtils.shared.temperatureString(from: latestTemperature)
     }
     
     public var lowestTemperatureString: String {
-        MeasurementUtils().temperatureString(from: lowestTemperature)
+        MeasurementUtils.shared.temperatureString(from: lowestTemperature)
     }
     
     public var averageTemperatureString: String {
-        MeasurementUtils().temperatureString(from: averageTemperature)
+        MeasurementUtils.shared.temperatureString(from: averageTemperature)
     }
     
     public var highestTemperatureString: String {
-        MeasurementUtils().temperatureString(from: highestTemperature)
+        MeasurementUtils.shared.temperatureString(from: highestTemperature)
     }
 }
 

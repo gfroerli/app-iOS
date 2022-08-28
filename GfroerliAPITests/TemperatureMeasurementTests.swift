@@ -17,7 +17,7 @@ final class TemperatureMeasurementTests: XCTestCase {
         // Arrange
         let data = try JsonLoader.loadJson(fileName: "TemperatureMeasurementFull")
         
-        let measurementDate = "2022-08-01"
+        let measurementDate = dateCreator(string: "2022-08-01")
         let lowest = 20.0
         let average = 25.0
         let highest = 30.0
@@ -37,8 +37,7 @@ final class TemperatureMeasurementTests: XCTestCase {
         // Arrange
         let data = try JsonLoader.loadJson(fileName: "TemperatureMeasurementFull")
         
-        let measurementDate = "2022-08-01"
-        
+        let measurementDate = dateCreator(string: "2022-08-01")
         // Act
         let measurement = try jsonDecoder.decode(TemperatureMeasurement.self, from: data)
         
@@ -50,8 +49,7 @@ final class TemperatureMeasurementTests: XCTestCase {
         // Arrange
         let data = try JsonLoader.loadJson(fileName: "TemperatureMeasurementAdditional")
         
-        let measurementDate = "2022-08-01"
-        
+        let measurementDate = dateCreator(string: "2022-08-01")
         // Act
         let measurement = try jsonDecoder.decode(TemperatureMeasurement.self, from: data)
         
@@ -59,4 +57,13 @@ final class TemperatureMeasurementTests: XCTestCase {
         XCTAssertEqual(measurement.measurementDate, measurementDate)
     }
     
+    
+    // MARK: - Helpers
+    private func dateCreator(string: String) -> Date? {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy/MM/dd"
+        formatter.timeZone = TimeZone(abbreviation: "UTC")!
+        let someDateTime = formatter.date(from: string)
+        return someDateTime
+    }
 }

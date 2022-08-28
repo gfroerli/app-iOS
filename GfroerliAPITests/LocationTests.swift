@@ -90,7 +90,7 @@ final class LocationTests: XCTestCase {
     func testLocationUnwrapLatestTempString() {
         // Arrange
         let temp = 20.0
-        let tempString = MeasurementUtils().temperatureString(from: temp)
+        let tempString = MeasurementUtils.shared.temperatureString(from: temp)
         // Act
         let location = Location(id: 1, latestTemperature: temp)
         
@@ -101,7 +101,7 @@ final class LocationTests: XCTestCase {
     func testLocationUnwrapHighestTempString() {
         // Arrange
         let temp = 20.0
-        let tempString = MeasurementUtils().temperatureString(from: temp)
+        let tempString = MeasurementUtils.shared.temperatureString(from: temp)
         // Act
         let location = Location(id: 1, highestTemperature: temp)
         
@@ -112,7 +112,7 @@ final class LocationTests: XCTestCase {
     func testLocationUnwrapLowestTempString() {
         // Arrange
         let temp = 20.0
-        let tempString = MeasurementUtils().temperatureString(from: temp)
+        let tempString = MeasurementUtils.shared.temperatureString(from: temp)
         // Act
         let location = Location(id: 1, lowestTemperature: temp)
         
@@ -123,7 +123,7 @@ final class LocationTests: XCTestCase {
     func testLocationUnwrapAverageTempString() {
         // Arrange
         let temp = 20.0
-        let tempString = MeasurementUtils().temperatureString(from: temp)
+        let tempString = MeasurementUtils.shared.temperatureString(from: temp)
         // Act
         let location = Location(id: 1, averageTemperature: temp)
         
