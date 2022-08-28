@@ -9,7 +9,6 @@ import Foundation
 
 class JsonLoader {
     static func loadJson(fileName: String) throws -> Data {
-        let decoder = JSONDecoder()
         let testBundle = Bundle(for: Self.self)
         guard
             let url = testBundle.url(forResource: fileName, withExtension: "json") else {

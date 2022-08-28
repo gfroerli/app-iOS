@@ -11,8 +11,8 @@ public class GfroerliAPI {
     
     public init() {}
     
-    lazy var decoder: JSONDecoder = {
-       let decoder = JSONDecoder()
+    private lazy var decoder: JSONDecoder = {
+        let decoder = JSONDecoder()
         decoder.dateDecodingStrategy = .secondsSince1970
         return decoder
     }()

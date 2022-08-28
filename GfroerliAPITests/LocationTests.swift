@@ -14,7 +14,7 @@ final class LocationTests: XCTestCase {
     let jsonDecoder = JSONDecoder()
     
     // MARK: - Intitialization
-    func testInitialisationAllValues() {
+    func testLocationInitialisationAllValues() {
         // Arrange
         let id = 1
         let name = "TestName"
@@ -34,7 +34,7 @@ final class LocationTests: XCTestCase {
         
         // Assert
         XCTAssertEqual(location.id, id)
-        XCTAssertEqual(location.name, name)
+        XCTAssertEqual(location.jName, name)
         XCTAssertEqual(location.jDescription, desc)
         XCTAssertEqual(location.jLatitude, lat)
         XCTAssertEqual(location.jLongitude, long)
@@ -51,7 +51,7 @@ final class LocationTests: XCTestCase {
     }
     
     // MARK: - Unwrapping
-    func testLocationUnwrapNameNotNil() {
+    func testLocationUnwrapName() {
         // Arrange
         let name = "TestName"
         
@@ -151,7 +151,7 @@ final class LocationTests: XCTestCase {
     }
     
     // MARK: - Decoding
-    func testDecodingAllValues() throws{
+    func testLocationDecodingAllValues() throws{
         // Arrange
         let data = try JsonLoader.loadJson(fileName: "LocationFull")
         
@@ -173,7 +173,7 @@ final class LocationTests: XCTestCase {
         
         // Assert
         XCTAssertEqual(location.id, id)
-        XCTAssertEqual(location.name, name)
+        XCTAssertEqual(location.jName, name)
         XCTAssertEqual(location.jDescription, desc)
         XCTAssertEqual(location.jLatitude, lat)
         XCTAssertEqual(location.jLongitude, long)
@@ -189,7 +189,7 @@ final class LocationTests: XCTestCase {
         XCTAssertEqual(location.averageTemperature, avg)
     }
     
-    func testDecodingMissingValues() throws{
+    func testLocationDecodingMissingValues() throws{
         // Arrange
         let data = try JsonLoader.loadJson(fileName: "LocationMissing")
         
@@ -202,7 +202,7 @@ final class LocationTests: XCTestCase {
         XCTAssertEqual(location.id, id)
     }
     
-    func testDecodingAdditionalValues() throws{
+    func testLocationDecodingAdditionalValues() throws{
         // Arrange
         let data = try JsonLoader.loadJson(fileName: "LocationAdditional")
         

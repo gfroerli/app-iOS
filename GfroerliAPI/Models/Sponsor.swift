@@ -8,7 +8,7 @@
 import Foundation
 
 struct Sponsor: Identifiable {
-
+    
     public let id: Int
     let jName: String?
     let jDescription: String?
@@ -16,7 +16,7 @@ struct Sponsor: Identifiable {
     
     // MARK: - Lifecycle
     
-    init(id: Int, jName: String, jDescription: String, created_at: String, logoUrl: URL) {
+    init(id: Int, jName: String? = nil, jDescription: String? = nil, logoUrl: URL? = nil) {
         self.id = id
         self.jName = jName
         self.jDescription = jDescription
@@ -46,7 +46,7 @@ extension Sponsor: Codable {
         case jDescription = "description"
         case logoUrl = "logo_url"
     }
-
+    
     init(from decoder: Decoder) throws {
         let values = try decoder.container(keyedBy: CodingKeys.self)
         

@@ -11,10 +11,10 @@ public struct TemperatureMeasurement: Identifiable, Hashable {
     
     // MARK: Properties
     public let id: String?
-    let measurementDate: String?
-    let lowest: Double?
+    public let measurementDate: String?
+    public let lowest: Double?
     public let average: Double?
-    let highest: Double?
+    public let highest: Double?
 }
 
 // MARK: - Codable
@@ -25,9 +25,9 @@ extension TemperatureMeasurement: Codable {
         case lowest = "minimum_temperature"
         case highest = "maximum_temperature"
         case average = "average_temperature"
-
+        
     }
-
+    
     public init(from decoder: Decoder) throws {
         let values = try decoder.container(keyedBy: CodingKeys.self)
         id = UUID().uuidString

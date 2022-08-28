@@ -10,7 +10,7 @@ import XCTest
 
 final class APIConfigurationTests: XCTestCase {
     
-    // MARK: - preprosessDate()
+    // MARK: - preprocessDate()
     func testPreprocessDate5Days() throws {
         // Arrange
         let startDate = "2022/08/27"

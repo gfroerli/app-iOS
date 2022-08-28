@@ -22,7 +22,7 @@ public class APIConfiguration {
     public static func preprocessDate(subtractingDays: Int, from date: Date) -> String {
         
         guard let offsetDate = Calendar.current.date(byAdding: .day, value: -subtractingDays, to: date) else {
-            fatalError("Could not reduce hours from date")
+            return ""
         }
         
         formatter.dateFormat = self.dateFormat
