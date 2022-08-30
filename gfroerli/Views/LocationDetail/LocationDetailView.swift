@@ -20,13 +20,11 @@ struct LocationDetailView: View {
     // MARK: - Body
     var body: some View {
         VStack{
-            // Top row
-            HStack (alignment: .top){
-                LatestTemperatureView(location: $locationVM.location)
-                TemperatureSummaryView(location: $locationVM.location)
-            }
-            .defaultBoxStyle()
+            LatestTemperatureView(location: $locationVM.location)
             
+            TemperatureSummaryView(location: $locationVM.location)
+            
+            LocationMapPreviewView(location: locationVM.location)
             Spacer()
                 .navigationTitle(locationVM.location.name)
                 .navigationBarTitleDisplayMode(.inline)

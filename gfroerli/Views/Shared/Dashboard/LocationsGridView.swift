@@ -33,7 +33,7 @@ struct LocationsGridView: View {
                 .padding(.horizontal)
             ScrollView(.vertical) {
                 LazyVGrid(columns: columns, spacing: config.gridSpacing) {
-                    ForEach(locationsViewModel.allLocations) { location in
+                    ForEach(locationsViewModel.activeLocations) { location in
                         NavigationLink(value: location) {
                             LocationTile(location: location)
                         }

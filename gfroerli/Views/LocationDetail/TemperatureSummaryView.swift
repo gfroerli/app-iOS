@@ -10,18 +10,17 @@ import GfroerliAPI
 
 struct TemperatureSummaryView: View {
 
-    typealias config = AppConfiguration.LoacationDetails
+    typealias config = AppConfiguration.LocationDetails
     
     @Binding var location: Location
 
     var body: some View {
-        VStack(alignment: .leading, spacing: 4) {
+        VStack(alignment: .leading) {
             
             HStack {
                 Text("All time:")
                     .font(.title.bold())
             }
-            .padding(.bottom)
             
             HStack {
                 Text("Highest:")
@@ -44,6 +43,7 @@ struct TemperatureSummaryView: View {
         .font(.title2)
         .minimumScaleFactor(0.1)
         .padding()
+        .defaultBoxStyle()
     }
 }
 

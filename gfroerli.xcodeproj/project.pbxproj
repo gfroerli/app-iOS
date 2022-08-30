@@ -10,6 +10,8 @@
 		2411AAFA28BA47D200D5B59D /* FetchTypeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2411AAF928BA47D100D5B59D /* FetchTypeTests.swift */; };
 		2411AAFD28BA4E8D00D5B59D /* MeasurementUtilsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2411AAFC28BA4E8D00D5B59D /* MeasurementUtilsTests.swift */; };
 		2411AAFF28BA53D900D5B59D /* LocationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2411AAFE28BA53D900D5B59D /* LocationTests.swift */; };
+		241E02C828BE7F3F007DFEA7 /* DateUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 241E02C728BE7F3F007DFEA7 /* DateUtil.swift */; };
+		241E02CA28BE8338007DFEA7 /* LocationMapPreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 241E02C928BE8338007DFEA7 /* LocationMapPreviewView.swift */; };
 		242F4E4528BB7981005C27B6 /* SponsorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 242F4E4428BB7981005C27B6 /* SponsorTests.swift */; };
 		242F4E5128BB7DF0005C27B6 /* SponsorFull.json in Resources */ = {isa = PBXBuildFile; fileRef = 242F4E4E28BB7DF0005C27B6 /* SponsorFull.json */; };
 		242F4E5228BB7DF0005C27B6 /* SponsorAdditional.json in Resources */ = {isa = PBXBuildFile; fileRef = 242F4E4F28BB7DF0005C27B6 /* SponsorAdditional.json */; };
@@ -26,7 +28,7 @@
 		8D31E32F286601950095622E /* HourlyTemperaturesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D31E32E286601950095622E /* HourlyTemperaturesViewModel.swift */; };
 		8D31E332286604450095622E /* LocationDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D31E331286604450095622E /* LocationDetailView.swift */; };
 		8D3C681B285B672100DC8CA4 /* LocationTile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D3C681A285B672100DC8CA4 /* LocationTile.swift */; };
-		8D3C681D285B6E4800DC8CA4 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D3C681C285B6E4800DC8CA4 /* Configuration.swift */; };
+		8D3C681D285B6E4800DC8CA4 /* AppConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D3C681C285B6E4800DC8CA4 /* AppConfiguration.swift */; };
 		8D54890D2856315C007253FE /* gfroerliApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D54890C2856315C007253FE /* gfroerliApp.swift */; };
 		8D54890F2856315C007253FE /* NavigationBaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D54890E2856315C007253FE /* NavigationBaseView.swift */; };
 		8D5489112856315D007253FE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8D5489102856315D007253FE /* Assets.xcassets */; };
@@ -123,6 +125,8 @@
 		2411AAFB28BA4D7D00D5B59D /* GfroerliAPI.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; name = GfroerliAPI.xctestplan; path = gfroerli.xcodeproj/GfroerliAPI.xctestplan; sourceTree = SOURCE_ROOT; };
 		2411AAFC28BA4E8D00D5B59D /* MeasurementUtilsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MeasurementUtilsTests.swift; path = GfroerliAPITests/Tests/MeasurementUtilsTests.swift; sourceTree = SOURCE_ROOT; };
 		2411AAFE28BA53D900D5B59D /* LocationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationTests.swift; sourceTree = "<group>"; };
+		241E02C728BE7F3F007DFEA7 /* DateUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateUtil.swift; sourceTree = "<group>"; };
+		241E02C928BE8338007DFEA7 /* LocationMapPreviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationMapPreviewView.swift; sourceTree = "<group>"; };
 		242F4E4428BB7981005C27B6 /* SponsorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SponsorTests.swift; sourceTree = "<group>"; };
 		242F4E4E28BB7DF0005C27B6 /* SponsorFull.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = SponsorFull.json; sourceTree = "<group>"; };
 		242F4E4F28BB7DF0005C27B6 /* SponsorAdditional.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = SponsorAdditional.json; sourceTree = "<group>"; };
@@ -139,7 +143,7 @@
 		8D31E32E286601950095622E /* HourlyTemperaturesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HourlyTemperaturesViewModel.swift; sourceTree = "<group>"; };
 		8D31E331286604450095622E /* LocationDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationDetailView.swift; sourceTree = "<group>"; };
 		8D3C681A285B672100DC8CA4 /* LocationTile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationTile.swift; sourceTree = "<group>"; };
-		8D3C681C285B6E4800DC8CA4 /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
+		8D3C681C285B6E4800DC8CA4 /* AppConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfiguration.swift; sourceTree = "<group>"; };
 		8D5489092856315C007253FE /* gfroerli.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = gfroerli.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D54890C2856315C007253FE /* gfroerliApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gfroerliApp.swift; sourceTree = "<group>"; };
 		8D54890E2856315C007253FE /* NavigationBaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBaseView.swift; sourceTree = "<group>"; };
@@ -292,6 +296,7 @@
 				8D31E331286604450095622E /* LocationDetailView.swift */,
 				8DE7D71B28674BBE001684D1 /* LatestTemperatureView.swift */,
 				8DE7D71D2867513A001684D1 /* TemperatureSummaryView.swift */,
+				241E02C928BE8338007DFEA7 /* LocationMapPreviewView.swift */,
 			);
 			path = LocationDetail;
 			sourceTree = "<group>";
@@ -342,7 +347,6 @@
 				8D8961BB2857932600C2A7CC /* ViewModels */,
 				8D54893928563185007253FE /* Info.plist */,
 				8D54890C2856315C007253FE /* gfroerliApp.swift */,
-				8D3C681C285B6E4800DC8CA4 /* Configuration.swift */,
 				8D5489102856315D007253FE /* Assets.xcassets */,
 				8D5489122856315D007253FE /* gfroerli.entitlements */,
 				8D5489132856315D007253FE /* Preview Content */,
@@ -502,6 +506,8 @@
 		8D9328E4285B98930076E174 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				8D3C681C285B6E4800DC8CA4 /* AppConfiguration.swift */,
+				241E02C728BE7F3F007DFEA7 /* DateUtil.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -734,6 +740,7 @@
 				8D8961C42858E4B900C2A7CC /* UIDevice+Extension.swift in Sources */,
 				8DEE78C8285E460A009D853C /* ChangeLogView.swift in Sources */,
 				8DE7D71E2867513A001684D1 /* TemperatureSummaryView.swift in Sources */,
+				241E02CA28BE8338007DFEA7 /* LocationMapPreviewView.swift in Sources */,
 				8DE7D720286756DF001684D1 /* SingleLocationViewModel.swift in Sources */,
 				8D31E332286604450095622E /* LocationDetailView.swift in Sources */,
 				8D8961C72858F5AD00C2A7CC /* MapView.swift in Sources */,
@@ -748,11 +755,12 @@
 				8D31E32F286601950095622E /* HourlyTemperaturesViewModel.swift in Sources */,
 				8DE7D72228675AA4001684D1 /* View+Modifiers.swift in Sources */,
 				8DEE78C4285E3313009D853C /* SettingsThumbnailView.swift in Sources */,
-				8D3C681D285B6E4800DC8CA4 /* Configuration.swift in Sources */,
+				8D3C681D285B6E4800DC8CA4 /* AppConfiguration.swift in Sources */,
 				8D9328E3285B95110076E174 /* LocationsGridView.swift in Sources */,
 				8DE7D71C28674BBE001684D1 /* LatestTemperatureView.swift in Sources */,
 				8DEE78C6285E4497009D853C /* FAQView.swift in Sources */,
 				8DEE78BF285E319E009D853C /* SettingsView.swift in Sources */,
+				241E02C828BE7F3F007DFEA7 /* DateUtil.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

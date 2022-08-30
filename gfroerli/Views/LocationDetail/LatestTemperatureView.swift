@@ -9,40 +9,31 @@ import SwiftUI
 import GfroerliAPI
 
 struct LatestTemperatureView: View {
-
-    typealias config = AppConfiguration.LoacationDetails
-
+    
+    typealias config = AppConfiguration.LocationDetails
+    
     @Environment(\.colorScheme) var colorScheme
     @Binding var location: Location
     
     // MARK: - Body
     var body: some View {
-        VStack(alignment: .leading) {
+        HStack(alignment: .top) {
+            Text("Latest: ")
+                .minimumScaleFactor(0.1)
             
-            HStack {
-                Text("Latest Temperature: ")
+            Spacer()
+            VStack(alignment: .trailing) {
+                Text(location.latestTemperatureString)
+                Text(location.lastTemperatureDateString)
+                    .font(.title3)
+                    .foregroundColor(.secondary)
                     .minimumScaleFactor(0.1)
-                    .fixedSize(horizontal: false, vertical: true)
-                    .lineLimit(2, reservesSpace: true)
-                Spacer()
+                    .lineLimit(2)
             }
-
-            HStack {
-                Spacer()
-                VStack(alignment:.trailing) {
-                    Text(location.latestTemperatureString)
-                    Text(location.lastTemperatureDateString)
-                        .font(.title3)
-                        .foregroundColor(.secondary)
-                        .minimumScaleFactor(0.1)
-                        .fixedSize(horizontal: false, vertical: true)
-                        .lineLimit(2)
-                }
-            }
-
         }
         .font(.largeTitle.bold())
         .padding()
+        .defaultBoxStyle()
     }
 }
 

@@ -7,6 +7,7 @@
 
 import Foundation
 import UIKit
+import MapKit
 
 /// Contains all the configuration values for layout
 enum AppConfiguration {
@@ -20,9 +21,16 @@ enum AppConfiguration {
         static let gridSpacing = 25.0
     }
     
-    enum LoacationDetails {
+    enum LocationDetails {
         /// Height of the top boxes in location details view
         static let topBoxHeight = 180.0
+    }
+    
+    enum MapPreviewView {
+        // Default coordinates to display if coordinate of Location is nil
+        static let defaultCoordinates = CLLocation(latitude: 46.80121, longitude:  8.226692)
+        // Default span of map in meters
+        static let defaultMapSpan = 1250.0
     }
     
     enum Settings {
