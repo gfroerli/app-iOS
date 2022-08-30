@@ -17,7 +17,11 @@ class AllLocationsViewModel: ObservableObject {
             fatalError("")
         }
         allLocations = fetchedLocations
-        // TODO
-        activeLocations = fetchedLocations
+        activeLocations = fetchedLocations.filter({ location in
+            guard let lastTempDate = location.lastTemperatureDate else {
+                return false
+            }
+            return DateUtil.wasInLast72Hours(givenDate: lastTempDate)
+        })
     }
 }
