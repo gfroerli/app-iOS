@@ -24,7 +24,7 @@ struct LocationDetailView: View {
             
             TemperatureSummaryView(location: $locationVM.location)
             
-            LocationMapPreviewView(location: locationVM.location)
+            LocationMapPreviewView(location: $locationVM.location)
             Spacer()
                 .navigationTitle(locationVM.location.name)
                 .navigationBarTitleDisplayMode(.inline)

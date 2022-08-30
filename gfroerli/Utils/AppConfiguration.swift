@@ -29,6 +29,8 @@ enum AppConfiguration {
     enum MapPreviewView {
         // Default coordinates to display if coordinate of Location is nil
         static let defaultCoordinates = CLLocation(latitude: 46.80121, longitude:  8.226692)
+        // Default region to display if coordinate of Location is nil
+        static let defaultRegion = MKCoordinateRegion(center: defaultCoordinates.coordinate, latitudinalMeters: defaultMapSpan * 5, longitudinalMeters: defaultMapSpan * 5)
         // Default span of map in meters
         static let defaultMapSpan = 1250.0
     }
