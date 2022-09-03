@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Sponsor: Identifiable {
+public struct Sponsor: Identifiable, Equatable {
     
     public let id: Int
     let jName: String?
@@ -47,12 +47,20 @@ extension Sponsor: Codable {
         case logoUrl = "logo_url"
     }
     
-    init(from decoder: Decoder) throws {
+    public init(from decoder: Decoder) throws {
         let values = try decoder.container(keyedBy: CodingKeys.self)
         
         id = try values.decode(Int.self, forKey: .id)
         jName = try values.decodeIfPresent(String.self, forKey: .jName)
         jDescription = try values.decodeIfPresent(String.self, forKey: .jDescription)
         logoUrl = try values.decodeIfPresent(URL.self, forKey: .logoUrl)
+    }
+}
+
+
+// MARK: - Example
+extension Sponsor {
+    public static func exampleSponsor() -> Sponsor {
+        Sponsor(id: 0, jName: "Test Sponsor", jDescription: "Test Sponsor Description", logoUrl: URL(string: "www.gfoer.li")!)
     }
 }
