@@ -13,7 +13,7 @@ struct LatestTemperatureView: View {
     typealias config = AppConfiguration.LocationDetails
     
     @Environment(\.colorScheme) var colorScheme
-    @Binding var location: Location
+    @Binding var location: Location?
     
     // MARK: - Body
     var body: some View {
@@ -23,13 +23,14 @@ struct LatestTemperatureView: View {
             
             Spacer()
             VStack(alignment: .trailing) {
-                Text(location.latestTemperatureString)
-                Text(location.lastTemperatureDateString)
+                Text(location!.latestTemperatureString)
+                Text(location!.lastTemperatureDateString)
                     .font(.title3)
                     .foregroundColor(.secondary)
                     .minimumScaleFactor(0.1)
                     .lineLimit(2)
             }
+            .redacted(reason: location == nil ? .placeholder : [])
         }
         .font(.largeTitle.bold())
         .padding()

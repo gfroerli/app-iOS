@@ -34,6 +34,16 @@ enum AppConfiguration {
         // Default span of map in meters
         static let defaultMapSpan = 1250.0
     }
+    enum MapView {
+        // Default coordinates to display if coordinate of Location is nil
+        static let defaultCoordinates = CLLocation(latitude: 46.80121, longitude:  8.226692)
+        // Default region to display if coordinate of Location is nil
+        static let defaultRegion = MKCoordinateRegion(center: defaultCoordinates.coordinate, latitudinalMeters: defaultMapSpan, longitudinalMeters: defaultMapSpan)
+        // Default span of map in meters
+        static let defaultMapSpan = 100_000.0
+        // Zoomed in span of map in meters
+        static let zoomedMapSpan = 1000.0
+    }
     
     enum Settings {
         /// String containing current version number, e.g. 1.0

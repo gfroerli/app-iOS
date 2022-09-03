@@ -10,10 +10,9 @@ import GfroerliAPI
 
 @MainActor
 class SingleLocationsViewModel: ObservableObject {
-    @Published var location: Location
+    @Published var location: Location?
     
     init(id: Int) {
-        location = Location.exampleLocation()
         Task {
             self.location = try! await loadInitialLocation(for: id)
         }

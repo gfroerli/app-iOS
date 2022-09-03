@@ -12,7 +12,7 @@ struct TemperatureSummaryView: View {
 
     typealias config = AppConfiguration.LocationDetails
     
-    @Binding var location: Location
+    @Binding var location: Location?
 
     var body: some View {
         VStack(alignment: .leading) {
@@ -21,24 +21,26 @@ struct TemperatureSummaryView: View {
                 Text("All time:")
                     .font(.title.bold())
             }
-            
-            HStack {
-                Text("Highest:")
-                Spacer()
-                Text(location.highestTemperatureString)
+            VStack {
+                HStack {
+                    Text("Highest:")
+                    Spacer()
+                    Text(location!.highestTemperatureString)
+                }
+                
+                HStack {
+                    Text("Average:")
+                    Spacer()
+                    Text(location!.averageTemperatureString)
+                }
+                
+                HStack {
+                    Text("Lowest:")
+                    Spacer()
+                    Text(location!.lowestTemperatureString)
+                }
             }
-            
-            HStack {
-                Text("Average:")
-                Spacer()
-                Text(location.averageTemperatureString)
-            }
-            
-            HStack {
-                Text("Lowest:")
-                Spacer()
-                Text(location.lowestTemperatureString)
-            }
+            .redacted(reason: location == nil ? .placeholder : [])
         }
         .font(.title2)
         .minimumScaleFactor(0.1)
