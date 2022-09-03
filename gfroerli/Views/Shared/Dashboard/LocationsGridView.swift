@@ -40,7 +40,7 @@ struct LocationsGridView: View {
                         .buttonStyle(.plain)
                     }
                 }
-                .padding()
+                .padding(.vertical)
             }.scrollIndicators(.never)
         }
     }

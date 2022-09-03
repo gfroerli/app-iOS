@@ -23,6 +23,7 @@ extension View {
                     .stroke(.primary, lineWidth: 0.1)
                 
             }
+            .padding(.horizontal)
     }
     
 }
