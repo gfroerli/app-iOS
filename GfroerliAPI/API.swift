@@ -1,6 +1,6 @@
 //
 //  GfroerliLoader.swift
-//  
+//
 //
 //  Created by Marc Kramer on 12.06.22.
 //
@@ -9,7 +9,7 @@ import Foundation
 
 public class GfroerliAPI {
     
-    public init() {}
+    public init() { }
     
     private lazy var decoder: JSONDecoder = {
         let decoder = JSONDecoder()
@@ -28,7 +28,7 @@ public class GfroerliAPI {
         guard let data else {
             fatalError()
         }
-        let objects = try? self.decoder.decode(T.self, from: data)
+        let objects = try? decoder.decode(T.self, from: data)
         guard let objects else {
             fatalError()
         }

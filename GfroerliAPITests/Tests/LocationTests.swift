@@ -5,8 +5,8 @@
 //  Created by Marc on 27.08.22.
 //
 
-import XCTest
 import CoreLocation
+import XCTest
 @testable import GfroerliAPI
 
 final class LocationTests: XCTestCase {
@@ -14,6 +14,7 @@ final class LocationTests: XCTestCase {
     let jsonDecoder = JSONDecoder()
     
     // MARK: - Intitialization
+
     func testLocationInitialisationAllValues() {
         // Arrange
         let id = 1
@@ -30,7 +31,20 @@ final class LocationTests: XCTestCase {
         let avg = 10.0
         
         // Act
-        let location = Location(id: id, jName: name, jDescription: desc, jLatitude: lat, jLongitude: long, creationDate: creationDate, sponsorID: sponsorID, latestTemperature: latestTemp, lastTemperatureDate: latestTempDate, highestTemperature: highest, lowestTemperature: lowest, averageTemperature: avg)
+        let location = Location(
+            id: id,
+            jName: name,
+            jDescription: desc,
+            jLatitude: lat,
+            jLongitude: long,
+            creationDate: creationDate,
+            sponsorID: sponsorID,
+            latestTemperature: latestTemp,
+            lastTemperatureDate: latestTempDate,
+            highestTemperature: highest,
+            lowestTemperature: lowest,
+            averageTemperature: avg
+        )
         
         // Assert
         XCTAssertEqual(location.id, id)
@@ -51,6 +65,7 @@ final class LocationTests: XCTestCase {
     }
     
     // MARK: - Unwrapping
+
     func testLocationUnwrapName() {
         // Arrange
         let name = "TestName"
@@ -107,8 +122,8 @@ final class LocationTests: XCTestCase {
         
         // Assert
         XCTAssertEqual(location.highestTemperatureString, tempString)
-        
     }
+
     func testLocationUnwrapLowestTempString() {
         // Arrange
         let temp = 20.0
@@ -131,7 +146,6 @@ final class LocationTests: XCTestCase {
         XCTAssertEqual(location.averageTemperatureString, tempString)
     }
     
-    
     func testLocationUnwrapNilValues() {
         // Arrange
         // Nothing to do
@@ -151,7 +165,8 @@ final class LocationTests: XCTestCase {
     }
     
     // MARK: - Decoding
-    func testLocationDecodingAllValues() throws{
+
+    func testLocationDecodingAllValues() throws {
         // Arrange
         let data = try JsonLoader.loadJson(fileName: "LocationFull")
         
@@ -189,7 +204,7 @@ final class LocationTests: XCTestCase {
         XCTAssertEqual(location.averageTemperature, avg)
     }
     
-    func testLocationDecodingMissingValues() throws{
+    func testLocationDecodingMissingValues() throws {
         // Arrange
         let data = try JsonLoader.loadJson(fileName: "LocationMissing")
         
@@ -202,7 +217,7 @@ final class LocationTests: XCTestCase {
         XCTAssertEqual(location.id, id)
     }
     
-    func testLocationDecodingAdditionalValues() throws{
+    func testLocationDecodingAdditionalValues() throws {
         // Arrange
         let data = try JsonLoader.loadJson(fileName: "LocationAdditional")
         

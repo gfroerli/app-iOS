@@ -5,9 +5,9 @@
 //  Created by Marc on 02.09.22.
 //
 
-import SwiftUI
 import GfroerliAPI
 import MapKit
+import SwiftUI
 
 struct GfroerliMapAnnotation: View {
     

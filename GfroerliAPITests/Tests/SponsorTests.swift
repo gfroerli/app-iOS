@@ -13,6 +13,7 @@ final class SponsorTests: XCTestCase {
     let jsonDecoder = JSONDecoder()
     
     // MARK: - Intitialization
+
     func testSponsorInitialisationAllValues() {
         // Arrange
         let id = 1
@@ -21,16 +22,17 @@ final class SponsorTests: XCTestCase {
         let url = URL(string: "www.example.com/sponsor")!
         
         // Act
-        let sponsor = Sponsor(id: id, jName: name, jDescription: desc, logoUrl: url)
+        let sponsor = Sponsor(id: id, jName: name, jDescription: desc, logoURL: url)
         
         // Assert
         XCTAssertEqual(sponsor.id, id)
         XCTAssertEqual(sponsor.name, name)
         XCTAssertEqual(sponsor.jDescription, desc)
-        XCTAssertEqual(sponsor.logoUrl, url)
+        XCTAssertEqual(sponsor.logoURL, url)
     }
     
     // MARK: - Unwrapping
+
     func testSponsorUnwrapName() {
         // Arrange
         let name = "TestName"
@@ -66,7 +68,8 @@ final class SponsorTests: XCTestCase {
     }
     
     // MARK: - Decoding
-    func testSponsorDecodingAllValues() throws{
+
+    func testSponsorDecodingAllValues() throws {
         // Arrange
         let data = try JsonLoader.loadJson(fileName: "SponsorFull")
         
@@ -75,7 +78,6 @@ final class SponsorTests: XCTestCase {
         let desc = "TestDesc"
         let url = URL(string: "www.example.com/sponsor")!
         
-        
         // Act
         let sponsor = try jsonDecoder.decode(Sponsor.self, from: data)
         
@@ -83,11 +85,10 @@ final class SponsorTests: XCTestCase {
         XCTAssertEqual(sponsor.id, id)
         XCTAssertEqual(sponsor.jName, name)
         XCTAssertEqual(sponsor.jDescription, desc)
-        XCTAssertEqual(sponsor.logoUrl, url)
-        
+        XCTAssertEqual(sponsor.logoURL, url)
     }
     
-    func testSponsorDecodingMissingValues() throws{
+    func testSponsorDecodingMissingValues() throws {
         // Arrange
         let data = try JsonLoader.loadJson(fileName: "SponsorMissing")
         
@@ -100,7 +101,7 @@ final class SponsorTests: XCTestCase {
         XCTAssertEqual(sponsor.id, id)
     }
     
-    func testSponsorDecodingAdditionalValues() throws{
+    func testSponsorDecodingAdditionalValues() throws {
         // Arrange
         let data = try JsonLoader.loadJson(fileName: "SponsorAdditional")
         

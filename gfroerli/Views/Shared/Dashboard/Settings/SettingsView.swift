@@ -31,8 +31,8 @@ struct SettingsView: View {
     }
 }
 
-
 // MARK: - Header
+
 struct SettingsHeaderView: View {
     
     typealias config = AppConfiguration.Settings
@@ -64,7 +64,9 @@ struct SettingsHeaderView: View {
         }
     }
 }
+
 // MARK: - General
+
 struct SettingsGeneralSectionView: View {
     var body: some View {
         Section(header: Text("General")) {
@@ -79,7 +81,7 @@ struct SettingsGeneralSectionView: View {
                 })
             }
             
-            // Changelog
+            // Change log
             NavigationLink {
                 ChangeLogView()
             } label: {
@@ -106,13 +108,15 @@ struct SettingsGeneralSectionView: View {
     
     private func openLanguageSettings() {
         UIApplication.shared.open(
-            URL.init(string: UIApplication.openSettingsURLString)!,
+            URL(string: UIApplication.openSettingsURLString)!,
             options: [:],
             completionHandler: nil
         )
     }
 }
+
 // MARK: - Links
+
 struct SettingsLinksSectionView: View {
     @Environment(\.openURL) var openURL
 
@@ -196,6 +200,7 @@ struct SettingsLinksSectionView: View {
 }
 
 // MARK: - Preview
+
 struct SettingsView_Previews: PreviewProvider {
     static var previews: some View {
         SettingsView()

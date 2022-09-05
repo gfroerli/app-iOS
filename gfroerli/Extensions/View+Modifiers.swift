@@ -13,17 +13,14 @@ extension View {
     func defaultBoxStyle() -> some View {
         @Environment(\.colorScheme) var colorScheme
 
-        return self
-            .background(Color(UIColor.systemBackground))
+        return background(Color(UIColor.systemBackground))
             .frame(maxWidth: .infinity)
             .cornerRadius(15)
             .shadow(color: colorScheme == .light ? .secondary.opacity(0.3) : .clear, radius: 3)
             .overlay {
                 RoundedRectangle(cornerRadius: 15)
                     .stroke(.primary, lineWidth: 0.1)
-                
             }
             .padding(.horizontal)
     }
-    
 }

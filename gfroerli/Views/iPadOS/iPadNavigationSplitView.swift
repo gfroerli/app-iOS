@@ -14,7 +14,7 @@ struct iPadNavigationSplitView: View {
     var body: some View {
         NavigationSplitView {
             List(
-                Tabs.allCases, selection: $navModel.selectedTab
+                Tabs.allCases
             ) { tab in
                 NavigationLink(value: tab) {
                     Label(tab.localizedName, systemImage: tab.symbolName)
@@ -24,7 +24,7 @@ struct iPadNavigationSplitView: View {
             .navigationSplitViewStyle(.balanced)
             
         } detail: {
-            NavigationStack(path: $navModel.dashboardPath) {
+            NavigationStack(path: $navModel.navigationPath) {
                 switch navModel.selectedTab {
                 case .dashboard:
                     DashboardView()

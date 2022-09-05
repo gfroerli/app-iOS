@@ -11,6 +11,7 @@ import XCTest
 final class APIConfigurationTests: XCTestCase {
     
     // MARK: - preprocessDate()
+
     func testPreprocessDate5Days() throws {
         // Arrange
         let startDate = "2022/08/27"
@@ -40,6 +41,7 @@ final class APIConfigurationTests: XCTestCase {
     }
     
     // MARK: - Helpers
+
     private func dateCreator(string: String) -> Date? {
         let formatter = DateFormatter()
         formatter.dateFormat = "yyyy/MM/dd"

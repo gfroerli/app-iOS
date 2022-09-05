@@ -13,7 +13,8 @@ final class TemperatureMeasurementTests: XCTestCase {
     let jsonDecoder = JSONDecoder()
     
     // MARK: - Decoding
-    func testTemperatureMeasurementDecodingAllValues() throws{
+
+    func testTemperatureMeasurementDecodingAllValues() throws {
         // Arrange
         let data = try JsonLoader.loadJson(fileName: "TemperatureMeasurementFull")
         
@@ -21,7 +22,6 @@ final class TemperatureMeasurementTests: XCTestCase {
         let lowest = 20.0
         let average = 25.0
         let highest = 30.0
-        
         
         // Act
         let measurement = try jsonDecoder.decode(TemperatureMeasurement.self, from: data)
@@ -33,7 +33,7 @@ final class TemperatureMeasurementTests: XCTestCase {
         XCTAssertEqual(measurement.highest, highest)
     }
     
-    func testTemperatureMeasurementDecodingMissingValues() throws{
+    func testTemperatureMeasurementDecodingMissingValues() throws {
         // Arrange
         let data = try JsonLoader.loadJson(fileName: "TemperatureMeasurementFull")
         
@@ -45,7 +45,7 @@ final class TemperatureMeasurementTests: XCTestCase {
         XCTAssertEqual(measurement.measurementDate, measurementDate)
     }
     
-    func testTemperatureMeasurementDecodingAdditionalValues() throws{
+    func testTemperatureMeasurementDecodingAdditionalValues() throws {
         // Arrange
         let data = try JsonLoader.loadJson(fileName: "TemperatureMeasurementAdditional")
         
@@ -57,8 +57,8 @@ final class TemperatureMeasurementTests: XCTestCase {
         XCTAssertEqual(measurement.measurementDate, measurementDate)
     }
     
-    
     // MARK: - Helpers
+
     private func dateCreator(string: String) -> Date? {
         let formatter = DateFormatter()
         formatter.dateFormat = "yyyy/MM/dd"

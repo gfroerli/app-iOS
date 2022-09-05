@@ -1,16 +1,17 @@
 //
 //  Location.swift
-//  
+//
 //
 //  Created by Marc Kramer on 12.06.22.
 //
 
-import Foundation
 import CoreLocation
+import Foundation
 
 public struct Location: Equatable, Identifiable, Hashable {
     
     // MARK: Properties
+
     public let id: Int
     let jName: String?
     let jDescription: String?
@@ -28,7 +29,21 @@ public struct Location: Equatable, Identifiable, Hashable {
     public let averageTemperature: Double?
     
     // MARK: Lifecycle
-    init(id: Int, jName: String? = nil, jDescription: String? = nil, jLatitude: Double? = nil, jLongitude: Double? = nil, creationDate: Date? = nil, sponsorID: Int? = nil, latestTemperature: Double? = nil, lastTemperatureDate: Date? = nil, highestTemperature: Double? = nil, lowestTemperature: Double? = nil, averageTemperature: Double? = nil) {
+
+    init(
+        id: Int,
+        jName: String? = nil,
+        jDescription: String? = nil,
+        jLatitude: Double? = nil,
+        jLongitude: Double? = nil,
+        creationDate: Date? = nil,
+        sponsorID: Int? = nil,
+        latestTemperature: Double? = nil,
+        lastTemperatureDate: Date? = nil,
+        highestTemperature: Double? = nil,
+        lowestTemperature: Double? = nil,
+        averageTemperature: Double? = nil
+    ) {
         self.id = id
         self.jName = jName
         self.jDescription = jDescription
@@ -46,20 +61,20 @@ public struct Location: Equatable, Identifiable, Hashable {
 
 // MARK: - Unwrapping
 
-extension Location {
+public extension Location {
     
     /// Name of the Location
-    public var name: String {
+    var name: String {
         jName ?? "No Name"
     }
     
     /// Short description of the Location
-    public var description: String {
+    var description: String {
         jDescription ?? "No Description"
     }
     
     /// Created CLLocation of Location
-    public var coordinates: CLLocation? {
+    var coordinates: CLLocation? {
         guard let lat = jLatitude,
               let long = jLongitude else {
             return nil
@@ -68,7 +83,7 @@ extension Location {
     }
     
     /// String of  date of last measurement relative to now
-    public var lastTemperatureDateString: String {
+    var lastTemperatureDateString: String {
         guard let lastTemperatureDate else {
             return "Unknown"
         }
@@ -77,19 +92,19 @@ extension Location {
         return formatter.localizedString(for: lastTemperatureDate, relativeTo: .now)
     }
     
-    public var latestTemperatureString: String {
+    var latestTemperatureString: String {
         MeasurementUtils.shared.temperatureString(from: latestTemperature)
     }
     
-    public var lowestTemperatureString: String {
+    var lowestTemperatureString: String {
         MeasurementUtils.shared.temperatureString(from: lowestTemperature)
     }
     
-    public var averageTemperatureString: String {
+    var averageTemperatureString: String {
         MeasurementUtils.shared.temperatureString(from: averageTemperature)
     }
     
-    public var highestTemperatureString: String {
+    var highestTemperatureString: String {
         MeasurementUtils.shared.temperatureString(from: highestTemperature)
     }
 }
@@ -98,7 +113,7 @@ extension Location {
 
 extension Location: Codable {
     enum CodingKeys: String, CodingKey {
-        case id = "id"
+        case id
         
         case jName = "device_name"
         case jDescription = "caption"
@@ -117,6 +132,7 @@ extension Location: Codable {
     }
     
     // MARK: - Decoder
+
     public init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         
@@ -140,8 +156,22 @@ extension Location: Codable {
 }
 
 // MARK: - Example
-extension Location {
-    public static func exampleLocation() -> Location {
-        Location(id: 0, jName: "Test Location", jDescription: "This is just a description for the test location", jLatitude: 47.0, jLongitude: 8.0, creationDate: Date.now, sponsorID: 0, latestTemperature: 20.5, lastTemperatureDate: Date.now, highestTemperature: 20.0, lowestTemperature: 10.5, averageTemperature: 15.5)
+
+public extension Location {
+    static func exampleLocation() -> Location {
+        Location(
+            id: 0,
+            jName: "Test Location",
+            jDescription: "This is just a description for the test location",
+            jLatitude: 47.0,
+            jLongitude: 8.0,
+            creationDate: Date.now,
+            sponsorID: 0,
+            latestTemperature: 20.5,
+            lastTemperatureDate: Date.now,
+            highestTemperature: 20.0,
+            lowestTemperature: 10.5,
+            averageTemperature: 15.5
+        )
     }
 }

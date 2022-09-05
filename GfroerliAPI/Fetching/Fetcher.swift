@@ -1,13 +1,13 @@
 //
 //  Fetcher.swift
-//  
+//
 //
 //  Created by Marc Kramer on 12.06.22.
 //
 
 import Foundation
 
-public class Fetcher {
+public enum Fetcher {
     
     /// Fetches the data of a given type
     /// - Parameter type: FetchType

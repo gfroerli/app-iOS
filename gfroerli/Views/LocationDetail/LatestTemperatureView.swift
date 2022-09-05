@@ -5,8 +5,8 @@
 //  Created by Marc Kramer on 25.06.22.
 //
 
-import SwiftUI
 import GfroerliAPI
+import SwiftUI
 
 struct LatestTemperatureView: View {
     
@@ -15,6 +15,7 @@ struct LatestTemperatureView: View {
     @Binding var location: Location?
     
     // MARK: - Body
+
     var body: some View {
         HStack(alignment: .top) {
             Text("Latest:")
@@ -38,6 +39,7 @@ struct LatestTemperatureView: View {
 }
 
 // MARK: - Preview
+
 struct LatestTemperatureView_Previews: PreviewProvider {
     static var previews: some View {
         LatestTemperatureView(location: Binding.constant(Location.exampleLocation()))

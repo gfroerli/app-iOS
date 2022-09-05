@@ -6,8 +6,8 @@
 //
 
 import Foundation
-import UIKit
 import MapKit
+import UIKit
 
 /// Contains all the configuration values for layout
 enum AppConfiguration {
@@ -37,9 +37,13 @@ enum AppConfiguration {
     
     enum MapPreviewView {
         // Default coordinates to display if coordinate of Location is nil
-        static let defaultCoordinates = CLLocation(latitude: 46.80121, longitude:  8.226692)
+        static let defaultCoordinates = CLLocation(latitude: 46.80121, longitude: 8.226692)
         // Default region to display if coordinate of Location is nil
-        static let defaultRegion = MKCoordinateRegion(center: defaultCoordinates.coordinate, latitudinalMeters: defaultMapSpan * 5, longitudinalMeters: defaultMapSpan * 5)
+        static let defaultRegion = MKCoordinateRegion(
+            center: defaultCoordinates.coordinate,
+            latitudinalMeters: defaultMapSpan * 5,
+            longitudinalMeters: defaultMapSpan * 5
+        )
         // Default span of map in meters
         static let defaultMapSpan = 1250.0
         // Height of map
@@ -48,9 +52,13 @@ enum AppConfiguration {
     
     enum MapView {
         // Default coordinates to display if coordinate of Location is nil
-        static let defaultCoordinates = CLLocation(latitude: 46.80121, longitude:  8.226692)
+        static let defaultCoordinates = CLLocation(latitude: 46.80121, longitude: 8.226692)
         // Default region to display if coordinate of Location is nil
-        static let defaultRegion = MKCoordinateRegion(center: defaultCoordinates.coordinate, latitudinalMeters: defaultMapSpan, longitudinalMeters: defaultMapSpan)
+        static let defaultRegion = MKCoordinateRegion(
+            center: defaultCoordinates.coordinate,
+            latitudinalMeters: defaultMapSpan,
+            longitudinalMeters: defaultMapSpan
+        )
         // Default span of map in meters
         static let defaultMapSpan = 100_000.0
         // Zoomed in span of map in meters
@@ -69,7 +77,7 @@ enum AppConfiguration {
             )
             
             components?.queryItems = [
-                URLQueryItem(name: "action", value: "write-review")
+                URLQueryItem(name: "action", value: "write-review"),
             ]
             return components!.url!
         }()
@@ -80,12 +88,15 @@ enum AppConfiguration {
             let subject = "Feedback iOS Version: \(lastVersion)"
             let body = emailBody
             
-            return URL(string: "mailto:\(email)?subject=\(subject.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? "")&body=\(body.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed)!)")!
+            return URL(
+                string: "mailto:\(email)?subject=\(subject.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? "")&body=\(body.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed)!)"
+            )!
         }()
         
         /// Email body
         private static let emailBody: String = {
-            let version = ("App-Version: \(Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String ?? "unkown")")
+            let version =
+                "App-Version: \(Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String ?? "unkown")"
             let systemVersion = "OS-Version: \(UIDevice.current.systemName) \(UIDevice.current.systemVersion)"
             let lang = "Language: \(Locale.current.language.languageCode?.identifier ?? "unkown")"
             let str = NSLocalizedString("email_text", comment: "")
