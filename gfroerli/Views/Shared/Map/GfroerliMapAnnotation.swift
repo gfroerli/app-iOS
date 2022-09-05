@@ -10,15 +10,20 @@ import GfroerliAPI
 import MapKit
 
 struct GfroerliMapAnnotation: View {
+    
     let location: Location
+    
     var body: some View {
         HStack {
             Image(systemName: "thermometer.medium")
                 .symbolRenderingMode(.palette)
                 .foregroundStyle(.red, .white, .blue)
                 .padding(.leading, 6)
+            
             Text(location.name)
+            
             Text(location.latestTemperatureString)
+            
             Image(systemName: "chevron.right")
                 .fontWeight(.semibold)
                 .foregroundColor(.blue)
@@ -36,7 +41,9 @@ struct GfroerliMapAnnotation: View {
 }
 
 struct GfroerliMapAnnotationPin: View {
+    
     let location: Location
+    
     var body: some View {
         ZStack {
             Circle()
@@ -51,7 +58,6 @@ struct GfroerliMapAnnotationPin: View {
                         .foregroundStyle(.red, .white, .blue)
                         .padding(5)
                 }
-            
         }
     }
 }

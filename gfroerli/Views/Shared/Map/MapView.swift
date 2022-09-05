@@ -20,10 +20,10 @@ struct LocationMapView: View {
     @State private var region =  config.defaultRegion
     
     var body: some View {
-        NavigationStack(path: $navigationModel.locationPath){
+        NavigationStack(path: $navigationModel.mapPath){
             
             Map(coordinateRegion: $region, annotationItems: annotationLocations()) { location in
-                MapAnnotation(coordinate: location.coordinates?.coordinate ?? CLLocationCoordinate2D(latitude: 0.0, longitude: 0.0)) {
+                MapAnnotation(coordinate: location.coordinates?.coordinate ?? config.defaultCoordinates.coordinate) {
                     
                     if location.coordinates == nil {
                         EmptyView()
@@ -37,6 +37,7 @@ struct LocationMapView: View {
                     }
                 }
             }
+            
             .toolbar {
                 ToolbarItem(placement: .primaryAction) {
                     Menu {
@@ -52,6 +53,7 @@ struct LocationMapView: View {
             }
             .navigationTitle("Map")
             .navigationBarTitleDisplayMode(.inline)
+            
             .onAppear {
                 guard !locationsViewModel.allLocations.isEmpty else {
                     return
@@ -87,7 +89,6 @@ struct LocationMapView: View {
             return locationsViewModel.allLocations
         case 1:
             return  locationsViewModel.activeLocations
-            
         default:
             return locationsViewModel.allLocations
         }

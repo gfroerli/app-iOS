@@ -12,13 +12,12 @@ struct LatestTemperatureView: View {
     
     typealias config = AppConfiguration.LocationDetails
     
-    @Environment(\.colorScheme) var colorScheme
     @Binding var location: Location?
     
     // MARK: - Body
     var body: some View {
         HStack(alignment: .top) {
-            Text("Latest: ")
+            Text("Latest:")
                 .minimumScaleFactor(0.1)
             
             Spacer()
@@ -30,9 +29,9 @@ struct LatestTemperatureView: View {
                     .minimumScaleFactor(0.1)
                     .lineLimit(2)
             }
-            .redacted(reason: location == nil ? .placeholder : [])
         }
-        .font(.largeTitle.bold())
+        .font(.largeTitle)
+        .bold()
         .padding()
         .defaultBoxStyle()
     }

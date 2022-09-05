@@ -48,8 +48,9 @@ enum Tabs: Int, Hashable, CaseIterable, Identifiable, Codable {
 
 class NavigationModel: ObservableObject, Codable {
     @Published var selectedTab: Tabs? = .dashboard
-    @Published var locationPath: [Location] = []
-    
+    @Published var dashboardPath: [Location] = []
+    @Published var mapPath: [Location] = []
+
     enum CodingKeys: String, CodingKey {
         case selectedTab
         case locationPathIds
@@ -58,7 +59,7 @@ class NavigationModel: ObservableObject, Codable {
     func encode(to encoder: Encoder) throws {
         var container = encoder.container(keyedBy: CodingKeys.self)
         try container.encodeIfPresent(selectedTab, forKey: .selectedTab)
-        try container.encode(locationPath, forKey: .locationPathIds)
+        try container.encode(dashboardPath, forKey: .locationPathIds)
     }
     
     init() {}
@@ -69,7 +70,7 @@ class NavigationModel: ObservableObject, Codable {
             Tabs.self, forKey: .selectedTab)
         
         let locationPahtIds = try container.decode([Location].self, forKey: .locationPathIds)
-        self.locationPath = [Location]()
+        self.dashboardPath = [Location]()
     }
     
     var jsonData: Data? {
@@ -81,7 +82,7 @@ class NavigationModel: ObservableObject, Codable {
                   let model = try? JSONDecoder().decode(NavigationModel.self, from: data)
             else { return }
             self.selectedTab = model.selectedTab
-            self.locationPath = model.locationPath
+            self.dashboardPath = model.dashboardPath
             
         }
     }

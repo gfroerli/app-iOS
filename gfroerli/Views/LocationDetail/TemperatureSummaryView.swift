@@ -21,6 +21,7 @@ struct TemperatureSummaryView: View {
                 Text("All time:")
                     .font(.title.bold())
             }
+            
             VStack {
                 HStack {
                     Text("Highest:")
@@ -40,7 +41,6 @@ struct TemperatureSummaryView: View {
                     Text(location!.lowestTemperatureString)
                 }
             }
-            .redacted(reason: location == nil ? .placeholder : [])
         }
         .font(.title2)
         .minimumScaleFactor(0.1)

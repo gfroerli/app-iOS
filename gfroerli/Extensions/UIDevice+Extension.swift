@@ -14,7 +14,7 @@ extension UIDevice {
         UIDevice.current.userInterfaceIdiom
     }
     
-    static var isIpad: Bool {
+    static var isIPad: Bool {
         idiom == .pad
     }
     

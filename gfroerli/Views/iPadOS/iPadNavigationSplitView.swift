@@ -24,7 +24,7 @@ struct iPadNavigationSplitView: View {
             .navigationSplitViewStyle(.balanced)
             
         } detail: {
-            NavigationStack(path: $navModel.locationPath) {
+            NavigationStack(path: $navModel.dashboardPath) {
                 switch navModel.selectedTab {
                 case .dashboard:
                     DashboardView()

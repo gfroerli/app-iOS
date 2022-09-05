@@ -13,8 +13,9 @@ struct SponsorView: View {
         
     // MARK: - Body
     var body: some View {
+        
         VStack(alignment: .leading) {
-
+            
                 VStack(alignment: .leading) {
                     Text("Sponsored by:")
                         .font(.title)
@@ -23,7 +24,6 @@ struct SponsorView: View {
                 }
                 .bold()
                 .redacted(reason: sponsor == nil ? .placeholder : [])
-
                 
                 AsyncImage(url: sponsor!.logoUrl) { image in
                     image
@@ -31,21 +31,25 @@ struct SponsorView: View {
                         .aspectRatio(contentMode: .fit)
                         .padding()
                         .background(.white)
-                        .cornerRadius(15)
+                        .cornerRadius(AppConfiguration.General.cornerRadius)
                 } placeholder: {
-                    ProgressView()
+                    VStack {
+                        Spacer()
+                            HStack {
+                                Spacer()
+                                ProgressView()
+                                Spacer()
+                            }
+                        Spacer()
+                    }
                 }
-                
                 
                 VStack{
                     Text(sponsor!.description)
-                }        
-
-            
+                }
         }
         .padding()
         .defaultBoxStyle()
-        .redacted(reason: sponsor == nil ? .placeholder : [])
     }
 }
 

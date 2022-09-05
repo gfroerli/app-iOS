@@ -12,6 +12,15 @@ import MapKit
 /// Contains all the configuration values for layout
 enum AppConfiguration {
     
+    enum General {
+        /// Default corner radius
+        static let cornerRadius = 15.0
+        /// Default capsule radius
+        static let capsuleRadius = 5.0
+        /// Default capsule padding
+        static let capsulePadding = 4.0
+    }
+    
     enum Dashboard {
         /// Height of the location tile in grid view
         static let gridTileHeight = 250.0
@@ -33,7 +42,10 @@ enum AppConfiguration {
         static let defaultRegion = MKCoordinateRegion(center: defaultCoordinates.coordinate, latitudinalMeters: defaultMapSpan * 5, longitudinalMeters: defaultMapSpan * 5)
         // Default span of map in meters
         static let defaultMapSpan = 1250.0
+        // Height of map
+        static let mapHeight = 350.0
     }
+    
     enum MapView {
         // Default coordinates to display if coordinate of Location is nil
         static let defaultCoordinates = CLLocation(latitude: 46.80121, longitude:  8.226692)

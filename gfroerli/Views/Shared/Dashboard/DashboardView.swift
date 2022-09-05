@@ -19,7 +19,7 @@ struct DashboardView: View {
     
     // MARK: - Body
     var body: some View {
-        NavigationStack(path: $navigationModel.locationPath){
+        NavigationStack(path: $navigationModel.dashboardPath){
             ScrollView(.vertical) {
                 LocationsGridView()
             }

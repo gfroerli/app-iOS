@@ -17,7 +17,7 @@ struct LocationsGridView: View {
     private var columns: [GridItem] = {
         var columns = [GridItem(.flexible(), spacing: config.gridSpacing)]
         
-        if UIDevice.isIpad {
+        if UIDevice.isIPad {
             columns.append(GridItem(.flexible()))
         }
         

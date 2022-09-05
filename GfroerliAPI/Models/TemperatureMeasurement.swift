@@ -35,8 +35,8 @@ extension TemperatureMeasurement: Decodable {
         lowest = try values.decodeIfPresent(Double.self, forKey: .lowest)
         average = try values.decodeIfPresent(Double.self, forKey: .average)
         
-        var date = try values.decodeIfPresent(String.self, forKey: .measurementDate)
-        var hour = try values.decodeIfPresent(Int.self, forKey: .measurementHour)
+        let date = try values.decodeIfPresent(String.self, forKey: .measurementDate)
+        let hour = try values.decodeIfPresent(Int.self, forKey: .measurementHour)
         
         if let date {
             measurementDate = MeasurementUtils.shared.createDate(date: date, hour: hour)

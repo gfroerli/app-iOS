@@ -60,14 +60,15 @@ struct LocationMapPreviewView: View {
                         .font(.headline)
                         .bold()
                         .foregroundColor(.secondary)
-                        .padding(4)
+                        .padding(AppConfiguration.General.capsulePadding)
                         .background(.regularMaterial)
-                        .clipShape(RoundedRectangle(cornerRadius: 5))
+                        .clipShape(RoundedRectangle(cornerRadius: AppConfiguration.General.capsuleRadius))
                 }
             }
         }
-        .frame(idealHeight: 350)
+        .frame(idealHeight: Config.mapHeight)
         .defaultBoxStyle()
+        
         .onAppear {
             setLocation()
         }
