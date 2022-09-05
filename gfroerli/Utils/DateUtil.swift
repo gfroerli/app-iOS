@@ -7,7 +7,6 @@
 
 import Foundation
 
-
 class DateUtil {
     /// Returns true if the given date lays in the last 72h
     /// - Parameter givenDate: Date to check

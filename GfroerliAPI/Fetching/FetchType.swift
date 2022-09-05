@@ -1,6 +1,6 @@
 //
 //  FetchType.swift
-//  
+//
 //
 //  Created by Marc Kramer on 12.06.22.
 //
@@ -33,7 +33,6 @@ public enum FetchType {
     /// - Parameter to: Date of end of interval
     case dailyTemperatures(locationID: Int, from: Date, to: Date)
     
-    
     /// The assembled URL for the given case
     public var assembledURL: URL {
         switch self {
@@ -41,25 +40,31 @@ public enum FetchType {
         case .allLocations:
             return Foundation.URL(string: "https://watertemp-api.coredump.ch//api/mobile_app/sensors")!
             
-        case .singleLocation(id: let id):
+        case let .singleLocation(id: id):
             return Foundation.URL(string: "https://watertemp-api.coredump.ch//api/mobile_app/sensors/\(id)")!
             
-        case .sponsor(id: let id):
+        case let .sponsor(id: id):
             return Foundation.URL(string: "https://watertemp-api.coredump.ch//api/mobile_app/sensors/\(id)/sponsor")!
             
-        case .hourlyTemperatures(locationID: let locationID, from: let startDate, to: let endDate):
+        case let .hourlyTemperatures(locationID: locationID, from: startDate, to: endDate):
             
             // Due to the sensors not being Located in GMT timezones, we also must fetch the day before to be able to show all the hourly values in a given day. Therefore we substract one day from startDate.
             let startDateString = APIConfiguration.preprocessDate(subtractingDays: 1, from: startDate)
             let endDateString = APIConfiguration.preprocessDate(subtractingDays: 0, from: endDate)
             
-            return Foundation.URL(string: "https://watertemp-api.coredump.ch/api/mobile_app/sensors/\(locationID)/hourly_temperatures?from=\(startDateString)&to=\(endDateString)&limit=100")!
+            return Foundation
+                .URL(
+                    string: "https://watertemp-api.coredump.ch/api/mobile_app/sensors/\(locationID)/hourly_temperatures?from=\(startDateString)&to=\(endDateString)&limit=100"
+                )!
             
-        case .dailyTemperatures(locationID: let locationID, from: let startDate, to: let endDate):
+        case let .dailyTemperatures(locationID: locationID, from: startDate, to: endDate):
             let startDateString = APIConfiguration.preprocessDate(subtractingDays: 0, from: startDate)
             let endDateString = APIConfiguration.preprocessDate(subtractingDays: 0, from: endDate)
             
-            return Foundation.URL(string: "https://watertemp-api.coredump.ch/api/mobile_app/sensors/\(locationID)/daily_temperatures?from=\(startDateString)&to=\(endDateString)&limit=100")!
+            return Foundation
+                .URL(
+                    string: "https://watertemp-api.coredump.ch/api/mobile_app/sensors/\(locationID)/daily_temperatures?from=\(startDateString)&to=\(endDateString)&limit=100"
+                )!
         }
     }
 }

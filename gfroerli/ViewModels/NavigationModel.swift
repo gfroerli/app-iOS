@@ -5,10 +5,10 @@
 //  Created by Marc Kramer on 14.06.22.
 //
 
-import Foundation
-import SwiftUI
 import Combine
+import Foundation
 import GfroerliAPI
+import SwiftUI
 
 enum Tabs: Int, Hashable, CaseIterable, Identifiable, Codable {
     case dashboard
@@ -42,54 +42,52 @@ enum Tabs: Int, Hashable, CaseIterable, Identifiable, Codable {
         case .search:
             return "magnifyingglass"
         }
-        
     }
 }
 
 class NavigationModel: ObservableObject, Codable {
-    @Published var selectedTab: Tabs? = .dashboard
-    @Published var dashboardPath: [Location] = []
-    @Published var mapPath: [Location] = []
+    @Published var selectedTab: Tabs = .dashboard
+    @Published var navigationPath: [Location] = []
 
     enum CodingKeys: String, CodingKey {
-        case selectedTab
-        case locationPathIds
+        case selectedTabID
+        case navigationPath
     }
     
     func encode(to encoder: Encoder) throws {
         var container = encoder.container(keyedBy: CodingKeys.self)
-        try container.encodeIfPresent(selectedTab, forKey: .selectedTab)
-        try container.encode(dashboardPath, forKey: .locationPathIds)
+        try container.encode(selectedTab.id, forKey: .selectedTabID)
+        // try container.encode(navigationPath.compactMap { location in location.id }, forKey: .navigationPath)
     }
     
-    init() {}
+    init() { }
     
     required init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
-        self.selectedTab = try container.decodeIfPresent(
-            Tabs.self, forKey: .selectedTab)
+        let selectedTabID = try container.decodeIfPresent(
+            Int.self, forKey: .selectedTabID
+        )
         
-        let locationPahtIds = try container.decode([Location].self, forKey: .locationPathIds)
-        self.dashboardPath = [Location]()
+        self.selectedTab = Tabs(rawValue: selectedTabID ?? Tabs.dashboard.id) ?? .dashboard
     }
     
     var jsonData: Data? {
         get {
-            try? JSONEncoder().encode(self)
+            let data = try? JSONEncoder().encode(self)
+            return data
         }
         set {
             guard let data = newValue,
                   let model = try? JSONDecoder().decode(NavigationModel.self, from: data)
-            else { return }
-            self.selectedTab = model.selectedTab
-            self.dashboardPath = model.dashboardPath
-            
+            else {
+                return
+            }
+            selectedTab = model.selectedTab
         }
     }
     
     var objectWillChangeSequence:
-        AsyncPublisher<Publishers.Buffer<ObservableObjectPublisher>>
-    {
+        AsyncPublisher<Publishers.Buffer<ObservableObjectPublisher>> {
         objectWillChange
             .buffer(size: 1, prefetch: .byRequest, whenFull: .dropOldest)
             .values

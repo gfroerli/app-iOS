@@ -5,8 +5,8 @@
 //  Created by Marc Kramer on 14.06.22.
 //
 
-import SwiftUI
 import GfroerliAPI
+import SwiftUI
 
 struct DashboardView: View {
 
@@ -16,14 +16,16 @@ struct DashboardView: View {
     @EnvironmentObject var locationsViewModel: AllLocationsViewModel
     
     @State var showSettings = false
-    
+    @State var showNewFeatures = false
+
     // MARK: - Body
+
     var body: some View {
-        NavigationStack(path: $navigationModel.dashboardPath){
+        NavigationStack(path: $navigationModel.navigationPath) {
             ScrollView(.vertical) {
                 LocationsGridView()
             }
-            .toolbar{
+            .toolbar {
                 Button {
                     showSettings.toggle()
                 } label: {
@@ -33,12 +35,20 @@ struct DashboardView: View {
             .sheet(isPresented: $showSettings, content: {
                 SettingsView()
             })
+            .sheet(isPresented: $showNewFeatures, content: {
+                NewFeaturesView()
+            })
             
             // MARK: Navigation
+
             .navigationTitle("Dashboard")
             .navigationDestination(for: Location.self, destination: { location in
                 LocationDetailView(locationID: location.id)
             })
+            
+            .onAppear {
+                showNewFeatures = DefaultsCoordinator.shared.showNewFeatures()
+            }
         }
     }
 }

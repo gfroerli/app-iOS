@@ -5,48 +5,49 @@
 //  Created by Marc on 03.09.22.
 //
 
-import SwiftUI
 import GfroerliAPI
+import SwiftUI
 
 struct SponsorView: View {
     @Binding var sponsor: Sponsor?
         
     // MARK: - Body
+
     var body: some View {
         
         VStack(alignment: .leading) {
             
-                VStack(alignment: .leading) {
-                    Text("Sponsored by:")
-                        .font(.title)
-                    Text(sponsor!.name)
-                        .font(.largeTitle)
-                }
-                .bold()
-                .redacted(reason: sponsor == nil ? .placeholder : [])
+            VStack(alignment: .leading) {
+                Text("Sponsored by:")
+                    .font(.title)
+                Text(sponsor!.name)
+                    .font(.largeTitle)
+            }
+            .bold()
+            .redacted(reason: sponsor == nil ? .placeholder : [])
                 
-                AsyncImage(url: sponsor!.logoUrl) { image in
-                    image
-                        .resizable()
-                        .aspectRatio(contentMode: .fit)
-                        .padding()
-                        .background(.white)
-                        .cornerRadius(AppConfiguration.General.cornerRadius)
-                } placeholder: {
-                    VStack {
+            AsyncImage(url: sponsor!.logoURL) { image in
+                image
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .padding()
+                    .background(.white)
+                    .cornerRadius(AppConfiguration.General.cornerRadius)
+            } placeholder: {
+                VStack {
+                    Spacer()
+                    HStack {
                         Spacer()
-                            HStack {
-                                Spacer()
-                                ProgressView()
-                                Spacer()
-                            }
+                        ProgressView()
                         Spacer()
                     }
+                    Spacer()
                 }
+            }
                 
-                VStack{
-                    Text(sponsor!.description)
-                }
+            VStack {
+                Text(sponsor!.description)
+            }
         }
         .padding()
         .defaultBoxStyle()

@@ -1,6 +1,6 @@
 //
 //  APIConfiguration.swift
-//  
+//
 //
 //  Created by Marc Kramer on 12.06.22.
 //
@@ -8,9 +8,10 @@
 import Foundation
 
 /// Contains predefined parameters used during the fetching process
-public class APIConfiguration {
+public enum APIConfiguration {
     
     // MARK: Date handling
+
     static var formatter = DateFormatter()
     static let dateFormat = "yyyy-MM-dd"
     
@@ -25,7 +26,7 @@ public class APIConfiguration {
             return ""
         }
         
-        formatter.dateFormat = self.dateFormat
+        formatter.dateFormat = dateFormat
         let offsetDateString = formatter.string(from: offsetDate)
         print(offsetDateString)
         return offsetDateString

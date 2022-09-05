@@ -11,8 +11,8 @@ import MapKit
 @MainActor
 class AllLocationsViewModel: ObservableObject {
     
-    @Published var allLocations: [Location] = [Location]()
-    @Published var activeLocations: [Location] = [Location]()
+    @Published var allLocations = [Location]()
+    @Published var activeLocations = [Location]()
     @Published var mapRegionAll: MKCoordinateRegion = AppConfiguration.MapPreviewView.defaultRegion
     @Published var mapRegionActive: MKCoordinateRegion = AppConfiguration.MapPreviewView.defaultRegion
 
@@ -24,12 +24,12 @@ class AllLocationsViewModel: ObservableObject {
             fatalError("")
         }
         allLocations = fetchedLocations
-        activeLocations = fetchedLocations.filter({ location in
+        activeLocations = fetchedLocations.filter { location in
             guard let lastTempDate = location.lastTemperatureDate else {
                 return false
             }
             return DateUtil.wasInLast72Hours(givenDate: lastTempDate)
-        })
+        }
         
         mapRegionAll = calculateMapRegion(for: allLocations)
         mapRegionActive = calculateMapRegion(for: activeLocations)

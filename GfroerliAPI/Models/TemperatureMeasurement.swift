@@ -1,6 +1,6 @@
 //
 //  TemperatureMeasurement.swift
-//  
+//
 //
 //  Created by Marc Kramer on 24.06.22.
 //
@@ -10,6 +10,7 @@ import Foundation
 public struct TemperatureMeasurement: Identifiable, Hashable {
     
     // MARK: Properties
+
     public let id: String?
     public let measurementDate: Date?
     public let lowest: Double?
@@ -17,7 +18,7 @@ public struct TemperatureMeasurement: Identifiable, Hashable {
     public let highest: Double?
 }
 
-// MARK: - Codable
+// MARK: - Decodable
 
 extension TemperatureMeasurement: Decodable {
     enum CodingKeys: String, CodingKey {
@@ -30,18 +31,19 @@ extension TemperatureMeasurement: Decodable {
     
     public init(from decoder: Decoder) throws {
         let values = try decoder.container(keyedBy: CodingKeys.self)
-        id = UUID().uuidString
-        highest = try values.decodeIfPresent(Double.self, forKey: .highest)
-        lowest = try values.decodeIfPresent(Double.self, forKey: .lowest)
-        average = try values.decodeIfPresent(Double.self, forKey: .average)
+        self.id = UUID().uuidString
+        self.highest = try values.decodeIfPresent(Double.self, forKey: .highest)
+        self.lowest = try values.decodeIfPresent(Double.self, forKey: .lowest)
+        self.average = try values.decodeIfPresent(Double.self, forKey: .average)
         
         let date = try values.decodeIfPresent(String.self, forKey: .measurementDate)
         let hour = try values.decodeIfPresent(Int.self, forKey: .measurementHour)
         
         if let date {
-            measurementDate = MeasurementUtils.shared.createDate(date: date, hour: hour)
-        } else {
-            measurementDate = nil
+            self.measurementDate = MeasurementUtils.shared.createDate(date: date, hour: hour)
+        }
+        else {
+            self.measurementDate = nil
         }
     }
 }

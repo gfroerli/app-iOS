@@ -5,8 +5,8 @@
 //  Created by Marc Kramer on 16.06.22.
 //
 
-import SwiftUI
 import GfroerliAPI
+import SwiftUI
 
 struct LocationsGridView: View {
     
@@ -25,6 +25,7 @@ struct LocationsGridView: View {
     }()
     
     // MARK: View
+
     var body: some View {
         VStack(alignment: .leading, spacing: 0) {
             Text("Locations")
@@ -45,7 +46,6 @@ struct LocationsGridView: View {
         }
     }
 }
-
 
 struct LocationsGridView_Previews: PreviewProvider {
     static var previews: some View {

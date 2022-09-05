@@ -20,7 +20,13 @@
 		242F4E5E28BB80E6005C27B6 /* TemperatureMeasurementFull.json in Resources */ = {isa = PBXBuildFile; fileRef = 242F4E5B28BB80E6005C27B6 /* TemperatureMeasurementFull.json */; };
 		242F4E5F28BB80E6005C27B6 /* TemperatureMeasurementAdditional.json in Resources */ = {isa = PBXBuildFile; fileRef = 242F4E5C28BB80E6005C27B6 /* TemperatureMeasurementAdditional.json */; };
 		242F4E6028BB80E6005C27B6 /* TemperatureMeasurementMissing.json in Resources */ = {isa = PBXBuildFile; fileRef = 242F4E5D28BB80E6005C27B6 /* TemperatureMeasurementMissing.json */; };
+		24457EEE28C6197C00172C2B /* ChangeLogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24457EED28C6197C00172C2B /* ChangeLogView.swift */; };
+		24457EF028C619C200172C2B /* ChangeLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24457EEF28C619C200172C2B /* ChangeLog.swift */; };
+		24457EF228C61B7B00172C2B /* ChangeLog.json in Resources */ = {isa = PBXBuildFile; fileRef = 24457EF128C61B7B00172C2B /* ChangeLog.json */; };
 		247D86F828C27AAD003458C1 /* GfroerliMapAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247D86F728C27AAD003458C1 /* GfroerliMapAnnotation.swift */; };
+		24D1F42A28C60700004F7E8B /* Bundle+Dedode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24D1F42928C60700004F7E8B /* Bundle+Dedode.swift */; };
+		24D1F42C28C6074A004F7E8B /* NewFeatures.json in Resources */ = {isa = PBXBuildFile; fileRef = 24D1F42B28C6074A004F7E8B /* NewFeatures.json */; };
+		24D1F42E28C609A0004F7E8B /* DefaultsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24D1F42D28C609A0004F7E8B /* DefaultsCoordinator.swift */; };
 		24DAD5FF28BA5D29002E5785 /* JsonLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24DAD5FE28BA5D29002E5785 /* JsonLoader.swift */; };
 		24DAD60228BA5E82002E5785 /* LocationFull.json in Resources */ = {isa = PBXBuildFile; fileRef = 24DAD60128BA5E82002E5785 /* LocationFull.json */; };
 		24DAD60428BA62C8002E5785 /* LocationMissing.json in Resources */ = {isa = PBXBuildFile; fileRef = 24DAD60328BA62C7002E5785 /* LocationMissing.json */; };
@@ -28,6 +34,7 @@
 		24DAE30128C35FC20040D03D /* SponsorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24DAE30028C35FC20040D03D /* SponsorViewModel.swift */; };
 		24DAE30328C361500040D03D /* SponsorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24DAE30228C361500040D03D /* SponsorView.swift */; };
 		24E6F03E28BA43A000815A3E /* APIConfigurationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E6F03D28BA43A000815A3E /* APIConfigurationTests.swift */; };
+		24FF92F628C6064200454A5F /* NewFeatures.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24FF92F528C6064200454A5F /* NewFeatures.swift */; };
 		8D31E32F286601950095622E /* HourlyTemperaturesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D31E32E286601950095622E /* HourlyTemperaturesViewModel.swift */; };
 		8D31E332286604450095622E /* LocationDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D31E331286604450095622E /* LocationDetailView.swift */; };
 		8D3C681B285B672100DC8CA4 /* LocationTile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D3C681A285B672100DC8CA4 /* LocationTile.swift */; };
@@ -68,7 +75,7 @@
 		8DEE78BF285E319E009D853C /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DEE78BE285E319E009D853C /* SettingsView.swift */; };
 		8DEE78C4285E3313009D853C /* SettingsThumbnailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DEE78C3285E3313009D853C /* SettingsThumbnailView.swift */; };
 		8DEE78C6285E4497009D853C /* FAQView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DEE78C5285E4497009D853C /* FAQView.swift */; };
-		8DEE78C8285E460A009D853C /* ChangeLogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DEE78C7285E460A009D853C /* ChangeLogView.swift */; };
+		8DEE78C8285E460A009D853C /* NewFeaturesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DEE78C7285E460A009D853C /* NewFeaturesView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -138,7 +145,13 @@
 		242F4E5B28BB80E6005C27B6 /* TemperatureMeasurementFull.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = TemperatureMeasurementFull.json; path = TestJSONFiles/TemperatureMeasurement/TemperatureMeasurementFull.json; sourceTree = SOURCE_ROOT; };
 		242F4E5C28BB80E6005C27B6 /* TemperatureMeasurementAdditional.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = TemperatureMeasurementAdditional.json; path = TestJSONFiles/TemperatureMeasurement/TemperatureMeasurementAdditional.json; sourceTree = SOURCE_ROOT; };
 		242F4E5D28BB80E6005C27B6 /* TemperatureMeasurementMissing.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = TemperatureMeasurementMissing.json; path = TestJSONFiles/TemperatureMeasurement/TemperatureMeasurementMissing.json; sourceTree = SOURCE_ROOT; };
+		24457EED28C6197C00172C2B /* ChangeLogView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeLogView.swift; sourceTree = "<group>"; };
+		24457EEF28C619C200172C2B /* ChangeLog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeLog.swift; sourceTree = "<group>"; };
+		24457EF128C61B7B00172C2B /* ChangeLog.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = ChangeLog.json; sourceTree = "<group>"; };
 		247D86F728C27AAD003458C1 /* GfroerliMapAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GfroerliMapAnnotation.swift; sourceTree = "<group>"; };
+		24D1F42928C60700004F7E8B /* Bundle+Dedode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+Dedode.swift"; sourceTree = "<group>"; };
+		24D1F42B28C6074A004F7E8B /* NewFeatures.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = NewFeatures.json; sourceTree = "<group>"; };
+		24D1F42D28C609A0004F7E8B /* DefaultsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultsCoordinator.swift; sourceTree = "<group>"; };
 		24DAD5FE28BA5D29002E5785 /* JsonLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonLoader.swift; sourceTree = "<group>"; };
 		24DAD60128BA5E82002E5785 /* LocationFull.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = LocationFull.json; sourceTree = "<group>"; };
 		24DAD60328BA62C7002E5785 /* LocationMissing.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = LocationMissing.json; sourceTree = "<group>"; };
@@ -146,6 +159,7 @@
 		24DAE30028C35FC20040D03D /* SponsorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SponsorViewModel.swift; sourceTree = "<group>"; };
 		24DAE30228C361500040D03D /* SponsorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SponsorView.swift; sourceTree = "<group>"; };
 		24E6F03D28BA43A000815A3E /* APIConfigurationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConfigurationTests.swift; sourceTree = "<group>"; };
+		24FF92F528C6064200454A5F /* NewFeatures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewFeatures.swift; sourceTree = "<group>"; };
 		8D31E32E286601950095622E /* HourlyTemperaturesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HourlyTemperaturesViewModel.swift; sourceTree = "<group>"; };
 		8D31E331286604450095622E /* LocationDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationDetailView.swift; sourceTree = "<group>"; };
 		8D3C681A285B672100DC8CA4 /* LocationTile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationTile.swift; sourceTree = "<group>"; };
@@ -190,7 +204,7 @@
 		8DEE78BE285E319E009D853C /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		8DEE78C3285E3313009D853C /* SettingsThumbnailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsThumbnailView.swift; sourceTree = "<group>"; };
 		8DEE78C5285E4497009D853C /* FAQView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FAQView.swift; sourceTree = "<group>"; };
-		8DEE78C7285E460A009D853C /* ChangeLogView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeLogView.swift; sourceTree = "<group>"; };
+		8DEE78C7285E460A009D853C /* NewFeaturesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewFeaturesView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -305,6 +319,15 @@
 			path = JSONFiles;
 			sourceTree = "<group>";
 		};
+		24FF92F728C606A800454A5F /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				24D1F42B28C6074A004F7E8B /* NewFeatures.json */,
+				24457EF128C61B7B00172C2B /* ChangeLog.json */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		8D31E3302866041A0095622E /* LocationDetail */ = {
 			isa = PBXGroup;
 			children = (
@@ -360,6 +383,7 @@
 				8D8961C02858D31900C2A7CC /* Extensions */,
 				8D8961C52858F59C00C2A7CC /* Views */,
 				8D9328E4285B98930076E174 /* Utils */,
+				24FF92F728C606A800454A5F /* Resources */,
 				8D8961BB2857932600C2A7CC /* ViewModels */,
 				8D54893928563185007253FE /* Info.plist */,
 				8D54890C2856315C007253FE /* gfroerliApp.swift */,
@@ -478,6 +502,7 @@
 			isa = PBXGroup;
 			children = (
 				8D8961C32858E4B900C2A7CC /* UIDevice+Extension.swift */,
+				24D1F42928C60700004F7E8B /* Bundle+Dedode.swift */,
 				8DE7D72128675AA4001684D1 /* View+Modifiers.swift */,
 			);
 			path = Extensions;
@@ -525,6 +550,9 @@
 			children = (
 				8D3C681C285B6E4800DC8CA4 /* AppConfiguration.swift */,
 				241E02C728BE7F3F007DFEA7 /* DateUtil.swift */,
+				24FF92F528C6064200454A5F /* NewFeatures.swift */,
+				24457EEF28C619C200172C2B /* ChangeLog.swift */,
+				24D1F42D28C609A0004F7E8B /* DefaultsCoordinator.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -534,7 +562,8 @@
 			children = (
 				8DEE78BE285E319E009D853C /* SettingsView.swift */,
 				8DEE78C5285E4497009D853C /* FAQView.swift */,
-				8DEE78C7285E460A009D853C /* ChangeLogView.swift */,
+				8DEE78C7285E460A009D853C /* NewFeaturesView.swift */,
+				24457EED28C6197C00172C2B /* ChangeLogView.swift */,
 				8DEE78C3285E3313009D853C /* SettingsThumbnailView.swift */,
 			);
 			path = Settings;
@@ -558,6 +587,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8D54892E2856315D007253FE /* Build configuration list for PBXNativeTarget "gfroerli" */;
 			buildPhases = (
+				24FF92F428C5E62700454A5F /* ShellScript */,
 				8D5489052856315C007253FE /* Sources */,
 				8D5489062856315C007253FE /* Frameworks */,
 				8D5489072856315C007253FE /* Resources */,
@@ -706,6 +736,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D5489152856315D007253FE /* Preview Assets.xcassets in Resources */,
+				24D1F42C28C6074A004F7E8B /* NewFeatures.json in Resources */,
+				24457EF228C61B7B00172C2B /* ChangeLog.json in Resources */,
 				8D5489112856315D007253FE /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -749,6 +781,26 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		24FF92F428C5E62700454A5F /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "cd BuildTools\nSDKROOT=(xcrun --sdk macosx --show-sdk-path)\n#swift package update #Uncomment this line temporarily to update the version used to the latest matching your BuildTools/Package.swift file\nswift run -c release swiftformat \"$SRCROOT\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		8D5489052856315C007253FE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -756,9 +808,11 @@
 			files = (
 				8D8961C42858E4B900C2A7CC /* UIDevice+Extension.swift in Sources */,
 				24DAE30128C35FC20040D03D /* SponsorViewModel.swift in Sources */,
-				8DEE78C8285E460A009D853C /* ChangeLogView.swift in Sources */,
+				8DEE78C8285E460A009D853C /* NewFeaturesView.swift in Sources */,
+				24457EEE28C6197C00172C2B /* ChangeLogView.swift in Sources */,
 				8DE7D71E2867513A001684D1 /* TemperatureSummaryView.swift in Sources */,
 				241E02CA28BE8338007DFEA7 /* LocationMapPreviewView.swift in Sources */,
+				24FF92F628C6064200454A5F /* NewFeatures.swift in Sources */,
 				24DAE30328C361500040D03D /* SponsorView.swift in Sources */,
 				8DE7D720286756DF001684D1 /* SingleLocationViewModel.swift in Sources */,
 				8D31E332286604450095622E /* LocationDetailView.swift in Sources */,
@@ -770,6 +824,7 @@
 				8D8961C92858F5B600C2A7CC /* DashboardView.swift in Sources */,
 				8D8961BF2858CD7000C2A7CC /* NavigationModel.swift in Sources */,
 				8D8961BD2857933100C2A7CC /* AllLocationsViewModel.swift in Sources */,
+				24457EF028C619C200172C2B /* ChangeLog.swift in Sources */,
 				8D54890D2856315C007253FE /* gfroerliApp.swift in Sources */,
 				8D31E32F286601950095622E /* HourlyTemperaturesViewModel.swift in Sources */,
 				247D86F828C27AAD003458C1 /* GfroerliMapAnnotation.swift in Sources */,
@@ -777,9 +832,11 @@
 				8DEE78C4285E3313009D853C /* SettingsThumbnailView.swift in Sources */,
 				8D3C681D285B6E4800DC8CA4 /* AppConfiguration.swift in Sources */,
 				8D9328E3285B95110076E174 /* LocationsGridView.swift in Sources */,
+				24D1F42E28C609A0004F7E8B /* DefaultsCoordinator.swift in Sources */,
 				8DE7D71C28674BBE001684D1 /* LatestTemperatureView.swift in Sources */,
 				8DEE78C6285E4497009D853C /* FAQView.swift in Sources */,
 				8DEE78BF285E319E009D853C /* SettingsView.swift in Sources */,
+				24D1F42A28C60700004F7E8B /* Bundle+Dedode.swift in Sources */,
 				241E02C828BE7F3F007DFEA7 /* DateUtil.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -913,6 +970,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -965,6 +1023,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;
@@ -987,10 +1046,11 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = gfroerli/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Gfrör.li";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.weather";
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
@@ -999,10 +1059,12 @@
 				PRODUCT_BUNDLE_IDENTIFIER = ch.coredump.gfroerli;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -1021,10 +1083,11 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = gfroerli/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Gfrör.li";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.weather";
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
@@ -1033,10 +1096,12 @@
 				PRODUCT_BUNDLE_IDENTIFIER = ch.coredump.gfroerli;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

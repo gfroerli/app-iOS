@@ -17,22 +17,22 @@ struct TabBarView: View {
                 switch tab {
                 case .dashboard:
                     DashboardView()
-                    .tabItem {
-                        Label(tab.localizedName, systemImage: tab.symbolName)
-                            .onTapGesture {
-                            selection = tab
+                        .tabItem {
+                            Label(tab.localizedName, systemImage: tab.symbolName)
+                                .onTapGesture {
+                                    selection = tab
+                                }
                         }
-                    }
-                    .tag(tab)
+                        .tag(tab)
                 case .map:
                     LocationMapView()
-                    .tabItem {
-                        Label(tab.localizedName, systemImage: tab.symbolName)
-                            .onTapGesture {
-                            selection = tab
+                        .tabItem {
+                            Label(tab.localizedName, systemImage: tab.symbolName)
+                                .onTapGesture {
+                                    selection = tab
+                                }
                         }
-                    }
-                    .tag(tab)
+                        .tag(tab)
                 default:
                     Text("DEFAULT")
                         .tabItem {

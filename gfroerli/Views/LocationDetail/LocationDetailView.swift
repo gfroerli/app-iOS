@@ -5,8 +5,8 @@
 //  Created by Marc Kramer on 24.06.22.
 //
 
-import SwiftUI
 import GfroerliAPI
+import SwiftUI
 
 struct LocationDetailView: View {
     
@@ -19,6 +19,7 @@ struct LocationDetailView: View {
     }
     
     // MARK: - Body
+
     var body: some View {
         ScrollView(showsIndicators: false) {
             VStack {
@@ -43,6 +44,7 @@ struct LocationDetailView: View {
 }
 
 // MARK: - Preview
+
 struct LocationDetailView_Previews: PreviewProvider {
     static var previews: some View {
         LocationDetailView(locationID: 1)

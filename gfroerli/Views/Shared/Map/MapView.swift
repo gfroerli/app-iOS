@@ -5,9 +5,9 @@
 //  Created by Marc Kramer on 14.06.22.
 //
 
-import SwiftUI
-import MapKit
 import GfroerliAPI
+import MapKit
+import SwiftUI
 
 struct LocationMapView: View {
     
@@ -16,20 +16,22 @@ struct LocationMapView: View {
     @EnvironmentObject var navigationModel: NavigationModel
     @EnvironmentObject var locationsViewModel: AllLocationsViewModel
     
-    @State private var filter: Int = 0
-    @State private var region =  config.defaultRegion
+    @State private var filter = 0
+    @State private var region = config.defaultRegion
     
     var body: some View {
-        NavigationStack(path: $navigationModel.mapPath){
+        NavigationStack(path: $navigationModel.navigationPath) {
             
             Map(coordinateRegion: $region, annotationItems: annotationLocations()) { location in
                 MapAnnotation(coordinate: location.coordinates?.coordinate ?? config.defaultCoordinates.coordinate) {
                     
                     if location.coordinates == nil {
                         EmptyView()
-                    } else if region.span.latitudeDelta <= 0.1 {
+                    }
+                    else if region.span.latitudeDelta <= 0.1 {
                         GfroerliMapAnnotation(location: location)
-                    } else {
+                    }
+                    else {
                         GfroerliMapAnnotationPin(location: location)
                             .onTapGesture {
                                 zoom(to: location.coordinates!.coordinate)
@@ -46,10 +48,13 @@ struct LocationMapView: View {
                             Text("Active").tag(1)
                         }
                     } label: {
-                        Label("Sort", systemImage: filter == 0 ? "line.3.horizontal.decrease.circle" : "line.3.horizontal.decrease.circle.fill")
+                        Label(
+                            "Sort",
+                            systemImage: filter == 0 ? "line.3.horizontal.decrease.circle" :
+                                "line.3.horizontal.decrease.circle.fill"
+                        )
                     }
                 }
-                
             }
             .navigationTitle("Map")
             .navigationBarTitleDisplayMode(.inline)
@@ -62,7 +67,7 @@ struct LocationMapView: View {
                     filterChanged()
                 }
             }
-            .onChange(of: filter, perform: { newValue in
+            .onChange(of: filter, perform: { _ in
                 withAnimation {
                     filterChanged()
                 }
@@ -88,7 +93,7 @@ struct LocationMapView: View {
         case 0:
             return locationsViewModel.allLocations
         case 1:
-            return  locationsViewModel.activeLocations
+            return locationsViewModel.activeLocations
         default:
             return locationsViewModel.allLocations
         }
@@ -96,7 +101,11 @@ struct LocationMapView: View {
     
     private func zoom(to coordinates: CLLocationCoordinate2D) {
         withAnimation {
-            region = MKCoordinateRegion(center: coordinates, latitudinalMeters: config.zoomedMapSpan, longitudinalMeters: config.zoomedMapSpan)
+            region = MKCoordinateRegion(
+                center: coordinates,
+                latitudinalMeters: config.zoomedMapSpan,
+                longitudinalMeters: config.zoomedMapSpan
+            )
         }
     }
 }

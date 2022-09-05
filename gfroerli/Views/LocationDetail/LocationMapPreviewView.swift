@@ -5,9 +5,9 @@
 //  Created by Marc on 30.08.22.
 //
 
-import SwiftUI
-import MapKit
 import GfroerliAPI
+import MapKit
+import SwiftUI
 
 struct LocationMapPreviewView: View {
     
@@ -22,6 +22,7 @@ struct LocationMapPreviewView: View {
     }
     
     // MARK: - View
+
     var body: some View {
         VStack(alignment: .leading) {
             
@@ -41,18 +42,25 @@ struct LocationMapPreviewView: View {
                 .disabled(!hasLocation)
                 .buttonStyle(.bordered)
                 .clipShape(Circle())
-                
             }
             .padding([.top, .horizontal])
             
             ZStack {
-                Map(coordinateRegion: $region, annotationItems: hasLocation ? [location!] : [], annotationContent: { location  in
-                    MapMarker(coordinate:location.coordinates?.coordinate ?? AppConfiguration.MapPreviewView.defaultCoordinates.coordinate, tint: .blue)
-                })
+                Map(
+                    coordinateRegion: $region,
+                    annotationItems: hasLocation ? [location!] : [],
+                    annotationContent: { location in
+                        MapMarker(
+                            coordinate: location.coordinates?.coordinate ?? AppConfiguration.MapPreviewView
+                                .defaultCoordinates.coordinate,
+                            tint: .blue
+                        )
+                    }
+                )
                 .disabled(!hasLocation)
                 
                 if !hasLocation {
-                    VStack{}
+                    VStack { }
                         .frame(maxWidth: .infinity, maxHeight: .infinity)
                         .background(.ultraThinMaterial)
                     
@@ -72,14 +80,14 @@ struct LocationMapPreviewView: View {
         .onAppear {
             setLocation()
         }
-        .onChange(of: location, perform: { newValue in
+        .onChange(of: location, perform: { _ in
             setLocation()
         })
     }
     
     // MARK: - Private Functions
     
-    private func setLocation () {
+    private func setLocation() {
         guard let coords = location?.coordinates else {
             hasLocation = false
             region = Config.defaultRegion
@@ -87,7 +95,11 @@ struct LocationMapPreviewView: View {
         }
         
         hasLocation = true
-        region = MKCoordinateRegion(center: coords.coordinate, latitudinalMeters: Config.defaultMapSpan, longitudinalMeters: Config.defaultMapSpan)
+        region = MKCoordinateRegion(
+            center: coords.coordinate,
+            latitudinalMeters: Config.defaultMapSpan,
+            longitudinalMeters: Config.defaultMapSpan
+        )
     }
 }
 

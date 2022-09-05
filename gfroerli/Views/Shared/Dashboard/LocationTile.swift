@@ -5,9 +5,9 @@
 //  Created by Marc Kramer on 16.06.22.
 //
 
-import SwiftUI
-import MapKit
 import GfroerliAPI
+import MapKit
+import SwiftUI
 
 struct LocationTile: View {
     
@@ -19,15 +19,19 @@ struct LocationTile: View {
     var location: Location
     
     // MARK: Lifecylce
+
     init(location: Location) {
         self.location = location
-        _region = State(initialValue: MKCoordinateRegion(
-            center: location.coordinates!.coordinate,
-            span: MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01))
+        _region = State(
+            initialValue: MKCoordinateRegion(
+                center: location.coordinates!.coordinate,
+                span: MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01)
+            )
         )
     }
     
     // MARK: View
+
     var body: some View {
         VStack(alignment: .leading) {
             Map(coordinateRegion: $region, interactionModes: [])
@@ -54,7 +58,6 @@ struct LocationTile: View {
                 }
             }
             .padding([.horizontal, .bottom])
-            
         }
         .frame(maxWidth: .infinity, idealHeight: config.gridTileHeight)
         .defaultBoxStyle()
