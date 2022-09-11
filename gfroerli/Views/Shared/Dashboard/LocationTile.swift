@@ -13,12 +13,11 @@ struct LocationTile: View {
     
     typealias config = AppConfiguration.Dashboard
 
-    @Environment(\.colorScheme) var colorScheme
     @State var region: MKCoordinateRegion
     
     var location: Location
     
-    // MARK: Lifecylce
+    // MARK: - Lifecycle
 
     init(location: Location) {
         self.location = location
@@ -30,7 +29,7 @@ struct LocationTile: View {
         )
     }
     
-    // MARK: View
+    // MARK: - View
 
     var body: some View {
         VStack(alignment: .leading) {

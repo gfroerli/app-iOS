@@ -28,6 +28,8 @@ struct LocationDetailView: View {
                     
                     TemperatureSummaryView(location: $locationVM.location)
                     
+                    TemperatureHistoryView(location: $locationVM.location)
+                    
                     LocationMapPreviewView(location: $locationVM.location)
                     
                     if locationVM.location!.sponsorID != nil {

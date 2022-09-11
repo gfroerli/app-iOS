@@ -23,9 +23,8 @@ public enum FetchType {
     
     /// Used for fetching date interval of hourly temperatures for a sensor
     /// - Parameter sensorID: Int of location ID
-    /// - Parameter from: Date of beginning of interval
-    /// - Parameter to: Date of end of interval
-    case hourlyTemperatures(locationID: Int, from: Date, to: Date)
+    /// - Parameter of: Date
+    case hourlyTemperatures(locationID: Int, of: Date)
     
     /// Used for fetching date interval of daily temperatures for a location
     /// - Parameter sensorID: Int of location ID
@@ -46,11 +45,12 @@ public enum FetchType {
         case let .sponsor(id: id):
             return Foundation.URL(string: "https://watertemp-api.coredump.ch//api/mobile_app/sensors/\(id)/sponsor")!
             
-        case let .hourlyTemperatures(locationID: locationID, from: startDate, to: endDate):
+        case let .hourlyTemperatures(locationID: locationID, of: date):
             
             // Due to the sensors not being Located in GMT timezones, we also must fetch the day before to be able to show all the hourly values in a given day. Therefore we substract one day from startDate.
-            let startDateString = APIConfiguration.preprocessDate(subtractingDays: 1, from: startDate)
-            let endDateString = APIConfiguration.preprocessDate(subtractingDays: 0, from: endDate)
+            // TODO: Handle timezones before UTC
+            let startDateString = APIConfiguration.preprocessDate(subtractingDays: 1, from: date)
+            let endDateString = APIConfiguration.preprocessDate(subtractingDays: 0, from: date)
             
             return Foundation
                 .URL(
@@ -58,8 +58,8 @@ public enum FetchType {
                 )!
             
         case let .dailyTemperatures(locationID: locationID, from: startDate, to: endDate):
-            let startDateString = APIConfiguration.preprocessDate(subtractingDays: 0, from: startDate)
-            let endDateString = APIConfiguration.preprocessDate(subtractingDays: 0, from: endDate)
+            let startDateString = APIConfiguration.preprocessDate(from: startDate)
+            let endDateString = APIConfiguration.preprocessDate(from: endDate)
             
             return Foundation
                 .URL(

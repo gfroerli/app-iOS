@@ -36,7 +36,7 @@ class MeasurementUtils {
     ///   - date: String of format "yyyy-MM-dd"
     ///   - hour: Int between 0 and 23
     /// - Returns: Optional date
-    func createDate(date: String, hour: Int? = nil) -> Date? {
+    func createDate(date: String, hour: Int? = nil) -> Date {
         var format = "yyyy/MM/dd"
         var dateString = date
         
@@ -48,6 +48,7 @@ class MeasurementUtils {
         dateFormatter.dateFormat = format
         dateFormatter.timeZone = TimeZone(abbreviation: "UTC")!
         let someDateTime = dateFormatter.date(from: dateString)
-        return someDateTime
+
+        return someDateTime?.toLocalTime() ?? Date(timeIntervalSinceReferenceDate: 0)
     }
 }

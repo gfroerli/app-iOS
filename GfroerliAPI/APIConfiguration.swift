@@ -17,10 +17,10 @@ public enum APIConfiguration {
     
     /// Removes given days from date and formats it to the `dateFormat` style
     /// - Parameters:
-    ///   - subtractingDays: Number of days to substract
+    ///   - subtractingDays: Number of days to subtract
     ///   - date: Date
     /// - Returns: String in `dateFormat` style
-    public static func preprocessDate(subtractingDays: Int, from date: Date) -> String {
+    public static func preprocessDate(subtractingDays: Int = 0, from date: Date) -> String {
         
         guard let offsetDate = Calendar.current.date(byAdding: .day, value: -subtractingDays, to: date) else {
             return ""

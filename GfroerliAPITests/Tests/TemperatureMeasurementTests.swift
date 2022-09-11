@@ -24,7 +24,7 @@ final class TemperatureMeasurementTests: XCTestCase {
         let highest = 30.0
         
         // Act
-        let measurement = try jsonDecoder.decode(TemperatureMeasurement.self, from: data)
+        let measurement = try jsonDecoder.decode(TemperatureMeasurementCollection.self, from: data)
         
         // Assert
         XCTAssertEqual(measurement.measurementDate, measurementDate)
@@ -39,7 +39,7 @@ final class TemperatureMeasurementTests: XCTestCase {
         
         let measurementDate = dateCreator(string: "2022-08-01")
         // Act
-        let measurement = try jsonDecoder.decode(TemperatureMeasurement.self, from: data)
+        let measurement = try jsonDecoder.decode(TemperatureMeasurementCollection.self, from: data)
         
         // Assert
         XCTAssertEqual(measurement.measurementDate, measurementDate)
@@ -51,7 +51,7 @@ final class TemperatureMeasurementTests: XCTestCase {
         
         let measurementDate = dateCreator(string: "2022-08-01")
         // Act
-        let measurement = try jsonDecoder.decode(TemperatureMeasurement.self, from: data)
+        let measurement = try jsonDecoder.decode(TemperatureMeasurementCollection.self, from: data)
         
         // Assert
         XCTAssertEqual(measurement.measurementDate, measurementDate)
