@@ -92,7 +92,7 @@ final class MeasurementUtilsTests: XCTestCase {
         XCTAssertEqual(year, 2022)
         XCTAssertEqual(month, 8)
         XCTAssertEqual(day, 1)
-        XCTAssertEqual(hour, 0)
+        XCTAssertEqual(hour, 2)
     }
     
     func testCreateDateWithHourSingleDigit() throws {
@@ -113,7 +113,7 @@ final class MeasurementUtilsTests: XCTestCase {
         XCTAssertEqual(year, 2022)
         XCTAssertEqual(month, 8)
         XCTAssertEqual(day, 1)
-        XCTAssertEqual(hour, 1)
+        XCTAssertEqual(hour, 3)
     }
     
     func testCreateDateWithHourMultiDigit() throws {
@@ -133,7 +133,7 @@ final class MeasurementUtilsTests: XCTestCase {
         
         XCTAssertEqual(year, 2022)
         XCTAssertEqual(month, 8)
-        XCTAssertEqual(day, 1)
-        XCTAssertEqual(hour, 23)
+        XCTAssertEqual(day, 2)
+        XCTAssertEqual(hour, 1)
     }
 }

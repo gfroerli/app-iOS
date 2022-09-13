@@ -80,12 +80,11 @@ final class FetchTypeTests: XCTestCase {
         // Arrange
         let locationID = 1
         let startDate = dateCreator(string: "2022/08/26")!
-        let endDate = dateCreator(string: "2022/08/27")!
         
         let expectedStartDateSting = "2022-08-25"
-        let expectedEndDateSting = "2022-08-27"
+        let expectedEndDateSting = "2022-08-26"
         
-        let url = FetchType.hourlyTemperatures(locationID: locationID, from: startDate, to: endDate).assembledURL
+        let url = FetchType.hourlyTemperatures(locationID: locationID, of: startDate).assembledURL
         
         // Act
         // Nothing to do
@@ -101,12 +100,11 @@ final class FetchTypeTests: XCTestCase {
         // Arrange
         let locationID = 2
         let startDate = dateCreator(string: "2021/07/25")!
-        let endDate = dateCreator(string: "2021/07/26")!
         
         let expectedStartDateSting = "2021-07-24"
-        let expectedEndDateSting = "2021-07-26"
+        let expectedEndDateSting = "2021-07-25"
         
-        let url = FetchType.hourlyTemperatures(locationID: locationID, from: startDate, to: endDate).assembledURL
+        let url = FetchType.hourlyTemperatures(locationID: locationID, of: startDate).assembledURL
         
         // Act
         // Nothing to do

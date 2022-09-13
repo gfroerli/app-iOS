@@ -17,9 +17,6 @@
 		242F4E5228BB7DF0005C27B6 /* SponsorAdditional.json in Resources */ = {isa = PBXBuildFile; fileRef = 242F4E4F28BB7DF0005C27B6 /* SponsorAdditional.json */; };
 		242F4E5328BB7DF0005C27B6 /* SponsorMissing.json in Resources */ = {isa = PBXBuildFile; fileRef = 242F4E5028BB7DF0005C27B6 /* SponsorMissing.json */; };
 		242F4E5528BB7F81005C27B6 /* TemperatureMeasurementTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 242F4E5428BB7F81005C27B6 /* TemperatureMeasurementTests.swift */; };
-		242F4E5E28BB80E6005C27B6 /* TemperatureMeasurementFull.json in Resources */ = {isa = PBXBuildFile; fileRef = 242F4E5B28BB80E6005C27B6 /* TemperatureMeasurementFull.json */; };
-		242F4E5F28BB80E6005C27B6 /* TemperatureMeasurementAdditional.json in Resources */ = {isa = PBXBuildFile; fileRef = 242F4E5C28BB80E6005C27B6 /* TemperatureMeasurementAdditional.json */; };
-		242F4E6028BB80E6005C27B6 /* TemperatureMeasurementMissing.json in Resources */ = {isa = PBXBuildFile; fileRef = 242F4E5D28BB80E6005C27B6 /* TemperatureMeasurementMissing.json */; };
 		24457EEE28C6197C00172C2B /* ChangeLogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24457EED28C6197C00172C2B /* ChangeLogView.swift */; };
 		24457EF028C619C200172C2B /* ChangeLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24457EEF28C619C200172C2B /* ChangeLog.swift */; };
 		24457EF228C61B7B00172C2B /* ChangeLog.json in Resources */ = {isa = PBXBuildFile; fileRef = 24457EF128C61B7B00172C2B /* ChangeLog.json */; };
@@ -27,6 +24,9 @@
 		247D86F828C27AAD003458C1 /* GfroerliMapAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247D86F728C27AAD003458C1 /* GfroerliMapAnnotation.swift */; };
 		24B93CF128CDE48200573CD5 /* TemperatureMeasurement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24B93CF028CDE48200573CD5 /* TemperatureMeasurement.swift */; };
 		24B93CF328CDE50600573CD5 /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24B93CF228CDE50600573CD5 /* Date+Extensions.swift */; };
+		24C62B9C28D073B300607952 /* TemperatureMeasurementMissing.json in Resources */ = {isa = PBXBuildFile; fileRef = 24C62B9928D073B300607952 /* TemperatureMeasurementMissing.json */; };
+		24C62B9D28D073B300607952 /* TemperatureMeasurementAdditional.json in Resources */ = {isa = PBXBuildFile; fileRef = 24C62B9A28D073B300607952 /* TemperatureMeasurementAdditional.json */; };
+		24C62B9E28D073B300607952 /* TemperatureMeasurementFull.json in Resources */ = {isa = PBXBuildFile; fileRef = 24C62B9B28D073B300607952 /* TemperatureMeasurementFull.json */; };
 		24D1F42A28C60700004F7E8B /* Bundle+Dedode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24D1F42928C60700004F7E8B /* Bundle+Dedode.swift */; };
 		24D1F42C28C6074A004F7E8B /* NewFeatures.json in Resources */ = {isa = PBXBuildFile; fileRef = 24D1F42B28C6074A004F7E8B /* NewFeatures.json */; };
 		24D1F42E28C609A0004F7E8B /* DefaultsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24D1F42D28C609A0004F7E8B /* DefaultsCoordinator.swift */; };
@@ -145,9 +145,6 @@
 		242F4E4F28BB7DF0005C27B6 /* SponsorAdditional.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = SponsorAdditional.json; sourceTree = "<group>"; };
 		242F4E5028BB7DF0005C27B6 /* SponsorMissing.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = SponsorMissing.json; sourceTree = "<group>"; };
 		242F4E5428BB7F81005C27B6 /* TemperatureMeasurementTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemperatureMeasurementTests.swift; sourceTree = "<group>"; };
-		242F4E5B28BB80E6005C27B6 /* TemperatureMeasurementFull.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = TemperatureMeasurementFull.json; path = TestJSONFiles/TemperatureMeasurement/TemperatureMeasurementFull.json; sourceTree = SOURCE_ROOT; };
-		242F4E5C28BB80E6005C27B6 /* TemperatureMeasurementAdditional.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = TemperatureMeasurementAdditional.json; path = TestJSONFiles/TemperatureMeasurement/TemperatureMeasurementAdditional.json; sourceTree = SOURCE_ROOT; };
-		242F4E5D28BB80E6005C27B6 /* TemperatureMeasurementMissing.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = TemperatureMeasurementMissing.json; path = TestJSONFiles/TemperatureMeasurement/TemperatureMeasurementMissing.json; sourceTree = SOURCE_ROOT; };
 		24457EED28C6197C00172C2B /* ChangeLogView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeLogView.swift; sourceTree = "<group>"; };
 		24457EEF28C619C200172C2B /* ChangeLog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeLog.swift; sourceTree = "<group>"; };
 		24457EF128C61B7B00172C2B /* ChangeLog.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = ChangeLog.json; sourceTree = "<group>"; };
@@ -155,6 +152,9 @@
 		247D86F728C27AAD003458C1 /* GfroerliMapAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GfroerliMapAnnotation.swift; sourceTree = "<group>"; };
 		24B93CF028CDE48200573CD5 /* TemperatureMeasurement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemperatureMeasurement.swift; sourceTree = "<group>"; };
 		24B93CF228CDE50600573CD5 /* Date+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extensions.swift"; sourceTree = "<group>"; };
+		24C62B9928D073B300607952 /* TemperatureMeasurementMissing.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = TemperatureMeasurementMissing.json; path = GfroerliAPITests/JSONFiles/TemperatureMeasurement/TemperatureMeasurementMissing.json; sourceTree = SOURCE_ROOT; };
+		24C62B9A28D073B300607952 /* TemperatureMeasurementAdditional.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = TemperatureMeasurementAdditional.json; path = GfroerliAPITests/JSONFiles/TemperatureMeasurement/TemperatureMeasurementAdditional.json; sourceTree = SOURCE_ROOT; };
+		24C62B9B28D073B300607952 /* TemperatureMeasurementFull.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = TemperatureMeasurementFull.json; path = GfroerliAPITests/JSONFiles/TemperatureMeasurement/TemperatureMeasurementFull.json; sourceTree = SOURCE_ROOT; };
 		24D1F42928C60700004F7E8B /* Bundle+Dedode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+Dedode.swift"; sourceTree = "<group>"; };
 		24D1F42B28C6074A004F7E8B /* NewFeatures.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = NewFeatures.json; sourceTree = "<group>"; };
 		24D1F42D28C609A0004F7E8B /* DefaultsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultsCoordinator.swift; sourceTree = "<group>"; };
@@ -290,9 +290,9 @@
 		242F4E5A28BB80D4005C27B6 /* TemperatureMeasurement */ = {
 			isa = PBXGroup;
 			children = (
-				242F4E5C28BB80E6005C27B6 /* TemperatureMeasurementAdditional.json */,
-				242F4E5B28BB80E6005C27B6 /* TemperatureMeasurementFull.json */,
-				242F4E5D28BB80E6005C27B6 /* TemperatureMeasurementMissing.json */,
+				24C62B9A28D073B300607952 /* TemperatureMeasurementAdditional.json */,
+				24C62B9B28D073B300607952 /* TemperatureMeasurementFull.json */,
+				24C62B9928D073B300607952 /* TemperatureMeasurementMissing.json */,
 			);
 			name = TemperatureMeasurement;
 			path = Sponsor/TemperatureMeasurement;
@@ -776,14 +776,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				24C62B9D28D073B300607952 /* TemperatureMeasurementAdditional.json in Resources */,
 				24DAD60628BA62CE002E5785 /* LocationAdditional.json in Resources */,
 				242F4E5228BB7DF0005C27B6 /* SponsorAdditional.json in Resources */,
-				242F4E5F28BB80E6005C27B6 /* TemperatureMeasurementAdditional.json in Resources */,
 				24DAD60428BA62C8002E5785 /* LocationMissing.json in Resources */,
+				24C62B9C28D073B300607952 /* TemperatureMeasurementMissing.json in Resources */,
+				24C62B9E28D073B300607952 /* TemperatureMeasurementFull.json in Resources */,
 				242F4E5328BB7DF0005C27B6 /* SponsorMissing.json in Resources */,
-				242F4E6028BB80E6005C27B6 /* TemperatureMeasurementMissing.json in Resources */,
 				24DAD60228BA5E82002E5785 /* LocationFull.json in Resources */,
-				242F4E5E28BB80E6005C27B6 /* TemperatureMeasurementFull.json in Resources */,
 				242F4E5128BB7DF0005C27B6 /* SponsorFull.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
