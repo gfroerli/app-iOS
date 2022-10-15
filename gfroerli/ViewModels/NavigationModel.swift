@@ -10,7 +10,7 @@ import Foundation
 import GfroerliAPI
 import SwiftUI
 
-enum Tabs: Int, Hashable, CaseIterable, Identifiable, Codable {
+enum TabType: Int, Hashable, CaseIterable, Identifiable, Codable {
     case dashboard
     case map
     case favorites
@@ -46,7 +46,7 @@ enum Tabs: Int, Hashable, CaseIterable, Identifiable, Codable {
 }
 
 class NavigationModel: ObservableObject, Codable {
-    @Published var selectedTab: Tabs = .dashboard
+    @Published var selectedTab: TabType = .dashboard
     @Published var navigationPath: [Location] = []
 
     enum CodingKeys: String, CodingKey {
@@ -57,7 +57,7 @@ class NavigationModel: ObservableObject, Codable {
     func encode(to encoder: Encoder) throws {
         var container = encoder.container(keyedBy: CodingKeys.self)
         try container.encode(selectedTab.id, forKey: .selectedTabID)
-        // try container.encode(navigationPath.compactMap { location in location.id }, forKey: .navigationPath)
+        try container.encode(navigationPath.compactMap { location in location.id }, forKey: .navigationPath)
     }
     
     init() { }
@@ -68,7 +68,7 @@ class NavigationModel: ObservableObject, Codable {
             Int.self, forKey: .selectedTabID
         )
         
-        self.selectedTab = Tabs(rawValue: selectedTabID ?? Tabs.dashboard.id) ?? .dashboard
+        self.selectedTab = TabType(rawValue: selectedTabID ?? TabType.dashboard.id) ?? .dashboard
     }
     
     var jsonData: Data? {
@@ -83,6 +83,7 @@ class NavigationModel: ObservableObject, Codable {
                 return
             }
             selectedTab = model.selectedTab
+            navigationPath = model.navigationPath
         }
     }
     

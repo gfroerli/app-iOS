@@ -10,21 +10,19 @@ import SwiftUI
 /// View handling the tab bar view
 struct TabBarView: View {
     @EnvironmentObject var navigationModel: NavigationModel
-    @Binding var selection: Tabs
+    @Binding var selection: TabType
     
-    var handler: Binding<Tabs> { Binding(
+    var handler: Binding<TabType> { Binding(
         get: { self.selection },
         set: {
-            if $0 == self.selection {
-                navigationModel.resetCurrentNavigationPath()
-            }
+            navigationModel.resetCurrentNavigationPath()
             self.selection = $0
         }
-    )}
+    ) }
     
     var body: some View {
         TabView(selection: handler) {
-            ForEach(Tabs.allCases) { tab in
+            ForEach(TabType.allCases) { tab in
                 switch tab {
                 case .dashboard:
                     DashboardView()

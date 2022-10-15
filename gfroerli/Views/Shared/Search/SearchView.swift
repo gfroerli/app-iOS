@@ -5,8 +5,8 @@
 //  Created by Marc on 13.09.22.
 //
 
-import SwiftUI
 import GfroerliAPI
+import SwiftUI
 
 struct SearchView: View {
 
@@ -26,8 +26,8 @@ struct SearchView: View {
                 }
             }
             
-            .searchable(text: $query, placement: .navigationBarDrawer(displayMode: .always))
-            .onChange(of: query){ newValue in
+            .searchable(text: $query)
+            .onChange(of: query) { newValue in
                 locationsViewModel.sortLocations(query: newValue)
             }
             .toolbar {

@@ -19,7 +19,7 @@ struct NavigationBaseView: View {
     @AppStorage("navigation") private var data: Data?
 
     @EnvironmentObject var navigationModel: NavigationModel
-    @State var selection: Tabs = .dashboard
+    @State var selection: TabType = .dashboard
     
     var body: some View {
         VStack {
@@ -36,13 +36,14 @@ struct NavigationBaseView: View {
             guard navigationModel.selectedTab != selection else {
                 return
             }
-            
+            navigationModel.navigationPath.removeAll()
             navigationModel.selectedTab = newValue
         }
         .onChange(of: navigationModel.selectedTab) { newValue in
             guard newValue != selection else {
                 return
             }
+            navigationModel.navigationPath.removeAll()
             selection = newValue
         }
         .task {
@@ -51,7 +52,7 @@ struct NavigationBaseView: View {
             }
             for await _ in navigationModel.objectWillChangeSequence {
                 // TODO: IPad support
-                // data = navigationModel.jsonData
+                data = navigationModel.jsonData
             }
         }
     }

@@ -5,8 +5,8 @@
 //  Created by Marc on 13.09.22.
 //
 
-import SwiftUI
 import GfroerliAPI
+import SwiftUI
 
 struct FavoritesView: View {
     
@@ -27,6 +27,7 @@ struct FavoritesView: View {
                 }
             }
             .navigationBarTitle("Favorites")
+            .navigationBarTitleDisplayMode(.inline)
             .navigationDestination(for: Location.self, destination: { location in
                 LocationDetailView(locationID: location.id)
             })

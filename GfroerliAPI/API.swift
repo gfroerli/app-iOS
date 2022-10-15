@@ -26,7 +26,7 @@ public class GfroerliAPI {
         let data = try? await Fetcher.fetch(type: fetchType)
         
         guard let data else {
-            fatalError()
+            throw GfroerliAPIError.noData
         }
         let objects = try? decoder.decode(T.self, from: data)
         guard let objects else {

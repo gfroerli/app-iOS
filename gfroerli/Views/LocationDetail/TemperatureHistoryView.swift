@@ -61,8 +61,13 @@ struct TemperatureHistoryView: View {
         .frame(height: 200)
         .task {
             do {
+                
+                guard let locationID = location?.id else {
+                    return
+                }
+                
                 try await hourlyVM.loadHourlyMeasurements(
-                    locationID: location?.id ?? 0,
+                    locationID: locationID,
                     of: Date.now.addingTimeInterval(-86000)
                 )
             }

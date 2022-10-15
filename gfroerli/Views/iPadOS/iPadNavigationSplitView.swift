@@ -14,7 +14,7 @@ struct iPadNavigationSplitView: View {
     var body: some View {
         NavigationSplitView {
             List(
-                Tabs.allCases
+                TabType.allCases
             ) { tab in
                 NavigationLink(value: tab) {
                     Label(tab.localizedName, systemImage: tab.symbolName)

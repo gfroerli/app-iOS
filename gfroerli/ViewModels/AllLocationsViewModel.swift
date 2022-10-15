@@ -93,10 +93,10 @@ class AllLocationsViewModel: ObservableObject {
     
     public func sortLocations(query: String? = nil) {
         
-       var  tempLocations = allLocations
+        var tempLocations = allLocations
         
         if let query, query != "" {
-            tempLocations.removeAll {!($0.name.lowercased().contains(query.lowercased()))}
+            tempLocations.removeAll { !($0.name.lowercased().contains(query.lowercased())) }
         }
         
         switch sortedBy {

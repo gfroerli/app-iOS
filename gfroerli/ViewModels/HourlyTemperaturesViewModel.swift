@@ -24,8 +24,7 @@ class HourlyTemperaturesViewModel: ObservableObject {
                 locationID: locationID,
                 of: date
             )) else {
-            // TODO: Error handling
-            fatalError("")
+            return
         }
                 
         for measurement in measurements {

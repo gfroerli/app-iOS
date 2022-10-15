@@ -5,8 +5,8 @@
 //  Created by Marc on 15.10.22.
 //
 
-import SwiftUI
 import GfroerliAPI
+import SwiftUI
 
 struct InlineLocationView: View {
     

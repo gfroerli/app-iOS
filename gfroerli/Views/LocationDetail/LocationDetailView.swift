@@ -46,7 +46,6 @@ struct LocationDetailView: View {
                         .navigationBarTitleDisplayMode(.inline)
                 }
             }
-            
         }
         .toolbar {
             Button {
