@@ -6,10 +6,31 @@
 //
 
 import SwiftUI
+import GfroerliAPI
 
 struct FavoritesView: View {
+    
+    @AppStorage("favorites") private var favorites = [Int]()
+    
+    @EnvironmentObject var navigationModel: NavigationModel
+    @EnvironmentObject var locationsViewModel: AllLocationsViewModel
+
     var body: some View {
-        Text("Hello, Favs!")
+        NavigationStack(path: $navigationModel.navigationPath) {
+            List {
+                ForEach(locationsViewModel.sortedLocations) { location in
+                    if favorites.contains(location.id) {
+                        NavigationLink(value: location) {
+                            InlineLocationView(location: location)
+                        }
+                    }
+                }
+            }
+            .navigationBarTitle("Favorites")
+            .navigationDestination(for: Location.self, destination: { location in
+                LocationDetailView(locationID: location.id)
+            })
+        }
     }
 }
 

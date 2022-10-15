@@ -92,4 +92,8 @@ class NavigationModel: ObservableObject, Codable {
             .buffer(size: 1, prefetch: .byRequest, whenFull: .dropOldest)
             .values
     }
+    
+    public func resetCurrentNavigationPath() {
+        navigationPath.removeAll()
+    }
 }

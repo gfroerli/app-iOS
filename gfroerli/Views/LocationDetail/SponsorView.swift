@@ -20,7 +20,7 @@ struct SponsorView: View {
             VStack(alignment: .leading) {
                 Text("Sponsored by:")
                     .font(.title)
-                Text(sponsor!.name)
+                Text(sponsor?.name ?? "")
                     .font(.largeTitle)
             }
             .bold()

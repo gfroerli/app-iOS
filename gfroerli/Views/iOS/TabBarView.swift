@@ -9,37 +9,39 @@ import SwiftUI
 
 /// View handling the tab bar view
 struct TabBarView: View {
+    @EnvironmentObject var navigationModel: NavigationModel
     @Binding var selection: Tabs
     
+    var handler: Binding<Tabs> { Binding(
+        get: { self.selection },
+        set: {
+            if $0 == self.selection {
+                navigationModel.resetCurrentNavigationPath()
+            }
+            self.selection = $0
+        }
+    )}
+    
     var body: some View {
-        TabView(selection: $selection) {
+        TabView(selection: handler) {
             ForEach(Tabs.allCases) { tab in
                 switch tab {
                 case .dashboard:
                     DashboardView()
                         .tabItem {
                             Label(tab.localizedName, systemImage: tab.symbolName)
-                                .onTapGesture {
-                                    selection = tab
-                                }
                         }
                         .tag(tab)
                 case .map:
                     LocationMapView()
                         .tabItem {
                             Label(tab.localizedName, systemImage: tab.symbolName)
-                                .onTapGesture {
-                                    selection = tab
-                                }
                         }
                         .tag(tab)
                 case .search:
                     SearchView()
                         .tabItem {
                             Label(tab.localizedName, systemImage: tab.symbolName)
-                                .onTapGesture {
-                                    selection = tab
-                                }
                         }
                         .tag(tab)
                     
@@ -47,9 +49,6 @@ struct TabBarView: View {
                     FavoritesView()
                         .tabItem {
                             Label(tab.localizedName, systemImage: tab.symbolName)
-                                .onTapGesture {
-                                    selection = tab
-                                }
                         }
                         .tag(tab)
                 }

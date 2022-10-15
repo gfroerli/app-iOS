@@ -6,9 +6,10 @@
 //
 
 import SwiftUI
+import GfroerliAPI
 
 struct SearchView: View {
-    
+
     @EnvironmentObject var navigationModel: NavigationModel
     @EnvironmentObject var locationsViewModel: AllLocationsViewModel
     
@@ -19,15 +20,13 @@ struct SearchView: View {
         NavigationStack(path: $navigationModel.navigationPath) {
             List {
                 ForEach(locationsViewModel.sortedLocations) { location in
-                    VStack {
-                        Text(location.name)
-                        Text(location.lastTemperatureDateString)
-                        Text(location.latestTemperatureString)
+                    NavigationLink(value: location) {
+                        InlineLocationView(location: location)
                     }
                 }
             }
             
-            .searchable(text: $query)
+            .searchable(text: $query, placement: .navigationBarDrawer(displayMode: .always))
             .onChange(of: query){ newValue in
                 locationsViewModel.sortLocations(query: newValue)
             }
@@ -51,6 +50,10 @@ struct SearchView: View {
             }
             
             .navigationTitle("Search")
+            .navigationBarTitleDisplayMode(.inline)
+            .navigationDestination(for: Location.self, destination: { location in
+                LocationDetailView(locationID: location.id)
+            })
         }
     }
 }

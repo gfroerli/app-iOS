@@ -17,6 +17,7 @@ struct NavigationBaseView: View {
 
     // TODO: IPad support use scene storage
     @AppStorage("navigation") private var data: Data?
+
     @EnvironmentObject var navigationModel: NavigationModel
     @State var selection: Tabs = .dashboard
     
@@ -35,6 +36,7 @@ struct NavigationBaseView: View {
             guard navigationModel.selectedTab != selection else {
                 return
             }
+            
             navigationModel.selectedTab = newValue
         }
         .onChange(of: navigationModel.selectedTab) { newValue in

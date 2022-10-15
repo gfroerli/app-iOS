@@ -14,7 +14,7 @@ class SingleLocationsViewModel: ObservableObject {
     
     init(id: Int) {
         Task {
-            self.location = try! await loadInitialLocation(for: id)
+            self.location = try! await loadInitialLocation(for: id) // TODO: unwrap
         }
     }
 
