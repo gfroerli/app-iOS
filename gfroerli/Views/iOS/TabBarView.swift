@@ -33,8 +33,18 @@ struct TabBarView: View {
                                 }
                         }
                         .tag(tab)
-                default:
-                    Text("DEFAULT")
+                case .search:
+                    SearchView()
+                        .tabItem {
+                            Label(tab.localizedName, systemImage: tab.symbolName)
+                                .onTapGesture {
+                                    selection = tab
+                                }
+                        }
+                        .tag(tab)
+                    
+                case .favorites:
+                    FavoritesView()
                         .tabItem {
                             Label(tab.localizedName, systemImage: tab.symbolName)
                                 .onTapGesture {

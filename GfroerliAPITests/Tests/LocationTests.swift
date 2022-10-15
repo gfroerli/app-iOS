@@ -57,7 +57,7 @@ final class LocationTests: XCTestCase {
         XCTAssertEqual(location.sponsorID, sponsorID)
         
         XCTAssertEqual(location.latestTemperature, latestTemp)
-        XCTAssertEqual(location.lastTemperatureDate, latestTempDate)
+        XCTAssertEqual(location.jLastTemperatureDate, latestTempDate)
         
         XCTAssertEqual(location.highestTemperature, highest)
         XCTAssertEqual(location.lowestTemperature, lowest)
@@ -197,7 +197,7 @@ final class LocationTests: XCTestCase {
         XCTAssertEqual(location.sponsorID, sponsorID)
         
         XCTAssertEqual(location.latestTemperature, latestTemp)
-        XCTAssertEqual(location.lastTemperatureDate, latestTempDate)
+        XCTAssertEqual(location.jLastTemperatureDate, latestTempDate)
         
         XCTAssertEqual(location.highestTemperature, highest)
         XCTAssertEqual(location.lowestTemperature, lowest)

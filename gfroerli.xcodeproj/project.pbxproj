@@ -27,6 +27,8 @@
 		24C62B9C28D073B300607952 /* TemperatureMeasurementMissing.json in Resources */ = {isa = PBXBuildFile; fileRef = 24C62B9928D073B300607952 /* TemperatureMeasurementMissing.json */; };
 		24C62B9D28D073B300607952 /* TemperatureMeasurementAdditional.json in Resources */ = {isa = PBXBuildFile; fileRef = 24C62B9A28D073B300607952 /* TemperatureMeasurementAdditional.json */; };
 		24C62B9E28D073B300607952 /* TemperatureMeasurementFull.json in Resources */ = {isa = PBXBuildFile; fileRef = 24C62B9B28D073B300607952 /* TemperatureMeasurementFull.json */; };
+		24C62BA228D0761500607952 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C62BA128D0761500607952 /* SearchView.swift */; };
+		24C62BA528D0765A00607952 /* FavoritesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C62BA428D0765A00607952 /* FavoritesView.swift */; };
 		24D1F42A28C60700004F7E8B /* Bundle+Dedode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24D1F42928C60700004F7E8B /* Bundle+Dedode.swift */; };
 		24D1F42C28C6074A004F7E8B /* NewFeatures.json in Resources */ = {isa = PBXBuildFile; fileRef = 24D1F42B28C6074A004F7E8B /* NewFeatures.json */; };
 		24D1F42E28C609A0004F7E8B /* DefaultsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24D1F42D28C609A0004F7E8B /* DefaultsCoordinator.swift */; };
@@ -155,6 +157,8 @@
 		24C62B9928D073B300607952 /* TemperatureMeasurementMissing.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = TemperatureMeasurementMissing.json; path = GfroerliAPITests/JSONFiles/TemperatureMeasurement/TemperatureMeasurementMissing.json; sourceTree = SOURCE_ROOT; };
 		24C62B9A28D073B300607952 /* TemperatureMeasurementAdditional.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = TemperatureMeasurementAdditional.json; path = GfroerliAPITests/JSONFiles/TemperatureMeasurement/TemperatureMeasurementAdditional.json; sourceTree = SOURCE_ROOT; };
 		24C62B9B28D073B300607952 /* TemperatureMeasurementFull.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = TemperatureMeasurementFull.json; path = GfroerliAPITests/JSONFiles/TemperatureMeasurement/TemperatureMeasurementFull.json; sourceTree = SOURCE_ROOT; };
+		24C62BA128D0761500607952 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
+		24C62BA428D0765A00607952 /* FavoritesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesView.swift; sourceTree = "<group>"; };
 		24D1F42928C60700004F7E8B /* Bundle+Dedode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+Dedode.swift"; sourceTree = "<group>"; };
 		24D1F42B28C6074A004F7E8B /* NewFeatures.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = NewFeatures.json; sourceTree = "<group>"; };
 		24D1F42D28C609A0004F7E8B /* DefaultsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultsCoordinator.swift; sourceTree = "<group>"; };
@@ -307,6 +311,29 @@
 			path = Map;
 			sourceTree = "<group>";
 		};
+		24C62B9F28D075F500607952 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "New Group";
+			sourceTree = "<group>";
+		};
+		24C62BA028D0760200607952 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				24C62BA128D0761500607952 /* SearchView.swift */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		24C62BA328D0764500607952 /* Favorites */ = {
+			isa = PBXGroup;
+			children = (
+				24C62BA428D0765A00607952 /* FavoritesView.swift */,
+			);
+			path = Favorites;
+			sourceTree = "<group>";
+		};
 		24DAD5FD28BA5D06002E5785 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
@@ -350,6 +377,7 @@
 		8D3C6819285B669700DC8CA4 /* Dashboard */ = {
 			isa = PBXGroup;
 			children = (
+				24C62B9F28D075F500607952 /* New Group */,
 				8D8961C82858F5B600C2A7CC /* DashboardView.swift */,
 				8D9328E2285B95110076E174 /* LocationsGridView.swift */,
 				8D3C681A285B672100DC8CA4 /* LocationTile.swift */,
@@ -532,6 +560,8 @@
 			isa = PBXGroup;
 			children = (
 				8D54890E2856315C007253FE /* NavigationBaseView.swift */,
+				24C62BA328D0764500607952 /* Favorites */,
+				24C62BA028D0760200607952 /* Search */,
 				247D86F628C27A8B003458C1 /* Map */,
 				8D3C6819285B669700DC8CA4 /* Dashboard */,
 			);
@@ -821,6 +851,7 @@
 				24457EEE28C6197C00172C2B /* ChangeLogView.swift in Sources */,
 				8DE7D71E2867513A001684D1 /* TemperatureSummaryView.swift in Sources */,
 				24558F1C28CB4F230025864F /* TemperatureHistoryView.swift in Sources */,
+				24C62BA228D0761500607952 /* SearchView.swift in Sources */,
 				241E02CA28BE8338007DFEA7 /* LocationMapPreviewView.swift in Sources */,
 				24FF92F628C6064200454A5F /* NewFeatures.swift in Sources */,
 				24DAE30328C361500040D03D /* SponsorView.swift in Sources */,
@@ -839,6 +870,7 @@
 				8D31E32F286601950095622E /* HourlyTemperaturesViewModel.swift in Sources */,
 				247D86F828C27AAD003458C1 /* GfroerliMapAnnotation.swift in Sources */,
 				8DE7D72228675AA4001684D1 /* View+Modifiers.swift in Sources */,
+				24C62BA528D0765A00607952 /* FavoritesView.swift in Sources */,
 				8DEE78C4285E3313009D853C /* SettingsThumbnailView.swift in Sources */,
 				8D3C681D285B6E4800DC8CA4 /* AppConfiguration.swift in Sources */,
 				8D9328E3285B95110076E174 /* LocationsGridView.swift in Sources */,

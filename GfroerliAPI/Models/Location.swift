@@ -22,7 +22,7 @@ public struct Location: Equatable, Identifiable, Hashable {
     public let sponsorID: Int?
     
     public let latestTemperature: Double?
-    public let lastTemperatureDate: Date?
+    public let jLastTemperatureDate: Date?
     
     public let highestTemperature: Double?
     public let lowestTemperature: Double?
@@ -52,7 +52,7 @@ public struct Location: Equatable, Identifiable, Hashable {
         self.creationDate = creationDate
         self.sponsorID = sponsorID
         self.latestTemperature = latestTemperature
-        self.lastTemperatureDate = lastTemperatureDate
+        self.jLastTemperatureDate = lastTemperatureDate
         self.highestTemperature = highestTemperature
         self.lowestTemperature = lowestTemperature
         self.averageTemperature = averageTemperature
@@ -82,14 +82,18 @@ public extension Location {
         return CLLocation(latitude: lat, longitude: long)
     }
     
+    var lastTemperatureDate: Date {
+        jLastTemperatureDate ?? Date(timeIntervalSinceReferenceDate: 0)
+    }
+    
     /// String of  date of last measurement relative to now
     var lastTemperatureDateString: String {
-        guard let lastTemperatureDate else {
+        guard let jLastTemperatureDate else {
             return "Unknown"
         }
         let formatter = RelativeDateTimeFormatter()
         formatter.dateTimeStyle = .named
-        return formatter.localizedString(for: lastTemperatureDate, relativeTo: .now)
+        return formatter.localizedString(for: jLastTemperatureDate, relativeTo: .now)
     }
     
     var latestTemperatureString: String {
@@ -124,7 +128,7 @@ extension Location: Codable {
         case sponsorID = "sponsor_id"
         
         case latestTemperature = "latest_temperature"
-        case lastTemperatureDate = "latest_measurement_at"
+        case jLastTemperatureDate = "latest_measurement_at"
         
         case highestTemperature = "maximum_temperature"
         case lowestTemperature = "minimum_temperature"
@@ -147,7 +151,7 @@ extension Location: Codable {
         self.sponsorID = try container.decodeIfPresent(Int.self, forKey: .sponsorID)
         
         self.latestTemperature = try container.decodeIfPresent(Double.self, forKey: .latestTemperature)
-        self.lastTemperatureDate = try container.decodeIfPresent(Date.self, forKey: .lastTemperatureDate)
+        self.jLastTemperatureDate = try container.decodeIfPresent(Date.self, forKey: .jLastTemperatureDate)
         
         self.highestTemperature = try container.decodeIfPresent(Double.self, forKey: .highestTemperature)
         self.lowestTemperature = try container.decodeIfPresent(Double.self, forKey: .lowestTemperature)
