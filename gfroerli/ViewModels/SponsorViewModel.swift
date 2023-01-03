@@ -8,27 +8,63 @@
 import Foundation
 import GfroerliAPI
 
-@MainActor
+/// ViewModel handling loading and refreshing of Sponsors
 class SponsorViewModel: ObservableObject {
-    @Published var sponsor: Sponsor?
     
+    private var id: Int
+    
+    // MARK: - Lifecycle
+    
+    /// Initializer
+    /// - Parameter id: ID of the Sponsor to be loaded
     init(id: Int) {
-        Task {
-            self.sponsor = try! await loadInitialSponsor(for: id)
-        }
+        self.id = id
+        self.modelState = .initial
+        loadInitialSponsor()
     }
 
-    private func loadInitialSponsor(for id: Int) async throws -> Sponsor {
-        guard let fetchedSponsor: Sponsor = try? await GfroerliAPI().load(fetchType: .sponsor(id: id)) else {
-            fatalError("")
+    // MARK: - Published Properties
+
+    @Published var sponsor: Sponsor?
+    
+    @Published var modelState: ViewModelState
+    
+    // MARK: - Public Functions
+    
+    /// Loads the Sponsor with the ID the ViewModel was initialized with
+    public func loadSponsor() {
+        assignSponsor(nil, newState: .loading)
+
+        Task {
+            guard let fetchedSponsor: Sponsor = try? await GfroerliAPI().load(fetchType: .sponsor(id: id)) else {
+                // TODO: Error Handling
+                assignSponsor(nil, newState: .failed(error: .otherError))
+                sponsor = nil
+                return
+            }
+            assignSponsor(fetchedSponsor, newState: .loaded)
         }
-        return fetchedSponsor
     }
     
-    public func loadLocation(for id: Int) async throws {
-        guard let fetchedSponsor: Sponsor = try? await GfroerliAPI().load(fetchType: .sponsor(id: id)) else {
-            fatalError("")
+    // MARK: - Private Functions
+
+    private func loadInitialSponsor() {
+        assignSponsor(nil, newState: .loading)
+
+        Task {
+            guard let fetchedSponsor: Sponsor = try? await GfroerliAPI().load(fetchType: .sponsor(id: id)) else {
+                // TODO: Error Handling
+                assignSponsor(nil, newState: .failed(error: .otherError))
+                return
+            }
+            assignSponsor(fetchedSponsor, newState: .loaded)
         }
-        sponsor = fetchedSponsor
+    }
+    
+    private func assignSponsor(_ fetchedSponsor: Sponsor?, newState: ViewModelState) {
+        Task { @MainActor in
+            modelState = newState
+            sponsor = fetchedSponsor
+        }
     }
 }

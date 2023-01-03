@@ -38,7 +38,7 @@ struct LocationDetailView: View {
                     LocationMapPreviewView(location: $locationVM.location)
                     
                     if locationVM.location!.sponsorID != nil {
-                        SponsorView(sponsor: $sponsorVM.sponsor)
+                        SponsorView(sponsorVM: sponsorVM)
                     }
                     
                     Spacer()

@@ -9,44 +9,67 @@ import GfroerliAPI
 import SwiftUI
 
 struct SponsorView: View {
-    @Binding var sponsor: Sponsor?
-        
+    @ObservedObject var sponsorVM: SponsorViewModel
+    
     // MARK: - Body
-
+    
     var body: some View {
-        
         VStack(alignment: .leading) {
-            
-            VStack(alignment: .leading) {
-                Text("Sponsored by:")
-                    .font(.title)
-                Text(sponsor?.name ?? "")
-                    .font(.largeTitle)
-            }
-            .bold()
-            .redacted(reason: sponsor == nil ? .placeholder : [])
+            if case ViewModelState.failed = sponsorVM.modelState {
                 
-            AsyncImage(url: sponsor!.logoURL) { image in
-                image
-                    .resizable()
-                    .aspectRatio(contentMode: .fit)
-                    .padding()
-                    .background(.white)
-                    .cornerRadius(AppConfiguration.General.cornerRadius)
-            } placeholder: {
                 VStack {
-                    Spacer()
-                    HStack {
+                    Text("Fetching Sponsor Failed")
+                        .font(.title3)
+                        .bold()
+                        .foregroundColor(.secondary)
+                    
+                    Button {
+                        sponsorVM.loadSponsor()
+                    } label: {
+                        Text("Retry")
+                    }
+                    .buttonStyle(.bordered)
+                }
+                .frame(maxWidth: .infinity)
+            }
+            else {
+                
+                VStack(alignment: .leading) {
+                    Text("Sponsored by:")
+                        .font(.title)
+                    
+                    Text(sponsorVM.sponsor?.name ?? "No Name")
+                        .font(.largeTitle)
+                        .redacted(
+                            reason: sponsorVM.sponsor == nil ? .placeholder : []
+                        )
+                }
+                .bold()
+                
+                AsyncImage(url: sponsorVM.sponsor?.logoURL) { image in
+                    image
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .padding()
+                        .background(.white)
+                        .cornerRadius(AppConfiguration.General.cornerRadius)
+                    
+                } placeholder: {
+                    VStack {
                         Spacer()
-                        ProgressView()
+                        HStack {
+                            Spacer()
+                            ProgressView()
+                            Spacer()
+                        }
                         Spacer()
                     }
-                    Spacer()
                 }
-            }
                 
-            VStack {
-                Text(sponsor!.description)
+                VStack {
+                    Text(sponsorVM.sponsor?.description ?? "No Description")
+                }
+                .redacted(reason: sponsorVM.modelState == .loading ? .placeholder : [])
             }
         }
         .padding()
@@ -56,6 +79,6 @@ struct SponsorView: View {
 
 struct SponsorView_Previews: PreviewProvider {
     static var previews: some View {
-        SponsorView(sponsor: .constant(Sponsor.exampleSponsor()))
+        SponsorView(sponsorVM: SponsorViewModel(id: 1))
     }
 }
