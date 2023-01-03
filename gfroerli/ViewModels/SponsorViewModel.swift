@@ -20,7 +20,8 @@ class SponsorViewModel: ObservableObject {
     init(id: Int) {
         self.id = id
         self.modelState = .initial
-        loadInitialSponsor()
+        
+        loadSponsor()
     }
 
     // MARK: - Published Properties
@@ -39,7 +40,6 @@ class SponsorViewModel: ObservableObject {
             guard let fetchedSponsor: Sponsor = try? await GfroerliAPI().load(fetchType: .sponsor(id: id)) else {
                 // TODO: Error Handling
                 assignSponsor(nil, newState: .failed(error: .otherError))
-                sponsor = nil
                 return
             }
             assignSponsor(fetchedSponsor, newState: .loaded)
@@ -47,19 +47,6 @@ class SponsorViewModel: ObservableObject {
     }
     
     // MARK: - Private Functions
-
-    private func loadInitialSponsor() {
-        assignSponsor(nil, newState: .loading)
-
-        Task {
-            guard let fetchedSponsor: Sponsor = try? await GfroerliAPI().load(fetchType: .sponsor(id: id)) else {
-                // TODO: Error Handling
-                assignSponsor(nil, newState: .failed(error: .otherError))
-                return
-            }
-            assignSponsor(fetchedSponsor, newState: .loaded)
-        }
-    }
     
     private func assignSponsor(_ fetchedSponsor: Sponsor?, newState: ViewModelState) {
         Task { @MainActor in

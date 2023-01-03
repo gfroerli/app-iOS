@@ -8,27 +8,51 @@
 import Foundation
 import GfroerliAPI
 
-@MainActor
+/// ViewModel handling loading and refreshing of single Locations
 class SingleLocationsViewModel: ObservableObject {
-    @Published var location: Location?
+
+    private var id: Int
     
+    // MARK: - Lifecycle
+
+    /// Initializer
+    /// - Parameter id: ID of the Location to be loaded
     init(id: Int) {
-        Task {
-            self.location = try! await loadInitialLocation(for: id) // TODO: unwrap
-        }
+        self.id = id
+        self.modelState = .initial
+
+        loadLocation()
     }
 
-    private func loadInitialLocation(for id: Int) async throws -> Location {
-        guard let fetchedLocation: Location = try? await GfroerliAPI().load(fetchType: .singleLocation(id: id)) else {
-            fatalError("")
+    // MARK: - Published Properties
+    
+    @Published var location: Location?
+
+    @Published var modelState: ViewModelState
+
+    // MARK: - Public Functions
+    
+    public func loadLocation() {
+        assignLocation(nil, newState: .loading)
+
+        Task {
+            guard let fetchedLocation: Location = try? await GfroerliAPI().load(fetchType: .singleLocation(id: id))
+            else {
+                // TODO: Error Handling
+                assignLocation(nil, newState: .failed(error: .otherError))
+                return
+            }
+            
+            assignLocation(fetchedLocation, newState: .loaded)
         }
-        return fetchedLocation
     }
     
-    public func loadLocation(for id: Int) async throws {
-        guard let fetchedLocation: Location = try? await GfroerliAPI().load(fetchType: .singleLocation(id: id)) else {
-            fatalError("")
+    // MARK: - Private Functions
+
+    private func assignLocation(_ fetchedLocation: Location?, newState: ViewModelState) {
+        Task { @MainActor in
+            modelState = newState
+            location = fetchedLocation
         }
-        location = fetchedLocation
     }
 }
