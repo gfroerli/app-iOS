@@ -70,13 +70,6 @@ enum AppConfiguration {
         static let fontWeight: Font.Weight = .semibold
     }
     
-    // TODO: Move
-    enum ChartSpan {
-        case day
-        case week
-        case month
-    }
-    
     enum Settings {
         /// String containing current version number, e.g. 1.0
         static let lastVersion = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as! String
@@ -125,12 +118,5 @@ enum AppConfiguration {
         static let twitterURL = URL(string: "https://twitter.com/coredump_ch")!
         /// URL to open GitHub
         static let githubURL = URL(string: "https://github.com/gfroerli")!
-    }
-    
-    enum CommonTimeInterval {
-        // TimeInterval representing a hours duration
-        static let hour = TimeInterval(3600)
-        // TimeInterval representing a days duration
-        static let day = hour * 24
     }
 }

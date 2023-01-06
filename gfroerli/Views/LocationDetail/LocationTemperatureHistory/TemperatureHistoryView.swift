@@ -15,13 +15,23 @@ struct TemperatureHistoryView: View {
 
     var locationID: Int
 
-    @StateObject var hourlyVM: HourlyTemperaturesViewModel
-    @State var currentSelection: AppConfiguration.ChartSpan = .day
+    @StateObject var hourlyVM: TemperaturesViewModel
+    @StateObject var weeklyVM: TemperaturesViewModel
+    @StateObject var monthlyVM: TemperaturesViewModel
+    @State var currentSelection: ChartSpan = .day
     @State var zoomed = false
     
     init(locationID: Int) {
         self.locationID = locationID
-        self._hourlyVM = StateObject(wrappedValue: HourlyTemperaturesViewModel(locationID: locationID, date: Date.now))
+        self
+            ._hourlyVM =
+            StateObject(wrappedValue: TemperaturesViewModel(locationID: locationID, interval: .day, date: Date.now))
+        self
+            ._weeklyVM =
+            StateObject(wrappedValue: TemperaturesViewModel(locationID: locationID, interval: .week, date: Date.now))
+        self
+            ._monthlyVM =
+            StateObject(wrappedValue: TemperaturesViewModel(locationID: locationID, interval: .month, date: Date.now))
     }
     
     var body: some View {
@@ -34,9 +44,9 @@ struct TemperatureHistoryView: View {
                 Spacer()
                 
                 Picker("Choose time span", selection: $currentSelection) {
-                    Text("Day").tag(AppConfiguration.ChartSpan.day)
-                    Text("Week").tag(AppConfiguration.ChartSpan.week)
-                    Text("Month").tag(AppConfiguration.ChartSpan.month)
+                    Text("Day").tag(ChartSpan.day)
+                    Text("Week").tag(ChartSpan.week)
+                    Text("Month").tag(ChartSpan.month)
                 }
                 
                 Button {
@@ -54,11 +64,11 @@ struct TemperatureHistoryView: View {
             }
             switch currentSelection {
             case .day:
-                HourlyHistoryGraphView(hourlyVM: hourlyVM, zoomed: $zoomed)
+                HistoryGraphView(hourlyVM: hourlyVM, zoomed: $zoomed)
             case .week:
-                Text("week")
+                HistoryGraphView(hourlyVM: weeklyVM, zoomed: $zoomed)
             case .month:
-                Text("Month")
+                HistoryGraphView(hourlyVM: monthlyVM, zoomed: $zoomed)
             }
         }
         .padding()

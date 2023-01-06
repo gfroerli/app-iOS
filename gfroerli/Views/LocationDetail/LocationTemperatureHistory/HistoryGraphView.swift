@@ -1,5 +1,5 @@
 //
-//  HourlyHistoryGraphView.swift
+//  HistoryGraphView.swift
 //  gfroerli
 //
 //  Created by Marc on 06.01.23.
@@ -8,9 +8,9 @@
 import Charts
 import SwiftUI
 
-struct HourlyHistoryGraphView: View {
+struct HistoryGraphView: View {
     
-    @ObservedObject var hourlyVM: HourlyTemperaturesViewModel
+    @ObservedObject var hourlyVM: TemperaturesViewModel
     @Binding var zoomed: Bool
     var body: some View {
         VStack {
@@ -60,7 +60,7 @@ struct HourlyHistoryGraphView: View {
             HStack {
                 Button {
                     withAnimation {
-                        hourlyVM.stepDayBack()
+                        hourlyVM.stepBack()
                     }
                 } label: {
                     Image(systemName: "chevron.left")
@@ -75,12 +75,12 @@ struct HourlyHistoryGraphView: View {
                 Spacer()
                 
                 Button {
-                    hourlyVM.stepDayForward()
+                    hourlyVM.stepForward()
                 } label: {
                     Image(systemName: "chevron.right")
                 }
                 .buttonStyle(.bordered)
-                .disabled(hourlyVM.isAtCurrentDate)
+                .disabled(hourlyVM.isAtMostRecentInterval)
             }
             .buttonBorderShape(.capsule)
         }
@@ -93,8 +93,8 @@ struct HourlyHistoryGraphView: View {
 
 struct HourlyHistoryGraphView_Previews: PreviewProvider {
     static var previews: some View {
-        HourlyHistoryGraphView(
-            hourlyVM: HourlyTemperaturesViewModel(locationID: 1, date: Date.now),
+        HistoryGraphView(
+            hourlyVM: TemperaturesViewModel(locationID: 1, interval: .day, date: Date.now),
             zoomed: .constant(false)
         )
     }
