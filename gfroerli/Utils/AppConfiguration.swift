@@ -65,6 +65,13 @@ enum AppConfiguration {
         static let zoomedMapSpan = 1000.0
     }
     
+    // TODO: Move
+    enum ChartSpan {
+        case day
+        case week
+        case month
+    }
+    
     enum Settings {
         /// String containing current version number, e.g. 1.0
         static let lastVersion = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as! String

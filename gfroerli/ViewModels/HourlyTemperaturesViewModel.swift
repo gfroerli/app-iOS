@@ -5,6 +5,7 @@
 //  Created by Marc Kramer on 24.06.22.
 //
 
+import Charts
 import Foundation
 import GfroerliAPI
 
@@ -19,7 +20,6 @@ class HourlyTemperaturesViewModel: ObservableObject {
     
     private var id: Int
     private var initialDate: Date
-    private var currentDate: Date
     
     // MARK: - Lifecycle
     
@@ -28,11 +28,12 @@ class HourlyTemperaturesViewModel: ObservableObject {
         self.initialDate = date
         self.currentDate = date
         
-        createPlaceholderMeasurements()
         loadHourlyMeasurements()
     }
    
     // MARK: - Published Properties
+
+    @Published var currentDate: Date
 
     @Published var lowestTemperatures = [TemperatureMeasurement]()
     
@@ -40,14 +41,17 @@ class HourlyTemperaturesViewModel: ObservableObject {
     
     @Published var highestTemperatures = [TemperatureMeasurement]()
     
+    @Published var zoomedYAxisMinValue = 0
+    
+    @Published var zoomedYAxisMaxValue = 30
+
     // MARK: - Public Functions
     
     /// Steps a day back and loads measurements
     public func stepDayBack() {
         Task {
             await removeMeasurements()
-            currentDate = currentDate.advanced(by: -AppConfiguration.CommonTimeInterval.day)
-            createPlaceholderMeasurements()
+            await advanceCurrentDate(by: -AppConfiguration.CommonTimeInterval.day)
             loadHourlyMeasurements()
         }
     }
@@ -56,8 +60,7 @@ class HourlyTemperaturesViewModel: ObservableObject {
     public func stepDayForward() {
         Task {
             await removeMeasurements()
-            currentDate = currentDate.advanced(by: AppConfiguration.CommonTimeInterval.day)
-            createPlaceholderMeasurements()
+            await advanceCurrentDate(by: AppConfiguration.CommonTimeInterval.day)
             loadHourlyMeasurements()
         }
     }
@@ -81,7 +84,14 @@ class HourlyTemperaturesViewModel: ObservableObject {
                     }
                 }
             }
+            await createPlaceholderMeasurements()
+            await calculateYAxisZoomedValues()
         }
+    }
+    
+    @MainActor
+    private func advanceCurrentDate(by timeInterval: TimeInterval) {
+        currentDate = currentDate.advanced(by: timeInterval)
     }
     
     @MainActor
@@ -106,7 +116,14 @@ class HourlyTemperaturesViewModel: ObservableObject {
             at: 0
         )
     }
+    
+    @MainActor
+    private func calculateYAxisZoomedValues() {
+        zoomedYAxisMinValue = Int((lowestTemperatures.min { $0.value < $1.value }?.value ?? 0.0).rounded(.down))
+        zoomedYAxisMaxValue = Int((highestTemperatures.max { $0.value < $1.value }?.value ?? 30.0).rounded(.up))
+    }
 
+    @MainActor
     private func createPlaceholderMeasurements() {
         placeholderTemperatures.removeAll()
         
@@ -118,7 +135,7 @@ class HourlyTemperaturesViewModel: ObservableObject {
             placeholders
                 .append(TemperatureMeasurement(
                     measurementDate: midnightDate.addingTimeInterval(TimeInterval(i * 3600)),
-                    value: 0.0
+                    value: averageTemperatures.first?.value ?? 0.0
                 ))
         }
         placeholderTemperatures = placeholders

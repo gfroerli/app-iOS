@@ -27,8 +27,6 @@ public enum APIConfiguration {
         }
         
         formatter.dateFormat = dateFormat
-        let offsetDateString = formatter.string(from: offsetDate)
-        print(offsetDateString)
-        return offsetDateString
+        return formatter.string(from: offsetDate)
     }
 }

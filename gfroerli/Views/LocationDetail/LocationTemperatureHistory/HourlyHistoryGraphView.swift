@@ -1,27 +1,17 @@
 //
-//  TemperatureHistoryView.swift
+//  HourlyHistoryGraphView.swift
 //  gfroerli
 //
-//  Created by Marc on 09.09.22.
+//  Created by Marc on 06.01.23.
 //
 
 import Charts
-import GfroerliAPI
 import SwiftUI
 
-struct TemperatureHistoryView: View {
+struct HourlyHistoryGraphView: View {
     
-    typealias config = AppConfiguration
-
-    var locationID: Int
-
-    @StateObject var hourlyVM: HourlyTemperaturesViewModel
-    
-    init(locationID: Int) {
-        self.locationID = locationID
-        self._hourlyVM = StateObject(wrappedValue: HourlyTemperaturesViewModel(locationID: locationID, date: Date.now))
-    }
-    
+    @ObservedObject var hourlyVM: HourlyTemperaturesViewModel
+    @Binding var zoomed: Bool
     var body: some View {
         VStack {
             Chart {
@@ -32,6 +22,7 @@ struct TemperatureHistoryView: View {
                         series: .value("Lowest", "low")
                     )
                     .foregroundStyle(.blue)
+                    .interpolationMethod(.catmullRom)
                 }
                 
                 ForEach(hourlyVM.averageTemperatures) {
@@ -41,6 +32,7 @@ struct TemperatureHistoryView: View {
                         series: .value("Average", "avg")
                     )
                     .foregroundStyle(.green)
+                    .interpolationMethod(.catmullRom)
                 }
                 
                 ForEach(hourlyVM.highestTemperatures) {
@@ -50,6 +42,7 @@ struct TemperatureHistoryView: View {
                         series: .value("Highest", "high")
                     )
                     .foregroundStyle(.red)
+                    .interpolationMethod(.catmullRom)
                 }
                 
                 ForEach(hourlyVM.placeholderTemperatures) {
@@ -61,7 +54,8 @@ struct TemperatureHistoryView: View {
                     .foregroundStyle(.clear)
                 }
             }
-            .padding(.bottom)
+            .chartYScale(domain: zoomed ? hourlyVM.zoomedYAxisMinValue...hourlyVM.zoomedYAxisMaxValue : 0...30)
+            .frame(minHeight: 250)
             
             HStack {
                 Button {
@@ -71,25 +65,37 @@ struct TemperatureHistoryView: View {
                 } label: {
                     Image(systemName: "chevron.left")
                 }
-                .buttonStyle(.borderedProminent)
+                .buttonStyle(.bordered)
                 Spacer()
+                
+                Text(hourlyVM.currentDate.formatted(.dateTime.day().month(.wide)))
+                    .font(.headline)
+                    .foregroundColor(.secondary)
+                
+                Spacer()
+                
                 Button {
                     hourlyVM.stepDayForward()
                 } label: {
                     Image(systemName: "chevron.right")
                 }
-                .buttonStyle(.borderedProminent)
-                .disabled(!hourlyVM.isAtCurrentDate)
+                .buttonStyle(.bordered)
+                .disabled(hourlyVM.isAtCurrentDate)
             }
+            .buttonBorderShape(.capsule)
         }
-        
-        .padding()
-        .frame(height: 200)
+    }
+
+    private func domain() -> any PositionScaleRange {
+        return (0...1 as? (any PositionScaleRange))!
     }
 }
 
-struct TemperatureHistoryView_Previews: PreviewProvider {
+struct HourlyHistoryGraphView_Previews: PreviewProvider {
     static var previews: some View {
-        TemperatureHistoryView(locationID: 1)
+        HourlyHistoryGraphView(
+            hourlyVM: HourlyTemperaturesViewModel(locationID: 1, date: Date.now),
+            zoomed: .constant(false)
+        )
     }
 }

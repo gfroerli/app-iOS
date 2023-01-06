@@ -31,7 +31,7 @@ struct LatestTemperatureView: View {
                     .lineLimit(2)
             }
         }
-        .font(.largeTitle)
+        .font(.title)
         .bold()
         .padding()
         .defaultBoxStyle()
