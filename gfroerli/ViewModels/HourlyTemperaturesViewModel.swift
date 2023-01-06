@@ -8,48 +8,109 @@
 import Foundation
 import GfroerliAPI
 
-@MainActor
 class HourlyTemperaturesViewModel: ObservableObject {
+    
+    /// Used to make the graph full width even when we do not have measurements in all time slots
+    public var placeholderTemperatures = [TemperatureMeasurement]()
+    /// Used to disable the forward button
+    public var isAtCurrentDate: Bool {
+        Calendar.current.isDate(initialDate, inSameDayAs: currentDate)
+    }
+    
+    private var id: Int
+    private var initialDate: Date
+    private var currentDate: Date
+    
+    // MARK: - Lifecycle
+    
+    init(locationID: Int, date: Date) {
+        self.id = locationID
+        self.initialDate = date
+        self.currentDate = date
+        
+        createPlaceholderMeasurements()
+        loadHourlyMeasurements()
+    }
    
+    // MARK: - Published Properties
+
     @Published var lowestTemperatures = [TemperatureMeasurement]()
+    
     @Published var averageTemperatures = [TemperatureMeasurement]()
+    
     @Published var highestTemperatures = [TemperatureMeasurement]()
-    @Published var placeholderTemperatures = [TemperatureMeasurement]()
     
     // MARK: - Public Functions
-
-    public func loadHourlyMeasurements(locationID: Int, of date: Date) async throws {
-        guard let measurements: [TemperatureMeasurementCollection] = try? await GfroerliAPI()
-            .load(fetchType: .hourlyTemperatures(
-                locationID: locationID,
-                of: date
-            )) else {
-            return
+    
+    /// Steps a day back and loads measurements
+    public func stepDayBack() {
+        Task {
+            await removeMeasurements()
+            currentDate = currentDate.advanced(by: -AppConfiguration.CommonTimeInterval.day)
+            createPlaceholderMeasurements()
+            loadHourlyMeasurements()
         }
-                
-        for measurement in measurements {
-            if Calendar.current.isDate(measurement.measurementDate, inSameDayAs: date) {
-                lowestTemperatures.insert(
-                    TemperatureMeasurement(measurementDate: measurement.measurementDate, value: measurement.lowest),
-                    at: 0
-                )
-                averageTemperatures.insert(
-                    TemperatureMeasurement(measurementDate: measurement.measurementDate, value: measurement.average),
-                    at: 0
-                )
-                highestTemperatures.insert(
-                    TemperatureMeasurement(measurementDate: measurement.measurementDate, value: measurement.highest),
-                    at: 0
-                )
-            }
+    }
+    
+    /// Steps a day forward and loads measurements
+    public func stepDayForward() {
+        Task {
+            await removeMeasurements()
+            currentDate = currentDate.advanced(by: AppConfiguration.CommonTimeInterval.day)
+            createPlaceholderMeasurements()
+            loadHourlyMeasurements()
         }
-        createPlaceholderMeasurements(for: date)
     }
     
     // MARK: - Private Functions
 
-    private func createPlaceholderMeasurements(for date: Date) {
-        let midnightComponents = Calendar.current.dateComponents([.year, .month, .day], from: date)
+    private func loadHourlyMeasurements() {
+        Task {
+            guard let measurements: [TemperatureMeasurementCollection] = try? await GfroerliAPI()
+                .load(fetchType: .hourlyTemperatures(
+                    locationID: id,
+                    of: currentDate
+                )) else {
+                return
+            }
+            
+            for measurement in measurements {
+                if Calendar.current.isDate(measurement.measurementDate, inSameDayAs: currentDate) {
+                    Task {
+                        await insertMeasurement(measurement)
+                    }
+                }
+            }
+        }
+    }
+    
+    @MainActor
+    private func removeMeasurements() {
+        lowestTemperatures.removeAll()
+        averageTemperatures.removeAll()
+        highestTemperatures.removeAll()
+    }
+    
+    @MainActor
+    private func insertMeasurement(_ measurement: TemperatureMeasurementCollection) {
+        lowestTemperatures.insert(
+            TemperatureMeasurement(measurementDate: measurement.measurementDate, value: measurement.lowest),
+            at: 0
+        )
+        averageTemperatures.insert(
+            TemperatureMeasurement(measurementDate: measurement.measurementDate, value: measurement.average),
+            at: 0
+        )
+        highestTemperatures.insert(
+            TemperatureMeasurement(measurementDate: measurement.measurementDate, value: measurement.highest),
+            at: 0
+        )
+    }
+
+    private func createPlaceholderMeasurements() {
+        placeholderTemperatures.removeAll()
+        
+        let midnightComponents = Calendar.current.dateComponents([.year, .month, .day], from: currentDate)
         let midnightDate = Calendar.current.date(from: midnightComponents)!
         
         var placeholders = [TemperatureMeasurement]()
@@ -60,7 +121,6 @@ class HourlyTemperaturesViewModel: ObservableObject {
                     value: 0.0
                 ))
         }
-        
         placeholderTemperatures = placeholders
     }
 }

@@ -114,4 +114,11 @@ enum AppConfiguration {
         /// URL to open GitHub
         static let githubURL = URL(string: "https://github.com/gfroerli")!
     }
+    
+    enum CommonTimeInterval {
+        // TimeInterval representing a hours duration
+        static let hour = TimeInterval(3600)
+        // TimeInterval representing a days duration
+        static let day = hour * 24
+    }
 }

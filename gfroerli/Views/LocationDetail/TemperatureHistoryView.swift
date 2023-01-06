@@ -12,9 +12,15 @@ import SwiftUI
 struct TemperatureHistoryView: View {
     
     typealias config = AppConfiguration
+
+    var locationID: Int
+
+    @StateObject var hourlyVM: HourlyTemperaturesViewModel
     
-    @ObservedObject var hourlyVM = HourlyTemperaturesViewModel()
-    @Binding var location: Location?
+    init(locationID: Int) {
+        self.locationID = locationID
+        self._hourlyVM = StateObject(wrappedValue: HourlyTemperaturesViewModel(locationID: locationID, date: Date.now))
+    }
     
     var body: some View {
         VStack {
@@ -55,32 +61,35 @@ struct TemperatureHistoryView: View {
                     .foregroundStyle(.clear)
                 }
             }
+            .padding(.bottom)
+            
+            HStack {
+                Button {
+                    withAnimation {
+                        hourlyVM.stepDayBack()
+                    }
+                } label: {
+                    Image(systemName: "chevron.left")
+                }
+                .buttonStyle(.borderedProminent)
+                Spacer()
+                Button {
+                    hourlyVM.stepDayForward()
+                } label: {
+                    Image(systemName: "chevron.right")
+                }
+                .buttonStyle(.borderedProminent)
+                .disabled(!hourlyVM.isAtCurrentDate)
+            }
         }
         
         .padding()
         .frame(height: 200)
-        .task {
-            do {
-                
-                guard let locationID = location?.id else {
-                    return
-                }
-                
-                try await hourlyVM.loadHourlyMeasurements(
-                    locationID: locationID,
-                    of: Date.now.addingTimeInterval(-86000)
-                )
-            }
-            catch {
-                // TODO: Error handling
-                print("@2")
-            }
-        }
     }
 }
 
 struct TemperatureHistoryView_Previews: PreviewProvider {
     static var previews: some View {
-        TemperatureHistoryView(location: .constant(Location.exampleLocation()))
+        TemperatureHistoryView(locationID: 1)
     }
 }

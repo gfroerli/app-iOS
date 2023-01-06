@@ -33,7 +33,7 @@ struct LocationDetailView: View {
                     
                     TemperatureSummaryView(location: $locationVM.location)
                     
-                    TemperatureHistoryView(location: $locationVM.location)
+                    TemperatureHistoryView(locationID: locationVM.id)
                     
                     LocationMapPreviewView(location: $locationVM.location)
                     

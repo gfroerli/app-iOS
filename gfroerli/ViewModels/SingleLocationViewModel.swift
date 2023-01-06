@@ -11,7 +11,7 @@ import GfroerliAPI
 /// ViewModel handling loading and refreshing of single Locations
 class SingleLocationsViewModel: ObservableObject {
 
-    private var id: Int
+    private(set) var id: Int
     
     // MARK: - Lifecycle
 
