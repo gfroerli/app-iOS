@@ -17,25 +17,24 @@ struct GfroerliMapAnnotation: View {
         HStack {
             Image(systemName: "thermometer.medium")
                 .symbolRenderingMode(.palette)
-                .foregroundStyle(.red, .white, .blue)
-                .padding(.leading, 6)
+                .foregroundStyle(.red, .white, Color.accentColor)
             
             Text(location.name)
-            
+
             Text(location.latestTemperatureString)
-            
+
             Image(systemName: "chevron.right")
-                .fontWeight(.semibold)
-                .foregroundColor(.blue)
+                .foregroundColor(.accentColor)
         }
+        .fontWeight(AppConfiguration.MapView.fontWeight)
         .foregroundColor(.white)
-        .padding(5)
-        .background(.blue.opacity(0.4))
-        .border(.blue, width: 2)
+        .padding(8)
+        .background(Color.accentColor.opacity(0.5))
+        .border(Color.accentColor, width: 2)
         .clipShape(Capsule())
         .overlay {
             Capsule()
-                .strokeBorder(.blue, lineWidth: 2)
+                .strokeBorder(Color.accentColor, lineWidth: 2)
         }
     }
 }
@@ -47,15 +46,15 @@ struct GfroerliMapAnnotationPin: View {
     var body: some View {
         ZStack {
             Circle()
-                .strokeBorder(.blue, lineWidth: 2)
-                .background(Circle().fill(.blue.opacity(0.4)))
+                .strokeBorder(Color.accentColor, lineWidth: 2)
+                .background(Circle().fill(Color(UIColor.tintColor).opacity(0.5)))
                 .frame(width: 44, height: 44)
                 .overlay {
                     Image(systemName: "thermometer.medium")
                         .resizable()
                         .aspectRatio(contentMode: .fit)
                         .symbolRenderingMode(.palette)
-                        .foregroundStyle(.red, .white, .blue)
+                        .foregroundStyle(.red, .white, Color.accentColor)
                         .padding(5)
                 }
         }
@@ -64,7 +63,9 @@ struct GfroerliMapAnnotationPin: View {
 
 struct GfroerliMapAnnotation_Previews: PreviewProvider {
     static var previews: some View {
-        GfroerliMapAnnotation(location: Location.exampleLocation())
-        GfroerliMapAnnotationPin(location: Location.exampleLocation())
+        VStack {
+            GfroerliMapAnnotation(location: Location.exampleLocation())
+            GfroerliMapAnnotationPin(location: Location.exampleLocation())
+        }
     }
 }

@@ -32,7 +32,7 @@ struct LocationTile: View {
     // MARK: - View
 
     var body: some View {
-        VStack(alignment: .leading) {
+        VStack(alignment: .leading, spacing: 0) {
             Map(coordinateRegion: $region, interactionModes: [])
             
             HStack(alignment: .top) {
@@ -53,10 +53,10 @@ struct LocationTile: View {
                     Text(location.lastTemperatureDateString)
                         .font(.caption)
                         .foregroundColor(.secondary)
-                        .lineLimit(2, reservesSpace: true)
+                        .lineLimit(2)
                 }
             }
-            .padding([.horizontal, .bottom])
+            .padding(AppConfiguration.General.boxPadding)
         }
         .frame(maxWidth: .infinity, idealHeight: config.gridTileHeight)
         .defaultBoxStyle()

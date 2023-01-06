@@ -29,7 +29,11 @@ struct LocationMapView: View {
                         EmptyView()
                     }
                     else if region.span.latitudeDelta <= 0.1 {
-                        GfroerliMapAnnotation(location: location)
+                        NavigationLink {
+                            LocationDetailView(locationID: location.id)
+                        } label: {
+                            GfroerliMapAnnotation(location: location)
+                        }
                     }
                     else {
                         GfroerliMapAnnotationPin(location: location)

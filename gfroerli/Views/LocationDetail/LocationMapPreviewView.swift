@@ -37,11 +37,11 @@ struct LocationMapPreviewView: View {
                         setLocation()
                     }
                 } label: {
-                    Image(systemName: "mappin.and.ellipse").font(.title2)
+                    Image(systemName: "mappin.and.ellipse")
                 }
                 .disabled(!hasLocation)
                 .buttonStyle(.bordered)
-                .clipShape(Circle())
+                .buttonBorderShape(.capsule)
             }
             .padding([.top, .horizontal])
             
@@ -53,7 +53,7 @@ struct LocationMapPreviewView: View {
                         MapMarker(
                             coordinate: location.coordinates?.coordinate ?? AppConfiguration.MapPreviewView
                                 .defaultCoordinates.coordinate,
-                            tint: .blue
+                            tint: .accentColor
                         )
                     }
                 )

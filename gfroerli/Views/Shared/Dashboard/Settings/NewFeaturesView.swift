@@ -29,7 +29,7 @@ struct NewFeaturesView: View {
                     
                     Image(systemName: note.imageName)
                         .resizable()
-                        .foregroundColor(.blue.opacity(0.5)) // TODO: Color
+                        .foregroundColor(.accentColor.opacity(0.8))
                         .frame(width: 40, height: 40)
                         .padding(.horizontal)
                     
@@ -55,7 +55,7 @@ struct NewFeaturesView: View {
             Button("Get Started") {
                 self.presentationMode.wrappedValue.dismiss()
             }
-            .tint(.blue) // TODO: Color
+            .tint(.accentColor)
             .buttonStyle(.bordered)
             
             Spacer()

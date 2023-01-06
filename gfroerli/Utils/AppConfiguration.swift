@@ -7,6 +7,7 @@
 
 import Foundation
 import MapKit
+import SwiftUI
 import UIKit
 
 /// Contains all the configuration values for layout
@@ -19,6 +20,8 @@ enum AppConfiguration {
         static let capsuleRadius = 5.0
         /// Default capsule padding
         static let capsulePadding = 4.0
+        /// Default box padding
+        static let boxPadding = 10.0
     }
     
     enum Dashboard {
@@ -63,6 +66,8 @@ enum AppConfiguration {
         static let defaultMapSpan = 100_000.0
         // Zoomed in span of map in meters
         static let zoomedMapSpan = 1000.0
+        // Font weight of text and images in annotations
+        static let fontWeight: Font.Weight = .semibold
     }
     
     // TODO: Move

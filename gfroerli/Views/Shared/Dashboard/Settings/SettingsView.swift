@@ -77,7 +77,7 @@ struct SettingsGeneralSectionView: View {
                 Label(title: {
                     Text("FAQ")
                 }, icon: {
-                    SettingsThumbnailView(imageName: "info.circle", backgroundColor: .blue)
+                    SettingsThumbnailView(imageName: "info.circle", backgroundColor: .accentColor)
                 })
             }
             
@@ -99,7 +99,7 @@ struct SettingsGeneralSectionView: View {
                 Label {
                     Text("Language")
                 } icon: {
-                    SettingsThumbnailView(imageName: "globe", backgroundColor: .blue)
+                    SettingsThumbnailView(imageName: "globe", backgroundColor: .accentColor)
                 }
             }
         }
@@ -142,7 +142,7 @@ struct SettingsLinksSectionView: View {
                     Text("Contact")
                         .foregroundColor(Color("textColor"))
                 } icon: {
-                    SettingsThumbnailView(imageName: "envelope.fill", backgroundColor: .blue)
+                    SettingsThumbnailView(imageName: "envelope.fill", backgroundColor: .accentColor)
                 }
             }
             
@@ -162,7 +162,7 @@ struct SettingsLinksSectionView: View {
                     Text("gfrör.li")
                         .foregroundColor(Color("textColor"))
                 } icon: {
-                    SettingsThumbnailView(imageName: "safari", backgroundColor: .blue)
+                    SettingsThumbnailView(imageName: "safari", backgroundColor: .accentColor)
                 }
             }
             

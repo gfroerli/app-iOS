@@ -26,11 +26,11 @@ struct ChangeItem: Identifiable, Decodable {
             case .improvement:
                 Image(systemName: "thermometer.sun")
                     .symbolRenderingMode(.palette)
-                    .foregroundStyle(.red, .yellow, .blue)
+                    .foregroundStyle(.red, .yellow, Color.accentColor)
             case .bugfix:
                 Image(systemName: "thermometer.snowflake")
                     .symbolRenderingMode(.palette)
-                    .foregroundStyle(.red, .blue, .blue)
+                    .foregroundStyle(.red, Color.accentColor, Color.accentColor)
             }
         }
     }
