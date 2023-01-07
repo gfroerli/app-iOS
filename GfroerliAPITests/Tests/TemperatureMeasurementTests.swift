@@ -18,7 +18,7 @@ final class TemperatureMeasurementTests: XCTestCase {
         // Arrange
         let data = try JsonLoader.loadJson(fileName: "TemperatureMeasurementFull")
         
-        let measurementDate = dateCreator(string: "2022-08-01 2")
+        let measurementDate = dateCreator(string: "2022-08-01 0")
         let lowest = 20.0
         let average = 25.0
         let highest = 30.0
@@ -37,7 +37,7 @@ final class TemperatureMeasurementTests: XCTestCase {
         // Arrange
         let data = try JsonLoader.loadJson(fileName: "TemperatureMeasurementFull")
         
-        let measurementDate = dateCreator(string: "2022-08-01 2")
+        let measurementDate = dateCreator(string: "2022-08-01 0")
         // Act
         let measurement = try jsonDecoder.decode(TemperatureMeasurementCollection.self, from: data)
         
@@ -49,7 +49,7 @@ final class TemperatureMeasurementTests: XCTestCase {
         // Arrange
         let data = try JsonLoader.loadJson(fileName: "TemperatureMeasurementAdditional")
         
-        let measurementDate = dateCreator(string: "2022-08-01 2")
+        let measurementDate = dateCreator(string: "2022-08-01 0")
         // Act
         let measurement = try jsonDecoder.decode(TemperatureMeasurementCollection.self, from: data)
         

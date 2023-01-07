@@ -47,8 +47,6 @@ class MeasurementUtils {
         
         dateFormatter.dateFormat = format
         dateFormatter.timeZone = TimeZone(abbreviation: "UTC")!
-        let someDateTime = dateFormatter.date(from: dateString)
-
-        return someDateTime?.toLocalTime() ?? Date(timeIntervalSinceReferenceDate: 0)
+        return dateFormatter.date(from: dateString) ?? Date.distantPast
     }
 }

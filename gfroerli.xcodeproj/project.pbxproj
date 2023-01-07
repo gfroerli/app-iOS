@@ -26,7 +26,6 @@
 		2481AEAC29684B1800316EDA /* Color+AccentColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2481AEAB29684B1800316EDA /* Color+AccentColor.swift */; };
 		2481AEAE296856FE00316EDA /* Date+Week.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2481AEAD296856FE00316EDA /* Date+Week.swift */; };
 		24B93CF128CDE48200573CD5 /* TemperatureMeasurement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24B93CF028CDE48200573CD5 /* TemperatureMeasurement.swift */; };
-		24B93CF328CDE50600573CD5 /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24B93CF228CDE50600573CD5 /* Date+Extensions.swift */; };
 		24BE370C28FAA90800CF7D99 /* InlineLocationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24BE370B28FAA90800CF7D99 /* InlineLocationView.swift */; };
 		24BE370E28FAE36800CF7D99 /* Array+Codable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24BE370D28FAE36800CF7D99 /* Array+Codable.swift */; };
 		24BE371028FAEEB600CF7D99 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24BE370F28FAEEB600CF7D99 /* APIError.swift */; };
@@ -157,7 +156,6 @@
 		2481AEAB29684B1800316EDA /* Color+AccentColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+AccentColor.swift"; sourceTree = "<group>"; };
 		2481AEAD296856FE00316EDA /* Date+Week.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Week.swift"; sourceTree = "<group>"; };
 		24B93CF028CDE48200573CD5 /* TemperatureMeasurement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemperatureMeasurement.swift; sourceTree = "<group>"; };
-		24B93CF228CDE50600573CD5 /* Date+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extensions.swift"; sourceTree = "<group>"; };
 		24BE370B28FAA90800CF7D99 /* InlineLocationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InlineLocationView.swift; sourceTree = "<group>"; };
 		24BE370D28FAE36800CF7D99 /* Array+Codable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Codable.swift"; sourceTree = "<group>"; };
 		24BE370F28FAEEB600CF7D99 /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
@@ -536,7 +534,6 @@
 			isa = PBXGroup;
 			children = (
 				8D5558242881F4E4008C1BE3 /* MeasurementUtils.swift */,
-				24B93CF228CDE50600573CD5 /* Date+Extensions.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -938,7 +935,6 @@
 				8D5558292881F4E4008C1BE3 /* Fetcher.swift in Sources */,
 				8D5558282881F4E4008C1BE3 /* FetchType.swift in Sources */,
 				8D5558272881F4E4008C1BE3 /* TemperatureMeasurementCollection.swift in Sources */,
-				24B93CF328CDE50600573CD5 /* Date+Extensions.swift in Sources */,
 				8D55582E2881F58A008C1BE3 /* BearerToken.swift in Sources */,
 				8D5558262881F4E4008C1BE3 /* Sponsor.swift in Sources */,
 				8D5558162881F430008C1BE3 /* APIConfiguration.swift in Sources */,

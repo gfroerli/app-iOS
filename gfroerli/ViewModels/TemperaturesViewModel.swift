@@ -122,24 +122,28 @@ class TemperaturesViewModel: ObservableObject {
                 .load(fetchType: fetchType) else {
                 return
             }
-            
-            // Assign fetched changes
-            for measurement in measurements {
-                switch interval {
-                case .day:
-                    if Calendar.current.isDate(measurement.measurementDate, inSameDayAs: currentDate) {
-                        Task {
+            Task {
+                // Assign fetched changes
+                for measurement in measurements {
+                    switch interval {
+                    case .day:
+                        if measurement.measurementDate.isEqual(to: currentDate, toGranularity: .day) {
+                            await insertMeasurement(measurement)
+                        }
+                    case .week:
+                        if measurement.measurementDate.isEqual(to: currentDate, toGranularity: .weekOfYear) {
+                            await insertMeasurement(measurement)
+                        }
+                    case .month:
+                        
+                        if measurement.measurementDate.isEqual(to: currentDate, toGranularity: .month) {
                             await insertMeasurement(measurement)
                         }
                     }
-                case .week, .month:
-                    Task {
-                        await insertMeasurement(measurement)
-                    }
                 }
+                await createPlaceholderMeasurements()
+                await calculateYAxisZoomedValues()
             }
-            await createPlaceholderMeasurements()
-            await calculateYAxisZoomedValues()
         }
     }
   
@@ -176,6 +180,7 @@ class TemperaturesViewModel: ObservableObject {
     
     @MainActor
     private func insertMeasurement(_ measurement: TemperatureMeasurementCollection) {
+        print(measurement.measurementDate.description(with: .current))
         lowestTemperatures.insert(
             TemperatureMeasurement(measurementDate: measurement.measurementDate, value: measurement.lowest),
             at: 0
@@ -213,15 +218,20 @@ class TemperaturesViewModel: ObservableObject {
             rangeMax = (Calendar.current.range(of: .day, in: .month, for: currentDate)?.count ?? 30) - 1
         }
         
-        for i in 0...rangeMax {
-            switch interval {
-            case .day:
+        switch interval {
+        case .day:
+            let midnightComponents = Calendar.current.dateComponents([.year, .month, .day], from: currentDate)
+            let midnightDate = Calendar.current.date(from: midnightComponents)!
+            for i in 0...rangeMax {
                 placeholders
                     .append(TemperatureMeasurement(
-                        measurementDate: Calendar.current.date(byAdding: .hour, value: i, to: currentDate)!,
+                        measurementDate: Calendar.current.date(byAdding: .hour, value: i, to: midnightDate)!,
                         value: averageTemperatures.first?.value ?? 0.0
                     ))
-            case .week, .month:
+            }
+                
+        case .week, .month:
+            for i in 0...rangeMax {
                 placeholders
                     .append(TemperatureMeasurement(
                         measurementDate: Calendar.current.date(byAdding: .day, value: i, to: currentDate)!,

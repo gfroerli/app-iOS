@@ -47,10 +47,9 @@ public enum FetchType {
             
         case let .hourlyTemperatures(locationID: locationID, of: date):
             
-            // Due to the sensors not being Located in GMT timezones, we also must fetch the day before to be able to show all the hourly values in a given day. Therefore we substract one day from startDate.
-            // TODO: Handle timezones before UTC
+            // Due to the sensors not being Located in GMT timezones, we also must fetch the day before to be able to show all the hourly values in a given day. Therefore we subtract one day from startDate.
             let startDateString = APIConfiguration.preprocessDate(subtractingDays: 1, from: date)
-            let endDateString = APIConfiguration.preprocessDate(subtractingDays: 0, from: date)
+            let endDateString = APIConfiguration.preprocessDate(subtractingDays: -1, from: date)
             
             return Foundation
                 .URL(
@@ -58,8 +57,8 @@ public enum FetchType {
                 )!
             
         case let .dailyTemperatures(locationID: locationID, from: startDate, to: endDate):
-            let startDateString = APIConfiguration.preprocessDate(from: startDate)
-            let endDateString = APIConfiguration.preprocessDate(from: endDate)
+            let startDateString = APIConfiguration.preprocessDate(subtractingDays: 1, from: startDate)
+            let endDateString = APIConfiguration.preprocessDate(subtractingDays: -1, from: endDate)
             
             return Foundation
                 .URL(
