@@ -26,7 +26,7 @@ struct SearchView: View {
                 }
             }
             
-            .searchable(text: $query)
+            .searchable(text: $query, placement: .navigationBarDrawer(displayMode: .always))
             .onChange(of: query) { newValue in
                 locationsViewModel.sortLocations(query: newValue)
             }
