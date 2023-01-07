@@ -30,16 +30,6 @@ class DefaultsCoordinator {
         }
     }
     
-    // MARK: - Properties
-
-    private(set) lazy var latestVersion: String = {
-        guard let value = defaults.value(forKey: Keys.latestVersion.key()) as? String else {
-            defaults.set("0.0", forKey: Keys.latestVersion.key())
-            return "0.0"
-        }
-        return value
-    }()
-    
     // MARK: - Public functions
     
     /// Checks if last opened version was lower and if the new features view should be shown
@@ -50,11 +40,22 @@ class DefaultsCoordinator {
             fatalError() // TODO: Error
         }
         
-        guard currentVersion > latestVersion else {
+        guard currentVersion > latestVersion() else {
             return false
         }
         
         defaults.set(currentVersion, forKey: Keys.latestVersion.key())
+        defaults.synchronize()
         return true
+    }
+    
+    // MARK: - Private Functions
+
+    private func latestVersion() -> String {
+        guard let value = defaults.value(forKey: Keys.latestVersion.key()) as? String else {
+            defaults.set("0.0", forKey: Keys.latestVersion.key())
+            return "0.0"
+        }
+        return value
     }
 }
