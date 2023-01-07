@@ -71,6 +71,8 @@ class TemperaturesViewModel: ObservableObject {
     @Published var zoomedYAxisMinValue = 0
     
     @Published var zoomedYAxisMaxValue = 30
+    
+    @Published var xAxisLabel = ""
 
     // MARK: - Public Functions
     
@@ -143,6 +145,7 @@ class TemperaturesViewModel: ObservableObject {
                 }
                 await createPlaceholderMeasurements()
                 await calculateYAxisZoomedValues()
+                await updateXAxisLabel()
             }
         }
     }
@@ -199,6 +202,19 @@ class TemperaturesViewModel: ObservableObject {
     private func calculateYAxisZoomedValues() {
         zoomedYAxisMinValue = Int((lowestTemperatures.min { $0.value < $1.value }?.value ?? 0.0).rounded(.down))
         zoomedYAxisMaxValue = Int((highestTemperatures.max { $0.value < $1.value }?.value ?? 30.0).rounded(.up))
+    }
+    
+    @MainActor
+    private func updateXAxisLabel() {
+        switch interval {
+        case .day:
+            xAxisLabel = currentDate.formatted(.dateTime.day().month(.wide).year())
+        case .week:
+            xAxisLabel = currentDate.formatted(.dateTime.day().month()) + " - " + Calendar.current
+                .date(byAdding: .day, value: 7, to: currentDate)!.formatted(.dateTime.day().month().year())
+        case .month:
+            xAxisLabel = currentDate.formatted(.dateTime.month(.wide).year())
+        }
     }
 
     @MainActor

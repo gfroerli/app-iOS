@@ -68,7 +68,7 @@ struct HistoryGraphView: View {
                 .buttonStyle(.bordered)
                 Spacer()
                 
-                Text(hourlyVM.currentDate.formatted(.dateTime.day().month(.wide)))
+                Text(hourlyVM.xAxisLabel)
                     .font(.headline)
                     .foregroundColor(.secondary)
                 
