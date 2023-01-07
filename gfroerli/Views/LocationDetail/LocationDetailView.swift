@@ -30,6 +30,7 @@ struct LocationDetailView: View {
             VStack {
                 if locationVM.location != nil {
                     LatestTemperatureView(location: $locationVM.location)
+                        .padding(.top)
                     
                     TemperatureSummaryView(location: $locationVM.location)
                     
@@ -42,7 +43,7 @@ struct LocationDetailView: View {
                     }
                     
                     Spacer()
-                        .navigationTitle(locationVM.location!.name) // TODO: unwrap
+                        .navigationTitle(locationVM.location?.name ?? "")
                         .navigationBarTitleDisplayMode(.inline)
                 }
             }

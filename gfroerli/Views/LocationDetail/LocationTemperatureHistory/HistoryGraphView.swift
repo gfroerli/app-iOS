@@ -10,12 +10,13 @@ import SwiftUI
 
 struct HistoryGraphView: View {
     
-    @ObservedObject var hourlyVM: TemperaturesViewModel
+    @ObservedObject var vm: TemperaturesViewModel
     @Binding var zoomed: Bool
+
     var body: some View {
         VStack {
             Chart {
-                ForEach(hourlyVM.lowestTemperatures, id: \.id) {
+                ForEach(vm.lowestTemperatures, id: \.id) {
                     LineMark(
                         x: .value("date", $0.measurementDate),
                         y: .value("low", $0.value),
@@ -25,7 +26,7 @@ struct HistoryGraphView: View {
                     .interpolationMethod(.catmullRom)
                 }
                 
-                ForEach(hourlyVM.averageTemperatures) {
+                ForEach(vm.averageTemperatures) {
                     LineMark(
                         x: .value("date", $0.measurementDate),
                         y: .value("average", $0.value),
@@ -35,7 +36,7 @@ struct HistoryGraphView: View {
                     .interpolationMethod(.catmullRom)
                 }
                 
-                ForEach(hourlyVM.highestTemperatures) {
+                ForEach(vm.highestTemperatures) {
                     LineMark(
                         x: .value("date", $0.measurementDate),
                         y: .value("high", $0.value),
@@ -45,7 +46,7 @@ struct HistoryGraphView: View {
                     .interpolationMethod(.catmullRom)
                 }
                 
-                ForEach(hourlyVM.placeholderTemperatures) {
+                ForEach(vm.placeholderTemperatures) {
                     LineMark(
                         x: .value("date", $0.measurementDate),
                         y: .value("placeholder", $0.value),
@@ -54,33 +55,32 @@ struct HistoryGraphView: View {
                     .foregroundStyle(.clear)
                 }
             }
-            .chartYScale(domain: zoomed ? hourlyVM.zoomedYAxisMinValue...hourlyVM.zoomedYAxisMaxValue : 0...30)
+            .chartYScale(domain: zoomed ? vm.zoomedYAxisMinValue...vm.zoomedYAxisMaxValue : 0...30)
             .frame(minHeight: 250)
             
             HStack {
                 Button {
                     withAnimation {
-                        hourlyVM.stepBack()
+                        vm.stepBack()
                     }
                 } label: {
-                    Image(systemName: "chevron.left")
+                    Image(systemName: "chevron.left").fontWeight(.semibold)
                 }
                 .buttonStyle(.bordered)
                 Spacer()
                 
-                Text(hourlyVM.xAxisLabel)
-                    .font(.headline)
-                    .foregroundColor(.secondary)
+                Text(vm.xAxisLabel)
+                    .font(.callout).bold()
                 
                 Spacer()
                 
                 Button {
-                    hourlyVM.stepForward()
+                    vm.stepForward()
                 } label: {
-                    Image(systemName: "chevron.right")
+                    Image(systemName: "chevron.right").fontWeight(.semibold)
                 }
                 .buttonStyle(.bordered)
-                .disabled(hourlyVM.isAtMostRecentInterval)
+                .disabled(vm.isAtMostRecentInterval)
             }
             .buttonBorderShape(.capsule)
         }
@@ -94,7 +94,7 @@ struct HistoryGraphView: View {
 struct HourlyHistoryGraphView_Previews: PreviewProvider {
     static var previews: some View {
         HistoryGraphView(
-            hourlyVM: TemperaturesViewModel(locationID: 1, interval: .day, date: Date.now),
+            vm: TemperaturesViewModel(locationID: 1, interval: .day, date: Date.now),
             zoomed: .constant(false)
         )
     }

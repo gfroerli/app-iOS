@@ -24,11 +24,11 @@ struct LocationMapPreviewView: View {
     // MARK: - View
 
     var body: some View {
-        VStack(alignment: .leading) {
+        VStack(alignment: .leading, spacing: 0) {
             
             HStack {
                 Text("Map")
-                    .font(.title).bold()
+                    .font(.title2).bold()
                 
                 Spacer()
                 
@@ -38,13 +38,15 @@ struct LocationMapPreviewView: View {
                     }
                 } label: {
                     Image(systemName: "mappin.and.ellipse")
+                        .fontWeight(.semibold)
                 }
                 .disabled(!hasLocation)
                 .buttonStyle(.bordered)
                 .buttonBorderShape(.capsule)
             }
-            .padding([.top, .horizontal])
-            
+            .padding(.horizontal, AppConfiguration.General.horizontalBoxPadding)
+            .padding(.vertical, AppConfiguration.General.verticalBoxPadding)
+
             ZStack {
                 Map(
                     coordinateRegion: $region,

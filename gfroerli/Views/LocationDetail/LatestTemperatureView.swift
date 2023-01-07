@@ -20,20 +20,23 @@ struct LatestTemperatureView: View {
         HStack(alignment: .top) {
             Text("Latest:")
                 .minimumScaleFactor(0.1)
+                .bold()
             
             Spacer()
             VStack(alignment: .trailing) {
                 Text(location!.latestTemperatureString)
+                    .bold()
+
                 Text(location!.lastTemperatureDateString)
-                    .font(.title3)
+                    .font(.subheadline)
                     .foregroundColor(.secondary)
                     .minimumScaleFactor(0.1)
                     .lineLimit(2)
             }
         }
-        .font(.title)
-        .bold()
-        .padding()
+        .font(.title2)
+        .padding(.horizontal, AppConfiguration.General.horizontalBoxPadding)
+        .padding(.vertical, AppConfiguration.General.verticalBoxPadding)
         .defaultBoxStyle()
     }
 }

@@ -19,7 +19,7 @@ struct TemperatureSummaryView: View {
             
             HStack {
                 Text("All time:")
-                    .font(.title.bold())
+                    .font(.title2.bold())
             }
             
             VStack {
@@ -42,9 +42,10 @@ struct TemperatureSummaryView: View {
                 }
             }
         }
-        .font(.title2)
+        .font(.body)
         .minimumScaleFactor(0.1)
-        .padding()
+        .padding(.horizontal, AppConfiguration.General.horizontalBoxPadding)
+        .padding(.vertical, AppConfiguration.General.verticalBoxPadding)
         .defaultBoxStyle()
     }
 }

@@ -56,7 +56,8 @@ struct LocationTile: View {
                         .lineLimit(2)
                 }
             }
-            .padding(AppConfiguration.General.boxPadding)
+            .padding(.horizontal, AppConfiguration.General.horizontalBoxPadding)
+            .padding(.vertical, AppConfiguration.General.verticalBoxPadding)
         }
         .frame(maxWidth: .infinity, idealHeight: config.gridTileHeight)
         .defaultBoxStyle()

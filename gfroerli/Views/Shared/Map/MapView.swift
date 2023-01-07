@@ -16,7 +16,7 @@ struct LocationMapView: View {
     @EnvironmentObject var navigationModel: NavigationModel
     @EnvironmentObject var locationsViewModel: AllLocationsViewModel
     
-    @State private var filter = 0
+    @State private var filter = 1
     @State private var region = config.defaultRegion
     
     var body: some View {

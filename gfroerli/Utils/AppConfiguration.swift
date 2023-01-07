@@ -20,8 +20,10 @@ enum AppConfiguration {
         static let capsuleRadius = 5.0
         /// Default capsule padding
         static let capsulePadding = 4.0
-        /// Default box padding
-        static let boxPadding = 10.0
+        /// Default horizontal box padding
+        static let horizontalBoxPadding = 15.0
+        /// Default vertical box padding
+        static let verticalBoxPadding = 10.0
     }
     
     enum Dashboard {

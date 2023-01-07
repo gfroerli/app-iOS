@@ -19,7 +19,7 @@ struct TemperatureHistoryView: View {
     @StateObject var weeklyVM: TemperaturesViewModel
     @StateObject var monthlyVM: TemperaturesViewModel
     @State var currentSelection: ChartSpan = .day
-    @State var zoomed = false
+    @State var zoomed = true
     
     init(locationID: Int) {
         self.locationID = locationID
@@ -38,7 +38,7 @@ struct TemperatureHistoryView: View {
         VStack(alignment: .leading) {
             HStack {
                 Text("History")
-                    .font(.title)
+                    .font(.title2)
                     .bold()
                 
                 Spacer()
@@ -54,9 +54,11 @@ struct TemperatureHistoryView: View {
                 } label: {
                     if zoomed {
                         Image(systemName: "minus.magnifyingglass")
+                            .fontWeight(.semibold)
                     }
                     else {
                         Image(systemName: "plus.magnifyingglass")
+                            .fontWeight(.semibold)
                     }
                 }
                 .buttonBorderShape(.capsule)
@@ -64,14 +66,15 @@ struct TemperatureHistoryView: View {
             }
             switch currentSelection {
             case .day:
-                HistoryGraphView(hourlyVM: hourlyVM, zoomed: $zoomed)
+                HistoryGraphView(vm: hourlyVM, zoomed: $zoomed)
             case .week:
-                HistoryGraphView(hourlyVM: weeklyVM, zoomed: $zoomed)
+                HistoryGraphView(vm: weeklyVM, zoomed: $zoomed)
             case .month:
-                HistoryGraphView(hourlyVM: monthlyVM, zoomed: $zoomed)
+                HistoryGraphView(vm: monthlyVM, zoomed: $zoomed)
             }
         }
-        .padding()
+        .padding(.horizontal, AppConfiguration.General.horizontalBoxPadding)
+        .padding(.vertical, AppConfiguration.General.verticalBoxPadding)
         .defaultBoxStyle()
     }
 }

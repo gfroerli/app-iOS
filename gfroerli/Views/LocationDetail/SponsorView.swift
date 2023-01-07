@@ -36,10 +36,10 @@ struct SponsorView: View {
                 
                 VStack(alignment: .leading) {
                     Text("Sponsored by:")
-                        .font(.title)
+                        .font(.title2)
                     
                     Text(sponsorVM.sponsor?.name ?? "No Name")
-                        .font(.largeTitle)
+                        .font(.title2)
                         .redacted(
                             reason: sponsorVM.sponsor == nil ? .placeholder : []
                         )
@@ -72,7 +72,8 @@ struct SponsorView: View {
                 .redacted(reason: sponsorVM.modelState == .loading ? .placeholder : [])
             }
         }
-        .padding()
+        .padding(.horizontal, AppConfiguration.General.horizontalBoxPadding)
+        .padding(.vertical, AppConfiguration.General.verticalBoxPadding)
         .defaultBoxStyle()
     }
 }
