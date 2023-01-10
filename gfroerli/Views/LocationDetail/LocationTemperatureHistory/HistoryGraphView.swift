@@ -26,6 +26,7 @@ struct HistoryGraphView: View {
                             in: RoundedRectangle(cornerRadius: 8, style: .continuous)
                         )
                 }
+                
                 Chart {
                     ForEach(vm.lowestTemperatures, id: \.id) {
                         LineMark(
@@ -33,7 +34,7 @@ struct HistoryGraphView: View {
                             y: .value("low", $0.animate ? $0.value : vm.averageTemp),
                             series: .value("Lowest", "low")
                         )
-                        .foregroundStyle(.blue)
+                        .foregroundStyle(.blue.gradient)
                         .interpolationMethod(.catmullRom)
                     }
                     
@@ -43,7 +44,7 @@ struct HistoryGraphView: View {
                             y: .value("average", $0.animate ? $0.value : vm.averageTemp),
                             series: .value("Average", "avg")
                         )
-                        .foregroundStyle(.green)
+                        .foregroundStyle(.green.gradient)
                         .interpolationMethod(.catmullRom)
                     }
                     
@@ -53,7 +54,7 @@ struct HistoryGraphView: View {
                             y: .value("highest", $0.animate ? $0.value : vm.averageTemp),
                             series: .value("Highest", "high")
                         )
-                        .foregroundStyle(.red)
+                        .foregroundStyle(.red.gradient)
                         .interpolationMethod(.catmullRom)
                     }
                     
@@ -66,9 +67,16 @@ struct HistoryGraphView: View {
                         .foregroundStyle(.clear)
                     }
                 }
+                .chartForegroundStyleScale([
+                    "Minimum" : .blue,
+                    "Average" : .green,
+                    "Maximum": .red
+                ])
+                .chartLegend(position: .bottom, alignment: .center, spacing: 10)
                 .chartYScale(domain: zoomed ? vm.zoomedYAxisMinValue...vm.zoomedYAxisMaxValue : 0...30)
                 .frame(minHeight: 250)
             }
+            
             .onChange(of: vm.averageTemp) { _ in
                 animate()
             }

@@ -27,7 +27,8 @@ struct LocationDetailView: View {
     
     var body: some View {
         ScrollView(showsIndicators: false) {
-            VStack {
+            VStack(spacing: 12) {
+                
                 if locationVM.location != nil {
                     LatestTemperatureView(location: $locationVM.location)
                         .padding(.top)
