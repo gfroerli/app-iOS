@@ -68,6 +68,10 @@ class TemperaturesViewModel: ObservableObject {
     
     @Published var highestTemperatures = [TemperatureMeasurement]()
     
+    @Published var averageTemp = 15.0
+    
+    @Published var hasDataPoints = false
+    
     @Published var zoomedYAxisMinValue = 0
     
     @Published var zoomedYAxisMaxValue = 30
@@ -126,26 +130,12 @@ class TemperaturesViewModel: ObservableObject {
             }
             Task {
                 // Assign fetched changes
-                for measurement in measurements {
-                    switch interval {
-                    case .day:
-                        if measurement.measurementDate.isEqual(to: currentDate, toGranularity: .day) {
-                            await insertMeasurement(measurement)
-                        }
-                    case .week:
-                        if measurement.measurementDate.isEqual(to: currentDate, toGranularity: .weekOfYear) {
-                            await insertMeasurement(measurement)
-                        }
-                    case .month:
-                        
-                        if measurement.measurementDate.isEqual(to: currentDate, toGranularity: .month) {
-                            await insertMeasurement(measurement)
-                        }
-                    }
-                }
+                await insertMeasurements(measurements)
                 await createPlaceholderMeasurements()
                 await calculateYAxisZoomedValues()
                 await updateXAxisLabel()
+                await checkHasDataPoints()
+                await calculateAvgTemp()
             }
         }
     }
@@ -182,20 +172,105 @@ class TemperaturesViewModel: ObservableObject {
     }
     
     @MainActor
-    private func insertMeasurement(_ measurement: TemperatureMeasurementCollection) {
-        print(measurement.measurementDate.description(with: .current))
-        lowestTemperatures.insert(
-            TemperatureMeasurement(measurementDate: measurement.measurementDate, value: measurement.lowest),
-            at: 0
-        )
-        averageTemperatures.insert(
-            TemperatureMeasurement(measurementDate: measurement.measurementDate, value: measurement.average),
-            at: 0
-        )
-        highestTemperatures.insert(
-            TemperatureMeasurement(measurementDate: measurement.measurementDate, value: measurement.highest),
-            at: 0
-        )
+    private func insertMeasurements(_ measurements: [TemperatureMeasurementCollection]) {
+        var tempMinTemps = [TemperatureMeasurement]()
+        var tempAvgTemps = [TemperatureMeasurement]()
+        var tempMaxTemps = [TemperatureMeasurement]()
+
+        for measurement in measurements {
+            
+            switch interval {
+            case .day:
+                if measurement.measurementDate.isEqual(to: currentDate, toGranularity: .day) {
+                    tempMinTemps.insert(
+                        TemperatureMeasurement(measurementDate: measurement.measurementDate, value: measurement.lowest),
+                        at: 0
+                    )
+                    tempAvgTemps.insert(
+                        TemperatureMeasurement(
+                            measurementDate: measurement.measurementDate,
+                            value: measurement.average
+                        ),
+                        at: 0
+                    )
+                    tempMaxTemps.insert(
+                        TemperatureMeasurement(
+                            measurementDate: measurement.measurementDate,
+                            value: measurement.highest
+                        ),
+                        at: 0
+                    )
+                }
+            case .week:
+                if measurement.measurementDate.isEqual(to: currentDate, toGranularity: .weekOfYear) {
+                    tempMinTemps.insert(
+                        TemperatureMeasurement(measurementDate: measurement.measurementDate, value: measurement.lowest),
+                        at: 0
+                    )
+                    tempAvgTemps.insert(
+                        TemperatureMeasurement(
+                            measurementDate: measurement.measurementDate,
+                            value: measurement.average
+                        ),
+                        at: 0
+                    )
+                    tempMaxTemps.insert(
+                        TemperatureMeasurement(
+                            measurementDate: measurement.measurementDate,
+                            value: measurement.highest
+                        ),
+                        at: 0
+                    )
+                }
+            case .month:
+                
+                if measurement.measurementDate.isEqual(to: currentDate, toGranularity: .month) {
+                    tempMinTemps.insert(
+                        TemperatureMeasurement(measurementDate: measurement.measurementDate, value: measurement.lowest),
+                        at: 0
+                    )
+                    tempAvgTemps.insert(
+                        TemperatureMeasurement(
+                            measurementDate: measurement.measurementDate,
+                            value: measurement.average
+                        ),
+                        at: 0
+                    )
+                    tempMaxTemps.insert(
+                        TemperatureMeasurement(
+                            measurementDate: measurement.measurementDate,
+                            value: measurement.highest
+                        ),
+                        at: 0
+                    )
+                }
+            }
+        }
+        
+        lowestTemperatures = tempMinTemps
+        averageTemperatures = tempAvgTemps
+        highestTemperatures = tempMaxTemps
+    }
+    
+    @MainActor
+    private func checkHasDataPoints() {
+        if !lowestTemperatures.isEmpty || !averageTemperatures.isEmpty || !highestTemperatures.isEmpty {
+            hasDataPoints = true
+        }
+        else {
+            hasDataPoints = false
+        }
+    }
+    
+    @MainActor
+    private func calculateAvgTemp() {
+        guard !averageTemperatures.isEmpty else {
+            averageTemp = 15.0
+            return
+        }
+        
+        let sum = averageTemperatures.reduce(0) { $0 + $1.value }
+        averageTemp = sum / Double(averageTemperatures.count)
     }
     
     @MainActor

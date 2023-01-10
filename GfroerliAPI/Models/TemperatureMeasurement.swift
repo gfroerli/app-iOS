@@ -14,6 +14,7 @@ public struct TemperatureMeasurement: Identifiable, Hashable {
     public let id: UUID
     public let measurementDate: Date
     public let value: Double
+    public var animate = false
     
     // MARK: - Lifecycle
 

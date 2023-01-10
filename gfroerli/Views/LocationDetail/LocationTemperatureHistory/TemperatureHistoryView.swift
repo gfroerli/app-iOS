@@ -64,6 +64,7 @@ struct TemperatureHistoryView: View {
                 .buttonBorderShape(.capsule)
                 .buttonStyle(.bordered)
             }
+            
             switch currentSelection {
             case .day:
                 HistoryGraphView(vm: hourlyVM, zoomed: $zoomed)

@@ -15,54 +15,70 @@ struct HistoryGraphView: View {
 
     var body: some View {
         VStack {
-            Chart {
-                ForEach(vm.lowestTemperatures, id: \.id) {
-                    LineMark(
-                        x: .value("date", $0.measurementDate),
-                        y: .value("low", $0.value),
-                        series: .value("Lowest", "low")
-                    )
-                    .foregroundStyle(.blue)
-                    .interpolationMethod(.catmullRom)
+            ZStack {
+                if !vm.hasDataPoints {
+                    Text("No Data available")
+                        .font(.callout)
+                        .foregroundColor(.secondary)
+                        .padding(5)
+                        .background(
+                            .ultraThickMaterial,
+                            in: RoundedRectangle(cornerRadius: 8, style: .continuous)
+                        )
                 }
-                
-                ForEach(vm.averageTemperatures) {
-                    LineMark(
-                        x: .value("date", $0.measurementDate),
-                        y: .value("average", $0.value),
-                        series: .value("Average", "avg")
-                    )
-                    .foregroundStyle(.green)
-                    .interpolationMethod(.catmullRom)
+                Chart {
+                    ForEach(vm.lowestTemperatures, id: \.id) {
+                        LineMark(
+                            x: .value("date", $0.measurementDate),
+                            y: .value("low", $0.animate ? $0.value : vm.averageTemp),
+                            series: .value("Lowest", "low")
+                        )
+                        .foregroundStyle(.blue)
+                        .interpolationMethod(.catmullRom)
+                    }
+                    
+                    ForEach(vm.averageTemperatures) {
+                        LineMark(
+                            x: .value("date", $0.measurementDate),
+                            y: .value("average", $0.animate ? $0.value : vm.averageTemp),
+                            series: .value("Average", "avg")
+                        )
+                        .foregroundStyle(.green)
+                        .interpolationMethod(.catmullRom)
+                    }
+                    
+                    ForEach(vm.highestTemperatures) {
+                        LineMark(
+                            x: .value("date", $0.measurementDate),
+                            y: .value("highest", $0.animate ? $0.value : vm.averageTemp),
+                            series: .value("Highest", "high")
+                        )
+                        .foregroundStyle(.red)
+                        .interpolationMethod(.catmullRom)
+                    }
+                    
+                    ForEach(vm.placeholderTemperatures) {
+                        LineMark(
+                            x: .value("date", $0.measurementDate),
+                            y: .value("placeholder", $0.animate ? $0.value : vm.averageTemp),
+                            series: .value("Placeholder", "placeholder")
+                        )
+                        .foregroundStyle(.clear)
+                    }
                 }
-                
-                ForEach(vm.highestTemperatures) {
-                    LineMark(
-                        x: .value("date", $0.measurementDate),
-                        y: .value("high", $0.value),
-                        series: .value("Highest", "high")
-                    )
-                    .foregroundStyle(.red)
-                    .interpolationMethod(.catmullRom)
-                }
-                
-                ForEach(vm.placeholderTemperatures) {
-                    LineMark(
-                        x: .value("date", $0.measurementDate),
-                        y: .value("placeholder", $0.value),
-                        series: .value("Placeholder", "placeholder")
-                    )
-                    .foregroundStyle(.clear)
-                }
+                .chartYScale(domain: zoomed ? vm.zoomedYAxisMinValue...vm.zoomedYAxisMaxValue : 0...30)
+                .frame(minHeight: 250)
             }
-            .chartYScale(domain: zoomed ? vm.zoomedYAxisMinValue...vm.zoomedYAxisMaxValue : 0...30)
-            .frame(minHeight: 250)
+            .onChange(of: vm.averageTemp) { _ in
+                animate()
+            }
+            .onAppear {
+                animate()
+            }
             
             HStack {
                 Button {
-                    withAnimation {
-                        vm.stepBack()
-                    }
+                    vm.stepBack()
                 } label: {
                     Image(systemName: "chevron.left").fontWeight(.semibold)
                 }
@@ -85,9 +101,15 @@ struct HistoryGraphView: View {
             .buttonBorderShape(.capsule)
         }
     }
-
-    private func domain() -> any PositionScaleRange {
-        return (0...1 as? (any PositionScaleRange))!
+    
+    private func animate() {
+        for (index, _) in vm.highestTemperatures.enumerated() {
+            withAnimation {
+                vm.lowestTemperatures[index].animate = true
+                vm.averageTemperatures[index].animate = true
+                vm.highestTemperatures[index].animate = true
+            }
+        }
     }
 }
 
