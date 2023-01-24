@@ -7,9 +7,9 @@
 
 import Foundation
 
-class MeasurementUtils {
+public class MeasurementUtils {
     
-    static let shared = MeasurementUtils()
+    public static let shared = MeasurementUtils()
     
     lazy var dateFormatter = DateFormatter()
     
@@ -18,7 +18,7 @@ class MeasurementUtils {
     ///   - double: Double to be converted
     ///   - precision: Desired precision of the double
     /// - Returns: String
-    func temperatureString(from double: Double?, precision: Int = 1) -> String {
+    public func temperatureString(from double: Double?, precision: Int = 1) -> String {
         
         guard let double = double else {
             return "-°"

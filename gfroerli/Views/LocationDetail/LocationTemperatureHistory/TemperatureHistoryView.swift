@@ -19,6 +19,7 @@ struct TemperatureHistoryView: View {
     @StateObject var weeklyVM: TemperaturesViewModel
     @StateObject var monthlyVM: TemperaturesViewModel
     @State var currentSelection: ChartSpan = .day
+    @State var hoveringIndex: Int?
     @State var zoomed = true
     
     init(locationID: Int) {
@@ -36,42 +37,75 @@ struct TemperatureHistoryView: View {
     
     var body: some View {
         VStack(alignment: .leading) {
-            HStack {
+            HStack(alignment: .top) {
                 Text("History")
                     .font(.title2)
                     .bold()
-                
-                Spacer()
-                
-                Picker("Choose time span", selection: $currentSelection) {
-                    Text("Day").tag(ChartSpan.day)
-                    Text("Week").tag(ChartSpan.week)
-                    Text("Month").tag(ChartSpan.month)
-                }
-                
-                Button {
-                    zoomed = !zoomed
-                } label: {
-                    if zoomed {
-                        Image(systemName: "minus.magnifyingglass")
-                            .fontWeight(.semibold)
-                    }
-                    else {
-                        Image(systemName: "plus.magnifyingglass")
-                            .fontWeight(.semibold)
-                    }
-                }
-                .buttonBorderShape(.capsule)
-                .buttonStyle(.bordered)
-            }
             
+                Spacer()
+                if hoveringIndex != nil {
+                    switch currentSelection {
+                    case .day:
+                        TopGraphSummaryView(
+                            vm: hourlyVM,
+                            currentSelection: $currentSelection,
+                            currentIndex: $hoveringIndex
+                        )
+
+                    case .week:
+                        TopGraphSummaryView(
+                            vm: weeklyVM,
+                            currentSelection: $currentSelection,
+                            currentIndex: $hoveringIndex
+                        )
+
+                    case .month:
+                        TopGraphSummaryView(
+                            vm: monthlyVM,
+                            currentSelection: $currentSelection,
+                            currentIndex: $hoveringIndex
+                        )
+                    }
+                }
+                else {
+                    
+                    // Used to make view not jump
+                    VStack {
+                        Text(" ")
+                        Text(" ")
+                    }.frame(maxWidth: 1)
+                    
+                    Picker("Choose time span", selection: $currentSelection) {
+                        Text("Day").tag(ChartSpan.day)
+                        Text("Week").tag(ChartSpan.week)
+                        Text("Month").tag(ChartSpan.month)
+                    }
+                    .fixedSize()
+                    
+                    Button {
+                        zoomed = !zoomed
+                    } label: {
+                        if zoomed {
+                            Image(systemName: "minus.magnifyingglass")
+                                .fontWeight(.semibold)
+                        }
+                        else {
+                            Image(systemName: "plus.magnifyingglass")
+                                .fontWeight(.semibold)
+                        }
+                    }
+                    .buttonBorderShape(.capsule)
+                    .buttonStyle(.bordered)
+                }
+            }
+
             switch currentSelection {
             case .day:
-                HistoryGraphView(vm: hourlyVM, zoomed: $zoomed)
+                HistoryGraphView(vm: hourlyVM, zoomed: $zoomed, hoveringIndex: $hoveringIndex)
             case .week:
-                HistoryGraphView(vm: weeklyVM, zoomed: $zoomed)
+                HistoryGraphView(vm: weeklyVM, zoomed: $zoomed, hoveringIndex: $hoveringIndex)
             case .month:
-                HistoryGraphView(vm: monthlyVM, zoomed: $zoomed)
+                HistoryGraphView(vm: monthlyVM, zoomed: $zoomed, hoveringIndex: $hoveringIndex)
             }
         }
         .padding(.horizontal, AppConfiguration.General.horizontalBoxPadding)
@@ -83,5 +117,61 @@ struct TemperatureHistoryView: View {
 struct TemperatureHistoryView_Previews: PreviewProvider {
     static var previews: some View {
         TemperatureHistoryView(locationID: 1)
+    }
+}
+
+struct TopGraphSummaryView: View {
+   
+    @ObservedObject var vm: TemperaturesViewModel
+    
+    @Binding var currentSelection: ChartSpan
+    @Binding var currentIndex: Int?
+
+    var body: some View {
+        if let currentIndex {
+            VStack(alignment: .trailing) {
+                VStack {
+                    switch currentSelection {
+                    case .day:
+                        Text(
+                            vm.lowestTemperatures[currentIndex].measurementDate
+                                .formatted(.dateTime.day().month().hour().minute())
+                        )
+                    case .week:
+                        Text(
+                            vm.lowestTemperatures[currentIndex].measurementDate
+                                .formatted(.dateTime.weekday(.wide).day().month())
+                        )
+                    case .month:
+                        Text(
+                            vm.lowestTemperatures[currentIndex].measurementDate
+                                .formatted(.dateTime.day().month(.abbreviated))
+                        )
+                    }
+                }
+                .bold()
+                
+                HStack {
+                    Spacer()
+                    Spacer()
+                    Image(systemName: "circle.fill")
+                        .foregroundStyle(.blue)
+                    Text(MeasurementUtils.shared.temperatureString(from: vm.lowestTemperatures[currentIndex].value))
+                    Spacer()
+                    Image(systemName: "circle.fill")
+                        .foregroundStyle(.green)
+                    Text(MeasurementUtils.shared.temperatureString(from: vm.averageTemperatures[currentIndex].value))
+                    Spacer()
+                    Image(systemName: "circle.fill")
+                        .foregroundStyle(.red)
+                    Text(MeasurementUtils.shared.temperatureString(from: vm.highestTemperatures[currentIndex].value))
+                }
+                .imageScale(.small)
+                .lineLimit(1)
+            }
+        }
+        else {
+            EmptyView()
+        }
     }
 }

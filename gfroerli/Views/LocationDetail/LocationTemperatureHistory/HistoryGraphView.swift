@@ -6,12 +6,14 @@
 //
 
 import Charts
+import GfroerliAPI
 import SwiftUI
 
 struct HistoryGraphView: View {
     
     @ObservedObject var vm: TemperaturesViewModel
     @Binding var zoomed: Bool
+    @Binding var hoveringIndex: Int?
 
     var body: some View {
         VStack {
@@ -66,14 +68,33 @@ struct HistoryGraphView: View {
                         )
                         .foregroundStyle(.clear)
                     }
+                    if hoveringIndex != nil {
+                        RuleMark(x: .value("wow", vm.averageTemperatures[hoveringIndex!].measurementDate))
+                            .foregroundStyle(.gray.gradient)
+                    }
                 }
                 .chartForegroundStyleScale([
-                    "Minimum" : .blue,
-                    "Average" : .green,
-                    "Maximum": .red
+                    "Minimum": .blue,
+                    "Average": .green,
+                    "Maximum": .red,
                 ])
                 .chartLegend(position: .bottom, alignment: .center, spacing: 10)
                 .chartYScale(domain: zoomed ? vm.zoomedYAxisMinValue...vm.zoomedYAxisMaxValue : 0...30)
+                
+                .chartOverlay { proxy in
+                    GeometryReader { geo in
+                        Rectangle()
+                            .fill(.clear)
+                            .contentShape(Rectangle())
+                            .gesture(
+                                DragGesture()
+                                    .onChanged { value in
+                                        hoveringIndex = findIndex(location: value.location, proxy: proxy, geometry: geo)
+                                    }
+                                    .onEnded { _ in hoveringIndex = nil }
+                            )
+                    }
+                }
                 .frame(minHeight: 250)
             }
             
@@ -119,13 +140,36 @@ struct HistoryGraphView: View {
             }
         }
     }
+    
+    func findIndex(location: CGPoint, proxy: ChartProxy, geometry: GeometryProxy) -> Int? {
+      
+        let relativeXPosition = location.x - geometry[proxy.plotAreaFrame].origin.x
+
+        if let date = proxy.value(atX: relativeXPosition) as Date? {
+
+            var minDistance: TimeInterval = .infinity
+            var index: Int?
+            for dataIndex in vm.averageTemperatures.indices {
+                let nthDataDistance = vm.averageTemperatures[dataIndex].measurementDate.distance(to: date)
+                if abs(nthDataDistance) < minDistance {
+                    minDistance = abs(nthDataDistance)
+                    index = dataIndex
+                }
+            }
+            if let index {
+                return index
+            }
+        }
+        return nil
+    }
 }
 
 struct HourlyHistoryGraphView_Previews: PreviewProvider {
     static var previews: some View {
         HistoryGraphView(
             vm: TemperaturesViewModel(locationID: 1, interval: .day, date: Date.now),
-            zoomed: .constant(false)
+            zoomed: .constant(false),
+            hoveringIndex: .constant(nil)
         )
     }
 }
