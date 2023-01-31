@@ -23,7 +23,7 @@ struct LocationMapView: View {
     // MARK: - Body
     
     var body: some View {
-        VStack {
+        ZStack(alignment: .topTrailing) {
             Map(coordinateRegion: $region, annotationItems: annotationLocations()) { location in
                 
                 MapAnnotation(coordinate: location.coordinates?.coordinate ?? config.defaultCoordinates.coordinate) {
@@ -48,6 +48,22 @@ struct LocationMapView: View {
                 }
             }
             
+            VStack {
+                Button {
+                    withAnimation {
+                        filterChanged()
+                    }
+                } label: {
+                    Label("Zoom to all", systemImage: "arrow.up.left.and.arrow.down.right")
+                        .labelStyle(.iconOnly)
+                }
+                .padding(6)
+                .background(.background)
+                .cornerRadius(4)
+                .shadow(radius: 4)
+            }
+            .padding(10)
+            
             .onTapGesture {
                 searchDetent = .fraction(0.1)
             }
@@ -61,9 +77,8 @@ struct LocationMapView: View {
             .onChange(of: locationsViewModel.allLocations, perform: { _ in
                 filterChanged()
             })
-            
-            .ignoresSafeArea(.all, edges: .bottom)
         }
+        .ignoresSafeArea(.all, edges: .bottom)
     }
     
     // MARK: - Private Functions
