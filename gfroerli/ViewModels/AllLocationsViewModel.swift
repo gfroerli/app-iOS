@@ -27,11 +27,11 @@ class AllLocationsViewModel: ObservableObject {
     // MARK: - Sorter
     
     public enum SortVariants: CaseIterable, Identifiable {
-        case mostRecent
-        case highest
-        case lowest
         case alphabet
-        
+        case lowest
+        case highest
+        case mostRecent
+
         public var id: SortVariants { self }
         
         public var text: String {
@@ -40,10 +40,10 @@ class AllLocationsViewModel: ObservableObject {
                 return "Most Recent"
 
             case .highest:
-                return "Highest"
+                return "Warmest"
 
             case .lowest:
-                return "Lowest"
+                return "Coldest"
 
             case .alphabet:
                 return "Alphabetical"
@@ -148,7 +148,7 @@ class AllLocationsViewModel: ObservableObject {
         let minLoc = CLLocation(latitude: minLat, longitude: minLong)
         let maxLoc = CLLocation(latitude: maxLat, longitude: maxLong)
         
-        let zoom = minLoc.distance(from: maxLoc)
+        let zoom = minLoc.distance(from: maxLoc) * 1.1
         
         let centreLat = (maxLat + minLat) * 0.5
         let centreLong = (maxLong + minLong) * 0.5

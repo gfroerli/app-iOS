@@ -12,12 +12,18 @@ struct InlineLocationView: View {
     
     let location: Location
     
+    @AppStorage("favorites") private var favorites = [Int]()
+    @State var isFavorite = false
+    
     var body: some View {
         
-        HStack(alignment: .top) {
-            VStack {
-                Text(location.name)
-                    .bold()
+        HStack {
+            Text(location.name)
+                .bold()
+            if isFavorite {
+                Image(systemName: "star.fill")
+                    .foregroundColor(.yellow)
+                    .imageScale(.small)
             }
             
             Spacer()
@@ -28,6 +34,16 @@ struct InlineLocationView: View {
             }
             .font(.callout)
             .foregroundColor(.secondary)
+            
+            Image(systemName: "chevron.right")
+                .foregroundColor(.secondary)
+                .padding(.leading, 3)
+        }
+        .contentShape(Rectangle())
+        .padding(2)
+        
+        .onAppear {
+            isFavorite = favorites.contains(location.id)
         }
     }
 }

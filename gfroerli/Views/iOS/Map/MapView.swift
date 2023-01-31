@@ -10,30 +10,34 @@ import MapKit
 import SwiftUI
 
 struct LocationMapView: View {
-    
     typealias config = AppConfiguration.MapView
     
     @EnvironmentObject var navigationModel: NavigationModel
     @EnvironmentObject var locationsViewModel: AllLocationsViewModel
     
-    @State private var filter = 1
     @State private var region = config.defaultRegion
     
+    @Binding var filter: Int
+    @Binding var searchDetent: PresentationDetent
+    
+    // MARK: - Body
+    
     var body: some View {
-        NavigationStack(path: $navigationModel.navigationPath) {
-            
+        VStack {
             Map(coordinateRegion: $region, annotationItems: annotationLocations()) { location in
+                
                 MapAnnotation(coordinate: location.coordinates?.coordinate ?? config.defaultCoordinates.coordinate) {
-                    
                     if location.coordinates == nil {
                         EmptyView()
                     }
                     else if region.span.latitudeDelta <= 0.1 {
-                        NavigationLink {
-                            LocationDetailView(locationID: location.id)
+                        Button {
+                            navigationModel.navigationPath.append(location)
+                            
                         } label: {
                             GfroerliMapAnnotation(location: location)
                         }
+                        .buttonStyle(.plain)
                     }
                     else {
                         GfroerliMapAnnotationPin(location: location)
@@ -44,38 +48,21 @@ struct LocationMapView: View {
                 }
             }
             
-            .toolbar {
-                ToolbarItem(placement: .primaryAction) {
-                    Menu {
-                        Picker("Picker", selection: $filter) {
-                            Text("All").tag(0)
-                            Text("Active").tag(1)
-                        }
-                    } label: {
-                        Label(
-                            "Sort",
-                            systemImage: filter == 0 ? "line.3.horizontal.decrease.circle" :
-                                "line.3.horizontal.decrease.circle.fill"
-                        )
-                    }
-                }
+            .onTapGesture {
+                searchDetent = .fraction(0.1)
             }
-            .navigationTitle("Map")
-            .navigationBarTitleDisplayMode(.inline)
             
-            .onAppear {
-                guard !locationsViewModel.allLocations.isEmpty else {
-                    return
-                }
-                withAnimation {
-                    filterChanged()
-                }
-            }
             .onChange(of: filter, perform: { _ in
                 withAnimation {
                     filterChanged()
                 }
             })
+            
+            .onChange(of: locationsViewModel.allLocations, perform: { _ in
+                filterChanged()
+            })
+            
+            .ignoresSafeArea(.all, edges: .bottom)
         }
     }
     
@@ -104,6 +91,8 @@ struct LocationMapView: View {
     }
     
     private func zoom(to coordinates: CLLocationCoordinate2D) {
+        searchDetent = .fraction(0.1)
+        
         withAnimation {
             region = MKCoordinateRegion(
                 center: coordinates,
@@ -114,8 +103,10 @@ struct LocationMapView: View {
     }
 }
 
+// MARK: - Preview
+
 struct LocationMapView_Previews: PreviewProvider {
     static var previews: some View {
-        LocationMapView()
+        LocationMapView(filter: .constant(1), searchDetent: .constant(.medium))
     }
 }

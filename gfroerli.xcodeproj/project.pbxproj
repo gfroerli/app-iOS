@@ -26,14 +26,15 @@
 		2481AEAC29684B1800316EDA /* Color+AccentColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2481AEAB29684B1800316EDA /* Color+AccentColor.swift */; };
 		2481AEAE296856FE00316EDA /* Date+Week.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2481AEAD296856FE00316EDA /* Date+Week.swift */; };
 		24B93CF128CDE48200573CD5 /* TemperatureMeasurement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24B93CF028CDE48200573CD5 /* TemperatureMeasurement.swift */; };
+		24BB342B29884E1F004B4270 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24BB342A29884E1F004B4270 /* MainView.swift */; };
+		24BB342D29885191004B4270 /* UndimmedSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24BB342C29885191004B4270 /* UndimmedSheet.swift */; };
+		24BB342F29897C8A004B4270 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24BB342E29897C8A004B4270 /* SearchView.swift */; };
 		24BE370C28FAA90800CF7D99 /* InlineLocationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24BE370B28FAA90800CF7D99 /* InlineLocationView.swift */; };
 		24BE370E28FAE36800CF7D99 /* Array+Codable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24BE370D28FAE36800CF7D99 /* Array+Codable.swift */; };
 		24BE371028FAEEB600CF7D99 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24BE370F28FAEEB600CF7D99 /* APIError.swift */; };
 		24C62B9C28D073B300607952 /* TemperatureMeasurementMissing.json in Resources */ = {isa = PBXBuildFile; fileRef = 24C62B9928D073B300607952 /* TemperatureMeasurementMissing.json */; };
 		24C62B9D28D073B300607952 /* TemperatureMeasurementAdditional.json in Resources */ = {isa = PBXBuildFile; fileRef = 24C62B9A28D073B300607952 /* TemperatureMeasurementAdditional.json */; };
 		24C62B9E28D073B300607952 /* TemperatureMeasurementFull.json in Resources */ = {isa = PBXBuildFile; fileRef = 24C62B9B28D073B300607952 /* TemperatureMeasurementFull.json */; };
-		24C62BA228D0761500607952 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C62BA128D0761500607952 /* SearchView.swift */; };
-		24C62BA528D0765A00607952 /* FavoritesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C62BA428D0765A00607952 /* FavoritesView.swift */; };
 		24D02A4B2964BA0000B19452 /* NewFeatures.json in Resources */ = {isa = PBXBuildFile; fileRef = 24D02A4D2964BA0000B19452 /* NewFeatures.json */; };
 		24D02A4E2964BA0400B19452 /* ChangeLog.json in Resources */ = {isa = PBXBuildFile; fileRef = 24D02A502964BA0400B19452 /* ChangeLog.json */; };
 		24D02A552964BA4800B19452 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 24D02A572964BA4800B19452 /* Localizable.strings */; };
@@ -49,10 +50,8 @@
 		24FF92F628C6064200454A5F /* NewFeatures.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24FF92F528C6064200454A5F /* NewFeatures.swift */; };
 		8D31E32F286601950095622E /* TemperaturesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D31E32E286601950095622E /* TemperaturesViewModel.swift */; };
 		8D31E332286604450095622E /* LocationDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D31E331286604450095622E /* LocationDetailView.swift */; };
-		8D3C681B285B672100DC8CA4 /* LocationTile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D3C681A285B672100DC8CA4 /* LocationTile.swift */; };
 		8D3C681D285B6E4800DC8CA4 /* AppConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D3C681C285B6E4800DC8CA4 /* AppConfiguration.swift */; };
 		8D54890D2856315C007253FE /* gfroerliApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D54890C2856315C007253FE /* gfroerliApp.swift */; };
-		8D54890F2856315C007253FE /* NavigationBaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D54890E2856315C007253FE /* NavigationBaseView.swift */; };
 		8D5489112856315D007253FE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8D5489102856315D007253FE /* Assets.xcassets */; };
 		8D5489152856315D007253FE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8D5489142856315D007253FE /* Preview Assets.xcassets */; };
 		8D54891F2856315D007253FE /* gfroerliTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D54891E2856315D007253FE /* gfroerliTests.swift */; };
@@ -76,10 +75,6 @@
 		8D8961BF2858CD7000C2A7CC /* NavigationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D8961BE2858CD7000C2A7CC /* NavigationModel.swift */; };
 		8D8961C42858E4B900C2A7CC /* UIDevice+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D8961C32858E4B900C2A7CC /* UIDevice+Extension.swift */; };
 		8D8961C72858F5AD00C2A7CC /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D8961C62858F5AD00C2A7CC /* MapView.swift */; };
-		8D8961C92858F5B600C2A7CC /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D8961C82858F5B600C2A7CC /* DashboardView.swift */; };
-		8D8961CC2858F73C00C2A7CC /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D8961CB2858F73C00C2A7CC /* TabBarView.swift */; };
-		8D8961CE2858F7A300C2A7CC /* iPadNavigationSplitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D8961CD2858F7A300C2A7CC /* iPadNavigationSplitView.swift */; };
-		8D9328E3285B95110076E174 /* LocationsGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D9328E2285B95110076E174 /* LocationsGridView.swift */; };
 		8DE7D71C28674BBE001684D1 /* LatestTemperatureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DE7D71B28674BBE001684D1 /* LatestTemperatureView.swift */; };
 		8DE7D71E2867513A001684D1 /* TemperatureSummaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DE7D71D2867513A001684D1 /* TemperatureSummaryView.swift */; };
 		8DE7D720286756DF001684D1 /* SingleLocationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DE7D71F286756DF001684D1 /* SingleLocationViewModel.swift */; };
@@ -156,14 +151,15 @@
 		2481AEAB29684B1800316EDA /* Color+AccentColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+AccentColor.swift"; sourceTree = "<group>"; };
 		2481AEAD296856FE00316EDA /* Date+Week.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Week.swift"; sourceTree = "<group>"; };
 		24B93CF028CDE48200573CD5 /* TemperatureMeasurement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemperatureMeasurement.swift; sourceTree = "<group>"; };
+		24BB342A29884E1F004B4270 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		24BB342C29885191004B4270 /* UndimmedSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UndimmedSheet.swift; sourceTree = "<group>"; };
+		24BB342E29897C8A004B4270 /* SearchView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
 		24BE370B28FAA90800CF7D99 /* InlineLocationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InlineLocationView.swift; sourceTree = "<group>"; };
 		24BE370D28FAE36800CF7D99 /* Array+Codable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Codable.swift"; sourceTree = "<group>"; };
 		24BE370F28FAEEB600CF7D99 /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
 		24C62B9928D073B300607952 /* TemperatureMeasurementMissing.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = TemperatureMeasurementMissing.json; path = GfroerliAPITests/JSONFiles/TemperatureMeasurement/TemperatureMeasurementMissing.json; sourceTree = SOURCE_ROOT; };
 		24C62B9A28D073B300607952 /* TemperatureMeasurementAdditional.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = TemperatureMeasurementAdditional.json; path = GfroerliAPITests/JSONFiles/TemperatureMeasurement/TemperatureMeasurementAdditional.json; sourceTree = SOURCE_ROOT; };
 		24C62B9B28D073B300607952 /* TemperatureMeasurementFull.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = TemperatureMeasurementFull.json; path = GfroerliAPITests/JSONFiles/TemperatureMeasurement/TemperatureMeasurementFull.json; sourceTree = SOURCE_ROOT; };
-		24C62BA128D0761500607952 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
-		24C62BA428D0765A00607952 /* FavoritesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesView.swift; sourceTree = "<group>"; };
 		24D02A4C2964BA0000B19452 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = Base; path = Base.lproj/NewFeatures.json; sourceTree = "<group>"; };
 		24D02A4F2964BA0400B19452 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = Base; path = Base.lproj/ChangeLog.json; sourceTree = "<group>"; };
 		24D02A512964BA0F00B19452 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = en; path = en.lproj/ChangeLog.json; sourceTree = "<group>"; };
@@ -184,11 +180,9 @@
 		24FF92F528C6064200454A5F /* NewFeatures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewFeatures.swift; sourceTree = "<group>"; };
 		8D31E32E286601950095622E /* TemperaturesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemperaturesViewModel.swift; sourceTree = "<group>"; };
 		8D31E331286604450095622E /* LocationDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationDetailView.swift; sourceTree = "<group>"; };
-		8D3C681A285B672100DC8CA4 /* LocationTile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationTile.swift; sourceTree = "<group>"; };
 		8D3C681C285B6E4800DC8CA4 /* AppConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfiguration.swift; sourceTree = "<group>"; };
 		8D5489092856315C007253FE /* gfroerli.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = gfroerli.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D54890C2856315C007253FE /* gfroerliApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gfroerliApp.swift; sourceTree = "<group>"; };
-		8D54890E2856315C007253FE /* NavigationBaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBaseView.swift; sourceTree = "<group>"; };
 		8D5489102856315D007253FE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8D5489122856315D007253FE /* gfroerli.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = gfroerli.entitlements; sourceTree = "<group>"; };
 		8D5489142856315D007253FE /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -215,10 +209,6 @@
 		8D8961BE2858CD7000C2A7CC /* NavigationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationModel.swift; sourceTree = "<group>"; };
 		8D8961C32858E4B900C2A7CC /* UIDevice+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIDevice+Extension.swift"; sourceTree = "<group>"; };
 		8D8961C62858F5AD00C2A7CC /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
-		8D8961C82858F5B600C2A7CC /* DashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardView.swift; sourceTree = "<group>"; };
-		8D8961CB2858F73C00C2A7CC /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
-		8D8961CD2858F7A300C2A7CC /* iPadNavigationSplitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iPadNavigationSplitView.swift; sourceTree = "<group>"; };
-		8D9328E2285B95110076E174 /* LocationsGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsGridView.swift; sourceTree = "<group>"; };
 		8DE7D71B28674BBE001684D1 /* LatestTemperatureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LatestTemperatureView.swift; sourceTree = "<group>"; };
 		8DE7D71D2867513A001684D1 /* TemperatureSummaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemperatureSummaryView.swift; sourceTree = "<group>"; };
 		8DE7D71F286756DF001684D1 /* SingleLocationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleLocationViewModel.swift; sourceTree = "<group>"; };
@@ -319,6 +309,8 @@
 			children = (
 				8D8961C62858F5AD00C2A7CC /* MapView.swift */,
 				247D86F728C27AAD003458C1 /* GfroerliMapAnnotation.swift */,
+				24BE370B28FAA90800CF7D99 /* InlineLocationView.swift */,
+				8DEE78C2285E3305009D853C /* Settings */,
 			);
 			path = Map;
 			sourceTree = "<group>";
@@ -332,20 +324,20 @@
 			path = LocationTemperatureHistory;
 			sourceTree = "<group>";
 		};
+		24BB343029897D1F004B4270 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				24BB342C29885191004B4270 /* UndimmedSheet.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		24C62BA028D0760200607952 /* Search */ = {
 			isa = PBXGroup;
 			children = (
-				24C62BA128D0761500607952 /* SearchView.swift */,
+				24BB342E29897C8A004B4270 /* SearchView.swift */,
 			);
 			path = Search;
-			sourceTree = "<group>";
-		};
-		24C62BA328D0764500607952 /* Favorites */ = {
-			isa = PBXGroup;
-			children = (
-				24C62BA428D0765A00607952 /* FavoritesView.swift */,
-			);
-			path = Favorites;
 			sourceTree = "<group>";
 		};
 		24DAD5FD28BA5D06002E5785 /* Helpers */ = {
@@ -389,18 +381,6 @@
 			path = LocationDetail;
 			sourceTree = "<group>";
 		};
-		8D3C6819285B669700DC8CA4 /* Dashboard */ = {
-			isa = PBXGroup;
-			children = (
-				8D8961C82858F5B600C2A7CC /* DashboardView.swift */,
-				8D9328E2285B95110076E174 /* LocationsGridView.swift */,
-				8D3C681A285B672100DC8CA4 /* LocationTile.swift */,
-				8DEE78C2285E3305009D853C /* Settings */,
-				24BE370B28FAA90800CF7D99 /* InlineLocationView.swift */,
-			);
-			path = Dashboard;
-			sourceTree = "<group>";
-		};
 		8D5489002856315C007253FE = {
 			isa = PBXGroup;
 			children = (
@@ -430,13 +410,13 @@
 		8D54890B2856315C007253FE /* gfroerli */ = {
 			isa = PBXGroup;
 			children = (
-				8D8961C02858D31900C2A7CC /* Extensions */,
-				8D8961C52858F59C00C2A7CC /* Views */,
-				8D9328E4285B98930076E174 /* Utils */,
-				24FF92F728C606A800454A5F /* Resources */,
-				8D8961BB2857932600C2A7CC /* ViewModels */,
-				8D54893928563185007253FE /* Info.plist */,
 				8D54890C2856315C007253FE /* gfroerliApp.swift */,
+				8D8961C52858F59C00C2A7CC /* Views */,
+				8D8961BB2857932600C2A7CC /* ViewModels */,
+				8D9328E4285B98930076E174 /* Utils */,
+				8D8961C02858D31900C2A7CC /* Extensions */,
+				24FF92F728C606A800454A5F /* Resources */,
+				8D54893928563185007253FE /* Info.plist */,
 				8D5489102856315D007253FE /* Assets.xcassets */,
 				8D5489122856315D007253FE /* gfroerli.entitlements */,
 				8D5489132856315D007253FE /* Preview Content */,
@@ -567,40 +547,21 @@
 		8D8961C52858F59C00C2A7CC /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				8D8961D02858FEC400C2A7CC /* iPadOS */,
 				8D8961CF2858FEB800C2A7CC /* iOS */,
-				8D8961CA2858F71B00C2A7CC /* Shared */,
-				8D31E3302866041A0095622E /* LocationDetail */,
 			);
 			path = Views;
-			sourceTree = "<group>";
-		};
-		8D8961CA2858F71B00C2A7CC /* Shared */ = {
-			isa = PBXGroup;
-			children = (
-				8D54890E2856315C007253FE /* NavigationBaseView.swift */,
-				24C62BA328D0764500607952 /* Favorites */,
-				24C62BA028D0760200607952 /* Search */,
-				247D86F628C27A8B003458C1 /* Map */,
-				8D3C6819285B669700DC8CA4 /* Dashboard */,
-			);
-			path = Shared;
 			sourceTree = "<group>";
 		};
 		8D8961CF2858FEB800C2A7CC /* iOS */ = {
 			isa = PBXGroup;
 			children = (
-				8D8961CB2858F73C00C2A7CC /* TabBarView.swift */,
+				24BB342A29884E1F004B4270 /* MainView.swift */,
+				24C62BA028D0760200607952 /* Search */,
+				8D31E3302866041A0095622E /* LocationDetail */,
+				247D86F628C27A8B003458C1 /* Map */,
+				24BB343029897D1F004B4270 /* Helpers */,
 			);
 			path = iOS;
-			sourceTree = "<group>";
-		};
-		8D8961D02858FEC400C2A7CC /* iPadOS */ = {
-			isa = PBXGroup;
-			children = (
-				8D8961CD2858F7A300C2A7CC /* iPadNavigationSplitView.swift */,
-			);
-			path = iPadOS;
 			sourceTree = "<group>";
 		};
 		8D9328E4285B98930076E174 /* Utils */ = {
@@ -866,13 +827,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D8961C42858E4B900C2A7CC /* UIDevice+Extension.swift in Sources */,
+				24BB342B29884E1F004B4270 /* MainView.swift in Sources */,
 				2481AEAC29684B1800316EDA /* Color+AccentColor.swift in Sources */,
 				24DAE30128C35FC20040D03D /* SponsorViewModel.swift in Sources */,
 				8DEE78C8285E460A009D853C /* NewFeaturesView.swift in Sources */,
 				24457EEE28C6197C00172C2B /* ChangeLogView.swift in Sources */,
 				8DE7D71E2867513A001684D1 /* TemperatureSummaryView.swift in Sources */,
 				24558F1C28CB4F230025864F /* TemperatureHistoryView.swift in Sources */,
-				24C62BA228D0761500607952 /* SearchView.swift in Sources */,
 				241E02CA28BE8338007DFEA7 /* LocationMapPreviewView.swift in Sources */,
 				24BE370E28FAE36800CF7D99 /* Array+Codable.swift in Sources */,
 				24FF92F628C6064200454A5F /* NewFeatures.swift in Sources */,
@@ -881,12 +842,7 @@
 				8DE7D720286756DF001684D1 /* SingleLocationViewModel.swift in Sources */,
 				8D31E332286604450095622E /* LocationDetailView.swift in Sources */,
 				8D8961C72858F5AD00C2A7CC /* MapView.swift in Sources */,
-				8D8961CC2858F73C00C2A7CC /* TabBarView.swift in Sources */,
-				8D8961CE2858F7A300C2A7CC /* iPadNavigationSplitView.swift in Sources */,
 				24275B1F2964903000DDD05E /* ViewModelState.swift in Sources */,
-				8D3C681B285B672100DC8CA4 /* LocationTile.swift in Sources */,
-				8D54890F2856315C007253FE /* NavigationBaseView.swift in Sources */,
-				8D8961C92858F5B600C2A7CC /* DashboardView.swift in Sources */,
 				8D8961BF2858CD7000C2A7CC /* NavigationModel.swift in Sources */,
 				8D8961BD2857933100C2A7CC /* AllLocationsViewModel.swift in Sources */,
 				24457EF028C619C200172C2B /* ChangeLog.swift in Sources */,
@@ -894,11 +850,11 @@
 				8D31E32F286601950095622E /* TemperaturesViewModel.swift in Sources */,
 				247D86F828C27AAD003458C1 /* GfroerliMapAnnotation.swift in Sources */,
 				8DE7D72228675AA4001684D1 /* View+Modifiers.swift in Sources */,
-				24C62BA528D0765A00607952 /* FavoritesView.swift in Sources */,
 				8DEE78C4285E3313009D853C /* SettingsThumbnailView.swift in Sources */,
 				8D3C681D285B6E4800DC8CA4 /* AppConfiguration.swift in Sources */,
-				8D9328E3285B95110076E174 /* LocationsGridView.swift in Sources */,
+				24BB342D29885191004B4270 /* UndimmedSheet.swift in Sources */,
 				2481AEA8296820FD00316EDA /* HistoryGraphView.swift in Sources */,
+				24BB342F29897C8A004B4270 /* SearchView.swift in Sources */,
 				24D1F42E28C609A0004F7E8B /* DefaultsCoordinator.swift in Sources */,
 				8DE7D71C28674BBE001684D1 /* LatestTemperatureView.swift in Sources */,
 				8DEE78C6285E4497009D853C /* FAQView.swift in Sources */,

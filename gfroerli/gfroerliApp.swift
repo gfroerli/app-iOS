@@ -16,7 +16,7 @@ struct gfroerliApp: App {
     
     var body: some Scene {
         WindowGroup {
-            NavigationBaseView()
+            MainView()
                 .environmentObject(navigationModel)
                 .environmentObject(locationsViewModel)
                 .task {

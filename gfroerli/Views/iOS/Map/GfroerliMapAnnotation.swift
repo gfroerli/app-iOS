@@ -24,7 +24,7 @@ struct GfroerliMapAnnotation: View {
             Text(location.latestTemperatureString)
 
             Image(systemName: "chevron.right")
-                .foregroundColor(.accentColor)
+                .foregroundColor(.white)
         }
         .fontWeight(AppConfiguration.MapView.fontWeight)
         .foregroundColor(.white)
