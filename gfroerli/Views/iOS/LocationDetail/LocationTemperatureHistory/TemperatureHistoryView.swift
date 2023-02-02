@@ -38,7 +38,7 @@ struct TemperatureHistoryView: View {
     var body: some View {
         VStack(alignment: .leading) {
             HStack(alignment: .top) {
-                Text("History")
+                Text("temperature_history_view_title")
                     .font(.title2)
                     .bold()
             
@@ -75,10 +75,10 @@ struct TemperatureHistoryView: View {
                         Text(" ")
                     }.frame(maxWidth: 1)
                     
-                    Picker("Choose time span", selection: $currentSelection) {
-                        Text("Day").tag(ChartSpan.day)
-                        Text("Week").tag(ChartSpan.week)
-                        Text("Month").tag(ChartSpan.month)
+                    Picker("temperature_history_view_picker_title", selection: $currentSelection) {
+                        Text("temperature_history_view_picker_day").tag(ChartSpan.day)
+                        Text("temperature_history_view_picker_week").tag(ChartSpan.week)
+                        Text("temperature_history_view_picker_month").tag(ChartSpan.month)
                     }
                     .fixedSize()
                     

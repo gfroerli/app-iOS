@@ -18,7 +18,7 @@ struct LatestTemperatureView: View {
 
     var body: some View {
         HStack(alignment: .top) {
-            Text("Latest:")
+            Text("latest_temperature_view_title")
                 .minimumScaleFactor(0.1)
                 .bold()
             

@@ -65,7 +65,7 @@ struct LocationMapView: View {
             .padding(10)
             
             .onTapGesture {
-                searchDetent = .fraction(0.1)
+                searchDetent = .fraction(0.15)
             }
             
             .onChange(of: filter, perform: { _ in
@@ -78,7 +78,7 @@ struct LocationMapView: View {
                 filterChanged()
             })
         }
-        .ignoresSafeArea(.all, edges: .bottom)
+        .ignoresSafeArea(.all, edges: [.bottom, .top])
     }
     
     // MARK: - Private Functions
@@ -106,7 +106,7 @@ struct LocationMapView: View {
     }
     
     private func zoom(to coordinates: CLLocationCoordinate2D) {
-        searchDetent = .fraction(0.1)
+        searchDetent = .fraction(0.15)
         
         withAnimation {
             region = MKCoordinateRegion(

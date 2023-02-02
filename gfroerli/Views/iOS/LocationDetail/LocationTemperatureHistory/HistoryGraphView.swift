@@ -19,7 +19,7 @@ struct HistoryGraphView: View {
         VStack {
             ZStack {
                 if !vm.hasDataPoints {
-                    Text("No Data available")
+                    Text("history_graph_view_no_data_label")
                         .font(.callout)
                         .foregroundColor(.secondary)
                         .padding(5)
@@ -69,7 +69,7 @@ struct HistoryGraphView: View {
                         .foregroundStyle(.clear)
                     }
                     if hoveringIndex != nil {
-                        RuleMark(x: .value("wow", vm.averageTemperatures[hoveringIndex!].measurementDate))
+                        RuleMark(x: .value("", vm.averageTemperatures[hoveringIndex!].measurementDate))
                             .foregroundStyle(.gray.gradient)
                     }
                 }

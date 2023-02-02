@@ -74,7 +74,7 @@ enum AppConfiguration {
     
     enum Settings {
         /// String containing current version number, e.g. 1.0
-        static let lastVersion = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as! String
+        static let lastVersion = " " + (Bundle.main.infoDictionary?["CFBundleShortVersionString"] as! String)
         
         /// URL opening review in appstore
         static let reviewURL: URL = {

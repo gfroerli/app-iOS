@@ -22,10 +22,10 @@ struct SettingsView: View {
                 Button {
                     presentationMode.wrappedValue.dismiss()
                 } label: {
-                    Text("Close")
+                    Text("settings_view_close")
                 }
             })
-            .navigationTitle("Settings")
+            .navigationTitle("settings_view_title")
             .navigationBarTitleDisplayMode(.inline)
         }
     }
@@ -48,13 +48,13 @@ struct SettingsHeaderView: View {
                     .frame(maxWidth: 150)
                 
                 VStack(alignment: .leading) {
-                    Text("Gfrör.li")
+                    Text("settings_view_app_title")
                         .foregroundColor(.primary)
                         .font(.title)
                         .bold()
-                    Text("Version: \(config.lastVersion)")
-                    Text("by Marc")
-                    Text("for Coredump Rapperswil")
+                    Text("settings_view_app_version") +  Text(config.lastVersion)
+                    Text("settings_view_app_creator")
+                    Text("settings_view_app_coredump")
                 }
                 .foregroundColor(.secondary)
                 .lineLimit(2)
@@ -69,24 +69,24 @@ struct SettingsHeaderView: View {
 
 struct SettingsGeneralSectionView: View {
     var body: some View {
-        Section(header: Text("General")) {
+        Section(header: Text("settings_view_header_general")) {
             // FAQ
-            NavigationLink {
+           /* NavigationLink {
                 FAQView()
             } label: {
                 Label(title: {
-                    Text("FAQ")
+                    Text("settings_view_item_FAQ")
                 }, icon: {
                     SettingsThumbnailView(imageName: "info.circle", backgroundColor: .accentColor)
                 })
-            }
+            }*/
             
             // Change log
             NavigationLink {
                 ChangeLogView()
             } label: {
                 Label {
-                    Text("Changelog")
+                    Text("settings_view_item_changelog")
                 } icon: {
                     SettingsThumbnailView(imageName: "sparkles", backgroundColor: .green)
                 }
@@ -97,7 +97,7 @@ struct SettingsGeneralSectionView: View {
                 openLanguageSettings()
             } label: {
                 Label {
-                    Text("Language")
+                    Text("settings_view_item_language")
                 } icon: {
                     SettingsThumbnailView(imageName: "globe", backgroundColor: .accentColor)
                 }
@@ -129,7 +129,7 @@ struct SettingsLinksSectionView: View {
                 openURL(config.reviewURL)
             } label: {
                 Label {
-                    Text("Rate")
+                    Text("settings_view_item_review")
                         .foregroundColor(Color("textColor"))
                 } icon: {
                     SettingsThumbnailView(imageName: "heart.fill", backgroundColor: .red)
@@ -139,7 +139,7 @@ struct SettingsLinksSectionView: View {
             // Email
             Link(destination: config.emailURL) {
                 Label {
-                    Text("Contact")
+                    Text("settings_view_item_contact")
                         .foregroundColor(Color("textColor"))
                 } icon: {
                     SettingsThumbnailView(imageName: "envelope.fill", backgroundColor: .accentColor)
@@ -149,7 +149,7 @@ struct SettingsLinksSectionView: View {
             // Privacy Policy
             Link(destination: config.privacyPolicyURL) {
                 Label {
-                    Text("Privacy Policy")
+                    Text("settings_view_item_policy")
                         .foregroundColor(Color("textColor"))
                 } icon: {
                     SettingsThumbnailView(imageName: "hand.raised.fill", backgroundColor: .black)
@@ -159,7 +159,7 @@ struct SettingsLinksSectionView: View {
             // Gfroerli Web
             Link(destination: config.gfroerliURL) {
                 Label {
-                    Text("gfrör.li")
+                    Text("settings_view_item_gfroerli_web")
                         .foregroundColor(Color("textColor"))
                 } icon: {
                     SettingsThumbnailView(imageName: "safari", backgroundColor: .accentColor)
@@ -169,7 +169,7 @@ struct SettingsLinksSectionView: View {
             // Coredump Web
             Link(destination: config.coredumpURL) {
                 Label {
-                    Text("coredump.ch")
+                    Text("settings_view_item_coredump_web")
                         .foregroundColor(Color("textColor"))
                 } icon: {
                     SettingsThumbnailView(imageName: "safari", backgroundColor: .green)
@@ -179,7 +179,7 @@ struct SettingsLinksSectionView: View {
             // Coredump Twitter
             Link(destination: config.twitterURL) {
                 Label {
-                    Text("@coredump_ch")
+                    Text("settings_view_item_coredump_twitter")
                         .foregroundColor(Color("textColor"))
                 } icon: {
                     SettingsThumbnailView(imageName: "bird.fill", backgroundColor: .green)
@@ -189,7 +189,7 @@ struct SettingsLinksSectionView: View {
             // GitHub
             Link(destination: config.githubURL) {
                 Label {
-                    Text("View Code on GitHub")
+                    Text("settings_view_item_github")
                         .foregroundColor(Color("textColor"))
                 } icon: {
                     SettingsThumbnailView(imageName: "flame.fill", backgroundColor: .black)

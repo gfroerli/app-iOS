@@ -37,14 +37,14 @@ struct SearchView: View {
          
                     ToolbarItem(placement: .primaryAction) {
                         Menu {
-                            Picker("Sort", selection: $locationsViewModel.sortedBy) {
+                            Picker("search_view_sort_title", selection: $locationsViewModel.sortedBy) {
                                 ForEach(AllLocationsViewModel.SortVariants.allCases) { option in
                                     Label(option.text, systemImage: option.symbolName)
                                 }
                             }
                         } label: {
                             Label(
-                                "Sort",
+                                "search_view_sort_label",
                                 systemImage: filter == 0 ? "arrow.up.arrow.down.circle" :
                                     "arrow.up.arrow.down.circle.fill"
                             )
@@ -52,7 +52,7 @@ struct SearchView: View {
                     }
                 }
             
-                .navigationTitle("Search")
+                .navigationTitle("search_view_navigation_title")
                 .navigationBarTitleDisplayMode(.inline)
         }
     }

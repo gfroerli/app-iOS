@@ -15,7 +15,7 @@ struct MainView: View {
     @EnvironmentObject var locationsViewModel: AllLocationsViewModel
 
     @State var showSearch = true
-    @State var searchDetent: PresentationDetent = .fraction(0.1)
+    @State var searchDetent: PresentationDetent = .fraction(0.2)
     @State private var filter = 1
     @State private var region = config.defaultRegion
     @State private var sheetToShow: SheetToShow = .none
@@ -33,13 +33,13 @@ struct MainView: View {
                 .toolbar {
                     ToolbarItem(placement: .primaryAction) {
                         Menu {
-                            Picker("Picker", selection: $filter) {
-                                Text("Active").tag(1)
-                                Text("All").tag(0)
+                            Picker("main_view_filter_title", selection: $filter) {
+                                Text("main_view_filter_active").tag(1)
+                                Text("main_view_filter_all").tag(0)
                             }
                         } label: {
                             Label(
-                                "Sort",
+                                "main_view_filter_label",
                                 systemImage: filter == 0 ? "line.3.horizontal.decrease.circle" :
                                     "line.3.horizontal.decrease.circle.fill"
                             )
@@ -52,7 +52,8 @@ struct MainView: View {
                                 showSearch = false
                             }
                         } label: {
-                            Image(systemName: "gear")
+                            Label("main_view_settings_label", systemImage: "gear")
+                                .labelStyle(.iconOnly)
                         }
                     }
                 }
@@ -72,7 +73,7 @@ struct MainView: View {
                     SearchView()
                         .interactiveDismissDisabled()
                         .presentationDetents(
-                            undimmed: [.fraction(0.1), .fraction(0.9)],
+                            undimmed: [.fraction(0.15), .fraction(0.9)],
                             selection: $searchDetent
                         )
                 })
@@ -105,8 +106,9 @@ struct MainView: View {
             
                 // MARK: - Navigation
 
-                .navigationTitle("Map")
+                .navigationTitle("main_view_navigation_title")
                 .navigationBarTitleDisplayMode(.inline)
+                .toolbarBackground(.visible, for: .navigationBar)
                 .navigationDestination(for: Location.self, destination: { location in
                     LocationDetailView(locationID: location.id)
                 })

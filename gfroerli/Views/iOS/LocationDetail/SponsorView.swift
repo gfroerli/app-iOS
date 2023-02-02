@@ -18,7 +18,7 @@ struct SponsorView: View {
             if case ViewModelState.failed = sponsorVM.modelState {
                 
                 VStack {
-                    Text("Fetching Sponsor Failed")
+                    Text("sponsor_view_failed")
                         .font(.title3)
                         .bold()
                         .foregroundColor(.secondary)
@@ -35,10 +35,10 @@ struct SponsorView: View {
             else {
                 
                 VStack(alignment: .leading) {
-                    Text("Sponsored by:")
+                    Text("sponsor_view_title")
                         .font(.title2)
                     
-                    Text(sponsorVM.sponsor?.name ?? "No Name")
+                    Text(sponsorVM.sponsor?.name ?? "sponsor_view_no_name")
                         .font(.title2)
                         .redacted(
                             reason: sponsorVM.sponsor == nil ? .placeholder : []
@@ -67,7 +67,7 @@ struct SponsorView: View {
                 }
                 
                 VStack {
-                    Text(sponsorVM.sponsor?.description ?? "No Description")
+                    Text(sponsorVM.sponsor?.description ?? "sponsor_view_no_descriptionn")
                 }
                 .redacted(reason: sponsorVM.modelState == .loading ? .placeholder : [])
             }

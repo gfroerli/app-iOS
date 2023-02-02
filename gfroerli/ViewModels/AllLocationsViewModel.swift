@@ -72,7 +72,7 @@ class AllLocationsViewModel: ObservableObject {
     public func loadAllLocations() async throws {
         guard let fetchedLocations: [Location] = try? await GfroerliAPI().load(fetchType: .allLocations) else {
             // TODO: Error handling
-            fatalError("")
+            return
         }
         allLocations = fetchedLocations
         sortedLocations = fetchedLocations

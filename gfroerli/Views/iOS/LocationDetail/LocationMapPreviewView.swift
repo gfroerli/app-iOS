@@ -27,7 +27,7 @@ struct LocationMapPreviewView: View {
         VStack(alignment: .leading, spacing: 0) {
             
             HStack {
-                Text("Map")
+                Text("location_map_preview_view_title")
                     .font(.title2).bold()
                 
                 Spacer()
@@ -66,7 +66,7 @@ struct LocationMapPreviewView: View {
                         .frame(maxWidth: .infinity, maxHeight: .infinity)
                         .background(.ultraThinMaterial)
                     
-                    Text("Location unavailable")
+                    Text("location_map_preview_view_unavailable")
                         .font(.headline)
                         .bold()
                         .foregroundColor(.secondary)

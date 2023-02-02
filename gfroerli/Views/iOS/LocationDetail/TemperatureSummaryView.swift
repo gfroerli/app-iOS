@@ -18,25 +18,25 @@ struct TemperatureSummaryView: View {
         VStack(alignment: .leading) {
             
             HStack {
-                Text("All time:")
+                Text("temperature_summary_view_title")
                     .font(.title2.bold())
             }
             
             VStack {
                 HStack {
-                    Text("Highest:")
+                    Text("temperature_summary_view_highest")
                     Spacer()
                     Text(location!.highestTemperatureString)
                 }
                 
                 HStack {
-                    Text("Average:")
+                    Text("temperature_summary_view_average")
                     Spacer()
                     Text(location!.averageTemperatureString)
                 }
                 
                 HStack {
-                    Text("Lowest:")
+                    Text("temperature_summary_view_lowest")
                     Spacer()
                     Text(location!.lowestTemperatureString)
                 }
