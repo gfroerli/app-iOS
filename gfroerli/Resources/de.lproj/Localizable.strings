@@ -1,7 +1,82 @@
-/* 
+/*
   Localizable.strings
   gfroerli
 
   Created by Marc on 03.01.23.
   
 */
+
+// "" = "";
+
+// MainView
+"main_view_navigation_title" = "Karte";
+
+"main_view_filter_title" = "Standort Filter";
+"main_view_filter_label" = "Filter";
+"main_view_filter_active" = "Aktiv";
+"main_view_filter_all" = "Alle";
+
+"main_view_settings_label" = "Einstellungen";
+
+// SearchView
+"search_view_navigation_title" = "Suche";
+"search_view_sort_title" = "Sortieren";
+"search_view_sort_label" = "Standorte Sortieren";
+
+// TemperatureHistoryView
+"temperature_history_view_title" = "Verlauf";
+"temperature_history_view_picker_title" = "Zeitspanne wæhlen";
+"temperature_history_view_picker_day" = "Tag";
+"temperature_history_view_picker_week" = "Woche";
+"temperature_history_view_picker_month" = "Monat";
+
+// HistoryGraphView
+"history_graph_view_no_data_label" = "Keine Daten";
+"history_graph_view_legend_minimum"= "Tiefste";
+"history_graph_view_legend_average" = "Durchschnitt";
+"history_graph_view_legend_maximum" = "Höchste";
+
+// LatestTemperatureView
+"latest_temperature_view_title" = "Letzte";
+
+// TemperatureSummaryView
+"temperature_summary_view_title" = "Insgesamt";
+"temperature_summary_view_highest" = "Höchste";
+"temperature_summary_view_average" = "Durchschnitt";
+"temperature_summary_view_lowest" = "Tiefste";
+
+// LocationMapPreviewView
+"location_map_preview_view_title" = "Karte";
+"location_map_preview_view_unavailable" = "Standort nich verfügbar";
+
+// SponsorView
+"sponsor_view_title" = "Gesponsert durch";
+"sponsor_view_failed" = "Laden des Sponsors fehlgeschlagen";
+"sponsor_view_no_name" = "Kein Name";
+"sponsor_view_no_description" = "Keine Beschreibung";
+
+// SettingsView
+"settings_view_title" = "Einstellungen";
+"settings_view_close" = "Schliessen";
+
+"settings_view_app_title" = "Gfrör.li";
+"settings_view_app_version" = "Version:";
+"settings_view_app_creator" = "von Marc";
+"settings_view_app_coredump" = "für Coredump Rapperswil";
+"settings_view_header_general" = "Allgemein";
+"settings_view_item_FAQ" = "FAQ";
+"settings_view_item_changelog" = "Changelog";
+"settings_view_item_language" = "Sprache Ändern";
+
+"settings_view_header_links" = "Links";
+"settings_view_item_review" = "Bewerten";
+"settings_view_item_contact" = "Feedback";
+"settings_view_item_policy" = "Datenschutz Bestimmungen";
+"settings_view_item_gfroerli_web" = "gfrör.li";
+"settings_view_item_coredump_web" = "coredump.ch";
+"settings_view_item_coredump_twitter" = "@coredump_ch";
+"settings_view_item_github" = "Code auf GitHub ansehen";
+
+// ChangelogView
+"changelog_view_app_title" = "Changelog";
+"changelog_view_version_header" = "Version %@";

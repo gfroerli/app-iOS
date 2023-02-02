@@ -160,8 +160,6 @@
 		24C62B9928D073B300607952 /* TemperatureMeasurementMissing.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = TemperatureMeasurementMissing.json; path = GfroerliAPITests/JSONFiles/TemperatureMeasurement/TemperatureMeasurementMissing.json; sourceTree = SOURCE_ROOT; };
 		24C62B9A28D073B300607952 /* TemperatureMeasurementAdditional.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = TemperatureMeasurementAdditional.json; path = GfroerliAPITests/JSONFiles/TemperatureMeasurement/TemperatureMeasurementAdditional.json; sourceTree = SOURCE_ROOT; };
 		24C62B9B28D073B300607952 /* TemperatureMeasurementFull.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = TemperatureMeasurementFull.json; path = GfroerliAPITests/JSONFiles/TemperatureMeasurement/TemperatureMeasurementFull.json; sourceTree = SOURCE_ROOT; };
-		24D02A4C2964BA0000B19452 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = Base; path = Base.lproj/NewFeatures.json; sourceTree = "<group>"; };
-		24D02A4F2964BA0400B19452 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = Base; path = Base.lproj/ChangeLog.json; sourceTree = "<group>"; };
 		24D02A512964BA0F00B19452 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = en; path = en.lproj/ChangeLog.json; sourceTree = "<group>"; };
 		24D02A522964BA1300B19452 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = en; path = en.lproj/NewFeatures.json; sourceTree = "<group>"; };
 		24D02A562964BA4800B19452 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -732,7 +730,6 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
-				Base,
 				de,
 			);
 			mainGroup = 8D5489002856315C007253FE;
@@ -944,7 +941,6 @@
 		24D02A4D2964BA0000B19452 /* NewFeatures.json */ = {
 			isa = PBXVariantGroup;
 			children = (
-				24D02A4C2964BA0000B19452 /* Base */,
 				24D02A522964BA1300B19452 /* en */,
 				24D02A582964BA5900B19452 /* de */,
 			);
@@ -954,7 +950,6 @@
 		24D02A502964BA0400B19452 /* ChangeLog.json */ = {
 			isa = PBXVariantGroup;
 			children = (
-				24D02A4F2964BA0400B19452 /* Base */,
 				24D02A512964BA0F00B19452 /* en */,
 				24D02A592964BA5900B19452 /* de */,
 			);

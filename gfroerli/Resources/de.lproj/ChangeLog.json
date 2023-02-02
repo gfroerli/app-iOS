@@ -3,7 +3,7 @@
         "version": 2.02,
         "items": [
                 {
-                    "description": "The history graph could display the wrong data.",
+                    "description": "Der Verlauf zeigte möglicherweise falsche Daten an.",
                     "changeType": "bugfix"
                 }
         ]
@@ -12,7 +12,7 @@
         "version": 2.01,
         "items": [
                 {
-                    "description": "Interaction with the history-graph could lead to the app crashing.",
+                    "description": "Interaktionen mit dem Graph konnten die App beenden.",
                     "changeType": "bugfix"
                 }
         ]
@@ -21,11 +21,11 @@
         "version": 2.0,
         "items": [
                 {
-                    "description": "Brand new map view",
+                    "description": "Neue Karten-Ansicht",
                     "changeType": "feature"
                 },
                 {
-                    "description": "Search to quickly find Locations",
+                    "description": "Suche nach Standorten hinzugefügt.",
                     "changeType": "feature"
                 }
         ]
@@ -34,7 +34,7 @@
         "version": 1.2,
         "items": [
                 {
-                    "description": "Fixed various sources of crashes",
+                    "description": "Kleinere Fehlerbehebungen.",
                     "changeType": "bugfix"
                 }
         ]
@@ -43,11 +43,11 @@
         "version": 1.1,
         "items": [
                 {
-                    "description": "Changelog can be viewed in App",
+                    "description": "Der Changelog ist nun direkt in der App verfügbar.",
                     "changeType": "feature"
                 },
                 {
-                    "description": "Most recent measurement has now a timestamp",
+                    "description": "Neuste Messungen zeigen nun auch den Mess-Zeitpunkt an.",
                     "changeType": "improvement"
                 }
         ]
@@ -56,7 +56,7 @@
         "version": 1.01,
         "items": [
                 {
-                    "description": "Locations we're wrongly displayed",
+                    "description": "Standorte wurden nicht richtig angezeigt.",
                     "changeType": "bugfix"
                 }
         ]
@@ -66,7 +66,7 @@
         "version": 1.0,
         "items": [
                 {
-                    "description": "Initial Release! 🎉",
+                    "description": "Erste Veröffentlichung! 🎉",
                     "changeType": "feature"
                 }
         ]

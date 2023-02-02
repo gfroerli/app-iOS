@@ -34,7 +34,7 @@
 "history_graph_view_no_data_label" = "No data available";
 "history_graph_view_legend_minimum"= "Minimum";
 "history_graph_view_legend_average" = "Average";
-"history_graph_view_legend_maximum" = "Maximum3333";
+"history_graph_view_legend_maximum" = "Maximum";
 
 // LatestTemperatureView
 "latest_temperature_view_title" = "Latest";
@@ -76,3 +76,7 @@
 "settings_view_item_coredump_web" = "coredump.ch";
 "settings_view_item_coredump_twitter" = "@coredump_ch";
 "settings_view_item_github" = "View Code on GitHub";
+
+// ChangelogView
+"changelog_view_app_title" = "Changelog";
+"changelog_view_version_header" = "Version";

@@ -21,11 +21,11 @@
         "version": 2.0,
         "items": [
                 {
-                    "description": "Brand new map view",
+                    "description": "Brand new map view.",
                     "changeType": "feature"
                 },
                 {
-                    "description": "Search to quickly find Locations",
+                    "description": "Search to quickly find Locations.",
                     "changeType": "feature"
                 }
         ]
@@ -34,7 +34,7 @@
         "version": 1.2,
         "items": [
                 {
-                    "description": "Fixed various sources of crashes",
+                    "description": "Fixed various crashes.",
                     "changeType": "bugfix"
                 }
         ]
@@ -43,11 +43,11 @@
         "version": 1.1,
         "items": [
                 {
-                    "description": "Changelog can be viewed in App",
+                    "description": "Changelog can be viewed in App.",
                     "changeType": "feature"
                 },
                 {
-                    "description": "Most recent measurement has now a timestamp",
+                    "description": "Most recent measurement has now a timestamp.",
                     "changeType": "improvement"
                 }
         ]
@@ -56,7 +56,7 @@
         "version": 1.01,
         "items": [
                 {
-                    "description": "Locations we're wrongly displayed",
+                    "description": "Locations we're wrongly displayed.",
                     "changeType": "bugfix"
                 }
         ]

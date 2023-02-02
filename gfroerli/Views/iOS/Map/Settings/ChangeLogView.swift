@@ -13,18 +13,16 @@ struct ChangeLogView: View {
     var body: some View {
         Form {
             ForEach(changeLog) { items in
-                Section("Version " + String(items.version)) {
+                Section("changelog_view_version_header") {
                     ForEach(items.items) { item in
-                        Label {
                             Text(item.description)
-                        } icon: {
-                            item.changeType.image()
-                        }
+                        
                     }
+                
                 }
             }
         }
-        .navigationBarTitle("Changelog")
+        .navigationBarTitle("changelog_view_app_title")
     }
 }
 

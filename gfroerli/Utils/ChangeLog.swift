@@ -24,13 +24,13 @@ struct ChangeItem: Identifiable, Decodable {
                 Image(systemName: "sparkles")
                     .foregroundColor(.yellow)
             case .improvement:
-                Image(systemName: "thermometer.sun")
+                Image(systemName: "star.filll")
                     .symbolRenderingMode(.palette)
-                    .foregroundStyle(.red, .yellow, Color.accentColor)
+                    .foregroundStyle(.yellow)
             case .bugfix:
-                Image(systemName: "thermometer.snowflake")
+                Image(systemName: "bolt.slash.fill")
                     .symbolRenderingMode(.palette)
-                    .foregroundStyle(.red, Color.accentColor, Color.accentColor)
+                    .foregroundStyle(Color.accentColor, .yellow)
             }
         }
     }
@@ -50,7 +50,7 @@ struct ChangeItem: Identifiable, Decodable {
 struct ChangeItems: Identifiable, Decodable {
     
     let id = UUID()
-    let version: Double
+    let version: String
     let items: [ChangeItem]
     
     enum CodingKeys: CodingKey {
@@ -60,7 +60,8 @@ struct ChangeItems: Identifiable, Decodable {
     
     init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
-        self.version = try container.decode(Double.self, forKey: .version)
+        let versionDouble = try container.decode(Double.self, forKey: .version)
+        self.version = String.localizedStringWithFormat("changelog_view_version_header", String(versionDouble))
         self.items = try container.decode([ChangeItem].self, forKey: .items)
     }
 }
