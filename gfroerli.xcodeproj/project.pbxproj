@@ -27,7 +27,6 @@
 		2481AEAE296856FE00316EDA /* Date+Week.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2481AEAD296856FE00316EDA /* Date+Week.swift */; };
 		24B93CF128CDE48200573CD5 /* TemperatureMeasurement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24B93CF028CDE48200573CD5 /* TemperatureMeasurement.swift */; };
 		24BB342B29884E1F004B4270 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24BB342A29884E1F004B4270 /* MainView.swift */; };
-		24BB342D29885191004B4270 /* UndimmedSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24BB342C29885191004B4270 /* UndimmedSheet.swift */; };
 		24BB342F29897C8A004B4270 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24BB342E29897C8A004B4270 /* SearchView.swift */; };
 		24BE370C28FAA90800CF7D99 /* InlineLocationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24BE370B28FAA90800CF7D99 /* InlineLocationView.swift */; };
 		24BE370E28FAE36800CF7D99 /* Array+Codable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24BE370D28FAE36800CF7D99 /* Array+Codable.swift */; };
@@ -143,6 +142,9 @@
 		242F4E4F28BB7DF0005C27B6 /* SponsorAdditional.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = SponsorAdditional.json; sourceTree = "<group>"; };
 		242F4E5028BB7DF0005C27B6 /* SponsorMissing.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = SponsorMissing.json; sourceTree = "<group>"; };
 		242F4E5428BB7F81005C27B6 /* TemperatureMeasurementTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemperatureMeasurementTests.swift; sourceTree = "<group>"; };
+		2441D0C529A8F5ED000E223F /* gsw */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = gsw; path = gsw.lproj/NewFeatures.json; sourceTree = "<group>"; };
+		2441D0C629A8F5ED000E223F /* gsw */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = gsw; path = gsw.lproj/ChangeLog.json; sourceTree = "<group>"; };
+		2441D0C729A8F5ED000E223F /* gsw */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = gsw; path = gsw.lproj/Localizable.strings; sourceTree = "<group>"; };
 		24457EED28C6197C00172C2B /* ChangeLogView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeLogView.swift; sourceTree = "<group>"; };
 		24457EEF28C619C200172C2B /* ChangeLog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeLog.swift; sourceTree = "<group>"; };
 		24558F1B28CB4F230025864F /* TemperatureHistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemperatureHistoryView.swift; sourceTree = "<group>"; };
@@ -152,8 +154,8 @@
 		2481AEAD296856FE00316EDA /* Date+Week.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Week.swift"; sourceTree = "<group>"; };
 		24B93CF028CDE48200573CD5 /* TemperatureMeasurement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemperatureMeasurement.swift; sourceTree = "<group>"; };
 		24BB342A29884E1F004B4270 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
-		24BB342C29885191004B4270 /* UndimmedSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UndimmedSheet.swift; sourceTree = "<group>"; };
 		24BB342E29897C8A004B4270 /* SearchView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
+		24BCB50329A0E00C00DA52B3 /* gfroerliUITest.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = gfroerliUITest.xctestplan; sourceTree = "<group>"; };
 		24BE370B28FAA90800CF7D99 /* InlineLocationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InlineLocationView.swift; sourceTree = "<group>"; };
 		24BE370D28FAE36800CF7D99 /* Array+Codable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Codable.swift"; sourceTree = "<group>"; };
 		24BE370F28FAEEB600CF7D99 /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
@@ -322,14 +324,6 @@
 			path = LocationTemperatureHistory;
 			sourceTree = "<group>";
 		};
-		24BB343029897D1F004B4270 /* Helpers */ = {
-			isa = PBXGroup;
-			children = (
-				24BB342C29885191004B4270 /* UndimmedSheet.swift */,
-			);
-			path = Helpers;
-			sourceTree = "<group>";
-		};
 		24C62BA028D0760200607952 /* Search */ = {
 			isa = PBXGroup;
 			children = (
@@ -443,6 +437,7 @@
 			children = (
 				8D5489282856315D007253FE /* gfroerliUITests.swift */,
 				8D54892A2856315D007253FE /* gfroerliUITestsLaunchTests.swift */,
+				24BCB50329A0E00C00DA52B3 /* gfroerliUITest.xctestplan */,
 			);
 			path = gfroerliUITests;
 			sourceTree = "<group>";
@@ -557,7 +552,6 @@
 				24C62BA028D0760200607952 /* Search */,
 				8D31E3302866041A0095622E /* LocationDetail */,
 				247D86F628C27A8B003458C1 /* Map */,
-				24BB343029897D1F004B4270 /* Helpers */,
 			);
 			path = iOS;
 			sourceTree = "<group>";
@@ -731,6 +725,7 @@
 			knownRegions = (
 				en,
 				de,
+				gsw,
 			);
 			mainGroup = 8D5489002856315C007253FE;
 			productRefGroup = 8D54890A2856315C007253FE /* Products */;
@@ -849,7 +844,6 @@
 				8DE7D72228675AA4001684D1 /* View+Modifiers.swift in Sources */,
 				8DEE78C4285E3313009D853C /* SettingsThumbnailView.swift in Sources */,
 				8D3C681D285B6E4800DC8CA4 /* AppConfiguration.swift in Sources */,
-				24BB342D29885191004B4270 /* UndimmedSheet.swift in Sources */,
 				2481AEA8296820FD00316EDA /* HistoryGraphView.swift in Sources */,
 				24BB342F29897C8A004B4270 /* SearchView.swift in Sources */,
 				24D1F42E28C609A0004F7E8B /* DefaultsCoordinator.swift in Sources */,
@@ -943,6 +937,7 @@
 			children = (
 				24D02A522964BA1300B19452 /* en */,
 				24D02A582964BA5900B19452 /* de */,
+				2441D0C529A8F5ED000E223F /* gsw */,
 			);
 			name = NewFeatures.json;
 			sourceTree = "<group>";
@@ -952,6 +947,7 @@
 			children = (
 				24D02A512964BA0F00B19452 /* en */,
 				24D02A592964BA5900B19452 /* de */,
+				2441D0C629A8F5ED000E223F /* gsw */,
 			);
 			name = ChangeLog.json;
 			sourceTree = "<group>";
@@ -961,6 +957,7 @@
 			children = (
 				24D02A562964BA4800B19452 /* en */,
 				24D02A5A2964BA5900B19452 /* de */,
+				2441D0C729A8F5ED000E223F /* gsw */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";
@@ -1093,7 +1090,7 @@
 				CODE_SIGN_IDENTITY = "-";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 20230131;
+				CURRENT_PROJECT_VERSION = 20230202;
 				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"gfroerli/Preview Content\"";
 				DEVELOPMENT_TEAM = T7M5358433;
@@ -1106,7 +1103,7 @@
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 12.4;
@@ -1133,7 +1130,7 @@
 				CODE_SIGN_IDENTITY = "-";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 20230131;
+				CURRENT_PROJECT_VERSION = 20230202;
 				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"gfroerli/Preview Content\"";
 				DEVELOPMENT_TEAM = T7M5358433;
@@ -1146,7 +1143,7 @@
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 12.4;

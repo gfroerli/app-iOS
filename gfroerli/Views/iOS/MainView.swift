@@ -70,12 +70,11 @@ struct MainView: View {
                         showSettings = true
                     }
                 }, content: {
-                    SearchView()
+                    SearchView(detent: $searchDetent)
+                        .presentationDetents([.fraction(0.05), .large], selection: $searchDetent)
+                        .presentationBackground(.ultraThinMaterial)
+                        .presentationBackgroundInteraction(.enabled)
                         .interactiveDismissDisabled()
-                        .presentationDetents(
-                            undimmed: [.fraction(0.15), .fraction(0.9)],
-                            selection: $searchDetent
-                        )
                 })
             
                 .sheet(isPresented: $showSettings, onDismiss: {

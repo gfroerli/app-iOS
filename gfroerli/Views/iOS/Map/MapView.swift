@@ -57,16 +57,14 @@ struct LocationMapView: View {
                     Label("Zoom to all", systemImage: "arrow.up.left.and.arrow.down.right")
                         .labelStyle(.iconOnly)
                 }
-                .padding(6)
+                .frame(width: 15, height: 15)
+                .padding(8)
                 .background(.background)
-                .cornerRadius(4)
+                .cornerRadius(10)
                 .shadow(radius: 4)
             }
             .padding(10)
-            
-            .onTapGesture {
-                searchDetent = .fraction(0.15)
-            }
+            .offset(y: 100)
             
             .onChange(of: filter, perform: { _ in
                 withAnimation {
@@ -106,7 +104,7 @@ struct LocationMapView: View {
     }
     
     private func zoom(to coordinates: CLLocationCoordinate2D) {
-        searchDetent = .fraction(0.15)
+        searchDetent = .fraction(0.05)
         
         withAnimation {
             region = MKCoordinateRegion(

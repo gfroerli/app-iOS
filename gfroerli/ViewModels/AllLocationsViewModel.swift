@@ -28,9 +28,9 @@ class AllLocationsViewModel: ObservableObject {
     
     public enum SortVariants: CaseIterable, Identifiable {
         case alphabet
-        case lowest
-        case highest
         case mostRecent
+        case highest
+        case lowest
 
         public var id: SortVariants { self }
         

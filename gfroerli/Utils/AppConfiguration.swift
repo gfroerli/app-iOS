@@ -116,8 +116,8 @@ enum AppConfiguration {
         static let gfroerliURL = URL(string: "https://xn--gfrr-7qa.li")!
         /// URL to open coredump website
         static let coredumpURL = URL(string: "https://www.coredump.ch/")!
-        /// URL to open coredump twitter
-        static let twitterURL = URL(string: "https://twitter.com/coredump_ch")!
+        /// URL to open coredump Mastodon
+        static let mastodonCoreDumpURL = URL(string: "https://chaos.social/@coredump")!
         /// URL to open GitHub
         static let githubURL = URL(string: "https://github.com/gfroerli")!
     }
