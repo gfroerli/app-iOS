@@ -1,0 +1,75 @@
+[
+    {
+        "version": 2.02,
+        "items": [
+                {
+                    "description": "De temperatur verlauf het die falsche wert chönne azeige.",
+                    "changeType": "bugfix"
+                }
+        ]
+    },
+    {
+        "version": 2.01,
+        "items": [
+                {
+                    "description": "S wüsche ufem temperatur verlauf het d'app chönne crashe.",
+                    "changeType": "bugfix"
+                }
+        ]
+    },
+    {
+        "version": 2.0,
+        "items": [
+                {
+                    "description": "Neui charte ahsicht",
+                    "changeType": "feature"
+                },
+                {
+                    "description": "Suechi hinzuegfüegt.",
+                    "changeType": "feature"
+                }
+        ]
+    },
+    {
+        "version": 1.2,
+        "items": [
+                {
+                    "description": "Verschideni fehler behobe.",
+                    "changeType": "bugfix"
+                }
+        ]
+    },
+    {
+        "version": 1.1,
+        "items": [
+                {
+                    "description": "D update notize chönnd etz direkt im app agluegt werde.",
+                    "changeType": "feature"
+                },
+                {
+                    "description": "Die letsti mässig het etz en ziitstämpfel.",
+                    "changeType": "improvement"
+                }
+        ]
+    },
+    {
+        "version": 1.01,
+        "items": [
+                {
+                    "description": "D'standört hent falsch chöne ahzeigt werde.",
+                    "changeType": "bugfix"
+                }
+        ]
+    }
+    ,
+    {
+        "version": 1.0,
+        "items": [
+                {
+                    "description": "Erstveröffentlichung! 🎉",
+                    "changeType": "feature"
+                }
+        ]
+    }
+]
+

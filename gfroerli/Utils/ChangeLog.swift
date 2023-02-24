@@ -61,7 +61,8 @@ struct ChangeItems: Identifiable, Decodable {
     init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         let versionDouble = try container.decode(Double.self, forKey: .version)
-        self.version = String.localizedStringWithFormat("changelog_view_version_header", String(versionDouble))
+        let localizedString = NSLocalizedString("changelog_view_version_header", comment: "")
+        self.version = localizedString + " \(versionDouble)"
         self.items = try container.decode([ChangeItem].self, forKey: .items)
     }
 }

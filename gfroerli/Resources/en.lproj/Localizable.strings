@@ -70,12 +70,11 @@
 
 "settings_view_header_links" = "Links";
 "settings_view_item_review" = "Review";
-"settings_view_item_contact" = "Contact";
 "settings_view_item_policy" = "Privacy Policy";
-"settings_view_item_gfroerli_web" = "gfrör.li";
-"settings_view_item_coredump_web" = "coredump.ch";
-"settings_view_item_coredump_twitter" = "@coredump_ch";
-"settings_view_item_github" = "View Code on GitHub";
+"settings_view_item_gfroerli_web" = "Gfrör.li Website";
+"settings_view_item_coredump_web" = "Coredump Website";
+"settings_view_item_coredump_mastodon" = "Coredump on Mastodon";
+"settings_view_item_github" = "Code on GitHub";
 
 // ChangelogView
 "changelog_view_app_title" = "Changelog";

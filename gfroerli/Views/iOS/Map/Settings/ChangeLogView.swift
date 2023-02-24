@@ -13,12 +13,10 @@ struct ChangeLogView: View {
     var body: some View {
         Form {
             ForEach(changeLog) { items in
-                Section("changelog_view_version_header") {
+                Section(items.version) {
                     ForEach(items.items) { item in
-                            Text(item.description)
-                        
+                        Text(item.description)
                     }
-                
                 }
             }
         }

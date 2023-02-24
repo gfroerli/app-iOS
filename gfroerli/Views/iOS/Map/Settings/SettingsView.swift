@@ -52,7 +52,7 @@ struct SettingsHeaderView: View {
                         .foregroundColor(.primary)
                         .font(.title)
                         .bold()
-                    Text("settings_view_app_version") +  Text(config.lastVersion)
+                    Text("settings_view_app_version") + Text(config.lastVersion)
                     Text("settings_view_app_creator")
                     Text("settings_view_app_coredump")
                 }
@@ -71,15 +71,15 @@ struct SettingsGeneralSectionView: View {
     var body: some View {
         Section(header: Text("settings_view_header_general")) {
             // FAQ
-           /* NavigationLink {
-                FAQView()
-            } label: {
-                Label(title: {
-                    Text("settings_view_item_FAQ")
-                }, icon: {
-                    SettingsThumbnailView(imageName: "info.circle", backgroundColor: .accentColor)
-                })
-            }*/
+            // NavigationLink {
+            //    FAQView()
+            // } label: {
+            //    Label(title: {
+            //        Text("settings_view_item_FAQ")
+            //    }, icon: {
+            //        SettingsThumbnailView(imageName: "info.circle", backgroundColor: .accentColor)
+            //    })
+            // }
             
             // Change log
             NavigationLink {
@@ -136,16 +136,6 @@ struct SettingsLinksSectionView: View {
                 }
             }
             
-            // Email
-            Link(destination: config.emailURL) {
-                Label {
-                    Text("settings_view_item_contact")
-                        .foregroundColor(Color("textColor"))
-                } icon: {
-                    SettingsThumbnailView(imageName: "envelope.fill", backgroundColor: .accentColor)
-                }
-            }
-            
             // Privacy Policy
             Link(destination: config.privacyPolicyURL) {
                 Label {
@@ -176,13 +166,13 @@ struct SettingsLinksSectionView: View {
                 }
             }
             
-            // Coredump Twitter
-            Link(destination: config.twitterURL) {
+            // Coredump Mastodon
+            Link(destination: config.mastodonCoreDumpURL) {
                 Label {
-                    Text("settings_view_item_coredump_twitter")
+                    Text("settings_view_item_coredump_mastodon")
                         .foregroundColor(Color("textColor"))
                 } icon: {
-                    SettingsThumbnailView(imageName: "bird.fill", backgroundColor: .green)
+                    SettingsThumbnailAssetView(imageName: "mastodon", backgroundColor: .purple)
                 }
             }
             
@@ -192,7 +182,7 @@ struct SettingsLinksSectionView: View {
                     Text("settings_view_item_github")
                         .foregroundColor(Color("textColor"))
                 } icon: {
-                    SettingsThumbnailView(imageName: "flame.fill", backgroundColor: .black)
+                    SettingsThumbnailAssetView(imageName: "github.fill", backgroundColor: .black)
                 }
             }
         }

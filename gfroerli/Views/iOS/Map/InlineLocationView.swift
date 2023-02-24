@@ -11,10 +11,11 @@ import SwiftUI
 struct InlineLocationView: View {
     
     let location: Location
-    
+    @Environment(\.isSearching) var isSearching
+
     @AppStorage("favorites") private var favorites = [Int]()
     @State var isFavorite = false
-    
+    @Binding var detent: PresentationDetent
     var body: some View {
         
         HStack {
@@ -45,11 +46,16 @@ struct InlineLocationView: View {
         .onAppear {
             isFavorite = favorites.contains(location.id)
         }
+        .onChange(of: isSearching, perform: { newValue in
+            if newValue {
+                detent = .large
+            }
+        })
     }
 }
 
 struct InlineLocationView_Previews: PreviewProvider {
     static var previews: some View {
-        InlineLocationView(location: Location.exampleLocation())
+        InlineLocationView(location: Location.exampleLocation(), detent: .constant(.large))
     }
 }

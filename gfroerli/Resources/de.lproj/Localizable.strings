@@ -25,7 +25,7 @@
 
 // TemperatureHistoryView
 "temperature_history_view_title" = "Verlauf";
-"temperature_history_view_picker_title" = "Zeitspanne wæhlen";
+"temperature_history_view_picker_title" = "Zeitspanne wählen";
 "temperature_history_view_picker_day" = "Tag";
 "temperature_history_view_picker_week" = "Woche";
 "temperature_history_view_picker_month" = "Monat";
@@ -47,7 +47,7 @@
 
 // LocationMapPreviewView
 "location_map_preview_view_title" = "Karte";
-"location_map_preview_view_unavailable" = "Standort nich verfügbar";
+"location_map_preview_view_unavailable" = "Standort nicht verfügbar";
 
 // SponsorView
 "sponsor_view_title" = "Gesponsert durch";
@@ -70,13 +70,12 @@
 
 "settings_view_header_links" = "Links";
 "settings_view_item_review" = "Bewerten";
-"settings_view_item_contact" = "Feedback";
-"settings_view_item_policy" = "Datenschutz Bestimmungen";
-"settings_view_item_gfroerli_web" = "gfrör.li";
-"settings_view_item_coredump_web" = "coredump.ch";
-"settings_view_item_coredump_twitter" = "@coredump_ch";
-"settings_view_item_github" = "Code auf GitHub ansehen";
+"settings_view_item_policy" = "Datenschutzbestimmungen";
+"settings_view_item_gfroerli_web" = "Gfrör.li Website";
+"settings_view_item_coredump_web" = "Coredump Website";
+"settings_view_item_coredump_mastodon" = "Coredump auf Mastodon";
+"settings_view_item_github" = "Code auf GitHub";
 
 // ChangelogView
 "changelog_view_app_title" = "Changelog";
-"changelog_view_version_header" = "Version %@";
+"changelog_view_version_header" = "Version";
