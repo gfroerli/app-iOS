@@ -30,7 +30,7 @@
       region = "CH">
       <TestPlans>
          <TestPlanReference
-            reference = "container:gfroerliUITests/gfroerliUITest.xctestplan"
+            reference = "container:gfroerliUITests/gfroerliScreenshots.xctestplan"
             default = "YES">
          </TestPlanReference>
       </TestPlans>
