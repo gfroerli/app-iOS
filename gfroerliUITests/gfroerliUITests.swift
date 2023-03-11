@@ -17,15 +17,16 @@ final class gfroerliUITests: XCTestCase {
             //  app.launchArguments = ["-AppleLanguages", "\(localization.locale)"]
             app.launch()
             
+            sleep(5)
             let screenshot = app.screenshot()
             let view = ScreenshotWithTitle(
-                title: "###",
+                title: "Gfrör.li ",
                 image: Image(uiImage: screenshot.image),
-                background: .color(.blue),
-                exportSize: .iPhone
+                exportSize: .iPhone6_5
             )
-            let attachment = createMarketing(image: view, exportSize: .iPhone)
+            let attachment = createMarketing(image: view, exportSize: .iPhone6_5)
             
+            print(attachment.userInfo)
             add(attachment)
             
             app.terminate()
