@@ -20,7 +20,7 @@ pro14="Pro14ScreenShots"
 simulators=( "$pro14" )
 
 operatorName="Gfrör.li"
-timeStamp="2020-02-03T13:37:00+00:00"
+timeStamp="2020-02-03T13:37q:00+00:00"
 dataNetwork=wifi
 
 # Remove existing files & reset simulators
@@ -40,10 +40,20 @@ done
 
 # Run screenshots
 echo -e "Start taking screenshots\n\n"
-xcodebuild clean test -project gfroerli.xcodeproj -scheme $schemeName -destination "platform=iOS Simulator,name=$pro14"
+xcodebuild test -project gfroerli.xcodeproj -scheme $schemeName -destination "platform=iOS Simulator,name=$pro14"
 
 # Find and Extract Screenshots using xcparse
 echo -e "Extracting screenshots\n\n"
 find $xcresultPath -maxdepth 1 -type d -exec xcparse screenshots --language {} "$outputFolderPath/" \;
 
+# Rename extracted folders and images
+# Folders
+for file in $outputFolderPath/*; do
+
+      newName=${file%_*}
+      newName2=${newName%_*}
+      mv -v $file "$newName2.png"
+    
+    
+done
 xcrun simctl shutdown all
