@@ -112,6 +112,7 @@ struct HistoryGraphView: View {
                     Image(systemName: "chevron.left").fontWeight(.semibold)
                 }
                 .buttonStyle(.bordered)
+                .accessibilityIdentifier("HistoryGraphView_Back")
                 Spacer()
                 
                 Text(vm.xAxisLabel)

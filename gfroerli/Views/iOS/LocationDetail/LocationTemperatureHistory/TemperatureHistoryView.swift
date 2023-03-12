@@ -18,7 +18,7 @@ struct TemperatureHistoryView: View {
     @StateObject var hourlyVM: TemperaturesViewModel
     @StateObject var weeklyVM: TemperaturesViewModel
     @StateObject var monthlyVM: TemperaturesViewModel
-    @State var currentSelection: ChartSpan = .day
+    @State var currentSelection: ChartSpan = .month
     @State var hoveringIndex: Int?
     @State var zoomed = true
     

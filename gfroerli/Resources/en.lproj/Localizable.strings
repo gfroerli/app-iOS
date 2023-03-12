@@ -79,3 +79,13 @@
 // ChangelogView
 "changelog_view_app_title" = "Changelog";
 "changelog_view_version_header" = "Version";
+
+// Screenshots
+"screenshot_overview_title" = "Gfrör.li";
+"screenshot_overview_description" = "Watertemperatures at different locations in realtime.";
+
+"screenshot_detail_title" = "Various Infos";
+"screenshot_detail_description" = "Check the temperature history and other information of locations.";
+
+"screenshot_search_title" = "Improved Search";
+"screenshot_search_description" = "Search and filter locations using different parameters.";

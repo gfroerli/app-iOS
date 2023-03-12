@@ -62,6 +62,7 @@ struct LocationMapView: View {
                 .background(.background)
                 .cornerRadius(10)
                 .shadow(radius: 4)
+                .accessibilityIdentifier("LocationMapView_Zoom")
             }
             .padding(10)
             .offset(y: 100)

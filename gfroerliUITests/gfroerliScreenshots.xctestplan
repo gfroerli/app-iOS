@@ -4,7 +4,15 @@
       "id" : "8D0B0E45-3813-4D59-BFFF-36053C0F1E5A",
       "name" : "German",
       "options" : {
-
+        "areLocalizationScreenshotsEnabled" : false,
+        "language" : "de"
+      }
+    },
+    {
+      "id" : "67AA965F-8A51-4788-AC35-0775830B413E",
+      "name" : "English",
+      "options" : {
+        "language" : "en"
       }
     }
   ],
@@ -30,7 +38,6 @@
       }
     },
     {
-      "parallelizable" : true,
       "target" : {
         "containerPath" : "container:gfroerli.xcodeproj",
         "identifier" : "8D5489232856315D007253FE",

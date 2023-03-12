@@ -28,6 +28,10 @@
 		242F4E5528BB7F81005C27B6 /* TemperatureMeasurementTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 242F4E5428BB7F81005C27B6 /* TemperatureMeasurementTests.swift */; };
 		24457EEE28C6197C00172C2B /* ChangeLogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24457EED28C6197C00172C2B /* ChangeLogView.swift */; };
 		24457EF028C619C200172C2B /* ChangeLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24457EEF28C619C200172C2B /* ChangeLog.swift */; };
+		244FF97E29BDF0EA005146A3 /* ScreenShotContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244FF97D29BDF0EA005146A3 /* ScreenShotContent.swift */; };
+		244FF97F29BDF4CA005146A3 /* ScreenshotWithTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 242D55E829B3246F003C3090 /* ScreenshotWithTitle.swift */; };
+		244FF98029BDF4CF005146A3 /* ScreenShotContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244FF97D29BDF0EA005146A3 /* ScreenShotContent.swift */; };
+		244FF98129BDF58E005146A3 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 24D02A572964BA4800B19452 /* Localizable.strings */; };
 		24558F1C28CB4F230025864F /* TemperatureHistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24558F1B28CB4F230025864F /* TemperatureHistoryView.swift */; };
 		247D86F828C27AAD003458C1 /* GfroerliMapAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 247D86F728C27AAD003458C1 /* GfroerliMapAnnotation.swift */; };
 		2481AEA8296820FD00316EDA /* HistoryGraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2481AEA7296820FD00316EDA /* HistoryGraphView.swift */; };
@@ -40,7 +44,6 @@
 		24A6444F29BCD8E6009555FF /* UITestAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 24A6444E29BCD8E6009555FF /* UITestAssets.xcassets */; };
 		24A6445029BCDA3B009555FF /* UITestAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 24A6444E29BCD8E6009555FF /* UITestAssets.xcassets */; };
 		24A8AE7629B3260600F67F18 /* ScreenshotWithTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 242D55E829B3246F003C3090 /* ScreenshotWithTitle.swift */; };
-		24A8AE7729B3263800F67F18 /* ScreenshotWithTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 242D55E829B3246F003C3090 /* ScreenshotWithTitle.swift */; };
 		24A8AE7829B3263800F67F18 /* CapturingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 242D55E729B3246F003C3090 /* CapturingView.swift */; };
 		24A8AE7929B3263D00F67F18 /* ViewToUIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 242D55EE29B3246F003C3090 /* ViewToUIImage.swift */; };
 		24A8AE7A29B3263D00F67F18 /* ExportSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 242D55EB29B3246F003C3090 /* ExportSize.swift */; };
@@ -179,6 +182,7 @@
 		2441D0C729A8F5ED000E223F /* gsw */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = gsw; path = gsw.lproj/Localizable.strings; sourceTree = "<group>"; };
 		24457EED28C6197C00172C2B /* ChangeLogView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeLogView.swift; sourceTree = "<group>"; };
 		24457EEF28C619C200172C2B /* ChangeLog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeLog.swift; sourceTree = "<group>"; };
+		244FF97D29BDF0EA005146A3 /* ScreenShotContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenShotContent.swift; sourceTree = "<group>"; };
 		24558F1B28CB4F230025864F /* TemperatureHistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemperatureHistoryView.swift; sourceTree = "<group>"; };
 		247D86F728C27AAD003458C1 /* GfroerliMapAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GfroerliMapAnnotation.swift; sourceTree = "<group>"; };
 		2481AEA7296820FD00316EDA /* HistoryGraphView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryGraphView.swift; sourceTree = "<group>"; };
@@ -501,6 +505,7 @@
 			isa = PBXGroup;
 			children = (
 				24A6444929BCCBE6009555FF /* WaveShape.swift */,
+				244FF97D29BDF0EA005146A3 /* ScreenShotContent.swift */,
 				24A6444E29BCD8E6009555FF /* UITestAssets.xcassets */,
 				242D55E529B3246F003C3090 /* Blacksmith */,
 				8D5489282856315D007253FE /* gfroerliUITests.swift */,
@@ -834,6 +839,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				24A6444C29BCD199009555FF /* Assets.xcassets in Resources */,
+				244FF98129BDF58E005146A3 /* Localizable.strings in Resources */,
 				24A6444F29BCD8E6009555FF /* UITestAssets.xcassets in Resources */,
 				24A8AE8129B327BE00F67F18 /* Preview Assets.xcassets in Resources */,
 			);
@@ -901,6 +907,7 @@
 				24558F1C28CB4F230025864F /* TemperatureHistoryView.swift in Sources */,
 				241E02CA28BE8338007DFEA7 /* LocationMapPreviewView.swift in Sources */,
 				24A8AE7A29B3263D00F67F18 /* ExportSize.swift in Sources */,
+				244FF97F29BDF4CA005146A3 /* ScreenshotWithTitle.swift in Sources */,
 				24BE370E28FAE36800CF7D99 /* Array+Codable.swift in Sources */,
 				24FF92F628C6064200454A5F /* NewFeatures.swift in Sources */,
 				24A6444B29BCCBFD009555FF /* WaveShape.swift in Sources */,
@@ -924,10 +931,10 @@
 				24A8AE7C29B3263D00F67F18 /* ViewToNSImage.swift in Sources */,
 				2481AEA8296820FD00316EDA /* HistoryGraphView.swift in Sources */,
 				24BB342F29897C8A004B4270 /* SearchView.swift in Sources */,
-				24A8AE7729B3263800F67F18 /* ScreenshotWithTitle.swift in Sources */,
 				24D1F42E28C609A0004F7E8B /* DefaultsCoordinator.swift in Sources */,
 				8DE7D71C28674BBE001684D1 /* LatestTemperatureView.swift in Sources */,
 				8DEE78C6285E4497009D853C /* FAQView.swift in Sources */,
+				244FF98029BDF4CF005146A3 /* ScreenShotContent.swift in Sources */,
 				8DEE78BF285E319E009D853C /* SettingsView.swift in Sources */,
 				2481AEAE296856FE00316EDA /* Date+Week.swift in Sources */,
 				24A8AE7E29B3263D00F67F18 /* ImageBackground.swift in Sources */,
@@ -949,6 +956,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				242D55F429B3246F003C3090 /* ExportSize.swift in Sources */,
+				244FF97E29BDF0EA005146A3 /* ScreenShotContent.swift in Sources */,
 				242D55F529B3246F003C3090 /* ExportMarketingImageToURL.swift in Sources */,
 				24A8AE7629B3260600F67F18 /* ScreenshotWithTitle.swift in Sources */,
 				24A6444A29BCCBE6009555FF /* WaveShape.swift in Sources */,

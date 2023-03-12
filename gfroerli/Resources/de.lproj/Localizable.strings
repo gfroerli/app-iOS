@@ -79,3 +79,13 @@
 // ChangelogView
 "changelog_view_app_title" = "Changelog";
 "changelog_view_version_header" = "Version";
+
+// Screenshots
+"screenshot_overview_title" = "Gfrör.li";
+"screenshot_overview_description" = "Wassertempaturen verschiedener Standorte in Echtzeit.";
+
+"screenshot_detail_title" = "Verschiedene Infos";
+"screenshot_detail_description" = "Zeigt den Temperaturverlauf sowie verschiedene andere Werte.";
+
+"screenshot_search_title" = "Verbesserte Suche";
+"screenshot_search_description" = "Suche und filtere Standorte anhand verschiedener Werte.";
