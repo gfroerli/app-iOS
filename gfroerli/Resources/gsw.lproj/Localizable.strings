@@ -13,10 +13,10 @@
 
 "main_view_filter_title" = "Standortfilter";
 "main_view_filter_label" = "Filter";
-"main_view_filter_active" = "Aktiv";
-"main_view_filter_all" = "Alli";
+"main_view_filter_active" = "Aktivi";
+"main_view_filter_all" = "Ali";
 
-"main_view_settings_label" = "Ihstellige";
+"main_view_settings_label" = "Istellige";
 
 // SearchView
 "search_view_navigation_title" = "Suechi";
@@ -49,6 +49,9 @@
 "location_map_preview_view_title" = "Charte";
 "location_map_preview_view_unavailable" = "Standort nöd verfüegbar";
 
+// InlineLocationView
+"inline_location_view_inactive" = "Inaktiv";
+
 // SponsorView
 "sponsor_view_title" = "Gsponseret vo";
 "sponsor_view_failed" = "De sponsor het nöd chönne glade werde";
@@ -56,7 +59,7 @@
 "sponsor_view_no_description" = "Kei beschriebig";
 
 // SettingsView
-"settings_view_title" = "Ihstellige";
+"settings_view_title" = "Istellige";
 "settings_view_close" = "Schlüsse";
 
 "settings_view_app_title" = "Gfrör.li";
@@ -80,7 +83,11 @@
 "changelog_view_app_title" = "Änderigsübersicht";
 "changelog_view_version_header" = "Version";
 
-// Screenshots
+// NewFeaturesView
+"new_features_view_title" = "Neui Funktione in Gfrör.li";
+"new_features_view_button" = "Los gahts";
+
+// Screenshots (Unused for gsw)
 "screenshot_overview_title" = "Gfrör.li";
 "screenshot_overview_description" = "Watertemperatures at different locations in realtime.";
 

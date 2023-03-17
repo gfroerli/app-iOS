@@ -18,9 +18,18 @@ struct InlineLocationView: View {
     @Binding var detent: PresentationDetent
     var body: some View {
         
-        HStack {
-            Text(location.name)
-                .bold()
+        HStack(alignment: .top) {
+            VStack(alignment: .leading) {
+                Text(location.name)
+                    .bold()
+                    .foregroundColor(location.isActive ? .primary : .secondary)
+
+                if !location.isActive {
+                    Text("inline_location_view_inactive")
+                        .font(.callout)
+                        .foregroundColor(.secondary)
+                }
+            }
             if isFavorite {
                 Image(systemName: "star.fill")
                     .foregroundColor(.yellow)

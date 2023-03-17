@@ -10,7 +10,6 @@
 		2411AAFA28BA47D200D5B59D /* FetchTypeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2411AAF928BA47D100D5B59D /* FetchTypeTests.swift */; };
 		2411AAFD28BA4E8D00D5B59D /* MeasurementUtilsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2411AAFC28BA4E8D00D5B59D /* MeasurementUtilsTests.swift */; };
 		2411AAFF28BA53D900D5B59D /* LocationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2411AAFE28BA53D900D5B59D /* LocationTests.swift */; };
-		241E02C828BE7F3F007DFEA7 /* DateUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 241E02C728BE7F3F007DFEA7 /* DateUtil.swift */; };
 		241E02CA28BE8338007DFEA7 /* LocationMapPreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 241E02C928BE8338007DFEA7 /* LocationMapPreviewView.swift */; };
 		24275B1F2964903000DDD05E /* ViewModelState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24275B1E2964903000DDD05E /* ViewModelState.swift */; };
 		242D55F129B3246F003C3090 /* CapturingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 242D55E729B3246F003C3090 /* CapturingView.swift */; };
@@ -58,6 +57,7 @@
 		24BE370C28FAA90800CF7D99 /* InlineLocationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24BE370B28FAA90800CF7D99 /* InlineLocationView.swift */; };
 		24BE370E28FAE36800CF7D99 /* Array+Codable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24BE370D28FAE36800CF7D99 /* Array+Codable.swift */; };
 		24BE371028FAEEB600CF7D99 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24BE370F28FAEEB600CF7D99 /* APIError.swift */; };
+		24C16CE529C499F900FE213E /* DateUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 241E02C728BE7F3F007DFEA7 /* DateUtil.swift */; };
 		24C62B9C28D073B300607952 /* TemperatureMeasurementMissing.json in Resources */ = {isa = PBXBuildFile; fileRef = 24C62B9928D073B300607952 /* TemperatureMeasurementMissing.json */; };
 		24C62B9D28D073B300607952 /* TemperatureMeasurementAdditional.json in Resources */ = {isa = PBXBuildFile; fileRef = 24C62B9A28D073B300607952 /* TemperatureMeasurementAdditional.json */; };
 		24C62B9E28D073B300607952 /* TemperatureMeasurementFull.json in Resources */ = {isa = PBXBuildFile; fileRef = 24C62B9B28D073B300607952 /* TemperatureMeasurementFull.json */; };
@@ -578,6 +578,7 @@
 		8D5558232881F4E4008C1BE3 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				241E02C728BE7F3F007DFEA7 /* DateUtil.swift */,
 				8D5558242881F4E4008C1BE3 /* MeasurementUtils.swift */,
 			);
 			path = Utils;
@@ -632,7 +633,6 @@
 			isa = PBXGroup;
 			children = (
 				8D3C681C285B6E4800DC8CA4 /* AppConfiguration.swift */,
-				241E02C728BE7F3F007DFEA7 /* DateUtil.swift */,
 				24FF92F528C6064200454A5F /* NewFeatures.swift */,
 				24457EEF28C619C200172C2B /* ChangeLog.swift */,
 				24D1F42D28C609A0004F7E8B /* DefaultsCoordinator.swift */,
@@ -939,7 +939,6 @@
 				2481AEAE296856FE00316EDA /* Date+Week.swift in Sources */,
 				24A8AE7E29B3263D00F67F18 /* ImageBackground.swift in Sources */,
 				24D1F42A28C60700004F7E8B /* Bundle+Dedode.swift in Sources */,
-				241E02C828BE7F3F007DFEA7 /* DateUtil.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -985,6 +984,7 @@
 				8D5558162881F430008C1BE3 /* APIConfiguration.swift in Sources */,
 				8D5558252881F4E4008C1BE3 /* Location.swift in Sources */,
 				8D55582C2881F542008C1BE3 /* API.swift in Sources */,
+				24C16CE529C499F900FE213E /* DateUtil.swift in Sources */,
 				8D5557E42881F23C008C1BE3 /* GfroerliAPI.docc in Sources */,
 				24BE371028FAEEB600CF7D99 /* APIError.swift in Sources */,
 			);

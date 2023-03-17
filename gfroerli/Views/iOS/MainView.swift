@@ -14,12 +14,12 @@ struct MainView: View {
     @EnvironmentObject var navigationModel: NavigationModel
     @EnvironmentObject var locationsViewModel: AllLocationsViewModel
 
-    @State var showSearch = true
-    @State var searchDetent: PresentationDetent = .fraction(0.2)
+    @State var searchDetent: PresentationDetent = .fraction(0.1)
     @State private var filter = 1
     @State private var region = config.defaultRegion
-    @State private var sheetToShow: SheetToShow = .none
-
+    @State private var sheetToShow: SheetToShow = .search
+    
+    @State var showSearch = false
     @State var showSettings = false
     @State var showNewFeatures = false
     
@@ -62,7 +62,9 @@ struct MainView: View {
 
                 .sheet(isPresented: $showSearch, onDismiss: {
                     switch sheetToShow {
-                    case .none:
+                    case .search:
+                        showNewFeatures = false
+                        showSettings = false
                         return
                     case .whatsNew:
                         showNewFeatures = true
@@ -71,8 +73,7 @@ struct MainView: View {
                     }
                 }, content: {
                     SearchView(detent: $searchDetent)
-                        .presentationDetents([.fraction(0.05), .large], selection: $searchDetent)
-                        .presentationBackground(.ultraThinMaterial)
+                        .presentationDetents([.fraction(0.1), .large], selection: $searchDetent)
                         .presentationBackgroundInteraction(.enabled)
                         .interactiveDismissDisabled()
                 })
@@ -94,12 +95,16 @@ struct MainView: View {
                 .onAppear {
                     if DefaultsCoordinator.shared.showNewFeatures() {
                         sheetToShow = .whatsNew
-                        showSearch = false
+                        showNewFeatures = true
+                    }
+                    else {
+                        sheetToShow = .search
+                        showSearch = true
                     }
                 }
             
                 .onChange(of: navigationModel.navigationPath) { _ in
-                    sheetToShow = .none
+                    sheetToShow = .search
                     showSearch = navigationModel.navigationPath.isEmpty
                 }
             
@@ -117,7 +122,7 @@ struct MainView: View {
     // MARK: - Private Functions
     
     private enum SheetToShow {
-        case none, settings, whatsNew
+        case search, settings, whatsNew
     }
 }
 

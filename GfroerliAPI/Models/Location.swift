@@ -86,6 +86,10 @@ public extension Location {
         jLastTemperatureDate ?? Date(timeIntervalSinceReferenceDate: 0)
     }
     
+    var isActive: Bool {
+        DateUtil.wasInLast72Hours(givenDate: lastTemperatureDate)
+    }
+    
     /// String of  date of last measurement relative to now
     var lastTemperatureDateString: String {
         guard let jLastTemperatureDate else {
@@ -172,7 +176,7 @@ public extension Location {
             creationDate: Date.now,
             sponsorID: 0,
             latestTemperature: 20.5,
-            lastTemperatureDate: Date.now,
+            lastTemperatureDate: Date.distantPast,
             highestTemperature: 20.0,
             lowestTemperature: 10.5,
             averageTemperature: 15.5

@@ -16,6 +16,7 @@ struct LocationMapView: View {
     @EnvironmentObject var locationsViewModel: AllLocationsViewModel
     
     @State private var region = config.defaultRegion
+    @State private var annotationLocations = [Location]()
     
     @Binding var filter: Int
     @Binding var searchDetent: PresentationDetent
@@ -24,27 +25,22 @@ struct LocationMapView: View {
     
     var body: some View {
         ZStack(alignment: .topTrailing) {
-            Map(coordinateRegion: $region, annotationItems: annotationLocations()) { location in
-                
+            Map(coordinateRegion: $region, annotationItems: annotationLocations) { location in
                 MapAnnotation(coordinate: location.coordinates?.coordinate ?? config.defaultCoordinates.coordinate) {
-                    if location.coordinates == nil {
-                        EmptyView()
-                    }
-                    else if region.span.latitudeDelta <= 0.1 {
-                        Button {
-                            navigationModel.navigationPath.append(location)
-                            
-                        } label: {
+                    Button {
+                        didTapAnnotation(location: location)
+                    } label: {
+                        if location.coordinates == nil {
+                            EmptyView()
+                        }
+                        else if region.span.latitudeDelta <= 0.1 {
                             GfroerliMapAnnotation(location: location)
                         }
-                        .buttonStyle(.plain)
+                        else {
+                            GfroerliMapAnnotationPin(location: location)
+                        }
                     }
-                    else {
-                        GfroerliMapAnnotationPin(location: location)
-                            .onTapGesture {
-                                zoom(to: location.coordinates!.coordinate)
-                            }
-                    }
+                    .buttonStyle(.plain)
                 }
             }
             
@@ -65,19 +61,19 @@ struct LocationMapView: View {
                 .accessibilityIdentifier("LocationMapView_Zoom")
             }
             .padding(10)
-            .offset(y: 100)
             
             .onChange(of: filter, perform: { _ in
                 withAnimation {
                     filterChanged()
                 }
             })
-            
-            .onChange(of: locationsViewModel.allLocations, perform: { _ in
-                filterChanged()
+            .onChange(of: locationsViewModel.activeLocations, perform: { _ in
+                region = locationsViewModel.mapRegionActive
+                annotationLocations = locationsViewModel.activeLocations
+                zoom(to: locationsViewModel.mapRegionActive.center, span: config.defaultMapSpan)
             })
         }
-        .ignoresSafeArea(.all, edges: [.bottom, .top])
+        .ignoresSafeArea(.all, edges: .bottom)
     }
     
     // MARK: - Private Functions
@@ -86,32 +82,33 @@ struct LocationMapView: View {
         switch filter {
         case 0:
             region = locationsViewModel.mapRegionAll
+            annotationLocations = locationsViewModel.allLocations
         case 1:
             region = locationsViewModel.mapRegionActive
+            annotationLocations = locationsViewModel.activeLocations
         default:
             region = locationsViewModel.mapRegionAll
+            annotationLocations = locationsViewModel.allLocations
         }
     }
     
-    private func annotationLocations() -> [Location] {
-        switch filter {
-        case 0:
-            return locationsViewModel.allLocations
-        case 1:
-            return locationsViewModel.activeLocations
-        default:
-            return locationsViewModel.allLocations
+    private func didTapAnnotation(location: Location) {
+        if region.span.latitudeDelta <= 0.1 {
+            navigationModel.navigationPath.append(location)
+        }
+        else {
+            zoom(to: location.coordinates!.coordinate)
         }
     }
     
-    private func zoom(to coordinates: CLLocationCoordinate2D) {
-        searchDetent = .fraction(0.05)
+    private func zoom(to coordinates: CLLocationCoordinate2D, span: Double = config.zoomedMapSpan) {
+        searchDetent = .fraction(0.1)
         
         withAnimation {
             region = MKCoordinateRegion(
                 center: coordinates,
-                latitudinalMeters: config.zoomedMapSpan,
-                longitudinalMeters: config.zoomedMapSpan
+                latitudinalMeters: span,
+                longitudinalMeters: span
             )
         }
     }

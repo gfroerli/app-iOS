@@ -45,17 +45,18 @@ struct SettingsHeaderView: View {
                     .aspectRatio(contentMode: .fit)
                     .cornerRadius(15)
                     .padding(.trailing, 10)
-                    .frame(maxWidth: 150)
+                    .frame(maxWidth: 100)
                 
                 VStack(alignment: .leading) {
                     Text("settings_view_app_title")
                         .foregroundColor(.primary)
-                        .font(.title)
+                        .font(.title3)
                         .bold()
                     Text("settings_view_app_version") + Text(config.lastVersion)
                     Text("settings_view_app_creator")
                     Text("settings_view_app_coredump")
                 }
+                .font(.caption)
                 .foregroundColor(.secondary)
                 .lineLimit(2)
                 .minimumScaleFactor(0.1)

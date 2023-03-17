@@ -17,9 +17,10 @@ struct NewFeaturesView: View {
             
             Spacer()
             
-            Text("What's New to Gfrör.li")
+            Text("new_features_view_title")
                 .font(.largeTitle)
                 .bold()
+                .multilineTextAlignment(.center)
             
             Spacer()
             
@@ -52,7 +53,7 @@ struct NewFeaturesView: View {
             
             Spacer()
 
-            Button("Get Started") {
+            Button("new_features_view_button") {
                 self.presentationMode.wrappedValue.dismiss()
             }
             .tint(.accentColor)

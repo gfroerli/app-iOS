@@ -12,6 +12,9 @@ import SwiftUI
 struct GfroerliMapAnnotation: View {
     
     let location: Location
+    var color: Color {
+        location.isActive ? Color.accentColor : Color.gray
+    }
     
     var body: some View {
         HStack {
@@ -29,12 +32,12 @@ struct GfroerliMapAnnotation: View {
         .fontWeight(AppConfiguration.MapView.fontWeight)
         .foregroundColor(.white)
         .padding(8)
-        .background(Color.accentColor.opacity(0.5))
-        .border(Color.accentColor, width: 2)
+        .background(color.opacity(0.5))
+        .border(color, width: 2)
         .clipShape(Capsule())
         .overlay {
             Capsule()
-                .strokeBorder(Color.accentColor, lineWidth: 2)
+                .strokeBorder(color, lineWidth: 2)
         }
     }
 }
@@ -43,11 +46,15 @@ struct GfroerliMapAnnotationPin: View {
     
     let location: Location
     
+    var color: Color {
+        location.isActive ? Color.accentColor : Color.gray
+    }
+    
     var body: some View {
         ZStack {
             Circle()
-                .strokeBorder(Color.accentColor, lineWidth: 2)
-                .background(Circle().fill(Color(UIColor.tintColor).opacity(0.5)))
+                .strokeBorder(color, lineWidth: 2)
+                .background(Circle().fill(color.opacity(0.5)))
                 .frame(width: 44, height: 44)
                 .overlay {
                     Image(systemName: "thermometer.medium")

@@ -74,19 +74,17 @@ class AllLocationsViewModel: ObservableObject {
             // TODO: Error handling
             return
         }
-        allLocations = fetchedLocations
-        sortedLocations = fetchedLocations
-        activeLocations = fetchedLocations.filter { location in
-            guard let lastTempDate = location.jLastTemperatureDate else {
-                return false
-            }
-            return DateUtil.wasInLast72Hours(givenDate: lastTempDate)
+
+        let tempActiveLocations = fetchedLocations.filter { location in
+            location.isActive
         }
+        mapRegionActive = calculateMapRegion(for: tempActiveLocations)
+        activeLocations = tempActiveLocations
+        
+        allLocations = fetchedLocations
+        mapRegionAll = calculateMapRegion(for: allLocations)
         
         sortLocations()
-        
-        mapRegionAll = calculateMapRegion(for: allLocations)
-        mapRegionActive = calculateMapRegion(for: activeLocations)
     }
     
     // MARK: - Private Functions
@@ -106,11 +104,11 @@ class AllLocationsViewModel: ObservableObject {
             }
         case .highest:
             sortedLocations = tempLocations.sorted {
-                $0.latestTemperatureString > $1.latestTemperatureString
+                $0.latestTemperature ?? 0.0 > $1.latestTemperature ?? 0.0
             }
         case .lowest:
             sortedLocations = tempLocations.sorted {
-                $0.latestTemperatureString < $1.latestTemperatureString
+                $0.latestTemperature ?? 0.0 < $1.latestTemperature ?? 0.0
             }
         case .alphabet:
             sortedLocations = tempLocations.sorted {

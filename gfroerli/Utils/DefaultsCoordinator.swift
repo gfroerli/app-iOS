@@ -35,9 +35,8 @@ class DefaultsCoordinator {
     /// Checks if last opened version was lower and if the new features view should be shown
     /// - Returns: Bool
     public func showNewFeatures() -> Bool {
-        
         guard let currentVersion = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String else {
-            fatalError() // TODO: Error
+            return false
         }
         
         guard currentVersion > latestVersion() else {

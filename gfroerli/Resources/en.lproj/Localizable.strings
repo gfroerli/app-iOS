@@ -49,6 +49,9 @@
 "location_map_preview_view_title" = "Map";
 "location_map_preview_view_unavailable" = "Location unavailable";
 
+// InlineLocationView
+"inline_location_view_inactive" = "Inactive";
+
 // SponsorView
 "sponsor_view_title" = "Sponsored by";
 "sponsor_view_failed" = "Fetching Sponsor Failed";
@@ -79,6 +82,10 @@
 // ChangelogView
 "changelog_view_app_title" = "Changelog";
 "changelog_view_version_header" = "Version";
+
+// NewFeaturesView
+"new_features_view_title" = "What's new to Gfrör.li";
+"new_features_view_button" = "Get Started";
 
 // Screenshots
 "screenshot_overview_title" = "Gfrör.li";

@@ -29,7 +29,7 @@ struct SearchView: View {
                     .buttonStyle(.plain)
                 }
             }
-            .listStyle(InsetGroupedListStyle())
+            .listStyle(.insetGrouped)
             
             .searchable(text: $query, placement: .navigationBarDrawer(displayMode: .always))
             
@@ -55,7 +55,6 @@ struct SearchView: View {
                     }
                 }
             }
-        
             .navigationTitle("search_view_navigation_title")
             .navigationBarTitleDisplayMode(.inline)
         }
