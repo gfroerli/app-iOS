@@ -1,12 +1,12 @@
 //
 //  APIError.swift
-//  GfroerliAPI
+//  GfroerliBackend
 //
 //  Created by Marc on 15.10.22.
 //
 
 import Foundation
 
-public enum GfroerliAPIError: Error {
+public enum GfroerliBackendError: Error {
     case noData
 }

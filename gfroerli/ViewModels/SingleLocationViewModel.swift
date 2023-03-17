@@ -6,7 +6,7 @@
 //
 
 import Foundation
-import GfroerliAPI
+import GfroerliBackend
 
 /// ViewModel handling loading and refreshing of single Locations
 class SingleLocationsViewModel: ObservableObject {
@@ -36,7 +36,7 @@ class SingleLocationsViewModel: ObservableObject {
         assignLocation(nil, newState: .loading)
 
         Task {
-            guard let fetchedLocation: Location = try? await GfroerliAPI().load(fetchType: .singleLocation(id: id))
+            guard let fetchedLocation: Location = try? await GfroerliBackend().load(fetchType: .singleLocation(id: id))
             else {
                 // TODO: Error Handling
                 assignLocation(nil, newState: .failed(error: .otherError))

@@ -6,7 +6,7 @@
 //
 
 import Foundation
-import GfroerliAPI
+import GfroerliBackend
 
 /// ViewModel handling loading and refreshing of Sponsors
 class SponsorViewModel: ObservableObject {
@@ -37,7 +37,7 @@ class SponsorViewModel: ObservableObject {
         assignSponsor(nil, newState: .loading)
 
         Task {
-            guard let fetchedSponsor: Sponsor = try? await GfroerliAPI().load(fetchType: .sponsor(id: id)) else {
+            guard let fetchedSponsor: Sponsor = try? await GfroerliBackend().load(fetchType: .sponsor(id: id)) else {
                 // TODO: Error Handling
                 assignSponsor(nil, newState: .failed(error: .otherError))
                 return

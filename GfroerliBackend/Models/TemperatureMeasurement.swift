@@ -1,6 +1,6 @@
 //
 //  TemperatureMeasurement.swift
-//  GfroerliAPI
+//  GfroerliBackend
 //
 //  Created by Marc on 11.09.22.
 //

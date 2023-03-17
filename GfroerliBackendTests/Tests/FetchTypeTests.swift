@@ -1,12 +1,12 @@
 //
 //  FetchTypeTests.swift
-//  GfroerliAPITests
+//  GfroerliBackendTests
 //
 //  Created by Marc on 27.08.22.
 //
 
 import XCTest
-@testable import GfroerliAPI
+@testable import GfroerliBackend
 
 final class FetchTypeTests: XCTestCase {
     // MARK: - .allLocations

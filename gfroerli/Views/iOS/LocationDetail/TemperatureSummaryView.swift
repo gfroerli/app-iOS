@@ -5,7 +5,7 @@
 //  Created by Marc Kramer on 25.06.22.
 //
 
-import GfroerliAPI
+import GfroerliBackend
 import SwiftUI
 
 struct TemperatureSummaryView: View {

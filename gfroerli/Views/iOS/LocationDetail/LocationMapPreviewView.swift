@@ -5,7 +5,7 @@
 //  Created by Marc on 30.08.22.
 //
 
-import GfroerliAPI
+import GfroerliBackend
 import MapKit
 import SwiftUI
 

@@ -7,7 +7,7 @@
 
 import Charts
 import Foundation
-import GfroerliAPI
+import GfroerliBackend
 
 enum ChartSpan {
     case day
@@ -124,7 +124,7 @@ class TemperaturesViewModel: ObservableObject {
             }
             
             // Fetch
-            guard let measurements: [TemperatureMeasurementCollection] = try? await GfroerliAPI()
+            guard let measurements: [TemperatureMeasurementCollection] = try? await GfroerliBackend()
                 .load(fetchType: fetchType) else {
                 return
             }

@@ -5,7 +5,7 @@
 //  Created by Marc on 13.09.22.
 //
 
-import GfroerliAPI
+import GfroerliBackend
 import SwiftUI
 
 struct SearchView: View {

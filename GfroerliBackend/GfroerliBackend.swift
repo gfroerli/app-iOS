@@ -7,7 +7,7 @@
 
 import Foundation
 
-public class GfroerliAPI {
+public class GfroerliBackend {
     
     public init() { }
     
@@ -26,7 +26,7 @@ public class GfroerliAPI {
         let data = try? await Fetcher.fetch(type: fetchType)
         
         guard let data else {
-            throw GfroerliAPIError.noData
+            throw GfroerliBackendError.noData
         }
         let objects = try? decoder.decode(T.self, from: data)
         guard let objects else {

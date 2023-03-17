@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "1420"
+   LastUpgradeVersion = "1430"
    version = "1.7">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -15,8 +15,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "8D5557DF2881F23C008C1BE3"
-               BuildableName = "GfroerliAPI.framework"
-               BlueprintName = "GfroerliAPI"
+               BuildableName = "GfroerliBackend.framework"
+               BlueprintName = "GfroerliBackend"
                ReferencedContainer = "container:gfroerli.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -30,7 +30,7 @@
       codeCoverageEnabled = "YES">
       <TestPlans>
          <TestPlanReference
-            reference = "container:gfroerli.xcodeproj/GfroerliAPI.xctestplan"
+            reference = "container:gfroerli.xcodeproj/GfroerliBackend.xctestplan"
             default = "YES">
          </TestPlanReference>
       </TestPlans>
@@ -40,8 +40,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "8D5557E82881F23C008C1BE3"
-               BuildableName = "GfroerliAPITests.xctest"
-               BlueprintName = "GfroerliAPITests"
+               BuildableName = "GfroerliBackendTests.xctest"
+               BlueprintName = "GfroerliBackendTests"
                ReferencedContainer = "container:gfroerli.xcodeproj">
             </BuildableReference>
          </TestableReference>
@@ -68,8 +68,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "8D5557DF2881F23C008C1BE3"
-            BuildableName = "GfroerliAPI.framework"
-            BlueprintName = "GfroerliAPI"
+            BuildableName = "GfroerliBackend.framework"
+            BlueprintName = "GfroerliBackend"
             ReferencedContainer = "container:gfroerli.xcodeproj">
          </BuildableReference>
       </MacroExpansion>

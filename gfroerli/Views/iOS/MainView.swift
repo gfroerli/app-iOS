@@ -5,7 +5,7 @@
 //  Created by Marc on 30.01.23.
 //
 
-import GfroerliAPI
+import GfroerliBackend
 import SwiftUI
 
 struct MainView: View {

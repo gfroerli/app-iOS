@@ -38,7 +38,6 @@
 		2481AEAE296856FE00316EDA /* Date+Week.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2481AEAD296856FE00316EDA /* Date+Week.swift */; };
 		24A6444A29BCCBE6009555FF /* WaveShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A6444929BCCBE6009555FF /* WaveShape.swift */; };
 		24A6444B29BCCBFD009555FF /* WaveShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A6444929BCCBE6009555FF /* WaveShape.swift */; };
-		24A6444C29BCD199009555FF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8D5489102856315D007253FE /* Assets.xcassets */; };
 		24A6444D29BCD1F3009555FF /* Color+AccentColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2481AEAB29684B1800316EDA /* Color+AccentColor.swift */; };
 		24A6444F29BCD8E6009555FF /* UITestAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 24A6444E29BCD8E6009555FF /* UITestAssets.xcassets */; };
 		24A6445029BCDA3B009555FF /* UITestAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 24A6444E29BCD8E6009555FF /* UITestAssets.xcassets */; };
@@ -56,7 +55,7 @@
 		24BB342F29897C8A004B4270 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24BB342E29897C8A004B4270 /* SearchView.swift */; };
 		24BE370C28FAA90800CF7D99 /* InlineLocationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24BE370B28FAA90800CF7D99 /* InlineLocationView.swift */; };
 		24BE370E28FAE36800CF7D99 /* Array+Codable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24BE370D28FAE36800CF7D99 /* Array+Codable.swift */; };
-		24BE371028FAEEB600CF7D99 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24BE370F28FAEEB600CF7D99 /* APIError.swift */; };
+		24BE371028FAEEB600CF7D99 /* GfroerliBackendError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24BE370F28FAEEB600CF7D99 /* GfroerliBackendError.swift */; };
 		24C16CE529C499F900FE213E /* DateUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 241E02C728BE7F3F007DFEA7 /* DateUtil.swift */; };
 		24C62B9C28D073B300607952 /* TemperatureMeasurementMissing.json in Resources */ = {isa = PBXBuildFile; fileRef = 24C62B9928D073B300607952 /* TemperatureMeasurementMissing.json */; };
 		24C62B9D28D073B300607952 /* TemperatureMeasurementAdditional.json in Resources */ = {isa = PBXBuildFile; fileRef = 24C62B9A28D073B300607952 /* TemperatureMeasurementAdditional.json */; };
@@ -82,11 +81,11 @@
 		8D5489152856315D007253FE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8D5489142856315D007253FE /* Preview Assets.xcassets */; };
 		8D54891F2856315D007253FE /* gfroerliTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D54891E2856315D007253FE /* gfroerliTests.swift */; };
 		8D5489292856315D007253FE /* gfroerliUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D5489282856315D007253FE /* gfroerliUITests.swift */; };
-		8D5557E42881F23C008C1BE3 /* GfroerliAPI.docc in Sources */ = {isa = PBXBuildFile; fileRef = 8D5557E32881F23C008C1BE3 /* GfroerliAPI.docc */; };
-		8D5557EA2881F23C008C1BE3 /* GfroerliAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D5557E02881F23C008C1BE3 /* GfroerliAPI.framework */; };
-		8D5557F22881F23C008C1BE3 /* GfroerliAPI.h in Headers */ = {isa = PBXBuildFile; fileRef = 8D5557E22881F23C008C1BE3 /* GfroerliAPI.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		8D5557F52881F23C008C1BE3 /* GfroerliAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D5557E02881F23C008C1BE3 /* GfroerliAPI.framework */; };
-		8D5557F62881F23C008C1BE3 /* GfroerliAPI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8D5557E02881F23C008C1BE3 /* GfroerliAPI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		8D5557E42881F23C008C1BE3 /* GfroerliBackend.docc in Sources */ = {isa = PBXBuildFile; fileRef = 8D5557E32881F23C008C1BE3 /* GfroerliBackend.docc */; };
+		8D5557EA2881F23C008C1BE3 /* GfroerliBackend.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D5557E02881F23C008C1BE3 /* GfroerliBackend.framework */; };
+		8D5557F22881F23C008C1BE3 /* GfroerlBackend.h in Headers */ = {isa = PBXBuildFile; fileRef = 8D5557E22881F23C008C1BE3 /* GfroerlBackend.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8D5557F52881F23C008C1BE3 /* GfroerliBackend.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D5557E02881F23C008C1BE3 /* GfroerliBackend.framework */; };
+		8D5557F62881F23C008C1BE3 /* GfroerliBackend.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8D5557E02881F23C008C1BE3 /* GfroerliBackend.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		8D5558162881F430008C1BE3 /* APIConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D5558112881F430008C1BE3 /* APIConfiguration.swift */; };
 		8D5558252881F4E4008C1BE3 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D55581D2881F4E4008C1BE3 /* Location.swift */; };
 		8D5558262881F4E4008C1BE3 /* Sponsor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D55581E2881F4E4008C1BE3 /* Sponsor.swift */; };
@@ -94,7 +93,7 @@
 		8D5558282881F4E4008C1BE3 /* FetchType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D5558212881F4E4008C1BE3 /* FetchType.swift */; };
 		8D5558292881F4E4008C1BE3 /* Fetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D5558222881F4E4008C1BE3 /* Fetcher.swift */; };
 		8D55582A2881F4E4008C1BE3 /* MeasurementUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D5558242881F4E4008C1BE3 /* MeasurementUtils.swift */; };
-		8D55582C2881F542008C1BE3 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D55582B2881F542008C1BE3 /* API.swift */; };
+		8D55582C2881F542008C1BE3 /* GfroerliBackend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D55582B2881F542008C1BE3 /* GfroerliBackend.swift */; };
 		8D55582E2881F58A008C1BE3 /* BearerToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D55582D2881F58A008C1BE3 /* BearerToken.swift */; };
 		8D8961BD2857933100C2A7CC /* AllLocationsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D8961BC2857933100C2A7CC /* AllLocationsViewModel.swift */; };
 		8D8961BF2858CD7000C2A7CC /* NavigationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D8961BE2858CD7000C2A7CC /* NavigationModel.swift */; };
@@ -148,7 +147,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				8D5557F62881F23C008C1BE3 /* GfroerliAPI.framework in Embed Frameworks */,
+				8D5557F62881F23C008C1BE3 /* GfroerliBackend.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -157,7 +156,7 @@
 
 /* Begin PBXFileReference section */
 		2411AAF928BA47D100D5B59D /* FetchTypeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchTypeTests.swift; sourceTree = "<group>"; };
-		2411AAFB28BA4D7D00D5B59D /* GfroerliAPI.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; name = GfroerliAPI.xctestplan; path = gfroerli.xcodeproj/GfroerliAPI.xctestplan; sourceTree = SOURCE_ROOT; };
+		2411AAFB28BA4D7D00D5B59D /* GfroerliBackend.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; name = GfroerliBackend.xctestplan; path = gfroerli.xcodeproj/GfroerliBackend.xctestplan; sourceTree = SOURCE_ROOT; };
 		2411AAFC28BA4E8D00D5B59D /* MeasurementUtilsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MeasurementUtilsTests.swift; path = GfroerliAPITests/Tests/MeasurementUtilsTests.swift; sourceTree = SOURCE_ROOT; };
 		2411AAFE28BA53D900D5B59D /* LocationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationTests.swift; sourceTree = "<group>"; };
 		241E02C728BE7F3F007DFEA7 /* DateUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateUtil.swift; sourceTree = "<group>"; };
@@ -196,7 +195,7 @@
 		24BCB50329A0E00C00DA52B3 /* gfroerliScreenshots.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = gfroerliScreenshots.xctestplan; sourceTree = "<group>"; };
 		24BE370B28FAA90800CF7D99 /* InlineLocationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InlineLocationView.swift; sourceTree = "<group>"; };
 		24BE370D28FAE36800CF7D99 /* Array+Codable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Codable.swift"; sourceTree = "<group>"; };
-		24BE370F28FAEEB600CF7D99 /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
+		24BE370F28FAEEB600CF7D99 /* GfroerliBackendError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GfroerliBackendError.swift; sourceTree = "<group>"; };
 		24C62B9928D073B300607952 /* TemperatureMeasurementMissing.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = TemperatureMeasurementMissing.json; path = GfroerliAPITests/JSONFiles/TemperatureMeasurement/TemperatureMeasurementMissing.json; sourceTree = SOURCE_ROOT; };
 		24C62B9A28D073B300607952 /* TemperatureMeasurementAdditional.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = TemperatureMeasurementAdditional.json; path = GfroerliAPITests/JSONFiles/TemperatureMeasurement/TemperatureMeasurementAdditional.json; sourceTree = SOURCE_ROOT; };
 		24C62B9B28D073B300607952 /* TemperatureMeasurementFull.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = TemperatureMeasurementFull.json; path = GfroerliAPITests/JSONFiles/TemperatureMeasurement/TemperatureMeasurementFull.json; sourceTree = SOURCE_ROOT; };
@@ -229,10 +228,10 @@
 		8D5489242856315D007253FE /* gfroerliUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = gfroerliUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D5489282856315D007253FE /* gfroerliUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gfroerliUITests.swift; sourceTree = "<group>"; };
 		8D54893928563185007253FE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
-		8D5557E02881F23C008C1BE3 /* GfroerliAPI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GfroerliAPI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		8D5557E22881F23C008C1BE3 /* GfroerliAPI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GfroerliAPI.h; sourceTree = "<group>"; };
-		8D5557E32881F23C008C1BE3 /* GfroerliAPI.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = GfroerliAPI.docc; sourceTree = "<group>"; };
-		8D5557E92881F23C008C1BE3 /* GfroerliAPITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GfroerliAPITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8D5557E02881F23C008C1BE3 /* GfroerliBackend.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GfroerliBackend.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8D5557E22881F23C008C1BE3 /* GfroerlBackend.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GfroerlBackend.h; sourceTree = "<group>"; };
+		8D5557E32881F23C008C1BE3 /* GfroerliBackend.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = GfroerliBackend.docc; sourceTree = "<group>"; };
+		8D5557E92881F23C008C1BE3 /* GfroerliBackendTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GfroerliBackendTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D5558112881F430008C1BE3 /* APIConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIConfiguration.swift; sourceTree = "<group>"; };
 		8D55581D2881F4E4008C1BE3 /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		8D55581E2881F4E4008C1BE3 /* Sponsor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sponsor.swift; sourceTree = "<group>"; };
@@ -240,7 +239,7 @@
 		8D5558212881F4E4008C1BE3 /* FetchType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FetchType.swift; sourceTree = "<group>"; };
 		8D5558222881F4E4008C1BE3 /* Fetcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fetcher.swift; sourceTree = "<group>"; };
 		8D5558242881F4E4008C1BE3 /* MeasurementUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeasurementUtils.swift; sourceTree = "<group>"; };
-		8D55582B2881F542008C1BE3 /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		8D55582B2881F542008C1BE3 /* GfroerliBackend.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GfroerliBackend.swift; sourceTree = "<group>"; };
 		8D55582D2881F58A008C1BE3 /* BearerToken.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BearerToken.swift; sourceTree = "<group>"; };
 		8D8961BC2857933100C2A7CC /* AllLocationsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllLocationsViewModel.swift; sourceTree = "<group>"; };
 		8D8961BE2858CD7000C2A7CC /* NavigationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationModel.swift; sourceTree = "<group>"; };
@@ -261,7 +260,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8D5557F52881F23C008C1BE3 /* GfroerliAPI.framework in Frameworks */,
+				8D5557F52881F23C008C1BE3 /* GfroerliBackend.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -290,7 +289,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8D5557EA2881F23C008C1BE3 /* GfroerliAPI.framework in Frameworks */,
+				8D5557EA2881F23C008C1BE3 /* GfroerliBackend.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -446,10 +445,10 @@
 			isa = PBXGroup;
 			children = (
 				8D54890B2856315C007253FE /* gfroerli */,
-				8D5557E12881F23C008C1BE3 /* GfroerliAPI */,
+				8D5557E12881F23C008C1BE3 /* GfroerliBackend */,
 				8D54891D2856315D007253FE /* gfroerliTests */,
 				8D5489272856315D007253FE /* gfroerliUITests */,
-				8D5557EF2881F23C008C1BE3 /* GfroerliAPITests */,
+				8D5557EF2881F23C008C1BE3 /* GfroerliBackendTests */,
 				8D54890A2856315C007253FE /* Products */,
 				8D5489372856317E007253FE /* Packages */,
 				8D54893A2856318C007253FE /* Frameworks */,
@@ -462,8 +461,8 @@
 				8D5489092856315C007253FE /* gfroerli.app */,
 				8D54891A2856315D007253FE /* gfroerliTests.xctest */,
 				8D5489242856315D007253FE /* gfroerliUITests.xctest */,
-				8D5557E02881F23C008C1BE3 /* GfroerliAPI.framework */,
-				8D5557E92881F23C008C1BE3 /* GfroerliAPITests.xctest */,
+				8D5557E02881F23C008C1BE3 /* GfroerliBackend.framework */,
+				8D5557E92881F23C008C1BE3 /* GfroerliBackendTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -528,31 +527,31 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		8D5557E12881F23C008C1BE3 /* GfroerliAPI */ = {
+		8D5557E12881F23C008C1BE3 /* GfroerliBackend */ = {
 			isa = PBXGroup;
 			children = (
-				8D55582B2881F542008C1BE3 /* API.swift */,
-				24BE370F28FAEEB600CF7D99 /* APIError.swift */,
+				8D55582B2881F542008C1BE3 /* GfroerliBackend.swift */,
+				24BE370F28FAEEB600CF7D99 /* GfroerliBackendError.swift */,
 				8D5558202881F4E4008C1BE3 /* Fetching */,
 				8D55581C2881F4E4008C1BE3 /* Models */,
 				8D5558232881F4E4008C1BE3 /* Utils */,
 				8D5558112881F430008C1BE3 /* APIConfiguration.swift */,
 				8D55582D2881F58A008C1BE3 /* BearerToken.swift */,
-				8D5557E22881F23C008C1BE3 /* GfroerliAPI.h */,
-				8D5557E32881F23C008C1BE3 /* GfroerliAPI.docc */,
+				8D5557E22881F23C008C1BE3 /* GfroerlBackend.h */,
+				8D5557E32881F23C008C1BE3 /* GfroerliBackend.docc */,
 			);
-			path = GfroerliAPI;
+			path = GfroerliBackend;
 			sourceTree = "<group>";
 		};
-		8D5557EF2881F23C008C1BE3 /* GfroerliAPITests */ = {
+		8D5557EF2881F23C008C1BE3 /* GfroerliBackendTests */ = {
 			isa = PBXGroup;
 			children = (
-				2411AAFB28BA4D7D00D5B59D /* GfroerliAPI.xctestplan */,
+				2411AAFB28BA4D7D00D5B59D /* GfroerliBackend.xctestplan */,
 				241E02C628BE7ED4007DFEA7 /* Tests */,
 				24DAD60028BA5E4E002E5785 /* JSONFiles */,
 				24DAD5FD28BA5D06002E5785 /* Helpers */,
 			);
-			path = GfroerliAPITests;
+			path = GfroerliBackendTests;
 			sourceTree = "<group>";
 		};
 		8D55581C2881F4E4008C1BE3 /* Models */ = {
@@ -659,7 +658,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8D5557F22881F23C008C1BE3 /* GfroerliAPI.h in Headers */,
+				8D5557F22881F23C008C1BE3 /* GfroerlBackend.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -723,9 +722,9 @@
 			productReference = 8D5489242856315D007253FE /* gfroerliUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
-		8D5557DF2881F23C008C1BE3 /* GfroerliAPI */ = {
+		8D5557DF2881F23C008C1BE3 /* GfroerliBackend */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 8D5557F72881F23C008C1BE3 /* Build configuration list for PBXNativeTarget "GfroerliAPI" */;
+			buildConfigurationList = 8D5557F72881F23C008C1BE3 /* Build configuration list for PBXNativeTarget "GfroerliBackend" */;
 			buildPhases = (
 				8D5557DB2881F23C008C1BE3 /* Headers */,
 				8D5557DC2881F23C008C1BE3 /* Sources */,
@@ -736,14 +735,14 @@
 			);
 			dependencies = (
 			);
-			name = GfroerliAPI;
+			name = GfroerliBackend;
 			productName = GfroerliAPI;
-			productReference = 8D5557E02881F23C008C1BE3 /* GfroerliAPI.framework */;
+			productReference = 8D5557E02881F23C008C1BE3 /* GfroerliBackend.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		8D5557E82881F23C008C1BE3 /* GfroerliAPITests */ = {
+		8D5557E82881F23C008C1BE3 /* GfroerliBackendTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 8D5557FB2881F23C008C1BE3 /* Build configuration list for PBXNativeTarget "GfroerliAPITests" */;
+			buildConfigurationList = 8D5557FB2881F23C008C1BE3 /* Build configuration list for PBXNativeTarget "GfroerliBackendTests" */;
 			buildPhases = (
 				8D5557E52881F23C008C1BE3 /* Sources */,
 				8D5557E62881F23C008C1BE3 /* Frameworks */,
@@ -755,9 +754,9 @@
 				8D5557EC2881F23C008C1BE3 /* PBXTargetDependency */,
 				8D5557EE2881F23C008C1BE3 /* PBXTargetDependency */,
 			);
-			name = GfroerliAPITests;
+			name = GfroerliBackendTests;
 			productName = GfroerliAPITests;
-			productReference = 8D5557E92881F23C008C1BE3 /* GfroerliAPITests.xctest */;
+			productReference = 8D5557E92881F23C008C1BE3 /* GfroerliBackendTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -768,7 +767,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1400;
-				LastUpgradeCheck = 1420;
+				LastUpgradeCheck = 1430;
 				TargetAttributes = {
 					8D5489082856315C007253FE = {
 						CreatedOnToolsVersion = 14.0;
@@ -798,6 +797,7 @@
 				en,
 				de,
 				gsw,
+				Base,
 			);
 			mainGroup = 8D5489002856315C007253FE;
 			productRefGroup = 8D54890A2856315C007253FE /* Products */;
@@ -807,8 +807,8 @@
 				8D5489082856315C007253FE /* gfroerli */,
 				8D5489192856315D007253FE /* gfroerliTests */,
 				8D5489232856315D007253FE /* gfroerliUITests */,
-				8D5557DF2881F23C008C1BE3 /* GfroerliAPI */,
-				8D5557E82881F23C008C1BE3 /* GfroerliAPITests */,
+				8D5557DF2881F23C008C1BE3 /* GfroerliBackend */,
+				8D5557E82881F23C008C1BE3 /* GfroerliBackendTests */,
 			);
 		};
 /* End PBXProject section */
@@ -838,7 +838,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				24A6444C29BCD199009555FF /* Assets.xcassets in Resources */,
 				244FF98129BDF58E005146A3 /* Localizable.strings in Resources */,
 				24A6444F29BCD8E6009555FF /* UITestAssets.xcassets in Resources */,
 				24A8AE8129B327BE00F67F18 /* Preview Assets.xcassets in Resources */,
@@ -983,10 +982,10 @@
 				8D5558262881F4E4008C1BE3 /* Sponsor.swift in Sources */,
 				8D5558162881F430008C1BE3 /* APIConfiguration.swift in Sources */,
 				8D5558252881F4E4008C1BE3 /* Location.swift in Sources */,
-				8D55582C2881F542008C1BE3 /* API.swift in Sources */,
+				8D55582C2881F542008C1BE3 /* GfroerliBackend.swift in Sources */,
 				24C16CE529C499F900FE213E /* DateUtil.swift in Sources */,
-				8D5557E42881F23C008C1BE3 /* GfroerliAPI.docc in Sources */,
-				24BE371028FAEEB600CF7D99 /* APIError.swift in Sources */,
+				8D5557E42881F23C008C1BE3 /* GfroerliBackend.docc in Sources */,
+				24BE371028FAEEB600CF7D99 /* GfroerliBackendError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1019,7 +1018,7 @@
 		};
 		8D5557EC2881F23C008C1BE3 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 8D5557DF2881F23C008C1BE3 /* GfroerliAPI */;
+			target = 8D5557DF2881F23C008C1BE3 /* GfroerliBackend */;
 			targetProxy = 8D5557EB2881F23C008C1BE3 /* PBXContainerItemProxy */;
 		};
 		8D5557EE2881F23C008C1BE3 /* PBXTargetDependency */ = {
@@ -1355,6 +1354,7 @@
 		8D5557F82881F23C008C1BE3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -1362,6 +1362,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
@@ -1372,6 +1373,8 @@
 					"@loader_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
+				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
+				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "$(GCC_C_LANGUAGE_STANDARD) $(CLANG_CXX_LANGUAGE_STANDARD)";
 				PRODUCT_BUNDLE_IDENTIFIER = ch.coredump.GfroerliAPI;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = iphoneos;
@@ -1387,6 +1390,7 @@
 		8D5557F92881F23C008C1BE3 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -1394,6 +1398,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
@@ -1404,6 +1409,8 @@
 					"@loader_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
+				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
+				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "$(GCC_C_LANGUAGE_STANDARD) $(CLANG_CXX_LANGUAGE_STANDARD)";
 				PRODUCT_BUNDLE_IDENTIFIER = ch.coredump.GfroerliAPI;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = iphoneos;
@@ -1497,7 +1504,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		8D5557F72881F23C008C1BE3 /* Build configuration list for PBXNativeTarget "GfroerliAPI" */ = {
+		8D5557F72881F23C008C1BE3 /* Build configuration list for PBXNativeTarget "GfroerliBackend" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				8D5557F82881F23C008C1BE3 /* Debug */,
@@ -1506,7 +1513,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		8D5557FB2881F23C008C1BE3 /* Build configuration list for PBXNativeTarget "GfroerliAPITests" */ = {
+		8D5557FB2881F23C008C1BE3 /* Build configuration list for PBXNativeTarget "GfroerliBackendTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				8D5557FC2881F23C008C1BE3 /* Debug */,

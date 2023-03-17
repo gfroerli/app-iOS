@@ -8,7 +8,7 @@
 import CoreLocation
 import Foundation
 
-public struct Location: Equatable, Identifiable, Hashable {
+public struct Location: Equatable, Identifiable, Hashable, Sendable {
     
     // MARK: Properties
 

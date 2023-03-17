@@ -8,7 +8,7 @@
 import Foundation
 
 /// Defines common API Calls to the Gfrör.li server
-public enum FetchType {
+public enum FetchType: Sendable {
     
     /// Used for fetching all locations
     case allLocations

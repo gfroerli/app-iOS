@@ -5,7 +5,7 @@
 //
 
 import Foundation
-import GfroerliAPI
+import GfroerliBackend
 import MapKit
 
 @MainActor
@@ -70,7 +70,7 @@ class AllLocationsViewModel: ObservableObject {
     // MARK: - Public Functions
     
     public func loadAllLocations() async throws {
-        guard let fetchedLocations: [Location] = try? await GfroerliAPI().load(fetchType: .allLocations) else {
+        guard let fetchedLocations: [Location] = try? await GfroerliBackend().load(fetchType: .allLocations) else {
             // TODO: Error handling
             return
         }

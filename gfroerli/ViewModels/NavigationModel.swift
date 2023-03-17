@@ -7,7 +7,7 @@
 
 import Combine
 import Foundation
-import GfroerliAPI
+import GfroerliBackend
 import SwiftUI
 
 enum TabType: Int, Hashable, CaseIterable, Identifiable, Codable {
