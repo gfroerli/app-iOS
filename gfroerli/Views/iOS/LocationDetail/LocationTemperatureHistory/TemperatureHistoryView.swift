@@ -40,12 +40,11 @@ struct TemperatureHistoryView: View {
     var body: some View {
         VStack(alignment: .leading) {
             HStack(alignment: .top) {
-                Text("temperature_history_view_title")
-                    .font(.title2)
-                    .bold()
-            
-                Spacer()
                 if hoveringIndex != nil {
+                    Text(" ")
+                        .font(.title2)
+                        .bold()
+                    
                     switch currentSelection {
                     case .day:
                         TopGraphSummaryView(
@@ -70,6 +69,12 @@ struct TemperatureHistoryView: View {
                     }
                 }
                 else {
+                    
+                    Text("temperature_history_view_title")
+                        .font(.title2)
+                        .bold()
+                
+                    Spacer()
                     
                     // Used to make view not jump
                     VStack {
@@ -135,8 +140,8 @@ struct TopGraphSummaryView: View {
 
     var body: some View {
         if let currentIndex {
-            VStack(alignment: .trailing) {
-                VStack {
+            VStack(alignment: .leading) {
+                VStack(alignment: .leading) {
                     switch currentSelection {
                     case .day:
                         Text(

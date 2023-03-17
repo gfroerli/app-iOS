@@ -77,9 +77,9 @@ struct HistoryGraphView: View {
                     }
                 }
                 .chartForegroundStyleScale([
-                    "Minimum": .blue,
-                    "Average": .green,
-                    "Maximum": .red,
+                    NSLocalizedString("history_graph_view_legend_minimum", comment: ""): .blue,
+                    NSLocalizedString("history_graph_view_legend_average", comment: ""): .green,
+                    NSLocalizedString("history_graph_view_legend_maximum", comment: ""): .red,
                 ])
                 .chartLegend(position: .bottom, alignment: .center, spacing: 10)
                 .chartYScale(domain: zoomed ? vm.zoomedYAxisMinValue...vm.zoomedYAxisMaxValue : 0...30)

@@ -36,8 +36,8 @@ struct MainView: View {
                     ToolbarItem(placement: .primaryAction) {
                         Menu {
                             Picker("main_view_filter_title", selection: $filter) {
-                                Text("main_view_filter_active").tag(1)
                                 Text("main_view_filter_all").tag(0)
+                                Text("main_view_filter_active").tag(1)
                             }
                         } label: {
                             Label(

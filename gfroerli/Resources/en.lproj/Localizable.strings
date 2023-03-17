@@ -23,6 +23,11 @@
 "search_view_sort_title" = "Sort";
 "search_view_sort_label" = "Sort Locations";
 
+"search_view_sort_recent" = "Most Recent";
+"search_view_sort_highest" = "Warmest";
+"search_view_sort_lowest" = "Coldest";
+"search_view_sort_alphabetical" = "Alphabetical";
+
 // TemperatureHistoryView
 "temperature_history_view_title" = "History";
 "temperature_history_view_picker_title" = "Choose time span";

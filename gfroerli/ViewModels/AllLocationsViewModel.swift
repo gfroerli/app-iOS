@@ -7,6 +7,7 @@
 import Foundation
 import GfroerliBackend
 import MapKit
+import SwiftUI
 
 @MainActor
 class AllLocationsViewModel: ObservableObject {
@@ -28,25 +29,25 @@ class AllLocationsViewModel: ObservableObject {
     
     public enum SortVariants: CaseIterable, Identifiable {
         case alphabet
-        case mostRecent
-        case highest
         case lowest
+        case highest
+        case mostRecent
 
         public var id: SortVariants { self }
         
-        public var text: String {
+        public var text: LocalizedStringKey {
             switch self {
             case .mostRecent:
-                return "Most Recent"
+                return "search_view_sort_recent"
 
             case .highest:
-                return "Warmest"
+                return "search_view_sort_highest"
 
             case .lowest:
-                return "Coldest"
+                return "search_view_sort_lowest"
 
             case .alphabet:
-                return "Alphabetical"
+                return "search_view_sort_alphabetical"
             }
         }
         

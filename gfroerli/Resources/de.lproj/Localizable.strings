@@ -23,6 +23,11 @@
 "search_view_sort_title" = "Sortieren";
 "search_view_sort_label" = "Standorte Sortieren";
 
+"search_view_sort_recent" = "Zuletzt";
+"search_view_sort_highest" = "Wärmste";
+"search_view_sort_lowest" = "Kälteste";
+"search_view_sort_alphabetical" = "Alphabetisch";
+
 // TemperatureHistoryView
 "temperature_history_view_title" = "Verlauf";
 "temperature_history_view_picker_title" = "Zeitspanne wählen";

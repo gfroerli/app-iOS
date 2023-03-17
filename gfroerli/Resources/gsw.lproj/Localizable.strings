@@ -23,6 +23,11 @@
 "search_view_sort_title" = "Sortiere";
 "search_view_sort_label" = "Standort sortiere";
 
+"search_view_sort_recent" = "Z'letst";
+"search_view_sort_highest" = "Wärmsti";
+"search_view_sort_lowest" = "Chältisti";
+"search_view_sort_alphabetical" = "Alphabetisch";
+
 // TemperatureHistoryView
 "temperature_history_view_title" = "Verlauf";
 "temperature_history_view_picker_title" = "Ziitspanni uswähle";
