@@ -11,6 +11,8 @@ struct SettingsView: View {
     
     @Environment(\.presentationMode) var presentationMode
 
+    // MARK: - Body
+    
     var body: some View {
         NavigationStack {
             List {

@@ -10,12 +10,18 @@ import SwiftUI
 
 struct InlineLocationView: View {
     
-    let location: Location
     @Environment(\.isSearching) var isSearching
 
     @AppStorage("favorites") private var favorites = [Int]()
-    @State var isFavorite = false
+    
+    @State private var isFavorite = false
+
     @Binding var detent: PresentationDetent
+    
+    let location: Location
+
+    // MARK: - Body
+
     var body: some View {
         
         HStack(alignment: .top) {
@@ -63,8 +69,10 @@ struct InlineLocationView: View {
     }
 }
 
+// MARK: - Preview
+
 struct InlineLocationView_Previews: PreviewProvider {
     static var previews: some View {
-        InlineLocationView(location: Location.exampleLocation(), detent: .constant(.large))
+        InlineLocationView(detent: .constant(.large), location: Location.exampleLocation())
     }
 }

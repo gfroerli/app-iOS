@@ -24,7 +24,7 @@ class AllLocationsViewModel: ObservableObject {
     @Published var mapRegionAll: MKCoordinateRegion = AppConfiguration.MapPreviewView.defaultRegion
     @Published var mapRegionActive: MKCoordinateRegion = AppConfiguration.MapPreviewView.defaultRegion
 
-    // MARK: - Sorter
+    // MARK: - Sorting
     
     public enum SortVariants: CaseIterable, Identifiable {
         case alphabet

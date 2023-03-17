@@ -8,8 +8,10 @@
 import SwiftUI
 
 struct ChangeLogView: View {
-    let changeLog = ChangeLog.log
+    private let changeLog = ChangeLog.log
     
+    // MARK: - Body
+
     var body: some View {
         Form {
             ForEach(changeLog) { items in
@@ -23,6 +25,8 @@ struct ChangeLogView: View {
         .navigationBarTitle("changelog_view_app_title")
     }
 }
+
+// MARK: - Preview
 
 struct ChangeLogView_Previews: PreviewProvider {
     static var previews: some View {

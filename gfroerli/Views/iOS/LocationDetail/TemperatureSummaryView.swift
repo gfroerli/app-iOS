@@ -14,6 +14,8 @@ struct TemperatureSummaryView: View {
     
     @Binding var location: Location?
 
+    // MARK: - Body
+    
     var body: some View {
         VStack(alignment: .leading) {
             
@@ -49,6 +51,8 @@ struct TemperatureSummaryView: View {
         .defaultBoxStyle()
     }
 }
+
+// MARK: - Preview
 
 struct TemperatureSummaryView_Previews: PreviewProvider {
     static var previews: some View {

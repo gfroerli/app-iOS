@@ -14,15 +14,17 @@ struct MainView: View {
     @EnvironmentObject var navigationModel: NavigationModel
     @EnvironmentObject var locationsViewModel: AllLocationsViewModel
 
-    @State var searchDetent: PresentationDetent = .fraction(0.1)
+    @State private var searchDetent: PresentationDetent = .fraction(0.1)
     @State private var filter = 1
     @State private var region = config.defaultRegion
     @State private var sheetToShow: SheetToShow = .search
     
-    @State var showSearch = false
-    @State var showSettings = false
-    @State var showNewFeatures = false
+    @State private var showSearch = false
+    @State private var showSettings = false
+    @State private var showNewFeatures = false
     
+    // MARK: - Body
+
     var body: some View {
         NavigationStack(path: $navigationModel.navigationPath) {
             
@@ -57,6 +59,7 @@ struct MainView: View {
                         }
                     }
                 }
+                .toolbarBackground(.visible, for: .navigationBar)
                 
                 // MARK: - Sheets
 
@@ -112,7 +115,6 @@ struct MainView: View {
 
                 .navigationTitle("main_view_navigation_title")
                 .navigationBarTitleDisplayMode(.inline)
-                .toolbarBackground(.visible, for: .navigationBar)
                 .navigationDestination(for: Location.self, destination: { location in
                     LocationDetailView(locationID: location.id)
                 })
@@ -125,6 +127,8 @@ struct MainView: View {
         case search, settings, whatsNew
     }
 }
+
+// MARK: - Preview
 
 struct MainView_Previews: PreviewProvider {
     static var previews: some View {

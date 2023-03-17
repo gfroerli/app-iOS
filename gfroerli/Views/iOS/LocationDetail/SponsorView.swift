@@ -78,6 +78,8 @@ struct SponsorView: View {
     }
 }
 
+// MARK: - Preview
+
 struct SponsorView_Previews: PreviewProvider {
     static var previews: some View {
         SponsorView(sponsorVM: SponsorViewModel(id: 1))

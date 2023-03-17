@@ -13,28 +13,30 @@ struct TemperatureHistoryView: View {
     
     typealias config = AppConfiguration
 
-    var locationID: Int
+    private var locationID: Int
 
     @StateObject var hourlyVM: TemperaturesViewModel
     @StateObject var weeklyVM: TemperaturesViewModel
     @StateObject var monthlyVM: TemperaturesViewModel
-    @State var currentSelection: ChartSpan = .month
-    @State var hoveringIndex: Int?
-    @State var zoomed = true
+    
+    @State private var currentSelection: ChartSpan = .month
+    @State private var hoveringIndex: Int?
+    @State private var zoomed = true
+    
+    // MARK: - Lifecycle
     
     init(locationID: Int) {
         self.locationID = locationID
-        self
-            ._hourlyVM =
+        self._hourlyVM =
             StateObject(wrappedValue: TemperaturesViewModel(locationID: locationID, interval: .day, date: Date.now))
-        self
-            ._weeklyVM =
+        self._weeklyVM =
             StateObject(wrappedValue: TemperaturesViewModel(locationID: locationID, interval: .week, date: Date.now))
-        self
-            ._monthlyVM =
+        self._monthlyVM =
             StateObject(wrappedValue: TemperaturesViewModel(locationID: locationID, interval: .month, date: Date.now))
     }
     
+    // MARK: - Body
+
     var body: some View {
         VStack(alignment: .leading) {
             HStack(alignment: .top) {
@@ -114,11 +116,15 @@ struct TemperatureHistoryView: View {
     }
 }
 
+// MARK: - Preview
+
 struct TemperatureHistoryView_Previews: PreviewProvider {
     static var previews: some View {
         TemperatureHistoryView(locationID: 1)
     }
 }
+
+// MARK: - Subviews
 
 struct TopGraphSummaryView: View {
    

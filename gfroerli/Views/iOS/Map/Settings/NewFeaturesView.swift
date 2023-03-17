@@ -11,6 +11,8 @@ struct NewFeaturesView: View {
     
     @Environment(\.presentationMode) private var presentationMode
     
+    // MARK: - Body
+    
     var body: some View {
         
         VStack {
@@ -63,6 +65,8 @@ struct NewFeaturesView: View {
         }
     }
 }
+
+// MARK: - Preview
 
 struct NewFeaturesView_Previews: PreviewProvider {
     static var previews: some View {

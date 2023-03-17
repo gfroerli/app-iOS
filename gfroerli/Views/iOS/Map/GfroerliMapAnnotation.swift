@@ -12,10 +12,13 @@ import SwiftUI
 struct GfroerliMapAnnotation: View {
     
     let location: Location
-    var color: Color {
+    
+    private var color: Color {
         location.isActive ? Color.accentColor : Color.gray
     }
     
+    // MARK: - Body
+
     var body: some View {
         HStack {
             Image(systemName: "thermometer.medium")
@@ -67,6 +70,8 @@ struct GfroerliMapAnnotationPin: View {
         }
     }
 }
+
+// MARK: - Preview
 
 struct GfroerliMapAnnotation_Previews: PreviewProvider {
     static var previews: some View {

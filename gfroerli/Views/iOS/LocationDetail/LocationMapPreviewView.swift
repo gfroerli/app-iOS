@@ -12,16 +12,20 @@ import SwiftUI
 struct LocationMapPreviewView: View {
     
     typealias Config = AppConfiguration.MapPreviewView
+
+    @State private var hasLocation = false
+    @State private var region: MKCoordinateRegion
+    
     @Binding var location: Location?
-    @State var hasLocation = false
-    @State var region: MKCoordinateRegion
+
+    // MARK: - Lifecycle
     
     init(location: Binding<Location?>) {
         self._location = Binding(projectedValue: location)
         self._region = State(wrappedValue: Config.defaultRegion)
     }
     
-    // MARK: - View
+    // MARK: - Body
 
     var body: some View {
         VStack(alignment: .leading, spacing: 0) {
@@ -104,6 +108,8 @@ struct LocationMapPreviewView: View {
         )
     }
 }
+
+// MARK: - Preview
 
 struct LocationMapPreviewView_Previews: PreviewProvider {
     static var previews: some View {

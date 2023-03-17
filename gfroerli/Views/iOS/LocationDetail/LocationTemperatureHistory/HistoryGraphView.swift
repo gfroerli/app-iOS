@@ -12,8 +12,11 @@ import SwiftUI
 struct HistoryGraphView: View {
     
     @ObservedObject var vm: TemperaturesViewModel
+    
     @Binding var zoomed: Bool
     @Binding var hoveringIndex: Int?
+
+    // MARK: - Body
 
     var body: some View {
         VStack {
@@ -132,6 +135,8 @@ struct HistoryGraphView: View {
         }
     }
     
+    // MARK: - Private Functions
+
     private func animate() {
         for (index, _) in vm.highestTemperatures.enumerated() {
             withAnimation {
@@ -142,7 +147,7 @@ struct HistoryGraphView: View {
         }
     }
     
-    func findIndex(location: CGPoint, proxy: ChartProxy, geometry: GeometryProxy) -> Int? {
+    private func findIndex(location: CGPoint, proxy: ChartProxy, geometry: GeometryProxy) -> Int? {
       
         let relativeXPosition = location.x - geometry[proxy.plotAreaFrame].origin.x
 
@@ -164,6 +169,8 @@ struct HistoryGraphView: View {
         return nil
     }
 }
+
+// MARK: - Preview
 
 struct HourlyHistoryGraphView_Previews: PreviewProvider {
     static var previews: some View {

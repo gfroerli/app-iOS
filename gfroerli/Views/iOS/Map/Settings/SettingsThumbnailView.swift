@@ -39,6 +39,8 @@ struct SettingsThumbnailAssetView: View {
     }
 }
 
+// MARK: - Preview
+
 struct SettingsThumbnailView_Previews: PreviewProvider {
     static var previews: some View {
         SettingsThumbnailView(imageName: "pin", backgroundColor: .red)

@@ -15,7 +15,10 @@ struct SearchView: View {
     
     @State private var filter = 0
     @State private var query = ""
+    
     @Binding var detent: PresentationDetent
+
+    // MARK: - Body
 
     var body: some View {
         NavigationStack {
@@ -24,7 +27,7 @@ struct SearchView: View {
                     Button(action: {
                         navigationModel.navigationPath.append(location)
                     }, label: {
-                        InlineLocationView(location: location, detent: $detent)
+                        InlineLocationView(detent: $detent, location: location)
                     })
                     .buttonStyle(.plain)
                 }
@@ -60,6 +63,8 @@ struct SearchView: View {
         }
     }
 }
+
+// MARK: - Preview
 
 struct SearchView_Previews: PreviewProvider {
     static var previews: some View {

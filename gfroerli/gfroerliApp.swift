@@ -14,6 +14,8 @@ struct gfroerliApp: App {
     @StateObject private var navigationModel = NavigationModel()
     @StateObject private var locationsViewModel = AllLocationsViewModel()
     
+    // MARK: - Body
+
     var body: some Scene {
         WindowGroup {
             MainView()
@@ -21,11 +23,9 @@ struct gfroerliApp: App {
                 .environmentObject(locationsViewModel)
                 .task {
                     do {
-                        // TODO: We load all locations on start-up, needs to change
                         try await locationsViewModel.loadAllLocations()
                     }
                     catch {
-                        // TODO: We load all locations on start-up, needs to change
                         fatalError()
                     }
                 }

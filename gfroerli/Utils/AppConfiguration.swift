@@ -26,15 +26,6 @@ enum AppConfiguration {
         static let verticalBoxPadding = 10.0
     }
     
-    enum Dashboard {
-        /// Height of the location tile in grid view
-        static let gridTileHeight = 250.0
-        /// Width of the location tile in grid view
-        static let gridTileWidth = 325.0
-        /// Horizontal and vertical spacing between grid items
-        static let gridSpacing = 25.0
-    }
-    
     enum LocationDetails {
         /// Height of the top boxes in location details view
         static let topBoxHeight = 180.0

@@ -14,9 +14,13 @@ struct LocationDetailView: View {
 
     @StateObject var locationVM: SingleLocationsViewModel
     @StateObject var sponsorVM: SponsorViewModel
+    
+    @State private var isFavorite = false
+    
     let locationID: Int
     
-    @State var isFavorite = false
+    // MARK: - Lifecycle
+
     init(locationID: Int) {
         _locationVM = StateObject(wrappedValue: SingleLocationsViewModel(id: locationID))
         _sponsorVM = StateObject(wrappedValue: SponsorViewModel(id: locationID))
