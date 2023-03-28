@@ -21,14 +21,28 @@ struct gfroerliApp: App {
             MainView()
                 .environmentObject(navigationModel)
                 .environmentObject(locationsViewModel)
-                .task {
-                    do {
-                        try await locationsViewModel.loadAllLocations()
-                    }
-                    catch {
-                        fatalError()
-                    }
+                .onReceive(
+                    NotificationCenter.default
+                        .publisher(for: UIApplication.willEnterForegroundNotification)
+                ) { _ in
+                    loadAllLocations()
                 }
+                .task {
+                    loadAllLocations()
+                }
+        }
+    }
+    
+    // MARK: - Private Functions
+    
+    private func loadAllLocations() {
+        Task {
+            do {
+                try await locationsViewModel.loadAllLocations()
+            }
+            catch {
+                fatalError()
+            }
         }
     }
 }

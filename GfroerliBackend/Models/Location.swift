@@ -176,6 +176,23 @@ public extension Location {
             creationDate: Date.now,
             sponsorID: 0,
             latestTemperature: 20.5,
+            lastTemperatureDate: Date.now,
+            highestTemperature: 20.0,
+            lowestTemperature: 10.5,
+            averageTemperature: 15.5
+        )
+    }
+    
+    static func inactiveExampleLocation() -> Location {
+        Location(
+            id: 0,
+            jName: "Test Inactive Location",
+            jDescription: "This is just a description for the test location",
+            jLatitude: 47.0,
+            jLongitude: 8.0,
+            creationDate: Date.now,
+            sponsorID: 0,
+            latestTemperature: 20.5,
             lastTemperatureDate: Date.distantPast,
             highestTemperature: 20.0,
             lowestTemperature: 10.5,

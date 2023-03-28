@@ -10,7 +10,8 @@ import MapKit
 import SwiftUI
 
 struct GfroerliMapAnnotation: View {
-    
+    @Environment(\.colorScheme) var colorScheme
+
     let location: Location
     
     private var color: Color {
@@ -23,19 +24,21 @@ struct GfroerliMapAnnotation: View {
         HStack {
             Image(systemName: "thermometer.medium")
                 .symbolRenderingMode(.palette)
-                .foregroundStyle(.red, .white, Color.accentColor)
+                .foregroundStyle(.red, .white, colorScheme == .light ? Color.accentColor : .white.opacity(0.5))
             
             Text(location.name)
-
-            Text(location.latestTemperatureString)
-
+            
+            if location.isActive {
+                Text(location.latestTemperatureString)
+            }
+            
             Image(systemName: "chevron.right")
                 .foregroundColor(.white)
         }
         .fontWeight(AppConfiguration.MapView.fontWeight)
         .foregroundColor(.white)
         .padding(8)
-        .background(color.opacity(0.5))
+        .background(color.opacity(colorScheme == .light ? 0.5 : 0.8))
         .border(color, width: 2)
         .clipShape(Capsule())
         .overlay {
@@ -46,7 +49,8 @@ struct GfroerliMapAnnotation: View {
 }
 
 struct GfroerliMapAnnotationPin: View {
-    
+    @Environment(\.colorScheme) var colorScheme
+
     let location: Location
     
     var color: Color {
@@ -57,14 +61,14 @@ struct GfroerliMapAnnotationPin: View {
         ZStack {
             Circle()
                 .strokeBorder(color, lineWidth: 2)
-                .background(Circle().fill(color.opacity(0.5)))
+                .background(Circle().fill(color.opacity(colorScheme == .light ? 0.5 : 0.8)))
                 .frame(width: 44, height: 44)
                 .overlay {
                     Image(systemName: "thermometer.medium")
                         .resizable()
                         .aspectRatio(contentMode: .fit)
                         .symbolRenderingMode(.palette)
-                        .foregroundStyle(.red, .white, Color.accentColor)
+                        .foregroundStyle(.red, .white, colorScheme == .light ? Color.accentColor : .white.opacity(0.3))
                         .padding(5)
                 }
         }

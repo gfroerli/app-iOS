@@ -24,7 +24,7 @@ struct InlineLocationView: View {
 
     var body: some View {
         
-        HStack(alignment: .top) {
+        HStack {
             VStack(alignment: .leading) {
                 Text(location.name)
                     .bold()
@@ -56,7 +56,6 @@ struct InlineLocationView: View {
                 .padding(.leading, 3)
         }
         .contentShape(Rectangle())
-        .padding(2)
         
         .onAppear {
             isFavorite = favorites.contains(location.id)
@@ -73,6 +72,12 @@ struct InlineLocationView: View {
 
 struct InlineLocationView_Previews: PreviewProvider {
     static var previews: some View {
-        InlineLocationView(detent: .constant(.large), location: Location.exampleLocation())
+        VStack {
+            InlineLocationView(detent: .constant(.large), location: Location.exampleLocation())
+                .background(.red)
+            
+            InlineLocationView(detent: .constant(.large), location: Location.inactiveExampleLocation())
+                .background(.red)
+        }
     }
 }

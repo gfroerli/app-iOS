@@ -62,8 +62,14 @@ struct LocationDetailView: View {
                     .imageScale(.large)
             }
         }
+        .refreshable {
+            locationVM.loadLocation()
+        }
         .onAppear {
             isFavorite = favorites.contains(locationID)
+        }
+        .onReceive(NotificationCenter.default.publisher(for: UIApplication.willEnterForegroundNotification)) { _ in
+            locationVM.loadLocation()
         }
     }
     
