@@ -84,8 +84,8 @@
 		8D5557E42881F23C008C1BE3 /* GfroerliBackend.docc in Sources */ = {isa = PBXBuildFile; fileRef = 8D5557E32881F23C008C1BE3 /* GfroerliBackend.docc */; };
 		8D5557EA2881F23C008C1BE3 /* GfroerliBackend.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D5557E02881F23C008C1BE3 /* GfroerliBackend.framework */; };
 		8D5557F22881F23C008C1BE3 /* GfroerlBackend.h in Headers */ = {isa = PBXBuildFile; fileRef = 8D5557E22881F23C008C1BE3 /* GfroerlBackend.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		8D5557F52881F23C008C1BE3 /* GfroerliBackend.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D5557E02881F23C008C1BE3 /* GfroerliBackend.framework */; };
-		8D5557F62881F23C008C1BE3 /* GfroerliBackend.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8D5557E02881F23C008C1BE3 /* GfroerliBackend.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		8D5557F52881F23C008C1BE3 /* GfroerliBackend.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D5557E02881F23C008C1BE3 /* GfroerliBackend.framework */; platformFilter = ios; };
+		8D5557F62881F23C008C1BE3 /* GfroerliBackend.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8D5557E02881F23C008C1BE3 /* GfroerliBackend.framework */; platformFilter = ios; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		8D5558162881F430008C1BE3 /* APIConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D5558112881F430008C1BE3 /* APIConfiguration.swift */; };
 		8D5558252881F4E4008C1BE3 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D55581D2881F4E4008C1BE3 /* Location.swift */; };
 		8D5558262881F4E4008C1BE3 /* Sponsor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D55581E2881F4E4008C1BE3 /* Sponsor.swift */; };
@@ -1187,7 +1187,7 @@
 				CODE_SIGN_IDENTITY = "-";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 20230330;
+				CURRENT_PROJECT_VERSION = 20230331;
 				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"gfroerli/Preview Content\"";
 				DEVELOPMENT_TEAM = T7M5358433;
@@ -1197,8 +1197,10 @@
 				INFOPLIST_FILE = gfroerli/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Gfrör.li";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.weather";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				INFOPLIST_KEY_UIRequiredDeviceCapabilities = arm64;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
@@ -1227,7 +1229,7 @@
 				CODE_SIGN_IDENTITY = "-";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 20230330;
+				CURRENT_PROJECT_VERSION = 20230331;
 				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"gfroerli/Preview Content\"";
 				DEVELOPMENT_TEAM = T7M5358433;
@@ -1237,8 +1239,10 @@
 				INFOPLIST_FILE = gfroerli/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Gfrör.li";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.weather";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				INFOPLIST_KEY_UIRequiredDeviceCapabilities = arm64;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
@@ -1267,7 +1271,7 @@
 				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = T7M5358433;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				MACOSX_DEPLOYMENT_TARGET = 12.4;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = ch.coredump.gfroerliTests;
@@ -1291,7 +1295,7 @@
 				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = T7M5358433;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				MACOSX_DEPLOYMENT_TARGET = 12.4;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = ch.coredump.gfroerliTests;
@@ -1314,7 +1318,7 @@
 				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = T7M5358433;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				MACOSX_DEPLOYMENT_TARGET = 12.4;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = ch.coredump.gfroerliUITests;
@@ -1337,7 +1341,7 @@
 				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = T7M5358433;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				MACOSX_DEPLOYMENT_TARGET = 12.4;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = ch.coredump.gfroerliUITests;
@@ -1366,7 +1370,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1402,7 +1406,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1432,7 +1436,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = T7M5358433;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = ch.coredump.GfroerliAPITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1452,7 +1456,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = T7M5358433;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = ch.coredump.GfroerliAPITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
