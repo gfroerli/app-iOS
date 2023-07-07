@@ -1,0 +1,103 @@
+/* 
+  Localizable.strings
+  gfroerli
+
+  Created by Marc on 03.01.23.
+  
+*/
+
+// "" = "";
+
+// MainView
+"main_view_navigation_title" = "Charte";
+
+"main_view_filter_title" = "Standortfilter";
+"main_view_filter_label" = "Filter";
+"main_view_filter_active" = "Aktivi";
+"main_view_filter_all" = "Alli";
+
+"main_view_settings_label" = "Istellige";
+
+// SearchView
+"search_view_navigation_title" = "Suechi";
+"search_view_sort_title" = "Sortiere";
+"search_view_sort_label" = "Standort sortiere";
+
+"search_view_sort_recent" = "Z'letst";
+"search_view_sort_highest" = "Wärmsti";
+"search_view_sort_lowest" = "Chältisti";
+"search_view_sort_alphabetical" = "Alphabetisch";
+
+// TemperatureHistoryView
+"temperature_history_view_title" = "Verlauf";
+"temperature_history_view_picker_title" = "Ziitspanni uswähle";
+"temperature_history_view_picker_day" = "Tag";
+"temperature_history_view_picker_week" = "Wuche";
+"temperature_history_view_picker_month" = "Monat";
+
+// HistoryGraphView
+"history_graph_view_no_data_label" = "Kei date verfüegbar";
+"history_graph_view_legend_minimum"= "Minimum";
+"history_graph_view_legend_average" = "Durchschnitt";
+"history_graph_view_legend_maximum" = "Maximum";
+
+// LatestTemperatureView
+"latest_temperature_view_title" = "Letsti";
+
+// TemperatureSummaryView
+"temperature_summary_view_title" = "Insgsamt";
+"temperature_summary_view_highest" = "Höchsti";
+"temperature_summary_view_average" = "Durchschnitt";
+"temperature_summary_view_lowest" = "Tüüfsti";
+
+// LocationMapPreviewView
+"location_map_preview_view_title" = "Charte";
+"location_map_preview_view_unavailable" = "Standort nöd verfüegbar";
+
+// InlineLocationView
+"inline_location_view_inactive" = "Inaktiv";
+
+// SponsorView
+"sponsor_view_title" = "Gsponseret vo";
+"sponsor_view_failed" = "De sponsor het nöd chönne glade werde";
+"sponsor_view_no_name" = "Kein name";
+"sponsor_view_no_description" = "Kei beschriebig";
+
+// SettingsView
+"settings_view_title" = "Istellige";
+"settings_view_close" = "Schlüsse";
+
+"settings_view_app_title" = "Gfrör.li";
+"settings_view_app_version" = "Version:";
+"settings_view_app_creator" = "vom Marc";
+"settings_view_app_coredump" = "für Coredump Rapperswil";
+"settings_view_header_general" = "Allgemein";
+"settings_view_item_FAQ" = "FAQ";
+"settings_view_item_changelog" = "Änderigsübersicht";
+"settings_view_item_language" = "Sprach wechsle";
+
+"settings_view_header_links" = "Links";
+"settings_view_item_review" = "Bewerte";
+"settings_view_item_policy" = "Dateschutzerchlärig";
+"settings_view_item_gfroerli_web" = "Gfrör.li Website";
+"settings_view_item_coredump_web" = "Coredump Website";
+"settings_view_item_coredump_mastodon" = "Coredump uf Mastodon";
+"settings_view_item_github" = "Code uf GitHub";
+
+// ChangelogView
+"changelog_view_app_title" = "Änderigsübersicht";
+"changelog_view_version_header" = "Version";
+
+// NewFeaturesView
+"new_features_view_title" = "Neui Funktione in Gfrör.li";
+"new_features_view_button" = "Los gahts";
+
+// Screenshots (Unused for gsw)
+"screenshot_overview_title" = "Gfrör.li";
+"screenshot_overview_description" = "Watertemperatures at different locations in realtime.";
+
+"screenshot_detail_title" = "Various Infos";
+"screenshot_detail_description" = "Check the temperature history and other information of locations.";
+
+"screenshot_search_title" = "Improved Search";
+"screenshot_search_description" = "Search and filter locations using different parameters.";
