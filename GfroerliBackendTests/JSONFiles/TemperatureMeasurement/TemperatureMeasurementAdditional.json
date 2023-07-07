@@ -1,8 +1,0 @@
-{
-    "aggregation_date": "2022-08-01",
-    "aggregation_hour": 0,
-    "minimum_temperature": 20.0,
-    "maximum_temperature": 25.0,
-    "average_temperature": 30.0,
-    "unknownKey": "Unknown Value",
-}
