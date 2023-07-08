@@ -1,13 +1,13 @@
 //
-//  Gfroer_liUITestsLaunchTests.swift
-//  Gfroer.liUITests
+//  GfroerliUITestsLaunchTests.swift
+//  GfroerliUITests
 //
-//  Created by Marc on 05.07.2023.
+//  Created by Marc on 08.07.2023.
 //
 
 import XCTest
 
-final class Gfroer_liUITestsLaunchTests: XCTestCase {
+final class GfroerliUITestsLaunchTests: XCTestCase {
 
     override class var runsForEachTargetApplicationUIConfiguration: Bool {
         true

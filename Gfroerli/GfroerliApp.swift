@@ -1,8 +1,8 @@
 //
 //  GfroerliApp.swift
-//  Gfroer.li
+//  Gfroerli
 //
-//  Created by Marc on 05.07.2023.
+//  Created by Marc on 08.07.2023.
 //
 
 import GfroerliAPI

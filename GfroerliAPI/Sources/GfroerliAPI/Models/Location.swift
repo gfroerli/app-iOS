@@ -10,8 +10,8 @@ import Foundation
 import SwiftData
 
 @Model public class Location {
+    
     // MARK: SwiftData Attributes
-
     @Attribute(.unique) public let id: Int
     public var name: String?
     public var desc: String?
@@ -31,7 +31,6 @@ import SwiftData
     public var lastFetchDate: Date
 
     // MARK: Lifecycle
-
     init(
         id: Int,
         name: String? = nil,

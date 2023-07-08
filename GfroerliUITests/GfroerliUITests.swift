@@ -1,13 +1,13 @@
 //
-//  Gfroer_liUITests.swift
-//  Gfroer.liUITests
+//  GfroerliUITests.swift
+//  GfroerliUITests
 //
-//  Created by Marc on 05.07.2023.
+//  Created by Marc on 08.07.2023.
 //
 
 import XCTest
 
-final class Gfroer_liUITests: XCTestCase {
+final class GfroerliUITests: XCTestCase {
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
