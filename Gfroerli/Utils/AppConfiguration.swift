@@ -12,7 +12,6 @@ import UIKit
 
 /// Contains all the configuration values for layout
 enum AppConfiguration {
-    
     enum General {
         /// Default corner radius
         static let cornerRadius = 15.0
@@ -25,12 +24,12 @@ enum AppConfiguration {
         /// Default vertical box padding
         static let verticalBoxPadding = 10.0
     }
-    
+
     enum LocationDetails {
         /// Height of the top boxes in location details view
         static let topBoxHeight = 180.0
     }
-    
+
     enum MapPreviewView {
         // Default coordinates to display if coordinate of Location is nil
         static let defaultCoordinates = CLLocation(latitude: 46.80121, longitude: 8.226692)
@@ -45,7 +44,7 @@ enum AppConfiguration {
         // Height of map
         static let mapHeight = 350.0
     }
-    
+
     enum MapView {
         // Default coordinates to display if coordinate of Location is nil
         static let defaultCoordinates = CLLocation(latitude: 46.80121, longitude: 8.226692)
@@ -62,35 +61,35 @@ enum AppConfiguration {
         // Font weight of text and images in annotations
         static let fontWeight: Font.Weight = .semibold
     }
-    
+
     enum Settings {
         /// String containing current version number, e.g. 1.0
         static let lastVersion = " " + (Bundle.main.infoDictionary?["CFBundleShortVersionString"] as! String)
-        
+
         /// URL opening review in appstore
         static let reviewURL: URL = {
             var components = URLComponents(
                 url: URL(string: "https://apps.apple.com/us/app/gfr%C3%B6r-li/id1451431723")!,
                 resolvingAgainstBaseURL: false
             )
-            
+
             components?.queryItems = [
                 URLQueryItem(name: "action", value: "write-review"),
             ]
             return components!.url!
         }()
-        
+
         /// URL opening feedback email, containing body
         static let emailURL: URL = {
             let email = "appdev@coredump.ch"
             let subject = "Feedback iOS Version: \(lastVersion)"
             let body = emailBody
-            
+
             return URL(
                 string: "mailto:\(email)?subject=\(subject.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? "")&body=\(body.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed)!)"
             )!
         }()
-        
+
         /// Email body
         private static let emailBody: String = {
             let version =
@@ -100,7 +99,7 @@ enum AppConfiguration {
             let str = NSLocalizedString("email_text", comment: "")
             return "</br></br></br></br></br>\(str)</br></br>Info:</br>\(version)</br>\(systemVersion)</br>\(lang)"
         }()
-        
+
         /// URL to open privacy policy
         static let privacyPolicyURL = URL(string: "https://xn--gfrr-7qa.li/about")!
         /// URL to open gfroerli website

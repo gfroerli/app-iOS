@@ -10,13 +10,16 @@ let package = Package(
     products: [
         .library(
             name: "GfroerliBackend",
-            targets: ["GfroerliBackend"]),
+            targets: ["GfroerliBackend"]
+        ),
     ],
     targets: [
         .target(
-            name: "GfroerliBackend"),
+            name: "GfroerliBackend"
+        ),
         .testTarget(
             name: "GfroerliBackendTests",
-            dependencies: ["GfroerliBackend"]),
+            dependencies: ["GfroerliBackend"]
+        ),
     ]
 )

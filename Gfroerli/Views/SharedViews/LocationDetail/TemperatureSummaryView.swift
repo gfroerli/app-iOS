@@ -9,34 +9,32 @@ import GfroerliBackend
 import SwiftUI
 
 struct TemperatureSummaryView: View {
-
     typealias config = AppConfiguration.LocationDetails
-    
+
     var location: Location?
 
     // MARK: - Body
-    
+
     var body: some View {
         VStack(alignment: .leading) {
-            
             HStack {
                 Text("temperature_summary_view_title")
                     .font(.title2.bold())
             }
-            
+
             VStack {
                 HStack {
                     Text("temperature_summary_view_highest")
                     Spacer()
                     Text(location!.highestTemperatureString)
                 }
-                
+
                 HStack {
                     Text("temperature_summary_view_average")
                     Spacer()
                     Text(location!.averageTemperatureString)
                 }
-                
+
                 HStack {
                     Text("temperature_summary_view_lowest")
                     Spacer()

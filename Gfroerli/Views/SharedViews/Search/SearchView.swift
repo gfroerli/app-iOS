@@ -9,12 +9,11 @@ import GfroerliBackend
 import SwiftUI
 
 struct SearchView: View {
-
     @Environment(NavigationModel.self) var navigationModel
     @Environment(AllLocationsViewModel.self) var locationsViewModel
     @Environment(\.dismiss) private var dismiss
     @Environment(\.isSearching) private var isSearching
-    
+
     // MARK: - Body
 
     var body: some View {
@@ -44,7 +43,8 @@ struct SearchView: View {
                             } label: {
                                 Label(
                                     "search_view_sort_label",
-                                    systemImage: locationsViewModel.sortedVariant == SortVariants.mostRecent ? "arrow.up.arrow.down.circle" :
+                                    systemImage: locationsViewModel.sortedVariant == SortVariants
+                                        .mostRecent ? "arrow.up.arrow.down.circle" :
                                         "arrow.up.arrow.down.circle.fill"
                                 )
                                 .labelStyle(.iconOnly)

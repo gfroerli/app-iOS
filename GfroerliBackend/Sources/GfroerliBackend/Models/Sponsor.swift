@@ -9,7 +9,6 @@ import Foundation
 import SwiftData
 
 @Model public class Sponsor {
-    
     // MARK: SwiftData Attributes
 
     @Attribute(.unique) public var id: Int
@@ -25,10 +24,10 @@ import SwiftData
         self.desc = desc
         self.imageURL = imageURL
     }
-    
+
     public required init(from decoder: Decoder) throws {
         let values = try decoder.container(keyedBy: CodingKeys.self)
-        
+
         self.id = try values.decode(Int.self, forKey: .id)
         self.name = try values.decodeIfPresent(String.self, forKey: .name)
         self.desc = try values.decodeIfPresent(String.self, forKey: .description)

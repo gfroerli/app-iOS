@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ChangeLogView: View {
     private let changeLog = ChangeLog.log
-    
+
     // MARK: - Body
 
     var body: some View {

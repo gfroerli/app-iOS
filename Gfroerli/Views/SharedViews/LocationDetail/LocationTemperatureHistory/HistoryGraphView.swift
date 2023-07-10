@@ -10,9 +10,8 @@ import GfroerliBackend
 import SwiftUI
 
 struct HistoryGraphView: View {
-    
     @ObservedObject var vm: TemperaturesViewModel
-    
+
     @Binding var zoomed: Bool
     @Binding var hoveringIndex: Int?
 
@@ -31,7 +30,7 @@ struct HistoryGraphView: View {
                             in: RoundedRectangle(cornerRadius: 8, style: .continuous)
                         )
                 }
-                
+
                 Chart {
                     ForEach(vm.lowestTemperatures, id: \.id) {
                         LineMark(
@@ -42,7 +41,7 @@ struct HistoryGraphView: View {
                         .foregroundStyle(.blue.gradient)
                         .interpolationMethod(.catmullRom)
                     }
-                    
+
                     ForEach(vm.averageTemperatures) {
                         LineMark(
                             x: .value("date", $0.measurementDate),
@@ -52,7 +51,7 @@ struct HistoryGraphView: View {
                         .foregroundStyle(.green.gradient)
                         .interpolationMethod(.catmullRom)
                     }
-                    
+
                     ForEach(vm.highestTemperatures) {
                         LineMark(
                             x: .value("date", $0.measurementDate),
@@ -62,7 +61,7 @@ struct HistoryGraphView: View {
                         .foregroundStyle(.red.gradient)
                         .interpolationMethod(.catmullRom)
                     }
-                    
+
                     ForEach(vm.placeholderTemperatures) {
                         LineMark(
                             x: .value("date", $0.measurementDate),
@@ -83,7 +82,7 @@ struct HistoryGraphView: View {
                 ])
                 .chartLegend(position: .bottom, alignment: .center, spacing: 10)
                 .chartYScale(domain: zoomed ? vm.zoomedYAxisMinValue...vm.zoomedYAxisMaxValue : 0...30)
-                
+
                 .chartOverlay { proxy in
                     GeometryReader { geo in
                         Rectangle()
@@ -100,14 +99,14 @@ struct HistoryGraphView: View {
                 }
                 .frame(minHeight: 250)
             }
-            
+
             .onChange(of: vm.averageTemp) { _ in
                 animate()
             }
             .onAppear {
                 animate()
             }
-            
+
             HStack {
                 Button {
                     vm.stepBack()
@@ -117,12 +116,12 @@ struct HistoryGraphView: View {
                 .buttonStyle(.bordered)
                 .accessibilityIdentifier("HistoryGraphView_Back")
                 Spacer()
-                
+
                 Text(vm.xAxisLabel)
                     .font(.callout).bold()
-                
+
                 Spacer()
-                
+
                 Button {
                     vm.stepForward()
                 } label: {
@@ -134,7 +133,7 @@ struct HistoryGraphView: View {
             .buttonBorderShape(.capsule)
         }
     }
-    
+
     // MARK: - Private Functions
 
     private func animate() {
@@ -146,13 +145,11 @@ struct HistoryGraphView: View {
             }
         }
     }
-    
+
     private func findIndex(location: CGPoint, proxy: ChartProxy, geometry: GeometryProxy) -> Int? {
-      
         let relativeXPosition = location.x - geometry[proxy.plotAreaFrame].origin.x
 
         if let date = proxy.value(atX: relativeXPosition) as Date? {
-
             var minDistance: TimeInterval = .infinity
             var index: Int?
             for dataIndex in vm.averageTemperatures.indices {

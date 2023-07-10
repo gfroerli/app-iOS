@@ -8,7 +8,6 @@
 import Foundation
 
 public struct TemperatureMeasurementCollection: Identifiable, Hashable {
-    
     public init(id: String, measurementDate: Date, lowest: Double, average: Double, highest: Double) {
         self.id = id
         self.measurementDate = measurementDate
@@ -16,7 +15,7 @@ public struct TemperatureMeasurementCollection: Identifiable, Hashable {
         self.average = average
         self.highest = highest
     }
-    
+
     // MARK: Properties
 
     public let id: String
@@ -43,10 +42,10 @@ extension TemperatureMeasurementCollection: Decodable {
         self.highest = try values.decode(Double.self, forKey: .highest)
         self.lowest = try values.decode(Double.self, forKey: .lowest)
         self.average = try values.decode(Double.self, forKey: .average)
-        
+
         let date = try values.decode(String.self, forKey: .measurementDate)
         let hour = try values.decodeIfPresent(Int.self, forKey: .measurementHour)
-        
+
         self.measurementDate = MeasurementUtils.shared.createDate(date: date, hour: hour)
     }
 }

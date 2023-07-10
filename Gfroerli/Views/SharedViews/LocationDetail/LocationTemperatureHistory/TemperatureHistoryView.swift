@@ -10,7 +10,6 @@ import GfroerliBackend
 import SwiftUI
 
 struct TemperatureHistoryView: View {
-    
     typealias config = AppConfiguration
 
     private var locationID: Int
@@ -18,23 +17,23 @@ struct TemperatureHistoryView: View {
     @StateObject var hourlyVM: TemperaturesViewModel
     @StateObject var weeklyVM: TemperaturesViewModel
     @StateObject var monthlyVM: TemperaturesViewModel
-    
+
     @State private var currentSelection: ChartSpan = .month
     @State private var hoveringIndex: Int?
     @State private var zoomed = true
-    
+
     // MARK: - Lifecycle
-    
+
     init(locationID: Int) {
         self.locationID = locationID
-        self._hourlyVM =
+        _hourlyVM =
             StateObject(wrappedValue: TemperaturesViewModel(locationID: locationID, interval: .day, date: Date.now))
-        self._weeklyVM =
+        _weeklyVM =
             StateObject(wrappedValue: TemperaturesViewModel(locationID: locationID, interval: .week, date: Date.now))
-        self._monthlyVM =
+        _monthlyVM =
             StateObject(wrappedValue: TemperaturesViewModel(locationID: locationID, interval: .month, date: Date.now))
     }
-    
+
     // MARK: - Body
 
     var body: some View {
@@ -44,7 +43,7 @@ struct TemperatureHistoryView: View {
                     Text(" ")
                         .font(.title2)
                         .bold()
-                    
+
                     switch currentSelection {
                     case .day:
                         TopGraphSummaryView(
@@ -69,26 +68,25 @@ struct TemperatureHistoryView: View {
                     }
                 }
                 else {
-                    
                     Text("temperature_history_view_title")
                         .font(.title2)
                         .bold()
-                
+
                     Spacer()
-                    
+
                     // Used to make view not jump
                     VStack {
                         Text(" ")
                         Text(" ")
                     }.frame(maxWidth: 1)
-                    
+
                     Picker("temperature_history_view_picker_title", selection: $currentSelection) {
                         Text("temperature_history_view_picker_day").tag(ChartSpan.day)
                         Text("temperature_history_view_picker_week").tag(ChartSpan.week)
                         Text("temperature_history_view_picker_month").tag(ChartSpan.month)
                     }
                     .fixedSize()
-                    
+
                     Button {
                         zoomed = !zoomed
                     } label: {
@@ -132,9 +130,8 @@ struct TemperatureHistoryView_Previews: PreviewProvider {
 // MARK: - Subviews
 
 struct TopGraphSummaryView: View {
-   
     @ObservedObject var vm: TemperaturesViewModel
-    
+
     @Binding var currentSelection: ChartSpan
     @Binding var currentIndex: Int?
 
@@ -161,7 +158,7 @@ struct TopGraphSummaryView: View {
                     }
                 }
                 .bold()
-                
+
                 HStack {
                     Spacer()
                     Spacer()

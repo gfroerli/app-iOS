@@ -8,11 +8,10 @@
 import SwiftUI
 
 struct SettingsView: View {
-    
     @Environment(\.dismiss) private var dismiss
 
     // MARK: - Body
-    
+
     var body: some View {
         NavigationStack {
             List {
@@ -36,7 +35,6 @@ struct SettingsView: View {
 // MARK: - Header
 
 struct SettingsHeaderView: View {
-    
     typealias config = AppConfiguration.Settings
 
     var body: some View {
@@ -48,7 +46,7 @@ struct SettingsHeaderView: View {
                     .cornerRadius(15)
                     .padding(.trailing, 10)
                     .frame(maxWidth: 100)
-                
+
                 VStack(alignment: .leading) {
                     Text("settings_view_app_title")
                         .foregroundColor(.primary)
@@ -83,7 +81,7 @@ struct SettingsGeneralSectionView: View {
             //        SettingsThumbnailView(imageName: "info.circle", backgroundColor: .accentColor)
             //    })
             // }
-            
+
             // Change log
             NavigationLink {
                 ChangeLogView()
@@ -94,7 +92,7 @@ struct SettingsGeneralSectionView: View {
                     SettingsThumbnailView(imageName: "sparkles", backgroundColor: .green)
                 }
             }
-            
+
             // Language
             Button {
                 openLanguageSettings()
@@ -108,7 +106,7 @@ struct SettingsGeneralSectionView: View {
         }
         .buttonStyle(.plain)
     }
-    
+
     private func openLanguageSettings() {
         UIApplication.shared.open(
             URL(string: UIApplication.openSettingsURLString)!,
@@ -124,7 +122,7 @@ struct SettingsLinksSectionView: View {
     @Environment(\.openURL) var openURL
 
     typealias config = AppConfiguration.Settings
-    
+
     var body: some View {
         Section(header: Text("Links")) {
             // Rate
@@ -138,7 +136,7 @@ struct SettingsLinksSectionView: View {
                     SettingsThumbnailView(imageName: "heart.fill", backgroundColor: .red)
                 }
             }
-            
+
             // Privacy Policy
             Link(destination: config.privacyPolicyURL) {
                 Label {
@@ -148,7 +146,7 @@ struct SettingsLinksSectionView: View {
                     SettingsThumbnailView(imageName: "hand.raised.fill", backgroundColor: .black)
                 }
             }
-            
+
             // Gfroerli Web
             Link(destination: config.gfroerliURL) {
                 Label {
@@ -158,7 +156,7 @@ struct SettingsLinksSectionView: View {
                     SettingsThumbnailView(imageName: "safari", backgroundColor: .accentColor)
                 }
             }
-            
+
             // Coredump Web
             Link(destination: config.coredumpURL) {
                 Label {
@@ -168,7 +166,7 @@ struct SettingsLinksSectionView: View {
                     SettingsThumbnailView(imageName: "safari", backgroundColor: .green)
                 }
             }
-            
+
             // Coredump Mastodon
             Link(destination: config.mastodonCoreDumpURL) {
                 Label {
@@ -178,7 +176,7 @@ struct SettingsLinksSectionView: View {
                     SettingsThumbnailAssetView(imageName: "mastodon", backgroundColor: .purple)
                 }
             }
-            
+
             // GitHub
             Link(destination: config.githubURL) {
                 Label {

@@ -10,7 +10,6 @@ import SwiftData
 
 @MainActor
 @Observable public class AllLocationsViewModel {
-    
     // MARK: - Public Properties
 
     // swiftformat:disable:next all
@@ -22,17 +21,17 @@ import SwiftData
     // MARK: - Private Properties
 
     private let context = GfroerliBackend.modelContainer.mainContext
-    
+
     // MARK: - Lifecycle
-    
+
     public init() {
         Task {
             await loadAllLocations()
         }
     }
-    
+
     // MARK: - Public Functions
-    
+
     public func loadAllLocations() async {
         guard let locations = await LocationManager.shared.loadAllLocations() else {
             return
@@ -42,12 +41,12 @@ import SwiftData
         activeLocations = locations.filter { $0.isActive }
         sortLocations(query: "")
     }
-    
+
     // MARK: - Private Functions
+
     public func sortLocations(query: String? = nil) {
-        
         var tempLocations = allLocations
-        
+
         if let query, query != "" {
             tempLocations.removeAll { !($0.name!.lowercased().contains(query.lowercased())) }
         }
@@ -71,5 +70,4 @@ import SwiftData
             }
         }
     }
-   
 }

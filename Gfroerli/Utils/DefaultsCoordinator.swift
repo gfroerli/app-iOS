@@ -9,18 +9,18 @@ import Foundation
 
 class DefaultsCoordinator {
     static let shared = DefaultsCoordinator()
-    
+
     private let defaults = UserDefaults.standard
-    
+
     // MARK: - Lifecycle
-    
+
     init() { }
-    
+
     // MARK: - Keys
-    
+
     private enum Keys {
         case latestVersion
-        
+
         // Key
         func key() -> String {
             switch self {
@@ -29,25 +29,25 @@ class DefaultsCoordinator {
             }
         }
     }
-    
+
     // MARK: - Public functions
-    
+
     /// Checks if last opened version was lower and if the new features overview should be shown
     /// - Returns: Bool if new features overview should be shown
     public func showNewFeatures() -> Bool {
         guard let currentVersion = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String else {
             return false
         }
-        
+
         guard currentVersion > latestVersion() else {
             return false
         }
-        
+
         defaults.set(currentVersion, forKey: Keys.latestVersion.key())
         defaults.synchronize()
         return true
     }
-    
+
     // MARK: - Private Functions
 
     private func latestVersion() -> String {

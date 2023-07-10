@@ -10,31 +10,29 @@ import MapKit
 import SwiftUI
 
 struct LocationMapPreviewView: View {
-    
     typealias Config = AppConfiguration.MapPreviewView
 
     @State private var hasLocation = false
     @State private var region: MKCoordinateRegion
-    
+
     var location: Location?
 
     // MARK: - Lifecycle
-    
+
     init() {
-        self._region = State(wrappedValue: Config.defaultRegion)
+        _region = State(wrappedValue: Config.defaultRegion)
     }
-    
+
     // MARK: - Body
 
     var body: some View {
         VStack(alignment: .leading, spacing: 0) {
-            
             HStack {
                 Text("location_map_preview_view_title")
                     .font(.title2).bold()
-                
+
                 Spacer()
-                
+
                 Button {
                     withAnimation {
                         setLocation()
@@ -63,12 +61,12 @@ struct LocationMapPreviewView: View {
                     }
                 )
                 .disabled(!hasLocation)
-                
+
                 if !hasLocation {
                     VStack { }
                         .frame(maxWidth: .infinity, maxHeight: .infinity)
                         .background(.ultraThinMaterial)
-                    
+
                     Text("location_map_preview_view_unavailable")
                         .font(.headline)
                         .bold()
@@ -81,7 +79,7 @@ struct LocationMapPreviewView: View {
         }
         .frame(idealHeight: Config.mapHeight)
         .defaultBoxStyle()
-        
+
         .onAppear {
             setLocation()
         }
@@ -89,16 +87,16 @@ struct LocationMapPreviewView: View {
             setLocation()
         })
     }
-    
+
     // MARK: - Private Functions
-    
+
     private func setLocation() {
         guard let coords = location?.coordinates else {
             hasLocation = false
             region = Config.defaultRegion
             return
         }
-        
+
         hasLocation = true
         region = MKCoordinateRegion(
             center: coords.coordinate,

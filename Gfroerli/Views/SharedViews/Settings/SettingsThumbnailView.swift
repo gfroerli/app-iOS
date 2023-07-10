@@ -10,7 +10,7 @@ import SwiftUI
 struct SettingsThumbnailView: View {
     let imageName: String
     let backgroundColor: Color
-    
+
     var body: some View {
         Image(systemName: imageName)
             .resizable()
@@ -26,7 +26,7 @@ struct SettingsThumbnailView: View {
 struct SettingsThumbnailAssetView: View {
     let imageName: String
     let backgroundColor: Color
-    
+
     var body: some View {
         Image(imageName)
             .resizable()

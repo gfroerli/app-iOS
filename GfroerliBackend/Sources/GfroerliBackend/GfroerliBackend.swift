@@ -2,7 +2,6 @@ import Foundation
 import SwiftData
 
 public class GfroerliBackend {
-    
     public static let modelContainer: ModelContainer = {
         do {
             let container = try ModelContainer(for: [Location.self, Sponsor.self])
@@ -12,15 +11,15 @@ public class GfroerliBackend {
             fatalError()
         }
     }()
-    
+
     public init() { }
-    
+
     private lazy var decoder: JSONDecoder = {
         let decoder = JSONDecoder()
         decoder.dateDecodingStrategy = .secondsSince1970
         return decoder
     }()
-    
+
     /// Loads given type from FetchType case
     /// - Parameters:
     ///   - type: Type to load
@@ -28,7 +27,7 @@ public class GfroerliBackend {
     /// - Returns: Type
     public func load<T: Decodable>(fetchType: FetchType) async throws -> T {
         let data = try? await Fetcher.fetch(type: fetchType)
-        
+
         guard let data else {
             throw GfroerliBackendError.noData
         }
@@ -36,7 +35,7 @@ public class GfroerliBackend {
         guard let objects else {
             fatalError()
         }
-        
+
         return objects
     }
 }

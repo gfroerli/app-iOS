@@ -10,27 +10,28 @@ import Foundation
 import SwiftData
 
 @Model public class Location {
-    
     // MARK: SwiftData Attributes
+
     @Attribute(.unique) public let id: Int
     public var name: String?
     public var desc: String?
     public var latitude: Double?
     public var longitude: Double?
     public var creationDate: Date?
-    
+
     public var sponsorID: Int?
-    
+
     public var latestTemperature: Double?
     public var lastTemperatureDate: Date?
-    
+
     public var highestTemperature: Double?
     public var lowestTemperature: Double?
     public var averageTemperature: Double?
-    
+
     public var lastFetchDate: Date
 
     // MARK: Lifecycle
+
     init(
         id: Int,
         name: String? = nil,
@@ -60,23 +61,23 @@ import SwiftData
         self.averageTemperature = averageTemperature
         self.lastFetchDate = lastFetchDate
     }
-    
+
     public required init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
-        
+
         self.id = try container.decode(Int.self, forKey: .id)
-        
+
         self.name = try container.decodeIfPresent(String.self, forKey: .name)
         self.desc = try container.decodeIfPresent(String.self, forKey: .description)
         self.latitude = try container.decodeIfPresent(Double.self, forKey: .latitude)
         self.longitude = try container.decodeIfPresent(Double.self, forKey: .longitude)
         self.creationDate = try container.decodeIfPresent(Date.self, forKey: .creationDate)
-        
+
         self.sponsorID = try container.decodeIfPresent(Int.self, forKey: .sponsorID)
-        
+
         self.latestTemperature = try container.decodeIfPresent(Double.self, forKey: .latestTemperature)
         self.lastTemperatureDate = try container.decodeIfPresent(Date.self, forKey: .lastTemperatureDate)
-        
+
         self.highestTemperature = try container.decodeIfPresent(Double.self, forKey: .highestTemperature)
         self.lowestTemperature = try container.decodeIfPresent(Double.self, forKey: .lowestTemperature)
         self.averageTemperature = try container.decodeIfPresent(Double.self, forKey: .averageTemperature)
@@ -86,7 +87,7 @@ import SwiftData
 
 // MARK: - Unwrapping
 
-public extension Location {
+extension Location {
 //
 //    /// Name of the Location
 //    var name: String {
@@ -97,9 +98,9 @@ public extension Location {
 //    var description: String {
 //        jDescription ?? "No Description"
 //    }
-    
+
     /// Created CLLocation of Location
-    var coordinates: CLLocation? {
+    public var coordinates: CLLocation? {
         guard let lat = latitude,
               let long = longitude
         else {
@@ -107,17 +108,17 @@ public extension Location {
         }
         return CLLocation(latitude: lat, longitude: long)
     }
-    
+
 //    var lastTemperatureDate: Date {
 //        lastTemperatureDate ?? Date(timeIntervalSinceReferenceDate: 0)
 //    }
-    
-    var isActive: Bool {
+
+    public var isActive: Bool {
         DateUtil.wasInLast72Hours(givenDate: lastTemperatureDate!)
     }
-    
+
     /// String of  date of last measurement relative to now
-    var lastTemperatureDateString: String {
+    public var lastTemperatureDateString: String {
         guard let lastTemperatureDate else {
             return "Unknown"
         }
@@ -126,19 +127,19 @@ public extension Location {
         return formatter.localizedString(for: lastTemperatureDate, relativeTo: .now)
     }
 
-    var latestTemperatureString: String {
+    public var latestTemperatureString: String {
         MeasurementUtils.shared.temperatureString(from: latestTemperature)
     }
 
-    var lowestTemperatureString: String {
+    public var lowestTemperatureString: String {
         MeasurementUtils.shared.temperatureString(from: lowestTemperature)
     }
 
-    var averageTemperatureString: String {
+    public var averageTemperatureString: String {
         MeasurementUtils.shared.temperatureString(from: averageTemperature)
     }
 
-    var highestTemperatureString: String {
+    public var highestTemperatureString: String {
         MeasurementUtils.shared.temperatureString(from: highestTemperature)
     }
 }
@@ -148,18 +149,18 @@ public extension Location {
 extension Location: Decodable {
     enum CodingKeys: String, CodingKey {
         case id
-        
+
         case name = "device_name"
         case description = "caption"
         case latitude
         case longitude
         case creationDate = "created_at"
-        
+
         case sponsorID = "sponsor_id"
-        
+
         case latestTemperature = "latest_temperature"
         case lastTemperatureDate = "latest_measurement_at"
-        
+
         case highestTemperature = "maximum_temperature"
         case lowestTemperature = "minimum_temperature"
         case averageTemperature = "average_temperature"
@@ -168,8 +169,8 @@ extension Location: Decodable {
 
 // MARK: - Example
 
-public extension Location {
-    static func exampleLocation() -> Location {
+extension Location {
+    public static func exampleLocation() -> Location {
         Location(
             id: 0,
             name: "Test Location",
@@ -185,8 +186,8 @@ public extension Location {
             averageTemperature: 15.5
         )
     }
-    
-    static func inactiveExampleLocation() -> Location {
+
+    public static func inactiveExampleLocation() -> Location {
         Location(
             id: 0,
             name: "Test Inactive Location",

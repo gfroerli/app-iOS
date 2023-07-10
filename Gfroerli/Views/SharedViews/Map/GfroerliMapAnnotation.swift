@@ -13,11 +13,11 @@ struct GfroerliMapAnnotation: View {
     @Environment(\.colorScheme) var colorScheme
 
     let location: Location
-    
+
     private var color: Color {
         location.isActive ? Color.accentColor : Color.gray
     }
-    
+
     // MARK: - Body
 
     var body: some View {
@@ -25,12 +25,12 @@ struct GfroerliMapAnnotation: View {
             Image(systemName: "thermometer.medium")
                 .symbolRenderingMode(.palette)
                 .foregroundStyle(.red, .white, colorScheme == .light ? Color.accentColor : .white.opacity(0.5))
-            
+
             Text(location.name ?? "sdafasdf")
             if location.isActive {
                 Text(location.latestTemperatureString)
             }
-            
+
             Image(systemName: "chevron.right")
                 .foregroundColor(.white)
         }
@@ -52,11 +52,11 @@ struct GfroerliMapAnnotationPin: View {
     @Environment(\.colorScheme) var colorScheme
 
     let location: Location
-    
+
     var color: Color {
         location.isActive ? Color.accentColor : Color.gray
     }
-    
+
     var body: some View {
         ZStack {
             Circle()

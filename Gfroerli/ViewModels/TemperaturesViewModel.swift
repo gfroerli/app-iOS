@@ -16,14 +16,13 @@ enum ChartSpan {
 }
 
 class TemperaturesViewModel: ObservableObject {
-    
     /// Used to make the graph full width even when we do not have measurements in all time slots
     public var placeholderTemperatures = [TemperatureMeasurement]()
-   
+
     /// Used to disable the forward button
     public var isAtMostRecentInterval: Bool {
         var isAtMostRecentInterval: Bool!
-        
+
         switch interval {
         case .day:
             isAtMostRecentInterval = Calendar.current.isDate(initialDate, inSameDayAs: currentDate)
@@ -34,18 +33,18 @@ class TemperaturesViewModel: ObservableObject {
         }
         return isAtMostRecentInterval
     }
-    
+
     private var id: Int
     private var interval: ChartSpan
     private var initialDate: Date
-    
+
     // MARK: - Lifecycle
-    
+
     init(locationID: Int, interval: ChartSpan, date: Date) {
         self.id = locationID
         self.initialDate = date
         self.interval = interval
-        
+
         switch interval {
         case .day:
             self.currentDate = date
@@ -54,32 +53,32 @@ class TemperaturesViewModel: ObservableObject {
         case .month:
             self.currentDate = date.startOfMonth
         }
-        
+
         loadMeasurements()
     }
-   
+
     // MARK: - Published Properties
 
     @Published var currentDate: Date
 
     @Published var lowestTemperatures = [TemperatureMeasurement]()
-    
+
     @Published var averageTemperatures = [TemperatureMeasurement]()
-    
+
     @Published var highestTemperatures = [TemperatureMeasurement]()
-    
+
     @Published var averageTemp = 15.0
-    
+
     @Published var hasDataPoints = false
-    
+
     @Published var zoomedYAxisMinValue = 0
-    
+
     @Published var zoomedYAxisMaxValue = 30
-    
+
     @Published var xAxisLabel = ""
 
     // MARK: - Public Functions
-    
+
     /// Steps back and loads measurements
     public func stepBack() {
         Task {
@@ -88,7 +87,7 @@ class TemperaturesViewModel: ObservableObject {
             loadMeasurements()
         }
     }
-    
+
     /// Steps forward and loads measurements
     public func stepForward() {
         Task {
@@ -97,14 +96,13 @@ class TemperaturesViewModel: ObservableObject {
             loadMeasurements()
         }
     }
-    
+
     // MARK: - Private Functions
 
     private func loadMeasurements() {
         Task {
-            
             var fetchType: FetchType!
-            
+
             // Create FetchType to fetch
             switch interval {
             case .day:
@@ -122,10 +120,11 @@ class TemperaturesViewModel: ObservableObject {
                     to: Calendar.current.date(byAdding: .month, value: 1, to: currentDate)!
                 )
             }
-            
+
             // Fetch
             guard let measurements: [TemperatureMeasurementCollection] = try? await GfroerliBackend()
-                .load(fetchType: fetchType) else {
+                .load(fetchType: fetchType)
+            else {
                 return
             }
             Task {
@@ -139,7 +138,7 @@ class TemperaturesViewModel: ObservableObject {
             }
         }
     }
-  
+
     @MainActor
     private func advanceCurrentDate() {
         switch interval {
@@ -151,7 +150,7 @@ class TemperaturesViewModel: ObservableObject {
             currentDate = Calendar.current.date(byAdding: .month, value: 1, to: currentDate.startOfMonth)!
         }
     }
-    
+
     @MainActor
     private func reduceCurrentDate() {
         switch interval {
@@ -163,14 +162,14 @@ class TemperaturesViewModel: ObservableObject {
             currentDate = Calendar.current.date(byAdding: .month, value: -1, to: currentDate.startOfMonth)!
         }
     }
-    
+
     @MainActor
     private func removeMeasurements() {
         lowestTemperatures.removeAll()
         averageTemperatures.removeAll()
         highestTemperatures.removeAll()
     }
-    
+
     @MainActor
     private func insertMeasurements(_ measurements: [TemperatureMeasurementCollection]) {
         var tempMinTemps = [TemperatureMeasurement]()
@@ -178,7 +177,6 @@ class TemperaturesViewModel: ObservableObject {
         var tempMaxTemps = [TemperatureMeasurement]()
 
         for measurement in measurements {
-            
             switch interval {
             case .day:
                 if measurement.measurementDate.isEqual(to: currentDate, toGranularity: .day) {
@@ -223,7 +221,7 @@ class TemperaturesViewModel: ObservableObject {
                     )
                 }
             case .month:
-                
+
                 if measurement.measurementDate.isEqual(to: currentDate, toGranularity: .month) {
                     tempMinTemps.insert(
                         TemperatureMeasurement(measurementDate: measurement.measurementDate, value: measurement.lowest),
@@ -246,12 +244,12 @@ class TemperaturesViewModel: ObservableObject {
                 }
             }
         }
-        
+
         lowestTemperatures = tempMinTemps
         averageTemperatures = tempAvgTemps
         highestTemperatures = tempMaxTemps
     }
-    
+
     @MainActor
     private func checkHasDataPoints() {
         if !lowestTemperatures.isEmpty || !averageTemperatures.isEmpty || !highestTemperatures.isEmpty {
@@ -261,24 +259,24 @@ class TemperaturesViewModel: ObservableObject {
             hasDataPoints = false
         }
     }
-    
+
     @MainActor
     private func calculateAvgTemp() {
         guard !averageTemperatures.isEmpty else {
             averageTemp = 15.0
             return
         }
-        
+
         let sum = averageTemperatures.reduce(0) { $0 + $1.value }
         averageTemp = sum / Double(averageTemperatures.count)
     }
-    
+
     @MainActor
     private func calculateYAxisZoomedValues() {
         zoomedYAxisMinValue = Int((lowestTemperatures.min { $0.value < $1.value }?.value ?? 0.0).rounded(.down))
         zoomedYAxisMaxValue = Int((highestTemperatures.max { $0.value < $1.value }?.value ?? 30.0).rounded(.up))
     }
-    
+
     @MainActor
     private func updateXAxisLabel() {
         switch interval {
@@ -294,12 +292,11 @@ class TemperaturesViewModel: ObservableObject {
 
     @MainActor
     private func createPlaceholderMeasurements() {
-        
         placeholderTemperatures.removeAll()
         var placeholders = [TemperatureMeasurement]()
-        
+
         var rangeMax: Int!
-        
+
         switch interval {
         case .day:
             rangeMax = 23
@@ -308,7 +305,7 @@ class TemperaturesViewModel: ObservableObject {
         case .month:
             rangeMax = (Calendar.current.range(of: .day, in: .month, for: currentDate)?.count ?? 30) - 1
         }
-        
+
         switch interval {
         case .day:
             let midnightComponents = Calendar.current.dateComponents([.year, .month, .day], from: currentDate)
@@ -320,7 +317,7 @@ class TemperaturesViewModel: ObservableObject {
                         value: averageTemperatures.first?.value ?? 0.0
                     ))
             }
-                
+
         case .week, .month:
             for i in 0...rangeMax {
                 placeholders
@@ -330,7 +327,7 @@ class TemperaturesViewModel: ObservableObject {
                     ))
             }
         }
-        
+
         placeholderTemperatures = placeholders
     }
 }

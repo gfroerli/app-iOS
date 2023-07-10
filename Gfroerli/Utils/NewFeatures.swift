@@ -8,18 +8,17 @@
 import Foundation
 
 struct Feature: Identifiable, Codable {
-    
     let id = UUID()
     let imageName: String
     let title: String
     let text: String
-    
+
     enum CodingKeys: CodingKey {
         case imageName
         case title
         case text
     }
-    
+
     init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         self.imageName = try container.decode(String.self, forKey: .imageName)

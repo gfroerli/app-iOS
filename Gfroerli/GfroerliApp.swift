@@ -11,8 +11,8 @@ import SwiftUI
 
 @main
 struct GfroerliApp: App {
-    
     // MARK: - Body
+
     var body: some Scene {
         WindowGroup {
             ContentSizeDeciderView()

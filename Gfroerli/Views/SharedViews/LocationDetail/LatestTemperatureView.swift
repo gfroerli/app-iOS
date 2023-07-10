@@ -9,11 +9,10 @@ import GfroerliBackend
 import SwiftUI
 
 struct LatestTemperatureView: View {
-    
     typealias config = AppConfiguration.LocationDetails
-    
+
     var location: Location?
-    
+
     // MARK: - Body
 
     var body: some View {
@@ -21,7 +20,7 @@ struct LatestTemperatureView: View {
             Text("latest_temperature_view_title")
                 .minimumScaleFactor(0.1)
                 .bold()
-            
+
             Spacer()
             VStack(alignment: .trailing) {
                 Text(location!.latestTemperatureString)

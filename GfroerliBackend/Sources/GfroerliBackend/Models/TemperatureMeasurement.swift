@@ -8,14 +8,13 @@
 import Foundation
 
 public struct TemperatureMeasurement: Identifiable, Hashable {
-    
     // MARK: Properties
 
     public let id: UUID
     public let measurementDate: Date
     public let value: Double
     public var animate = false
-    
+
     // MARK: Lifecycle
 
     public init(measurementDate: Date, value: Double) {

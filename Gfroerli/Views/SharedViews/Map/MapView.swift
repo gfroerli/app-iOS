@@ -11,7 +11,7 @@ import SwiftUI
 
 struct LocationMapView: View {
     typealias config = AppConfiguration.MapView
-    
+
     @Environment(NavigationModel.self) var navigationModel
     @Environment(AllLocationsViewModel.self) var locationsViewModel
 
@@ -19,8 +19,9 @@ struct LocationMapView: View {
     @State private var position: MapCameraPosition = .automatic
     @State private var mapStyle: MapStyle = .standard
     @State private var selectedLocation: Location?
+
     // MARK: - Body
-    
+
     var body: some View {
         Map(position: $position, selection: $selectedLocation) {
             ForEach(locationsViewModel.allLocations) { location in
@@ -37,7 +38,7 @@ struct LocationMapView: View {
             }
         }
         .mapStyle(mapStyle)
-        .mapControls{
+        .mapControls {
             MapCompass()
             MapScaleView()
             MapPitchButton()
@@ -56,7 +57,11 @@ struct LocationMapView: View {
             }
             else {
                 withAnimation {
-                    position = .region(MKCoordinateRegion(center: newValue.coordinates!.coordinate, latitudinalMeters: config.zoomedMapSpan, longitudinalMeters: config.zoomedMapSpan))
+                    position = .region(MKCoordinateRegion(
+                        center: newValue.coordinates!.coordinate,
+                        latitudinalMeters: config.zoomedMapSpan,
+                        longitudinalMeters: config.zoomedMapSpan
+                    ))
                 } completion: {
                     selectedLocation = nil
                 }

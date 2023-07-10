@@ -19,7 +19,7 @@ struct MainViewIPadOS: View {
     @State private var searchDetent: PresentationDetent = .fraction(0.1)
     @State private var filter = 1
     @State private var region = config.defaultRegion
-    
+
     @State private var showSettings = false
     @State private var showNewFeatures = false
     @State private var didAppear = false
@@ -34,13 +34,11 @@ struct MainViewIPadOS: View {
         NavigationSplitView(columnVisibility: $columnVisibility) {
             SearchView()
         } detail: {
-        
             NavigationStack(path: $navigationModel.navigationPath) {
-                
                 LocationMapView()
 
                     // MARK: - Toolbar
-                
+
                     .toolbar {
                         ToolbarItem(placement: .primaryAction) {
                             Menu {
@@ -69,17 +67,17 @@ struct MainViewIPadOS: View {
                     }
                     .toolbarBackground(.visible, for: .navigationBar)
             }
-            
+
             // MARK: - Sheets
 
             .sheet(isPresented: $showSettings) {
                 SettingsView()
             }
-        
+
             .sheet(isPresented: $showNewFeatures) {
                 NewFeaturesView()
             }
-                
+
             // MARK: - Change observers
 
             .onAppear {
@@ -87,11 +85,11 @@ struct MainViewIPadOS: View {
                     showNewFeatures = true
                 }
             }
-        
+
             .onChange(of: navigationModel.navigationPath) { _ in
                 columnVisibility = .detailOnly
             }
-            
+
             // MARK: - Navigation
 
             .navigationTitle("main_view_navigation_title")
@@ -101,9 +99,9 @@ struct MainViewIPadOS: View {
             })
         }
     }
-    
+
     // MARK: - Private Functions
-    
+
     private enum SheetToShow {
         case search, settings, whatsNew
     }

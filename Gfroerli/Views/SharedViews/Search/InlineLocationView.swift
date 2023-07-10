@@ -9,23 +9,22 @@ import GfroerliBackend
 import SwiftUI
 
 struct InlineLocationView: View {
-    
     @Environment(\.isSearching) var isSearching
 
     @AppStorage("favorites") private var favorites = [Int]()
-    
+
     @State private var isFavorite = false
-    
+
     let location: Location
 
     // MARK: - Body
 
     var body: some View {
-     //  @Bindable var location = location
-        
+        //  @Bindable var location = location
+
         HStack {
             VStack(alignment: .leading) {
-              //  TextField("", text: location.name)
+                //  TextField("", text: location.name)
                 Text(location.name ?? "")
                     .bold()
                     .foregroundColor(location.isActive ? .primary : .secondary)
@@ -46,9 +45,9 @@ struct InlineLocationView: View {
                     .foregroundColor(.yellow)
                     .imageScale(.small)
             }
-            
+
             Spacer()
-            
+
             VStack(alignment: .trailing) {
                 Text(location.latestTemperatureString)
                 Text(location.lastTemperatureDateString)
@@ -57,7 +56,7 @@ struct InlineLocationView: View {
             .foregroundColor(.secondary)
         }
         .contentShape(Rectangle())
-        
+
         .onAppear {
             isFavorite = favorites.contains(location.id)
         }

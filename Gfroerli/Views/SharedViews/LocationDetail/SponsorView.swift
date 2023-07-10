@@ -13,17 +13,16 @@ struct SponsorView: View {
     @Environment(\.modelContext) var modelContext
 
     // MARK: - Body
-    
+
     var body: some View {
         VStack(alignment: .leading) {
             if sponsorVM.sponsor != nil {
-                
                 VStack {
                     Text("sponsor_view_failed")
                         .font(.title3)
                         .bold()
                         .foregroundColor(.secondary)
-                    
+
                     Button {
                         // sponsorVM.loadSponsor(id: 1, context: modelContext)
                         print("")
@@ -35,11 +34,10 @@ struct SponsorView: View {
                 .frame(maxWidth: .infinity)
             }
             else {
-                
                 VStack(alignment: .leading) {
                     Text("sponsor_view_title")
                         .font(.title2)
-                    
+
                     Text(sponsorVM.sponsor?.name ?? "sponsor_view_no_name")
                         .font(.title2)
                         .redacted(
@@ -47,7 +45,7 @@ struct SponsorView: View {
                         )
                 }
                 .bold()
-                
+
                 AsyncImage(url: sponsorVM.sponsor?.imageURL) { image in
                     image
                         .resizable()
@@ -55,7 +53,7 @@ struct SponsorView: View {
                         .padding()
                         .background(.white)
                         .cornerRadius(AppConfiguration.General.cornerRadius)
-                    
+
                 } placeholder: {
                     VStack {
                         Spacer()
@@ -67,7 +65,7 @@ struct SponsorView: View {
                         Spacer()
                     }
                 }
-                
+
                 VStack {
                     Text(sponsorVM.sponsor?.desc ?? "sponsor_view_no_descriptionn")
                 }

@@ -9,14 +9,13 @@ import Foundation
 import SwiftUI
 
 struct ChangeItem: Identifiable, Decodable {
-    
     let id = UUID()
     let description: String
     let changeType: ChangeType
-    
+
     enum ChangeType: String, Decodable {
         case feature, improvement, bugfix
-        
+
         @ViewBuilder
         public func image() -> some View {
             switch self {
@@ -34,12 +33,12 @@ struct ChangeItem: Identifiable, Decodable {
             }
         }
     }
-    
+
     enum CodingKeys: CodingKey {
         case description
         case changeType
     }
-    
+
     init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         self.description = try container.decode(String.self, forKey: .description)
@@ -48,16 +47,15 @@ struct ChangeItem: Identifiable, Decodable {
 }
 
 struct ChangeItems: Identifiable, Decodable {
-    
     let id = UUID()
     let version: String
     let items: [ChangeItem]
-    
+
     enum CodingKeys: CodingKey {
         case version
         case items
     }
-    
+
     init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         let versionDouble = try container.decode(Double.self, forKey: .version)

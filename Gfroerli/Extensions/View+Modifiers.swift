@@ -9,7 +9,6 @@ import Foundation
 import SwiftUI
 
 extension View {
-
     func defaultBoxStyle() -> some View {
         @Environment(\.colorScheme) var colorScheme
 
