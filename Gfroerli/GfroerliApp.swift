@@ -5,7 +5,7 @@
 //  Created by Marc on 08.07.2023.
 //
 
-import GfroerliAPI
+import GfroerliBackend
 import SwiftData
 import SwiftUI
 

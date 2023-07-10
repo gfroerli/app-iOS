@@ -6,7 +6,7 @@
 //
 
 import XCTest
-@testable import GfroerliAPI
+@testable import GfroerliBackend
 
 final class FetchTypeTests: XCTestCase {
     // MARK: - .allLocations

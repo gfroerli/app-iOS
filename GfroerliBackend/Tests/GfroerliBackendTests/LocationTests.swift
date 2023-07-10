@@ -7,7 +7,7 @@
 
 import CoreLocation
 import XCTest
-@testable import GfroerliAPI
+@testable import GfroerliBackend
 
 final class LocationTests: XCTestCase {
     

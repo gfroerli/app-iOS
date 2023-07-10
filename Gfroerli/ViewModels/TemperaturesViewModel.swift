@@ -7,7 +7,7 @@
 
 import Charts
 import Foundation
-import GfroerliAPI
+import GfroerliBackend
 
 enum ChartSpan {
     case day

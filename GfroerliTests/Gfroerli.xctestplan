@@ -1,0 +1,29 @@
+{
+  "configurations" : [
+    {
+      "id" : "B996F5D9-37B4-462B-B721-FDC38DA6D6BA",
+      "name" : "Test Scheme Action",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "codeCoverage" : false,
+    "targetForVariableExpansion" : {
+      "containerPath" : "container:Gfroerli.xcodeproj",
+      "identifier" : "2434F7C82A594886006ED9FD",
+      "name" : "Gfroerli"
+    }
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:Gfroerli.xcodeproj",
+        "identifier" : "2434F7D92A594888006ED9FD",
+        "name" : "GfroerliTests"
+      }
+    }
+  ],
+  "version" : 1
+}

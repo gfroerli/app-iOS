@@ -1,0 +1,27 @@
+{
+  "configurations" : [
+    {
+      "id" : "44BF6824-FDDA-4443-B5B1-82F4976E0520",
+      "name" : "Test Scheme Action",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+
+  },
+  "testTargets" : [
+    {
+      "skippedTests" : [
+        "GfroerliBackendTests"
+      ],
+      "target" : {
+        "containerPath" : "container:",
+        "identifier" : "GfroerliBackendTests",
+        "name" : "GfroerliBackendTests"
+      }
+    }
+  ],
+  "version" : 1
+}

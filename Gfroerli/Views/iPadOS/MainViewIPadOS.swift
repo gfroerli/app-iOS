@@ -5,7 +5,7 @@
 //  Created by Marc on 30.01.23.
 //
 
-import GfroerliAPI
+import GfroerliBackend
 import SwiftUI
 
 struct MainViewIPadOS: View {
@@ -24,7 +24,7 @@ struct MainViewIPadOS: View {
     @State private var showNewFeatures = false
     @State private var didAppear = false
 
-    private var api = GfroerliAPI()
+    private var api = GfroerliBackend()
 
     // MARK: - Body
 

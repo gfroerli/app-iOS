@@ -7,7 +7,7 @@
 
 //import Combine
 //import Foundation
-//import GfroerliAPI
+//import GfroerliBackend
 //import SwiftUI
 //
 ///// This "View is used to handle the base navigation on different OS's and device types

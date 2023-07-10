@@ -7,7 +7,7 @@
 
 import SwiftData
 import XCTest
-@testable import GfroerliAPI
+@testable import GfroerliBackend
 
 final class SponsorTests: XCTestCase {
     

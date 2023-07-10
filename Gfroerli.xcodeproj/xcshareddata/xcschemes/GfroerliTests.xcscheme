@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "1430"
+   LastUpgradeVersion = "1500"
    version = "1.7">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,13 +14,14 @@
       shouldAutocreateTestPlan = "YES">
       <Testables>
          <TestableReference
-            skipped = "NO">
+            skipped = "NO"
+            parallelizable = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "GfroerliAPITests"
-               BuildableName = "GfroerliAPITests"
-               BlueprintName = "GfroerliAPITests"
-               ReferencedContainer = "container:">
+               BlueprintIdentifier = "2434F7D92A594888006ED9FD"
+               BuildableName = "GfroerliTests.xctest"
+               BlueprintName = "GfroerliTests"
+               ReferencedContainer = "container:Gfroerli.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>

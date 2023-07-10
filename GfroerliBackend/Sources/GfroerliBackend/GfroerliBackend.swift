@@ -1,10 +1,3 @@
-//
-//  GfroerliLoader.swift
-//
-//
-//  Created by Marc Kramer on 12.06.22.
-//
-
 import Foundation
 import SwiftData
 

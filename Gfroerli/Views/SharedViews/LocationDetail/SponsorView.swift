@@ -5,7 +5,7 @@
 //  Created by Marc on 03.09.22.
 //
 
-import GfroerliAPI
+import GfroerliBackend
 import SwiftUI
 
 struct SponsorView: View {

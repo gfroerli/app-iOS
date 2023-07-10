@@ -6,7 +6,7 @@
 //
 
 import Foundation
-import GfroerliAPI
+import GfroerliBackend
 import SwiftUI
 
 @Observable

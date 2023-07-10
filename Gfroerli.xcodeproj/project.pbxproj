@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 60;
+	objectVersion = 56;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -51,7 +51,7 @@
 		2434F8582A594905006ED9FD /* ChangeLog.json in Resources */ = {isa = PBXBuildFile; fileRef = 2434F84B2A594905006ED9FD /* ChangeLog.json */; };
 		2434F8592A594905006ED9FD /* en.xcloc in Resources */ = {isa = PBXBuildFile; fileRef = 2434F8542A594905006ED9FD /* en.xcloc */; };
 		2434F85A2A594905006ED9FD /* de.xcloc in Resources */ = {isa = PBXBuildFile; fileRef = 2434F8552A594905006ED9FD /* de.xcloc */; };
-		2434F85D2A594937006ED9FD /* GfroerliAPI in Frameworks */ = {isa = PBXBuildFile; productRef = 2434F85C2A594937006ED9FD /* GfroerliAPI */; };
+		246058682A5C48920081FEB0 /* GfroerliBackend in Frameworks */ = {isa = PBXBuildFile; productRef = 246058672A5C48920081FEB0 /* GfroerliBackend */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -127,6 +127,8 @@
 		2434F8522A594905006ED9FD /* gsw */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = gsw; path = gsw.lproj/ChangeLog.json; sourceTree = "<group>"; };
 		2434F8542A594905006ED9FD /* en.xcloc */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = en.xcloc; sourceTree = "<group>"; };
 		2434F8552A594905006ED9FD /* de.xcloc */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = de.xcloc; sourceTree = "<group>"; };
+		246058652A5C48830081FEB0 /* GfroerliBackend */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = GfroerliBackend; sourceTree = "<group>"; };
+		2493C95F2A5C47D6007F7EA3 /* Gfroerli.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = Gfroerli.xctestplan; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,7 +136,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2434F85D2A594937006ED9FD /* GfroerliAPI in Frameworks */,
+				246058682A5C48920081FEB0 /* GfroerliBackend in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -162,6 +164,7 @@
 				2434F7DD2A594888006ED9FD /* GfroerliTests */,
 				2434F7E72A594888006ED9FD /* GfroerliUITests */,
 				2434F7CA2A594886006ED9FD /* Products */,
+				246058662A5C48920081FEB0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -203,6 +206,7 @@
 		2434F7DD2A594888006ED9FD /* GfroerliTests */ = {
 			isa = PBXGroup;
 			children = (
+				2493C95F2A5C47D6007F7EA3 /* Gfroerli.xctestplan */,
 				2434F7DE2A594888006ED9FD /* GfroerliTests.swift */,
 			);
 			path = GfroerliTests;
@@ -370,6 +374,14 @@
 			path = "gfroerli Localizations";
 			sourceTree = "<group>";
 		};
+		246058662A5C48920081FEB0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				246058652A5C48830081FEB0 /* GfroerliBackend */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -387,7 +399,7 @@
 			);
 			name = Gfroerli;
 			packageProductDependencies = (
-				2434F85C2A594937006ED9FD /* GfroerliAPI */,
+				246058672A5C48920081FEB0 /* GfroerliBackend */,
 			);
 			productName = Gfroerli;
 			productReference = 2434F7C92A594886006ED9FD /* Gfroerli.app */;
@@ -464,7 +476,6 @@
 			);
 			mainGroup = 2434F7C02A594886006ED9FD;
 			packageReferences = (
-				2434F85B2A594937006ED9FD /* XCLocalSwiftPackageReference "GfroerliAPI" */,
 			);
 			productRefGroup = 2434F7CA2A594886006ED9FD /* Products */;
 			projectDirPath = "";
@@ -947,17 +958,10 @@
 		};
 /* End XCConfigurationList section */
 
-/* Begin XCLocalSwiftPackageReference section */
-		2434F85B2A594937006ED9FD /* XCLocalSwiftPackageReference "GfroerliAPI" */ = {
-			isa = XCLocalSwiftPackageReference;
-			relativePath = GfroerliAPI;
-		};
-/* End XCLocalSwiftPackageReference section */
-
 /* Begin XCSwiftPackageProductDependency section */
-		2434F85C2A594937006ED9FD /* GfroerliAPI */ = {
+		246058672A5C48920081FEB0 /* GfroerliBackend */ = {
 			isa = XCSwiftPackageProductDependency;
-			productName = GfroerliAPI;
+			productName = GfroerliBackend;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
