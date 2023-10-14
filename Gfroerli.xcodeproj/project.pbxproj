@@ -181,11 +181,11 @@
 		2434F7CB2A594886006ED9FD /* Gfroerli */ = {
 			isa = PBXGroup;
 			children = (
-				24031DF42A594AE10026B29C /* Info.plist */,
-				2434F8142A5948FC006ED9FD /* Views */,
 				2434F7CC2A594886006ED9FD /* GfroerliApp.swift */,
+				2434F8142A5948FC006ED9FD /* Views */,
 				2434F7D02A594888006ED9FD /* Assets.xcassets */,
 				2434F7D22A594888006ED9FD /* Gfroerli.entitlements */,
+				24031DF42A594AE10026B29C /* Info.plist */,
 				2434F80D2A5948F5006ED9FD /* ViewModels */,
 				2434F7F72A5948E6006ED9FD /* Extensions */,
 				2434F8042A5948ED006ED9FD /* Utils */,
@@ -801,10 +801,11 @@
 				PRODUCT_BUNDLE_IDENTIFIER = ch.coredump.gfroerli;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = "1,2,7";
 			};
 			name = Debug;
 		};
@@ -842,10 +843,11 @@
 				PRODUCT_BUNDLE_IDENTIFIER = ch.coredump.gfroerli;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = "1,2,7";
 			};
 			name = Release;
 		};

@@ -42,11 +42,16 @@ struct MainViewIOS: View {
                 }
 
                 ToolbarItem(placement: .principal) {
-                    Image(.iconBig)
-                        .resizable()
-                        .aspectRatio(contentMode: .fit)
-                        .frame(width: 30)
-                        .cornerRadius(5)
+                    HStack {
+                        Image(.iconBig)
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .frame(width: 30)
+                            .cornerRadius(5)
+                        Text("Gfrör.li")
+                            .bold()
+                            .font(.subheadline)
+                    }
                 }
             }
             .toolbarBackground(.visible, for: .navigationBar)

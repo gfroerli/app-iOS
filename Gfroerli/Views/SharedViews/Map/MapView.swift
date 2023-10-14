@@ -26,12 +26,7 @@ struct LocationMapView: View {
         Map(position: $position, selection: $selectedLocation) {
             ForEach(locationsViewModel.allLocations) { location in
                 Annotation("", coordinate: location.coordinates?.coordinate ?? config.defaultCoordinates.coordinate) {
-                    if showBigAnnotations {
-                        GfroerliMapAnnotation(location: location)
-                    }
-                    else {
-                        GfroerliMapAnnotationPin(location: location)
-                    }
+                    GfroerliMapAnnotation(zoomed: $showBigAnnotations, location: location)
                 }
                 .annotationTitles(.hidden)
                 .tag(location)
@@ -41,7 +36,7 @@ struct LocationMapView: View {
         .mapControls {
             MapCompass()
             MapScaleView()
-            MapPitchButton()
+            MapPitchToggle()
         }
         .onMapCameraChange { context in
             showBigAnnotations = context.region.span.latitudeDelta <= 0.1

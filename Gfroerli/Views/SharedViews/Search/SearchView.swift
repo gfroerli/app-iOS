@@ -11,7 +11,6 @@ import SwiftUI
 struct SearchView: View {
     @Environment(NavigationModel.self) var navigationModel
     @Environment(AllLocationsViewModel.self) var locationsViewModel
-    @Environment(\.dismiss) private var dismiss
     @Environment(\.isSearching) private var isSearching
 
     // MARK: - Body

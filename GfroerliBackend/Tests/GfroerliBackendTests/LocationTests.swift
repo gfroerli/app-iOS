@@ -32,10 +32,10 @@ final class LocationTests: XCTestCase {
         // Act
         let location = Location(
             id: id,
-            jName: name,
-            jDescription: desc,
-            jLatitude: lat,
-            jLongitude: long,
+            name: name,
+            desc: desc,
+            latitude: lat,
+            longitude: long,
             creationDate: creationDate,
             sponsorID: sponsorID,
             latestTemperature: latestTemp,
@@ -47,16 +47,16 @@ final class LocationTests: XCTestCase {
 
         // Assert
         XCTAssertEqual(location.id, id)
-        XCTAssertEqual(location.jName, name)
-        XCTAssertEqual(location.jDescription, desc)
-        XCTAssertEqual(location.jLatitude, lat)
-        XCTAssertEqual(location.jLongitude, long)
+        XCTAssertEqual(location.name, name)
+        XCTAssertEqual(location.desc, desc)
+        XCTAssertEqual(location.latitude, lat)
+        XCTAssertEqual(location.longitude, long)
         XCTAssertEqual(location.creationDate, creationDate)
 
         XCTAssertEqual(location.sponsorID, sponsorID)
 
         XCTAssertEqual(location.latestTemperature, latestTemp)
-        XCTAssertEqual(location.jLastTemperatureDate, latestTempDate)
+        XCTAssertEqual(location.lastTemperatureDate, latestTempDate)
 
         XCTAssertEqual(location.highestTemperature, highest)
         XCTAssertEqual(location.lowestTemperature, lowest)
@@ -70,7 +70,7 @@ final class LocationTests: XCTestCase {
         let name = "TestName"
 
         // Act
-        let location = Location(id: 1, jName: name)
+        let location = Location(id: 1, name: name)
 
         // Assert
         XCTAssertEqual(location.name, name)
@@ -81,10 +81,10 @@ final class LocationTests: XCTestCase {
         let description = "Test Description"
 
         // Act
-        let location = Location(id: 1, jDescription: description)
+        let location = Location(id: 1, desc: description)
 
         // Assert
-        XCTAssertEqual(location.description, description)
+        XCTAssertEqual(location.desc, description)
     }
 
     func testLocationUnwrapCoordinates() {
@@ -94,7 +94,7 @@ final class LocationTests: XCTestCase {
         let coords = CLLocation(latitude: lat, longitude: long)
 
         // Act
-        let location = Location(id: 1, jLatitude: lat, jLongitude: long)
+        let location = Location(id: 1, latitude: lat, longitude: long)
 
         // Assert
         XCTAssertEqual(location.coordinates?.coordinate.latitude, coords.coordinate.latitude)
@@ -154,7 +154,7 @@ final class LocationTests: XCTestCase {
 
         // Assert
         XCTAssertEqual(location.name, "No Name")
-        XCTAssertEqual(location.description, "No Description")
+        XCTAssertEqual(location.desc, "No Description")
         XCTAssertEqual(location.coordinates, nil)
         XCTAssertEqual(location.lastTemperatureDateString, "Unknown")
         XCTAssertEqual(location.latestTemperatureString, "-°")
@@ -187,16 +187,16 @@ final class LocationTests: XCTestCase {
 
         // Assert
         XCTAssertEqual(location.id, id)
-        XCTAssertEqual(location.jName, name)
-        XCTAssertEqual(location.jDescription, desc)
-        XCTAssertEqual(location.jLatitude, lat)
-        XCTAssertEqual(location.jLongitude, long)
+        XCTAssertEqual(location.name, name)
+        XCTAssertEqual(location.desc, desc)
+        XCTAssertEqual(location.latitude, lat)
+        XCTAssertEqual(location.longitude, long)
         XCTAssertEqual(location.creationDate, creationDate)
 
         XCTAssertEqual(location.sponsorID, sponsorID)
 
         XCTAssertEqual(location.latestTemperature, latestTemp)
-        XCTAssertEqual(location.jLastTemperatureDate, latestTempDate)
+        XCTAssertEqual(location.lastTemperatureDate, latestTempDate)
 
         XCTAssertEqual(location.highestTemperature, highest)
         XCTAssertEqual(location.lowestTemperature, lowest)

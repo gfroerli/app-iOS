@@ -10,7 +10,7 @@ import class Foundation.Bundle
 
 public enum JsonLoader {
     public static func loadJson(fileName: String) throws -> Data {
-        let testBundle = Bundle.module
+        let testBundle = Bundle.main
         guard let url = testBundle.url(forResource: fileName, withExtension: "json") else {
             fatalError()
         }
