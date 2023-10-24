@@ -24,11 +24,16 @@ struct InlineLocationView: View {
 
         HStack {
             VStack(alignment: .leading) {
-                //  TextField("", text: location.name)
-                Text(location.name ?? "")
-                    .bold()
-                    .foregroundColor(location.isActive ? .primary : .secondary)
-
+                HStack {
+                    Text(location.name ?? "")
+                        .bold()
+                        .foregroundColor(location.isActive ? .primary : .secondary)
+                    if isFavorite {
+                        Image(systemName: "star.fill")
+                            .foregroundColor(.yellow)
+                            .imageScale(.small)
+                    }
+                }
                 if !location.isActive {
                     Text("inline_location_view_inactive")
                         .font(.callout)
@@ -40,12 +45,7 @@ struct InlineLocationView: View {
                         .hidden()
                 }
             }
-            if isFavorite {
-                Image(systemName: "star.fill")
-                    .foregroundColor(.yellow)
-                    .imageScale(.small)
-            }
-
+           
             Spacer()
 
             VStack(alignment: .trailing) {

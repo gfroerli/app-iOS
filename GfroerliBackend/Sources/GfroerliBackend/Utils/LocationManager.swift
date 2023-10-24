@@ -15,12 +15,14 @@ class LocationManager {
     // MARK: - Private Properties
 
     private let context = GfroerliBackend.modelContainer.mainContext
+    
+    private let useCache = UserDefaults.standard.bool(forKey: "UseCache")
 
     // MARK: - Public Functions
 
     public func location(for id: Int) async -> Location? {
         // Try to load from SwiftData
-        if var dbLocation = loadLocationFromDB(id: id) {
+        if useCache, var dbLocation = loadLocationFromDB(id: id) {
             // We check if the date we last tried to update the location, is smaller then the defined interval
             if dbLocation.lastFetchDate < Date.now.addingTimeInterval(-60) {
                 await refreshLocation(location: &dbLocation)
@@ -45,7 +47,7 @@ class LocationManager {
 
         var allLocations = [Location]()
         for location in fetchedLocations {
-            guard var dbLocation = dbLocations?.first(where: { dbLoc in
+            guard useCache, var dbLocation = dbLocations?.first(where: { dbLoc in
                 dbLoc.id == location.id
             }) else {
                 persistAndAssign(location)
@@ -108,6 +110,10 @@ class LocationManager {
     }
 
     private func persistAndAssign(_ location: Location) {
+        guard useCache else {
+            return
+        }
+        
         do {
             context.insert(location)
             try context.save()

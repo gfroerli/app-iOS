@@ -26,16 +26,14 @@ public class GfroerliBackend {
     ///   - types: FetchType
     /// - Returns: Type
     public func load<T: Decodable>(fetchType: FetchType) async throws -> T {
-        let data = try? await Fetcher.fetch(type: fetchType)
-
-        guard let data else {
-            throw GfroerliBackendError.noData
+        do {
+            let data = try await Fetcher.fetch(type: fetchType)
+            let objects = try decoder.decode(T.self, from: data)
+            return objects
         }
-        let objects = try? decoder.decode(T.self, from: data)
-        guard let objects else {
-            fatalError()
+        catch {
+            print("")
+            throw error
         }
-
-        return objects
     }
 }

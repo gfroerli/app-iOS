@@ -19,8 +19,9 @@ struct LocationMapPreviewView: View {
 
     // MARK: - Lifecycle
 
-    init() {
+    init(location: Location?) {
         _region = State(wrappedValue: Config.defaultRegion)
+        self.location = location
     }
 
     // MARK: - Body
@@ -110,6 +111,6 @@ struct LocationMapPreviewView: View {
 
 struct LocationMapPreviewView_Previews: PreviewProvider {
     static var previews: some View {
-        LocationMapPreviewView()
+        LocationMapPreviewView(location: Location.exampleLocation())
     }
 }

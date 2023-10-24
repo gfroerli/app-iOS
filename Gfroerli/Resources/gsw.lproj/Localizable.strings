@@ -84,6 +84,10 @@
 "settings_view_item_coredump_mastodon" = "Coredump uf Mastodon";
 "settings_view_item_github" = "Code uf GitHub";
 
+"settings_view_header_experimental" = "Experimentell";
+"settings_view_item_cache" = "Cache bruche";
+"settings_view_item_cache_delete" = "Cache lösche";
+
 // ChangelogView
 "changelog_view_app_title" = "Änderigsübersicht";
 "changelog_view_version_header" = "Version";

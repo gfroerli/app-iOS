@@ -39,10 +39,10 @@ struct LocationDetailView: View {
 
                     TemperatureHistoryView(locationID: locationVM.getID())
 
-                    LocationMapPreviewView()
+                    LocationMapPreviewView(location: locationVM.location)
 
                     if locationVM.location!.sponsorID != nil {
-                        SponsorView(sponsorVM: SponsorViewModel(id: 1))
+                        SponsorView(sponsorVM: SponsorViewModel(id: locationVM.location?.id ?? -1))
                     }
 
                     Spacer()

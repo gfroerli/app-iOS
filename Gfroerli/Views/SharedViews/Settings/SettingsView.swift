@@ -18,6 +18,7 @@ struct SettingsView: View {
                 SettingsHeaderView()
                 SettingsGeneralSectionView()
                 SettingsLinksSectionView()
+                SettingsOtherSectionView()
             }
             .toolbar(content: {
                 Button {
@@ -71,16 +72,6 @@ struct SettingsHeaderView: View {
 struct SettingsGeneralSectionView: View {
     var body: some View {
         Section(header: Text("settings_view_header_general")) {
-            // FAQ
-            // NavigationLink {
-            //    FAQView()
-            // } label: {
-            //    Label(title: {
-            //        Text("settings_view_item_FAQ")
-            //    }, icon: {
-            //        SettingsThumbnailView(imageName: "info.circle", backgroundColor: .accentColor)
-            //    })
-            // }
 
             // Change log
             NavigationLink {
@@ -124,14 +115,13 @@ struct SettingsLinksSectionView: View {
     typealias config = AppConfiguration.Settings
 
     var body: some View {
-        Section(header: Text("Links")) {
+        Section(header: Text("settings_view_header_links")) {
             // Rate
             Button {
                 openURL(config.reviewURL)
             } label: {
                 Label {
                     Text("settings_view_item_review")
-                        .foregroundColor(Color("textColor"))
                 } icon: {
                     SettingsThumbnailView(imageName: "heart.fill", backgroundColor: .red)
                 }
@@ -141,7 +131,6 @@ struct SettingsLinksSectionView: View {
             Link(destination: config.privacyPolicyURL) {
                 Label {
                     Text("settings_view_item_policy")
-                        .foregroundColor(Color("textColor"))
                 } icon: {
                     SettingsThumbnailView(imageName: "hand.raised.fill", backgroundColor: .black)
                 }
@@ -151,7 +140,6 @@ struct SettingsLinksSectionView: View {
             Link(destination: config.gfroerliURL) {
                 Label {
                     Text("settings_view_item_gfroerli_web")
-                        .foregroundColor(Color("textColor"))
                 } icon: {
                     SettingsThumbnailView(imageName: "safari", backgroundColor: .accentColor)
                 }
@@ -161,7 +149,6 @@ struct SettingsLinksSectionView: View {
             Link(destination: config.coredumpURL) {
                 Label {
                     Text("settings_view_item_coredump_web")
-                        .foregroundColor(Color("textColor"))
                 } icon: {
                     SettingsThumbnailView(imageName: "safari", backgroundColor: .green)
                 }
@@ -171,7 +158,6 @@ struct SettingsLinksSectionView: View {
             Link(destination: config.mastodonCoreDumpURL) {
                 Label {
                     Text("settings_view_item_coredump_mastodon")
-                        .foregroundColor(Color("textColor"))
                 } icon: {
                     SettingsThumbnailAssetView(imageName: "mastodon", backgroundColor: .purple)
                 }
@@ -181,10 +167,29 @@ struct SettingsLinksSectionView: View {
             Link(destination: config.githubURL) {
                 Label {
                     Text("settings_view_item_github")
-                        .foregroundColor(Color("textColor"))
                 } icon: {
                     SettingsThumbnailAssetView(imageName: "github.fill", backgroundColor: .black)
                 }
+            }
+        }
+        .buttonStyle(.plain)
+    }
+}
+
+struct SettingsOtherSectionView: View {
+    @AppStorage("UseCache") private var useCache = false
+
+    var body: some View {
+        Section(header: Text("settings_view_header_experimental")) {
+            // Cache
+            Toggle(isOn: $useCache) {
+                Text("settings_view_item_cache")
+            }
+            
+            Button(role: .destructive) {
+                print("")
+            } label: {
+                Text("settings_view_item_cache_delete")
             }
         }
     }

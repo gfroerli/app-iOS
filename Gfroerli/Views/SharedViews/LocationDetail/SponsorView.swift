@@ -16,7 +16,7 @@ struct SponsorView: View {
 
     var body: some View {
         VStack(alignment: .leading) {
-            if sponsorVM.sponsor != nil {
+            if sponsorVM.sponsor == nil {
                 VStack {
                     Text("sponsor_view_failed")
                         .font(.title3)
@@ -24,8 +24,9 @@ struct SponsorView: View {
                         .foregroundColor(.secondary)
 
                     Button {
-                        // sponsorVM.loadSponsor(id: 1, context: modelContext)
-                        print("")
+                        Task {
+                            await sponsorVM.loadSponsor()
+                        }
                     } label: {
                         Text("Retry")
                     }

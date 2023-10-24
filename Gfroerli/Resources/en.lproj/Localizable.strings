@@ -9,95 +9,99 @@
 // "" = "";
 
 // MainView
-"main_view_navigation_title" = "Karte";
+"main_view_navigation_title" = "Map";
 
-"main_view_filter_title" = "Standort Filter";
+"main_view_filter_title" = "Location Filter";
 "main_view_filter_label" = "Filter";
-"main_view_filter_active" = "Aktiv";
-"main_view_filter_all" = "Alle";
+"main_view_filter_active" = "Active";
+"main_view_filter_all" = "All";
 
-"main_view_settings_label" = "Einstellungen";
+"main_view_settings_label" = "Settings";
 
 // SearchView
-"search_view_navigation_title" = "Suche";
-"search_view_sort_title" = "Sortieren";
-"search_view_sort_label" = "Standorte Sortieren";
+"search_view_navigation_title" = "Search";
+"search_view_sort_title" = "Sort";
+"search_view_sort_label" = "Sort Locations";
 
-"search_view_sort_recent" = "Zuletzt";
-"search_view_sort_highest" = "Wärmste";
-"search_view_sort_lowest" = "Kälteste";
-"search_view_sort_alphabetical" = "Alphabetisch";
+"search_view_sort_recent" = "Most Recent";
+"search_view_sort_highest" = "Warmest";
+"search_view_sort_lowest" = "Coldest";
+"search_view_sort_alphabetical" = "Alphabetical";
 
 // TemperatureHistoryView
-"temperature_history_view_title" = "Verlauf";
-"temperature_history_view_picker_title" = "Zeitspanne wählen";
-"temperature_history_view_picker_day" = "Tag";
-"temperature_history_view_picker_week" = "Woche";
-"temperature_history_view_picker_month" = "Monat";
+"temperature_history_view_title" = "History";
+"temperature_history_view_picker_title" = "Choose time span";
+"temperature_history_view_picker_day" = "Day";
+"temperature_history_view_picker_week" = "Week";
+"temperature_history_view_picker_month" = "Month";
 
 // HistoryGraphView
-"history_graph_view_no_data_label" = "Keine Daten";
-"history_graph_view_legend_minimum"= "Tiefste";
-"history_graph_view_legend_average" = "Durchschnitt";
-"history_graph_view_legend_maximum" = "Höchste";
+"history_graph_view_no_data_label" = "No data available";
+"history_graph_view_legend_minimum"= "Minimum";
+"history_graph_view_legend_average" = "Average";
+"history_graph_view_legend_maximum" = "Maximum";
 
 // LatestTemperatureView
-"latest_temperature_view_title" = "Letzte";
+"latest_temperature_view_title" = "Latest";
 
 // TemperatureSummaryView
-"temperature_summary_view_title" = "Insgesamt";
-"temperature_summary_view_highest" = "Höchste";
-"temperature_summary_view_average" = "Durchschnitt";
-"temperature_summary_view_lowest" = "Tiefste";
+"temperature_summary_view_title" = "All time";
+"temperature_summary_view_highest" = "Highest";
+"temperature_summary_view_average" = "Average";
+"temperature_summary_view_lowest" = "Lowest";
 
 // LocationMapPreviewView
-"location_map_preview_view_title" = "Karte";
-"location_map_preview_view_unavailable" = "Standort nicht verfügbar";
+"location_map_preview_view_title" = "Map";
+"location_map_preview_view_unavailable" = "Location unavailable";
 
 // InlineLocationView
-"inline_location_view_inactive" = "Inaktiv";
+"inline_location_view_inactive" = "Inactive";
 
 // SponsorView
-"sponsor_view_title" = "Gesponsert durch";
-"sponsor_view_failed" = "Laden des Sponsors fehlgeschlagen";
-"sponsor_view_no_name" = "Kein Name";
-"sponsor_view_no_description" = "Keine Beschreibung";
+"sponsor_view_title" = "Sponsored by";
+"sponsor_view_failed" = "Fetching Sponsor Failed";
+"sponsor_view_no_name" = "No Name";
+"sponsor_view_no_description" = "No Description";
 
 // SettingsView
-"settings_view_title" = "Einstellungen";
-"settings_view_close" = "Schliessen";
+"settings_view_title" = "Settings";
+"settings_view_close" = "Close";
 
 "settings_view_app_title" = "Gfrör.li";
 "settings_view_app_version" = "Version:";
-"settings_view_app_creator" = "von Marc";
-"settings_view_app_coredump" = "für Coredump Rapperswil";
-"settings_view_header_general" = "Allgemein";
+"settings_view_app_creator" = "by Marc";
+"settings_view_app_coredump" = "for Coredump Rapperswil";
+"settings_view_header_general" = "General";
 "settings_view_item_FAQ" = "FAQ";
 "settings_view_item_changelog" = "Changelog";
-"settings_view_item_language" = "Sprache Ändern";
+"settings_view_item_language" = "Change Language";
 
 "settings_view_header_links" = "Links";
-"settings_view_item_review" = "Bewerten";
-"settings_view_item_policy" = "Datenschutzbestimmungen";
+"settings_view_item_review" = "Review";
+"settings_view_item_policy" = "Privacy Policy";
 "settings_view_item_gfroerli_web" = "Gfrör.li Website";
 "settings_view_item_coredump_web" = "Coredump Website";
-"settings_view_item_coredump_mastodon" = "Coredump auf Mastodon";
-"settings_view_item_github" = "Code auf GitHub";
+"settings_view_item_coredump_mastodon" = "Coredump on Mastodon";
+"settings_view_item_github" = "Code on GitHub";
+
+"settings_view_header_experimental" = "Experimentell";
+"settings_view_item_cache" = "Use cache";
+"settings_view_item_cache_delete" = "Delete cache";
 
 // ChangelogView
 "changelog_view_app_title" = "Changelog";
 "changelog_view_version_header" = "Version";
 
 // NewFeaturesView
-"new_features_view_title" = "Neue Funktionen in Gfrör.li";
-"new_features_view_button" = "Los gehts";
+"new_features_view_title" = "What's new to Gfrör.li";
+"new_features_view_button" = "Get Started";
 
 // Screenshots
 "screenshot_overview_title" = "Gfrör.li";
-"screenshot_overview_description" = "Wassertempaturen verschiedener Standorte in Echtzeit.";
+"screenshot_overview_description" = "Watertemperatures at different locations in realtime.";
 
-"screenshot_detail_title" = "Verschiedene Infos";
-"screenshot_detail_description" = "Zeigt den Temperaturverlauf sowie verschiedene andere Werte.";
+"screenshot_detail_title" = "Various Infos";
+"screenshot_detail_description" = "Check the temperature history and other information of locations.";
 
-"screenshot_search_title" = "Verbesserte Suche";
-"screenshot_search_description" = "Suche und filtere Standorte anhand verschiedener Werte.";
+"screenshot_search_title" = "Improved Search";
+"screenshot_search_description" = "Search and filter locations using different parameters.";

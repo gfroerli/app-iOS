@@ -10,6 +10,7 @@ import Foundation
 import Foundation
 import Observation
 import SwiftData
+import SwiftUI
 
 /// ViewModel handling CRUD for `Sponsor`
 @MainActor
@@ -36,12 +37,14 @@ import SwiftData
     private let context = GfroerliBackend.modelContainer.mainContext
     private let id: Int
 
+    private let useCache = UserDefaults.standard.bool(forKey: "UseCache")
+
     // MARK: - Public Functions
 
     /// Loads the Sponsor with the ID the ViewModel was initialized with
     public func loadSponsor() async {
         // Try to load from SwiftData
-        if let dbSponsor = loadFromDB() {
+        if useCache, let dbSponsor = loadFromDB() {
             sponsor = dbSponsor
             // TODO: Outdated
             return
@@ -78,11 +81,14 @@ import SwiftData
         }
     }
 
-    private func persistAndAssign(_ sponsor: Sponsor) {
+    private func persistAndAssign(_ apiSponsor: Sponsor) {
         do {
-            context.insert(sponsor)
-            try context.save()
-            self.sponsor = sponsor
+            sponsor = apiSponsor
+            
+            if useCache {
+                context.insert(sponsor!)
+                try context.save()
+            }
         }
         catch {
             // TODO: Error handling
