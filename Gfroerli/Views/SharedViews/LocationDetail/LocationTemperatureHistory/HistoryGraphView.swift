@@ -99,8 +99,7 @@ struct HistoryGraphView: View {
                 }
                 .frame(minHeight: 250)
             }
-
-            .onChange(of: vm.averageTemp) { _ in
+            .onChange(of: vm.averageTemp) {
                 animate()
             }
             .onAppear {
@@ -147,7 +146,11 @@ struct HistoryGraphView: View {
     }
 
     private func findIndex(location: CGPoint, proxy: ChartProxy, geometry: GeometryProxy) -> Int? {
-        let relativeXPosition = location.x - geometry[proxy.plotAreaFrame].origin.x
+        guard let plotFrame = proxy.plotFrame else {
+            return nil
+        }
+        
+        let relativeXPosition = location.x - geometry[plotFrame].origin.x
 
         if let date = proxy.value(atX: relativeXPosition) as Date? {
             var minDistance: TimeInterval = .infinity

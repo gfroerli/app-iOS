@@ -13,7 +13,6 @@
 		2434F7DF2A594888006ED9FD /* GfroerliTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2434F7DE2A594888006ED9FD /* GfroerliTests.swift */; };
 		2434F7E92A594888006ED9FD /* GfroerliUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2434F7E82A594888006ED9FD /* GfroerliUITests.swift */; };
 		2434F7EB2A594888006ED9FD /* GfroerliUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2434F7EA2A594888006ED9FD /* GfroerliUITestsLaunchTests.swift */; };
-		2434F7FE2A5948E6006ED9FD /* UIDevice+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2434F7F82A5948E6006ED9FD /* UIDevice+Extension.swift */; };
 		2434F7FF2A5948E6006ED9FD /* Date+Week.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2434F7F92A5948E6006ED9FD /* Date+Week.swift */; };
 		2434F8002A5948E6006ED9FD /* View+Modifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2434F7FA2A5948E6006ED9FD /* View+Modifiers.swift */; };
 		2434F8012A5948E6006ED9FD /* Bundle+Dedode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2434F7FB2A5948E6006ED9FD /* Bundle+Dedode.swift */; };
@@ -552,7 +551,6 @@
 				2434F83A2A5948FC006ED9FD /* MapView.swift in Sources */,
 				2434F8092A5948ED006ED9FD /* AppConfiguration.swift in Sources */,
 				2434F8032A5948E6006ED9FD /* Color+AccentColor.swift in Sources */,
-				2434F7FE2A5948E6006ED9FD /* UIDevice+Extension.swift in Sources */,
 				2434F8322A5948FC006ED9FD /* NewFeaturesView.swift in Sources */,
 				2434F8412A5948FC006ED9FD /* LocationMapPreviewView.swift in Sources */,
 				2434F8332A5948FC006ED9FD /* SettingsView.swift in Sources */,

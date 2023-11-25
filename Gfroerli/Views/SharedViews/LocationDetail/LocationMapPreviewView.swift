@@ -13,16 +13,8 @@ struct LocationMapPreviewView: View {
     typealias Config = AppConfiguration.MapPreviewView
 
     @State private var hasLocation = false
-    @State private var region: MKCoordinateRegion
-
+    @State private var position: MapCameraPosition = .automatic
     var location: Location?
-
-    // MARK: - Lifecycle
-
-    init(location: Location?) {
-        _region = State(wrappedValue: Config.defaultRegion)
-        self.location = location
-    }
 
     // MARK: - Body
 
@@ -50,17 +42,17 @@ struct LocationMapPreviewView: View {
             .padding(.vertical, AppConfiguration.General.verticalBoxPadding)
 
             ZStack {
-                Map(
-                    coordinateRegion: $region,
-                    annotationItems: hasLocation ? [location!] : [],
-                    annotationContent: { location in
-                        MapMarker(
-                            coordinate: location.coordinates?.coordinate ?? AppConfiguration.MapPreviewView
-                                .defaultCoordinates.coordinate,
-                            tint: .accentColor
+                Map(position: $position) {
+                    if hasLocation {
+                        Marker(
+                            location?.name ?? "",
+                            image: "thermometer.medium",
+                            coordinate: location?.coordinates?.coordinate ?? AppConfiguration.MapPreviewView
+                                .defaultCoordinates.coordinate
                         )
+                        .tint(.accent)
                     }
-                )
+                }
                 .disabled(!hasLocation)
 
                 if !hasLocation {
@@ -84,9 +76,9 @@ struct LocationMapPreviewView: View {
         .onAppear {
             setLocation()
         }
-        .onChange(of: location, perform: { _ in
+        .onChange(of: location) {
             setLocation()
-        })
+        }
     }
 
     // MARK: - Private Functions
@@ -94,15 +86,16 @@ struct LocationMapPreviewView: View {
     private func setLocation() {
         guard let coords = location?.coordinates else {
             hasLocation = false
-            region = Config.defaultRegion
             return
         }
 
         hasLocation = true
-        region = MKCoordinateRegion(
-            center: coords.coordinate,
-            latitudinalMeters: Config.defaultMapSpan,
-            longitudinalMeters: Config.defaultMapSpan
+        position = .region(
+            MKCoordinateRegion(
+                center: coords.coordinate,
+                latitudinalMeters: Config.defaultMapSpan,
+                longitudinalMeters: Config.defaultMapSpan
+            )
         )
     }
 }

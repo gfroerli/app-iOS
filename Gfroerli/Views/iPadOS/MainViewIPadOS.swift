@@ -86,7 +86,7 @@ struct MainViewIPadOS: View {
                 }
             }
 
-            .onChange(of: navigationModel.navigationPath) { _ in
+            .onChange(of: navigationModel.navigationPath) {
                 columnVisibility = .detailOnly
             }
 
