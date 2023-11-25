@@ -29,7 +29,7 @@ struct SearchView: View {
                         }
                     } header: {
                         HStack {
-                            Text("Results")
+                            Text("search_view_results_title")
                             Spacer()
                             Menu {
                                 ForEach(SortVariants.allCases) { variant in

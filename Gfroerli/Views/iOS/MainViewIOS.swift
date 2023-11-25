@@ -28,7 +28,7 @@ struct MainViewIOS: View {
                 LocationMapView()
                 SearchView()
             }
-            .searchable(text: $query, placement: .toolbar)
+            .searchable(text: $query, placement: .toolbar, prompt: "")
 
             // MARK: - Toolbar
 

@@ -96,7 +96,7 @@ enum AppConfiguration {
                 "App-Version: \(Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String ?? "unkown")"
             let systemVersion = "OS-Version: \(UIDevice.current.systemName) \(UIDevice.current.systemVersion)"
             let lang = "Language: \(Locale.current.language.languageCode?.identifier ?? "unkown")"
-            let str = NSLocalizedString("email_text", comment: "")
+            let str = NSLocalizedString("settings_email_text", comment: "")
             return "</br></br></br></br></br>\(str)</br></br>Info:</br>\(version)</br>\(systemVersion)</br>\(lang)"
         }()
 

@@ -40,7 +40,7 @@ struct TemperatureHistoryView: View {
         VStack(alignment: .leading) {
             HStack(alignment: .top) {
                 if hoveringIndex != nil {
-                    Text(" ")
+                    Text("general_space")
                         .font(.title2)
                         .bold()
 
@@ -76,8 +76,8 @@ struct TemperatureHistoryView: View {
 
                     // Used to make view not jump
                     VStack {
-                        Text(" ")
-                        Text(" ")
+                        Text("general_space")
+                        Text("general_space")
                     }.frame(maxWidth: 1)
 
                     Picker("temperature_history_view_picker_title", selection: $currentSelection) {

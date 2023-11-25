@@ -34,9 +34,9 @@ struct HistoryGraphView: View {
                 Chart {
                     ForEach(vm.lowestTemperatures, id: \.id) {
                         LineMark(
-                            x: .value("date", $0.measurementDate),
-                            y: .value("low", $0.animate ? $0.value : vm.averageTemp),
-                            series: .value("Lowest", "low")
+                            x: .value("history_graph_view_legend_date", $0.measurementDate),
+                            y: .value("history_graph_view_legend_minimum", $0.animate ? $0.value : vm.averageTemp),
+                            series: .value("history_graph_view_legend_minimum", "history_graph_view_legend_minimum")
                         )
                         .foregroundStyle(.blue.gradient)
                         .interpolationMethod(.catmullRom)
@@ -44,9 +44,9 @@ struct HistoryGraphView: View {
 
                     ForEach(vm.averageTemperatures) {
                         LineMark(
-                            x: .value("date", $0.measurementDate),
-                            y: .value("average", $0.animate ? $0.value : vm.averageTemp),
-                            series: .value("Average", "avg")
+                            x: .value("history_graph_view_legend_date", $0.measurementDate),
+                            y: .value("history_graph_view_legend_average", $0.animate ? $0.value : vm.averageTemp),
+                            series: .value("history_graph_view_legend_average", "history_graph_view_legend_average")
                         )
                         .foregroundStyle(.green.gradient)
                         .interpolationMethod(.catmullRom)
@@ -54,9 +54,9 @@ struct HistoryGraphView: View {
 
                     ForEach(vm.highestTemperatures) {
                         LineMark(
-                            x: .value("date", $0.measurementDate),
-                            y: .value("highest", $0.animate ? $0.value : vm.averageTemp),
-                            series: .value("Highest", "high")
+                            x: .value("history_graph_view_legend_date", $0.measurementDate),
+                            y: .value("history_graph_view_legend_maximum", $0.animate ? $0.value : vm.averageTemp),
+                            series: .value("history_graph_view_legend_maximum", "history_graph_view_legend_maximum")
                         )
                         .foregroundStyle(.red.gradient)
                         .interpolationMethod(.catmullRom)
@@ -64,11 +64,12 @@ struct HistoryGraphView: View {
 
                     ForEach(vm.placeholderTemperatures) {
                         LineMark(
-                            x: .value("date", $0.measurementDate),
-                            y: .value("placeholder", $0.animate ? $0.value : vm.averageTemp),
-                            series: .value("Placeholder", "placeholder")
+                            x: .value("general_space", $0.measurementDate),
+                            y: .value("general_space", $0.animate ? $0.value : vm.averageTemp),
+                            series: .value("general_space", "general_space")
                         )
                         .foregroundStyle(.clear)
+                        .accessibilityHidden(true)
                     }
                     if hoveringIndex != nil {
                         RuleMark(x: .value("", vm.averageTemperatures[hoveringIndex!].measurementDate))

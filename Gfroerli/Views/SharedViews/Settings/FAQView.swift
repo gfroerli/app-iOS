@@ -10,7 +10,7 @@ import SwiftUI
 struct FAQView: View {
     var body: some View {
         VStack {
-            Text("FAQ")
+            Text("settings_view_item_FAQ")
         }
     }
 }

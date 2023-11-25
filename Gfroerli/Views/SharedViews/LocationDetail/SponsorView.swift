@@ -28,7 +28,7 @@ struct SponsorView: View {
                             await sponsorVM.loadSponsor()
                         }
                     } label: {
-                        Text("Retry")
+                        Text("sponsor_view_retry")
                     }
                     .buttonStyle(.bordered)
                 }

@@ -20,8 +20,6 @@ struct InlineLocationView: View {
     // MARK: - Body
 
     var body: some View {
-        //  @Bindable var location = location
-
         HStack {
             VStack(alignment: .leading) {
                 HStack {

@@ -187,7 +187,7 @@ struct SettingsOtherSectionView: View {
             }
             
             Button(role: .destructive) {
-                print("")
+                // TODO:
             } label: {
                 Text("settings_view_item_cache_delete")
             }

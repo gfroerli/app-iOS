@@ -6,6 +6,7 @@ let package = Package(
     name: "GfroerliBackend",
     platforms: [
         .iOS(.v17),
+        .macOS(.v14),
     ],
     products: [
         .library(
