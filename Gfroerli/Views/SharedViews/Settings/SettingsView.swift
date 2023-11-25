@@ -5,11 +5,12 @@
 //  Created by Marc Kramer on 18.06.22.
 //
 
+import GfroerliBackend
 import SwiftUI
 
 struct SettingsView: View {
     @Environment(\.dismiss) private var dismiss
-
+    
     // MARK: - Body
 
     var body: some View {
@@ -178,20 +179,57 @@ struct SettingsLinksSectionView: View {
 
 struct SettingsOtherSectionView: View {
     @AppStorage("UseCache") private var useCache = false
-
+    @Environment(\.modelContext) var modelContext
+    @State var footerText = " "
     var body: some View {
-        Section(header: Text("settings_view_header_experimental")) {
+        Section(header: Text("settings_view_header_experimental"), footer: Text(footerText)) {
             // Cache
             Toggle(isOn: $useCache) {
                 Text("settings_view_item_cache")
             }
             
             Button(role: .destructive) {
-                // TODO:
+                do {
+                    try modelContext.delete(model: Location.self)
+                    try modelContext.delete(model: Sponsor.self)
+                    updateCacheSizeFooter()
+                }
+                catch { }
             } label: {
                 Text("settings_view_item_cache_delete")
             }
         }
+        .onAppear {
+            updateCacheSizeFooter()
+        }
+    }
+    
+    private func updateCacheSizeFooter() {
+        do {
+            guard let urlApp = FileManager.default.urls(for: .applicationSupportDirectory, in: .userDomainMask).last
+            else {
+                footerText = footerText(for: 0)
+                return
+            }
+            let url = urlApp.appendingPathComponent("default.store")
+            let attributes = try FileManager.default.attributesOfItem(atPath: url.path)
+            
+            guard let fileSize = attributes[FileAttributeKey.size] as? Int64 else {
+                footerText = footerText(for: 0)
+                return
+            }
+            
+            footerText = footerText(for: fileSize)
+        }
+        catch {
+            footerText = footerText(for: 0)
+        }
+    }
+    
+    private func footerText(for size: Int64) -> String {
+        return String(localized: "settings_view_item_cache_footer_size") + " " + ByteCountFormatter
+            .string(fromByteCount: size, countStyle: .file) + " \n" +
+            String(localized: "settings_view_item_cache_footer_note")
     }
 }
 

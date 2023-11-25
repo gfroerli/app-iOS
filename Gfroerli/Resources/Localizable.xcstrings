@@ -1041,6 +1041,50 @@
         }
       }
     },
+    "settings_view_item_cache_footer_note" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Beachte: Es kann eine Weile dauern bis sich der Wert nach dem Löschen aktualisiert."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Note: It may take a while to update the current size after deleting the cache."
+          }
+        },
+        "gsw" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Beacht: Es chan es bitzli duure bis sich de Wert nachem Lösche aktualisiert."
+          }
+        }
+      }
+    },
+    "settings_view_item_cache_footer_size" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aktuelle Grösse:"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Current size:"
+          }
+        },
+        "gsw" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aktuelli Grössi:"
+          }
+        }
+      }
+    },
     "settings_view_item_changelog" : {
       "localizations" : {
         "de" : {
