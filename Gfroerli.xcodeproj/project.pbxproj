@@ -51,6 +51,7 @@
 		2434F85A2A594905006ED9FD /* de.xcloc in Resources */ = {isa = PBXBuildFile; fileRef = 2434F8552A594905006ED9FD /* de.xcloc */; };
 		243DB8862B120FF200265111 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 243DB8852B120FF200265111 /* Localizable.xcstrings */; };
 		246058682A5C48920081FEB0 /* GfroerliBackend in Frameworks */ = {isa = PBXBuildFile; productRef = 246058672A5C48920081FEB0 /* GfroerliBackend */; };
+		249F08C42B16531D007697A8 /* SortVariant+Localized.swift in Sources */ = {isa = PBXBuildFile; fileRef = 249F08C32B16531D007697A8 /* SortVariant+Localized.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -126,6 +127,7 @@
 		243DB8852B120FF200265111 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		246058652A5C48830081FEB0 /* GfroerliBackend */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = GfroerliBackend; sourceTree = "<group>"; };
 		2493C95F2A5C47D6007F7EA3 /* Gfroerli.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = Gfroerli.xctestplan; sourceTree = "<group>"; };
+		249F08C32B16531D007697A8 /* SortVariant+Localized.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SortVariant+Localized.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -238,6 +240,7 @@
 				2434F8062A5948ED006ED9FD /* DefaultsCoordinator.swift */,
 				2434F8072A5948ED006ED9FD /* ChangeLog.swift */,
 				2434F8082A5948ED006ED9FD /* NewFeatures.swift */,
+				249F08C32B16531D007697A8 /* SortVariant+Localized.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -570,6 +573,7 @@
 				2434F8392A5948FC006ED9FD /* ContentSizeDeciderView.swift in Sources */,
 				2434F7CD2A594886006ED9FD /* GfroerliApp.swift in Sources */,
 				2434F8112A5948F5006ED9FD /* NavigationModel.swift in Sources */,
+				249F08C42B16531D007697A8 /* SortVariant+Localized.swift in Sources */,
 				2434F8362A5948FC006ED9FD /* ChangeLogView.swift in Sources */,
 				2434F8402A5948FC006ED9FD /* TemperatureHistoryView.swift in Sources */,
 				2434F8002A5948E6006ED9FD /* View+Modifiers.swift in Sources */,
@@ -772,7 +776,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Gfroerli/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = "Grrör.li";
+				INFOPLIST_KEY_CFBundleDisplayName = "Gfrör.li";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.weather";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
@@ -815,7 +819,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Gfroerli/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = "Grrör.li";
+				INFOPLIST_KEY_CFBundleDisplayName = "Gfrör.li";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.weather";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;

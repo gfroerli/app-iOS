@@ -27,7 +27,7 @@ struct GfroerliMapAnnotation: View {
             HStack {
                 Image(systemName: "thermometer.medium")
                     .symbolRenderingMode(.palette)
-                    .foregroundStyle(.red, .white, colorScheme == .light ? Color.accentColor : .white.opacity(0.5))
+                    .foregroundStyle(.red, .white, colorScheme == .light ? Color.accentColor : .white.opacity(0.3))
                 
                 Text(location.name ?? "sdafasdf")
                 if location.isActive {
@@ -46,12 +46,12 @@ struct GfroerliMapAnnotation: View {
             .clipShape(Capsule())
             .overlay {
                 Capsule()
-                    .strokeBorder(color, lineWidth: 2)
+                    .strokeBorder(colorScheme == .light ? Color.accentColor : .white.opacity(0.3), lineWidth: 2)
             }
             .opacity(zoomed ? 1 : 0)
             
             Circle()
-                .strokeBorder(color, lineWidth: 2)
+                .strokeBorder(colorScheme == .light ? Color.accentColor : .white.opacity(0.3), lineWidth: 2)
                 .background(Circle().fill(color.opacity(colorScheme == .light ? 0.5 : 0.8)))
                 .frame(width: 44, height: 44)
                 .overlay {

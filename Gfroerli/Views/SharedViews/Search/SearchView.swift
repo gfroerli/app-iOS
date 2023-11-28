@@ -36,7 +36,15 @@ struct SearchView: View {
                                     Button {
                                         locationsViewModel.sortedVariant = variant
                                     } label: {
-                                        Label(variant.text, systemImage: variant.symbolName)
+                                        Label(
+                                            title: {
+                                                Text(variant.text)
+                                                    .textCase(.none)
+                                            },
+                                            icon: {
+                                                Image(systemName: variant.symbolName)
+                                            }
+                                        )
                                     }
                                 }
                             } label: {

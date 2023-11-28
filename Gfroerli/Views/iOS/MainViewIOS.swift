@@ -26,9 +26,10 @@ struct MainViewIOS: View {
         NavigationStack(path: $navigationModel.navigationPath) {
             ZStack {
                 LocationMapView()
+                    .ignoresSafeArea(edges: .all)
                 SearchView()
             }
-            .searchable(text: $query, placement: .toolbar, prompt: "")
+            .searchable(text: $query, placement: .toolbar, prompt: "main_view_search_prompt")
 
             // MARK: - Toolbar
 

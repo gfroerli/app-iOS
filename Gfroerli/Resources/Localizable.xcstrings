@@ -413,6 +413,28 @@
         }
       }
     },
+    "main_view_search_prompt" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Suchen"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Search"
+          }
+        },
+        "gsw" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Suechi"
+          }
+        }
+      }
+    },
     "main_view_settings_label" : {
       "localizations" : {
         "de" : {
@@ -1045,7 +1067,7 @@
       "localizations" : {
         "de" : {
           "stringUnit" : {
-            "state" : "needs_review",
+            "state" : "translated",
             "value" : "Beachte: Es kann eine Weile dauern bis sich der Wert nach dem Löschen aktualisiert."
           }
         },
@@ -1057,8 +1079,8 @@
         },
         "gsw" : {
           "stringUnit" : {
-            "state" : "needs_review",
-            "value" : "Beacht: Es chan es bitzli duure bis sich de Wert nachem Lösche aktualisiert."
+            "state" : "translated",
+            "value" : "Beacht: Es chan es bitzli duure bis sich de Wert nachem lösche aktualisiert."
           }
         }
       }
@@ -1352,7 +1374,7 @@
       }
     },
     "sponsor_view_no_name" : {
-      "extractionState" : "migrated",
+      "extractionState" : "manual",
       "localizations" : {
         "de" : {
           "stringUnit" : {
