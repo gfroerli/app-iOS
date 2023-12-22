@@ -44,6 +44,7 @@ struct TemperatureSummaryView: View {
         }
         .font(.body)
         .minimumScaleFactor(0.1)
+        .frame(maxHeight: .infinity)
         .padding(.horizontal, AppConfiguration.General.horizontalBoxPadding)
         .padding(.vertical, AppConfiguration.General.verticalBoxPadding)
         .defaultBoxStyle()

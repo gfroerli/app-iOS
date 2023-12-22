@@ -20,12 +20,13 @@ struct LatestTemperatureView: View {
             Text("latest_temperature_view_title")
                 .minimumScaleFactor(0.1)
                 .bold()
-
+                
             Spacer()
             VStack(alignment: .trailing) {
+                Spacer()
                 Text(location!.latestTemperatureString)
                     .bold()
-
+                    .font(.title)
                 Text(location!.lastTemperatureDateString)
                     .font(.subheadline)
                     .foregroundColor(.secondary)
@@ -34,6 +35,7 @@ struct LatestTemperatureView: View {
             }
         }
         .font(.title2)
+        .frame(maxHeight: .infinity)
         .padding(.horizontal, AppConfiguration.General.horizontalBoxPadding)
         .padding(.vertical, AppConfiguration.General.verticalBoxPadding)
         .defaultBoxStyle()

@@ -8,7 +8,7 @@
 import GfroerliBackend
 import SwiftUI
 
-struct MainViewIOS: View {
+struct MainView: View {
     typealias config = AppConfiguration.MapView
 
     @Environment(NavigationModel.self) var navigationModel
@@ -29,10 +29,10 @@ struct MainViewIOS: View {
         NavigationStack(path: $navigationModel.navigationPath) {
             ZStack {
                 LocationMapView()
-                    .ignoresSafeArea(edges: .all)
                 SearchView()
+                    .ignoresSafeArea(edges: .bottom)
             }
-            .searchable(text: $query, placement: .toolbar, prompt: "main_view_search_prompt")
+            .searchable(text: $query, placement: .sidebar, prompt: "main_view_search_prompt")
 
             // MARK: - Toolbar
 
@@ -140,7 +140,7 @@ struct MainViewIOS: View {
 
 struct MainViewIOS_Previews: PreviewProvider {
     static var previews: some View {
-        MainViewIOS()
+        MainView()
             .environment(AllLocationsViewModel())
             .environment(NavigationModel())
     }

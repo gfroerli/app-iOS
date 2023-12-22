@@ -15,7 +15,7 @@ struct GfroerliApp: App {
 
     var body: some Scene {
         WindowGroup {
-            ContentSizeDeciderView()
+            MainView()
                 .environment(NavigationModel())
                 .environment(AllLocationsViewModel())
                 .modelContainer(GfroerliBackend.modelContainer)

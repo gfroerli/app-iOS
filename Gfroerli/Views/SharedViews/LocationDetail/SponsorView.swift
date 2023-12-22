@@ -11,6 +11,7 @@ import SwiftUI
 struct SponsorView: View {
     var sponsorVM: SponsorViewModel
     @Environment(\.modelContext) var modelContext
+    @Environment(\.horizontalSizeClass) var horizontalSizeClass
 
     // MARK: - Body
 
@@ -47,35 +48,48 @@ struct SponsorView: View {
                 }
                 .bold()
 
-                AsyncImage(url: sponsorVM.sponsor?.imageURL) { image in
-                    image
-                        .resizable()
-                        .aspectRatio(contentMode: .fit)
-                        .padding()
-                        .background(.white)
-                        .cornerRadius(AppConfiguration.General.cornerRadius)
-
-                } placeholder: {
-                    VStack {
-                        Spacer()
-                        HStack {
-                            Spacer()
-                            ProgressView()
-                            Spacer()
-                        }
-                        Spacer()
+                if horizontalSizeClass == .compact {
+                    sponsorContentView()
+                }
+                else {
+                    HStack(alignment: .top) {
+                        sponsorContentView()
                     }
                 }
-
-                VStack {
-                    Text(sponsorVM.sponsor?.desc ?? "sponsor_view_no_descriptionn")
-                }
-                .redacted(reason: sponsorVM.sponsor == nil ? .placeholder : [])
             }
         }
         .padding(.horizontal, AppConfiguration.General.horizontalBoxPadding)
         .padding(.vertical, AppConfiguration.General.verticalBoxPadding)
         .defaultBoxStyle()
+    }
+    
+    @MainActor
+    @ViewBuilder
+    func sponsorContentView() -> some View {
+        AsyncImage(url: sponsorVM.sponsor?.imageURL) { image in
+            image
+                .resizable()
+                .aspectRatio(contentMode: .fit)
+                .padding()
+                .background(.white)
+                .cornerRadius(AppConfiguration.General.cornerRadius)
+            
+        } placeholder: {
+            VStack {
+                Spacer()
+                HStack {
+                    Spacer()
+                    ProgressView()
+                    Spacer()
+                }
+                Spacer()
+            }
+        }
+        
+        VStack {
+            Text(sponsorVM.sponsor?.desc ?? "sponsor_view_no_descriptionn")
+        }
+        .redacted(reason: sponsorVM.sponsor == nil ? .placeholder : [])
     }
 }
 

@@ -13,6 +13,8 @@ import SwiftUI
 struct LocationDetailView: View {
     @AppStorage("favorites") private var favorites = [Int]()
 
+    @Environment(\.horizontalSizeClass) var horizontalSizeClass
+    
     var locationVM: SingleLocationViewModel
 
     @State private var isFavorite = false
@@ -32,10 +34,19 @@ struct LocationDetailView: View {
         ScrollView(showsIndicators: false) {
             VStack(spacing: 12) {
                 if locationVM.location != nil {
-                    LatestTemperatureView(location: locationVM.location)
+                    if horizontalSizeClass == .compact {
+                        LatestTemperatureView(location: locationVM.location)
+                            .padding(.top)
+                        TemperatureSummaryView(location: locationVM.location)
+                    }
+                    else {
+                        HStack {
+                            LatestTemperatureView(location: locationVM.location)
+                            TemperatureSummaryView(location: locationVM.location)
+                        }
+                        .fixedSize(horizontal: false, vertical: true)
                         .padding(.top)
-
-                    TemperatureSummaryView(location: locationVM.location)
+                    }
 
                     TemperatureHistoryView(locationID: locationVM.getID())
 
@@ -50,6 +61,7 @@ struct LocationDetailView: View {
                         .navigationBarTitleDisplayMode(.inline)
                 }
             }
+            .padding(.horizontal)
         }
         .background(Color.accentColor.opacity(0.1))
         .toolbar {

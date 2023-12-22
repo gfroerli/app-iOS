@@ -32,7 +32,6 @@
 		2434F8362A5948FC006ED9FD /* ChangeLogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2434F81B2A5948FC006ED9FD /* ChangeLogView.swift */; };
 		2434F8372A5948FC006ED9FD /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2434F81D2A5948FC006ED9FD /* SearchView.swift */; };
 		2434F8382A5948FC006ED9FD /* InlineLocationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2434F81E2A5948FC006ED9FD /* InlineLocationView.swift */; };
-		2434F8392A5948FC006ED9FD /* ContentSizeDeciderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2434F81F2A5948FC006ED9FD /* ContentSizeDeciderView.swift */; };
 		2434F83A2A5948FC006ED9FD /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2434F8212A5948FC006ED9FD /* MapView.swift */; };
 		2434F83B2A5948FC006ED9FD /* GfroerliMapAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2434F8222A5948FC006ED9FD /* GfroerliMapAnnotation.swift */; };
 		2434F83C2A5948FC006ED9FD /* SponsorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2434F8242A5948FC006ED9FD /* SponsorView.swift */; };
@@ -43,8 +42,7 @@
 		2434F8412A5948FC006ED9FD /* LocationMapPreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2434F82A2A5948FC006ED9FD /* LocationMapPreviewView.swift */; };
 		2434F8422A5948FC006ED9FD /* LatestTemperatureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2434F82B2A5948FC006ED9FD /* LatestTemperatureView.swift */; };
 		2434F8432A5948FC006ED9FD /* NavigationBaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2434F82D2A5948FC006ED9FD /* NavigationBaseView.swift */; };
-		2434F8442A5948FC006ED9FD /* MainViewIOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2434F82F2A5948FC006ED9FD /* MainViewIOS.swift */; };
-		2434F8452A5948FC006ED9FD /* MainViewIPadOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2434F8312A5948FC006ED9FD /* MainViewIPadOS.swift */; };
+		2434F8442A5948FC006ED9FD /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2434F82F2A5948FC006ED9FD /* MainView.swift */; };
 		2434F8562A594905006ED9FD /* NewFeatures.json in Resources */ = {isa = PBXBuildFile; fileRef = 2434F8472A594905006ED9FD /* NewFeatures.json */; };
 		2434F8582A594905006ED9FD /* ChangeLog.json in Resources */ = {isa = PBXBuildFile; fileRef = 2434F84B2A594905006ED9FD /* ChangeLog.json */; };
 		2434F8592A594905006ED9FD /* en.xcloc in Resources */ = {isa = PBXBuildFile; fileRef = 2434F8542A594905006ED9FD /* en.xcloc */; };
@@ -103,7 +101,6 @@
 		2434F81B2A5948FC006ED9FD /* ChangeLogView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangeLogView.swift; sourceTree = "<group>"; };
 		2434F81D2A5948FC006ED9FD /* SearchView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
 		2434F81E2A5948FC006ED9FD /* InlineLocationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InlineLocationView.swift; sourceTree = "<group>"; };
-		2434F81F2A5948FC006ED9FD /* ContentSizeDeciderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentSizeDeciderView.swift; sourceTree = "<group>"; };
 		2434F8212A5948FC006ED9FD /* MapView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		2434F8222A5948FC006ED9FD /* GfroerliMapAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GfroerliMapAnnotation.swift; sourceTree = "<group>"; };
 		2434F8242A5948FC006ED9FD /* SponsorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SponsorView.swift; sourceTree = "<group>"; };
@@ -114,8 +111,7 @@
 		2434F82A2A5948FC006ED9FD /* LocationMapPreviewView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationMapPreviewView.swift; sourceTree = "<group>"; };
 		2434F82B2A5948FC006ED9FD /* LatestTemperatureView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LatestTemperatureView.swift; sourceTree = "<group>"; };
 		2434F82D2A5948FC006ED9FD /* NavigationBaseView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationBaseView.swift; sourceTree = "<group>"; };
-		2434F82F2A5948FC006ED9FD /* MainViewIOS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewIOS.swift; sourceTree = "<group>"; };
-		2434F8312A5948FC006ED9FD /* MainViewIPadOS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewIPadOS.swift; sourceTree = "<group>"; };
+		2434F82F2A5948FC006ED9FD /* MainView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		2434F8482A594905006ED9FD /* de */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = de; path = de.lproj/NewFeatures.json; sourceTree = "<group>"; };
 		2434F84C2A594905006ED9FD /* de */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = de; path = de.lproj/ChangeLog.json; sourceTree = "<group>"; };
 		2434F84D2A594905006ED9FD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = en; path = en.lproj/NewFeatures.json; sourceTree = "<group>"; };
@@ -260,8 +256,6 @@
 			children = (
 				2434F8152A5948FC006ED9FD /* SharedViews */,
 				2434F82C2A5948FC006ED9FD /* Shared */,
-				2434F82E2A5948FC006ED9FD /* iOS */,
-				2434F8302A5948FC006ED9FD /* iPadOS */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -271,7 +265,6 @@
 			children = (
 				2434F8162A5948FC006ED9FD /* Settings */,
 				2434F81C2A5948FC006ED9FD /* Search */,
-				2434F81F2A5948FC006ED9FD /* ContentSizeDeciderView.swift */,
 				2434F8202A5948FC006ED9FD /* Map */,
 				2434F8232A5948FC006ED9FD /* LocationDetail */,
 			);
@@ -333,25 +326,10 @@
 		2434F82C2A5948FC006ED9FD /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				2434F82F2A5948FC006ED9FD /* MainView.swift */,
 				2434F82D2A5948FC006ED9FD /* NavigationBaseView.swift */,
 			);
 			path = Shared;
-			sourceTree = "<group>";
-		};
-		2434F82E2A5948FC006ED9FD /* iOS */ = {
-			isa = PBXGroup;
-			children = (
-				2434F82F2A5948FC006ED9FD /* MainViewIOS.swift */,
-			);
-			path = iOS;
-			sourceTree = "<group>";
-		};
-		2434F8302A5948FC006ED9FD /* iPadOS */ = {
-			isa = PBXGroup;
-			children = (
-				2434F8312A5948FC006ED9FD /* MainViewIPadOS.swift */,
-			);
-			path = iPadOS;
 			sourceTree = "<group>";
 		};
 		2434F8462A594905006ED9FD /* Resources */ = {
@@ -567,17 +545,15 @@
 				2434F8012A5948E6006ED9FD /* Bundle+Dedode.swift in Sources */,
 				2434F8022A5948E6006ED9FD /* Array+Codable.swift in Sources */,
 				2434F8122A5948F5006ED9FD /* TemperaturesViewModel.swift in Sources */,
-				2434F8452A5948FC006ED9FD /* MainViewIPadOS.swift in Sources */,
 				2434F8342A5948FC006ED9FD /* FAQView.swift in Sources */,
 				2434F83B2A5948FC006ED9FD /* GfroerliMapAnnotation.swift in Sources */,
-				2434F8392A5948FC006ED9FD /* ContentSizeDeciderView.swift in Sources */,
 				2434F7CD2A594886006ED9FD /* GfroerliApp.swift in Sources */,
 				2434F8112A5948F5006ED9FD /* NavigationModel.swift in Sources */,
 				249F08C42B16531D007697A8 /* SortVariant+Localized.swift in Sources */,
 				2434F8362A5948FC006ED9FD /* ChangeLogView.swift in Sources */,
 				2434F8402A5948FC006ED9FD /* TemperatureHistoryView.swift in Sources */,
 				2434F8002A5948E6006ED9FD /* View+Modifiers.swift in Sources */,
-				2434F8442A5948FC006ED9FD /* MainViewIOS.swift in Sources */,
+				2434F8442A5948FC006ED9FD /* MainView.swift in Sources */,
 				2434F7FF2A5948E6006ED9FD /* Date+Week.swift in Sources */,
 				2434F83D2A5948FC006ED9FD /* TemperatureSummaryView.swift in Sources */,
 			);
@@ -768,7 +744,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Gfroerli/Gfroerli.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 4005;
+				CURRENT_PROJECT_VERSION = 4006;
 				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"Gfroerli/Preview Content\"";
 				DEVELOPMENT_TEAM = T7M5358433;
@@ -800,7 +776,7 @@
 				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -811,7 +787,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Gfroerli/Gfroerli.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 4005;
+				CURRENT_PROJECT_VERSION = 4006;
 				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"Gfroerli/Preview Content\"";
 				DEVELOPMENT_TEAM = T7M5358433;
@@ -843,7 +819,7 @@
 				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};

@@ -78,7 +78,7 @@ struct TemperatureHistoryView: View {
                     VStack {
                         Text("general_space")
                         Text("general_space")
-                    }.frame(maxWidth: 1)
+                    }
 
                     Picker("temperature_history_view_picker_title", selection: $currentSelection) {
                         Text("temperature_history_view_picker_day").tag(ChartSpan.day)
