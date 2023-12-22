@@ -16,10 +16,6 @@ struct GfroerliMapAnnotation: View {
     
     let location: Location
 
-    private var color: Color {
-        location.isActive ? Color.accentColor : Color.gray
-    }
-
     // MARK: - Body
 
     var body: some View {
@@ -27,9 +23,9 @@ struct GfroerliMapAnnotation: View {
             HStack {
                 Image(systemName: "thermometer.medium")
                     .symbolRenderingMode(.palette)
-                    .foregroundStyle(.red, .white, colorScheme == .light ? Color.accentColor : .white.opacity(0.3))
+                    .foregroundStyle(.red, .white, tintColor())
                 
-                Text(location.name ?? "sdafasdf")
+                Text(location.name ?? "")
                 if location.isActive {
                     Text(location.latestTemperatureString)
                 }
@@ -41,55 +37,66 @@ struct GfroerliMapAnnotation: View {
             .fontWeight(AppConfiguration.MapView.fontWeight)
             .foregroundColor(.white)
             .padding(8)
-            .background(color.opacity(colorScheme == .light ? 0.5 : 0.8))
-            .border(color, width: 2)
+            .background(backgroundColor())
+            .border(tintColor(), width: 2)
             .clipShape(Capsule())
             .overlay {
                 Capsule()
-                    .strokeBorder(colorScheme == .light ? Color.accentColor : .white.opacity(0.3), lineWidth: 2)
+                    .strokeBorder(tintColor(), lineWidth: 2)
             }
             .opacity(zoomed ? 1 : 0)
             
             Circle()
-                .strokeBorder(colorScheme == .light ? Color.accentColor : .white.opacity(0.3), lineWidth: 2)
-                .background(Circle().fill(color.opacity(colorScheme == .light ? 0.5 : 0.8)))
+                .strokeBorder(tintColor(), lineWidth: 2)
+                .background(Circle().fill(backgroundColor()))
                 .frame(width: 44, height: 44)
                 .overlay {
                     Image(systemName: "thermometer.medium")
                         .resizable()
                         .aspectRatio(contentMode: .fit)
                         .symbolRenderingMode(.palette)
-                        .foregroundStyle(.red, .white, colorScheme == .light ? Color.accentColor : .white.opacity(0.3))
+                        .foregroundStyle(.red, .white, tintColor())
                         .padding(5)
                 }
                 .opacity(zoomed ? 0 : 1)
         }
     }
-}
-
-struct GfroerliMapAnnotationPin: View {
-    @Environment(\.colorScheme) var colorScheme
-
-    let location: Location
-
-    var color: Color {
-        location.isActive ? Color.accentColor : Color.gray
+    
+    private func tintColor() -> Color {
+        if colorScheme == .light {
+            if location.isActive {
+                Color.accentColor
+            }
+            else {
+                Color.gray
+            }
+        }
+        else {
+            if location.isActive {
+                Color.white.opacity(0.3)
+            }
+            else {
+                Color.gray
+            }
+        }
     }
-
-    var body: some View {
-        ZStack {
-            Circle()
-                .strokeBorder(color, lineWidth: 2)
-                .background(Circle().fill(color.opacity(colorScheme == .light ? 0.5 : 0.8)))
-                .frame(width: 44, height: 44)
-                .overlay {
-                    Image(systemName: "thermometer.medium")
-                        .resizable()
-                        .aspectRatio(contentMode: .fit)
-                        .symbolRenderingMode(.palette)
-                        .foregroundStyle(.red, .white, colorScheme == .light ? Color.accentColor : .white.opacity(0.3))
-                        .padding(5)
-                }
+        
+    private func backgroundColor() -> Color {
+        if colorScheme == .light {
+            if location.isActive {
+                Color.accentColor.opacity(0.5)
+            }
+            else {
+                Color.gray.opacity(0.5)
+            }
+        }
+        else {
+            if location.isActive {
+                Color.accentColor.opacity(0.5)
+            }
+            else {
+                Color.gray.opacity(0.5)
+            }
         }
     }
 }
@@ -100,7 +107,6 @@ struct GfroerliMapAnnotation_Previews: PreviewProvider {
     static var previews: some View {
         VStack {
             GfroerliMapAnnotation(zoomed: Binding.constant(true), location: Location.exampleLocation())
-            GfroerliMapAnnotationPin(location: Location.exampleLocation())
         }
     }
 }

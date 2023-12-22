@@ -17,6 +17,9 @@ struct MainViewIOS: View {
     @State private var showSettings = false
     @State private var showNewFeatures = false
     @State private var query = ""
+    
+    let filterOptions = [0, 1]
+    @State var selectedOption = 1
 
     // MARK: - Body
 
@@ -54,6 +57,28 @@ struct MainViewIOS: View {
                             .font(.subheadline)
                     }
                 }
+                
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    Menu {
+                        Picker("main_view_filter_label", selection: $selectedOption) {
+                            ForEach(filterOptions, id: \.self) { option in
+                                if option == 1 {
+                                    Label("main_view_filter_active", systemImage: "thermometer.medium")
+                                }
+                                else {
+                                    Label("main_view_filter_all", systemImage: "thermometer.medium.slash")
+                                }
+                            }
+                        }
+                    } label: {
+                        if locationsViewModel.isFilterActive {
+                            Label("main_view_filter_label", systemImage: "line.3.horizontal.decrease.circle.fill")
+                        }
+                        else {
+                            Label("main_view_filter_label", systemImage: "line.3.horizontal.decrease.circle")
+                        }
+                    }
+                }
             }
             .toolbarBackground(.visible, for: .navigationBar)
 
@@ -82,6 +107,22 @@ struct MainViewIOS: View {
             .onChange(of: locationsViewModel.sortedVariant) { _, _ in
                 withAnimation {
                     locationsViewModel.sortLocations(query: query)
+                }
+            }
+            .onChange(of: selectedOption) { _, newValue in
+                if newValue == 1 {
+                    locationsViewModel.isFilterActive = true
+                }
+                else {
+                    locationsViewModel.isFilterActive = false
+                }
+            }
+            .onReceive(
+                NotificationCenter.default
+                    .publisher(for: UIApplication.willEnterForegroundNotification)
+            ) { _ in
+                Task {
+                    await locationsViewModel.loadAllLocations()
                 }
             }
 

@@ -51,6 +51,7 @@ struct LocationDetailView: View {
                 }
             }
         }
+        .background(Color.accentColor.opacity(0.1))
         .toolbar {
             Button {
                 isFavorite ? removeFavorite() : markAsFavorite()
@@ -66,6 +67,14 @@ struct LocationDetailView: View {
         }
         .onAppear {
             isFavorite = favorites.contains(locationID)
+        }
+        .onReceive(
+            NotificationCenter.default
+                .publisher(for: UIApplication.willEnterForegroundNotification)
+        ) { _ in
+            Task {
+                await locationVM.refreshLocation()
+            }
         }
     }
 

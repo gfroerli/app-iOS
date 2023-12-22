@@ -24,7 +24,7 @@ struct LocationMapView: View {
 
     var body: some View {
         Map(position: $position, selection: $selectedLocation) {
-            ForEach(locationsViewModel.allLocations) { location in
+            ForEach(locationsViewModel.filteredLocations) { location in
                 Annotation("", coordinate: location.coordinates?.coordinate ?? config.defaultCoordinates.coordinate) {
                     GfroerliMapAnnotation(zoomed: $showBigAnnotations, location: location)
                 }
@@ -60,6 +60,11 @@ struct LocationMapView: View {
                 } completion: {
                     selectedLocation = nil
                 }
+            }
+        }
+        .onChange(of: locationsViewModel.isFilterActive) { _, _ in
+            withAnimation {
+                position = .automatic
             }
         }
     }

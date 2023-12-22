@@ -15,7 +15,7 @@ extension View {
         return background(Color(UIColor.systemBackground))
             .frame(maxWidth: .infinity)
             .cornerRadius(15)
-            .shadow(color: .secondary.opacity(0.5), radius: 3)
+            .shadow(color: .clear, radius: 0)
             .overlay {
                 RoundedRectangle(cornerRadius: 15)
                     .stroke(.primary, lineWidth: 0.1)

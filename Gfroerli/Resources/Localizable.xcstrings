@@ -958,19 +958,19 @@
         "de" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Experimental"
+            "value" : "Beta"
           }
         },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Experimentell"
+            "value" : "Experimental"
           }
         },
         "gsw" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Experimentell"
+            "value" : "Beta"
           }
         }
       }

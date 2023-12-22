@@ -15,9 +15,15 @@ import SwiftData
     // swiftformat:disable:next all
     public var allLocations = [Location]()
     public var activeLocations = [Location]()
+    public var filteredLocations = [Location]()
     public var sortedLocations = [Location]()
     public var sortedVariant: SortVariants = .mostRecent
-
+    public var isFilterActive = true {
+        didSet {
+            filterChanged()
+        }
+    }
+    
     // MARK: - Private Properties
 
     private let context = GfroerliBackend.modelContainer.mainContext
@@ -40,9 +46,8 @@ import SwiftData
         allLocations = locations
         activeLocations = locations.filter { $0.isActive }
         sortLocations(query: "")
+        filterChanged()
     }
-
-    // MARK: - Private Functions
 
     public func sortLocations(query: String? = nil) {
         var tempLocations = allLocations
@@ -68,6 +73,17 @@ import SwiftData
             sortedLocations = tempLocations.sorted {
                 $0.name! < $1.name!
             }
+        }
+    }
+    
+    // MARK: - Private Functions
+    
+    private func filterChanged() {
+        if isFilterActive {
+            filteredLocations = activeLocations
+        }
+        else {
+            filteredLocations = allLocations
         }
     }
 }

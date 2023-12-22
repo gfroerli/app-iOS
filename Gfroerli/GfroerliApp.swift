@@ -19,15 +19,6 @@ struct GfroerliApp: App {
                 .environment(NavigationModel())
                 .environment(AllLocationsViewModel())
                 .modelContainer(GfroerliBackend.modelContainer)
-//                .onReceive(
-//                    NotificationCenter.default
-//                        .publisher(for: UIApplication.willEnterForegroundNotification)
-//                ) { _ in
-//                    loadAllLocations()
-//                }
-//                .task {
-//                    loadAllLocations()
-//                }
         }
     }
 }
