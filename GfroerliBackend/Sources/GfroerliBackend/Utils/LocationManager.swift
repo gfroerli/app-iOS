@@ -16,7 +16,7 @@ class LocationManager {
 
     private let context = GfroerliBackend.modelContainer.mainContext
     
-    private let useCache = UserDefaults.standard.bool(forKey: "UseCache")
+    private let useCache = false // UserDefaults.standard.bool(forKey: "UseCache")
 
     // MARK: - Public Functions
 

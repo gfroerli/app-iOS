@@ -55,6 +55,7 @@ struct NewFeaturesView: View {
             }
             .tint(.accentColor)
             .buttonStyle(.bordered)
+            .accessibilityIdentifier("newFeaturesView_dismiss")
 
             Spacer()
         }

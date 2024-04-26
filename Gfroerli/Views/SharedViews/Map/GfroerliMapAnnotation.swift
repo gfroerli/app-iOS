@@ -38,7 +38,6 @@ struct GfroerliMapAnnotation: View {
             .foregroundColor(.white)
             .padding(8)
             .background(backgroundColor())
-            .border(tintColor(), width: 2)
             .clipShape(Capsule())
             .overlay {
                 Capsule()

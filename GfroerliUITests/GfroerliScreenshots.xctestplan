@@ -1,0 +1,37 @@
+{
+  "configurations" : [
+    {
+      "id" : "1CB64FC5-D7FE-428A-BCA5-0FFD6073898E",
+      "name" : "English",
+      "options" : {
+        "language" : "en",
+        "region" : "US",
+        "uiTestingScreenshotsLifetime" : "keepAlways"
+      }
+    },
+    {
+      "id" : "36DD4F30-0867-423F-8D07-93082F2DE19F",
+      "name" : "German",
+      "options" : {
+        "language" : "de",
+        "region" : "CH"
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "userAttachmentLifetime" : "keepAlways"
+  },
+  "testTargets" : [
+    {
+      "skippedTests" : [
+        "GfroerliUITests"
+      ],
+      "target" : {
+        "containerPath" : "container:Gfroerli.xcodeproj",
+        "identifier" : "2434F7E32A594888006ED9FD",
+        "name" : "GfroerliUITests"
+      }
+    }
+  ],
+  "version" : 1
+}

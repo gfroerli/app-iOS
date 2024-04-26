@@ -9,6 +9,8 @@ import GfroerliBackend
 import SwiftUI
 
 struct SponsorView: View {
+    typealias Config = AppConfiguration.MapPreviewView
+
     var sponsorVM: SponsorViewModel
     @Environment(\.modelContext) var modelContext
     @Environment(\.horizontalSizeClass) var horizontalSizeClass
@@ -56,10 +58,12 @@ struct SponsorView: View {
                         sponsorContentView()
                     }
                 }
+                Spacer()
             }
         }
         .padding(.horizontal, AppConfiguration.General.horizontalBoxPadding)
         .padding(.vertical, AppConfiguration.General.verticalBoxPadding)
+        .frame(idealHeight: Config.mapHeight)
         .defaultBoxStyle()
     }
     

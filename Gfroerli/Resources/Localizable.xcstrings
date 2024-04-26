@@ -17,6 +17,9 @@
         }
       }
     },
+    "%@_annotation" : {
+
+    },
     "changelog_view_app_title" : {
       "localizations" : {
         "de" : {

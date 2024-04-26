@@ -35,13 +35,13 @@ public enum FetchType: Sendable {
     public var assembledURL: URL {
         switch self {
         case .allLocations:
-            return Foundation.URL(string: "https://watertemp-api.coredump.ch//api/mobile_app/sensors")!
+            return Foundation.URL(string: "https://api.gfrör.li/api/mobile_app/sensors")!
 
         case let .singleLocation(id: id):
-            return Foundation.URL(string: "https://watertemp-api.coredump.ch//api/mobile_app/sensors/\(id)")!
+            return Foundation.URL(string: "https://api.gfrör.li//api/mobile_app/sensors/\(id)")!
 
         case let .sponsor(id: id):
-            return Foundation.URL(string: "https://watertemp-api.coredump.ch//api/mobile_app/sensors/\(id)/sponsor")!
+            return Foundation.URL(string: "https://api.gfrör.li//api/mobile_app/sensors/\(id)/sponsor")!
 
         case let .hourlyTemperatures(locationID: locationID, of: date):
 
@@ -52,7 +52,7 @@ public enum FetchType: Sendable {
 
             return Foundation
                 .URL(
-                    string: "https://watertemp-api.coredump.ch/api/mobile_app/sensors/\(locationID)/hourly_temperatures?from=\(startDateString)&to=\(endDateString)&limit=100"
+                    string: "https://api.gfrör.li/api/mobile_app/sensors/\(locationID)/hourly_temperatures?from=\(startDateString)&to=\(endDateString)&limit=100"
                 )!
 
         case let .dailyTemperatures(locationID: locationID, from: startDate, to: endDate):
@@ -61,7 +61,7 @@ public enum FetchType: Sendable {
 
             return Foundation
                 .URL(
-                    string: "https://watertemp-api.coredump.ch/api/mobile_app/sensors/\(locationID)/daily_temperatures?from=\(startDateString)&to=\(endDateString)&limit=100"
+                    string: "https://api.gfrör.li/api/mobile_app/sensors/\(locationID)/daily_temperatures?from=\(startDateString)&to=\(endDateString)&limit=100"
                 )!
         }
     }

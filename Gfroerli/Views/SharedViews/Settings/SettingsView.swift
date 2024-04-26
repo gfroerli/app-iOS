@@ -19,7 +19,7 @@ struct SettingsView: View {
                 SettingsHeaderView()
                 SettingsGeneralSectionView()
                 SettingsLinksSectionView()
-                SettingsOtherSectionView()
+                // SettingsOtherSectionView()
             }
             .toolbar(content: {
                 Button {

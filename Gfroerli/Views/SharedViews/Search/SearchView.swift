@@ -26,6 +26,7 @@ struct SearchView: View {
                             NavigationLink(value: location) {
                                 InlineLocationView(location: location)
                             }
+                            //  .accessibilityIdentifier("\(location.name!)")
                         }
                     } header: {
                         HStack {

@@ -136,7 +136,7 @@ struct TopGraphSummaryView: View {
     @Binding var currentIndex: Int?
 
     var body: some View {
-        if let currentIndex {
+        if let currentIndex, currentIndex < vm.lowestTemperatures.count {
             VStack(alignment: .leading) {
                 VStack(alignment: .leading) {
                     switch currentSelection {

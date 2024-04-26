@@ -50,12 +50,21 @@ struct LocationDetailView: View {
 
                     TemperatureHistoryView(locationID: locationVM.getID())
 
-                    LocationMapPreviewView(location: locationVM.location)
-
-                    if locationVM.location!.sponsorID != nil {
-                        SponsorView(sponsorVM: SponsorViewModel(id: locationVM.location?.id ?? -1))
+                    if horizontalSizeClass == .compact {
+                        if locationVM.location!.sponsorID != nil {
+                            LocationMapPreviewView(location: locationVM.location)
+                            SponsorView(sponsorVM: SponsorViewModel(id: locationVM.location?.id ?? -1))
+                        }
                     }
-
+                    else {
+                        HStack {
+                            LocationMapPreviewView(location: locationVM.location)
+                            if locationVM.location!.sponsorID != nil {
+                                SponsorView(sponsorVM: SponsorViewModel(id: locationVM.location?.id ?? -1))
+                            }
+                        }
+                        .fixedSize(horizontal: false, vertical: true)
+                    }
                     Spacer()
                         .navigationTitle(locationVM.location?.name ?? "")
                         .navigationBarTitleDisplayMode(.inline)
@@ -63,7 +72,7 @@ struct LocationDetailView: View {
             }
             .padding(.horizontal)
         }
-        .background(Color.accentColor.opacity(0.1))
+        .scrollBounceBehavior(.basedOnSize)
         .toolbar {
             Button {
                 isFavorite ? removeFavorite() : markAsFavorite()
@@ -82,7 +91,7 @@ struct LocationDetailView: View {
         }
         .onReceive(
             NotificationCenter.default
-                .publisher(for: UIApplication.willEnterForegroundNotification)
+                .publisher(for: UIApplication.didBecomeActiveNotification)
         ) { _ in
             Task {
                 await locationVM.refreshLocation()

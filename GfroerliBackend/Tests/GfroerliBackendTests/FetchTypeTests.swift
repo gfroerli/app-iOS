@@ -19,7 +19,7 @@ final class FetchTypeTests: XCTestCase {
         // Nothing to do
 
         // Assert
-        XCTAssertEqual(url.description, "https://watertemp-api.coredump.ch//api/mobile_app/sensors")
+        XCTAssertEqual(url.description, "https://api.gfrör.li/api/mobile_app/sensors")
     }
 
     // MARK: - .singleLocation
@@ -33,7 +33,7 @@ final class FetchTypeTests: XCTestCase {
         // Nothing to do
 
         // Assert
-        XCTAssertEqual(url.description, "https://watertemp-api.coredump.ch//api/mobile_app/sensors/\(id)")
+        XCTAssertEqual(url.description, "https://api.gfrör.li/api/mobile_app/sensors/\(id)")
     }
 
     func testSingleLocationURLIDIs2() {
@@ -45,7 +45,7 @@ final class FetchTypeTests: XCTestCase {
         // Nothing to do
 
         // Assert
-        XCTAssertEqual(url.description, "https://watertemp-api.coredump.ch//api/mobile_app/sensors/\(id)")
+        XCTAssertEqual(url.description, "https://api.gfrör.li/api/mobile_app/sensors/\(id)")
     }
 
     // MARK: - .sponsor
@@ -59,7 +59,7 @@ final class FetchTypeTests: XCTestCase {
         // Nothing to do
 
         // Assert
-        XCTAssertEqual(url.description, "https://watertemp-api.coredump.ch//api/mobile_app/sensors/\(id)/sponsor")
+        XCTAssertEqual(url.description, "https://api.gfrör.li/api/mobile_app/sensors/\(id)/sponsor")
     }
 
     func testSponsorURLIDIs2() {
@@ -71,7 +71,7 @@ final class FetchTypeTests: XCTestCase {
         // Nothing to do
 
         // Assert
-        XCTAssertEqual(url.description, "https://watertemp-api.coredump.ch//api/mobile_app/sensors/\(id)/sponsor")
+        XCTAssertEqual(url.description, "https://api.gfrör.li/api/mobile_app/sensors/\(id)/sponsor")
     }
 
     // MARK: - .hourlyTemperatures
@@ -92,7 +92,7 @@ final class FetchTypeTests: XCTestCase {
         // Assert
         XCTAssertEqual(
             url.description,
-            "https://watertemp-api.coredump.ch/api/mobile_app/sensors/\(locationID)/hourly_temperatures?from=\(expectedStartDateSting)&to=\(expectedEndDateSting)&limit=100"
+            "https://api.gfrör.li/api/mobile_app/sensors/\(locationID)/hourly_temperatures?from=\(expectedStartDateSting)&to=\(expectedEndDateSting)&limit=100"
         )
     }
 
@@ -112,7 +112,7 @@ final class FetchTypeTests: XCTestCase {
         // Assert
         XCTAssertEqual(
             url.description,
-            "https://watertemp-api.coredump.ch/api/mobile_app/sensors/\(locationID)/hourly_temperatures?from=\(expectedStartDateSting)&to=\(expectedEndDateSting)&limit=100"
+            "https://api.gfrör.li/api/mobile_app/sensors/\(locationID)/hourly_temperatures?from=\(expectedStartDateSting)&to=\(expectedEndDateSting)&limit=100"
         )
     }
 
@@ -135,7 +135,7 @@ final class FetchTypeTests: XCTestCase {
         // Assert
 //        XCTAssertEqual(
 //            url.description,
-//            "https://watertemp-api.coredump.ch/api/mobile_app/sensors/\(locationID)/daily_temperatures?from=\(expectedStartDateSting)&to=\(expectedEndDateSting)&limit=100"
+//            "https://api.gfrör.li/api/mobile_app/sensors/\(locationID)/daily_temperatures?from=\(expectedStartDateSting)&to=\(expectedEndDateSting)&limit=100"
 //        )
     }
 
@@ -156,7 +156,7 @@ final class FetchTypeTests: XCTestCase {
         // Assert
 //        XCTAssertEqual(
 //            url.description,
-//            "https://watertemp-api.coredump.ch/api/mobile_app/sensors/\(locationID)/daily_temperatures?from=\(expectedStartDateSting)&to=\(expectedEndDateSting)&limit=100"
+//            "https://api.gfrör.li/api/mobile_app/sensors/\(locationID)/daily_temperatures?from=\(expectedStartDateSting)&to=\(expectedEndDateSting)&limit=100"
 //        )
     }
 

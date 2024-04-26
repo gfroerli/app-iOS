@@ -94,11 +94,11 @@ struct MainView: View {
 
             // MARK: - Change observers
 
-            .onAppear {
-                if DefaultsCoordinator.shared.showNewFeatures() {
-                    showNewFeatures = true
-                }
-            }
+//            .onAppear {
+//                if DefaultsCoordinator.shared.showNewFeatures() {
+//                    showNewFeatures = true
+//                }
+//            }
             .onChange(of: query) { _, _ in
                 withAnimation {
                     locationsViewModel.sortLocations(query: query)

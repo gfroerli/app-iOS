@@ -11,8 +11,6 @@
 		2434F7D12A594888006ED9FD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2434F7D02A594888006ED9FD /* Assets.xcassets */; };
 		2434F7D52A594888006ED9FD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2434F7D42A594888006ED9FD /* Preview Assets.xcassets */; };
 		2434F7DF2A594888006ED9FD /* GfroerliTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2434F7DE2A594888006ED9FD /* GfroerliTests.swift */; };
-		2434F7E92A594888006ED9FD /* GfroerliUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2434F7E82A594888006ED9FD /* GfroerliUITests.swift */; };
-		2434F7EB2A594888006ED9FD /* GfroerliUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2434F7EA2A594888006ED9FD /* GfroerliUITestsLaunchTests.swift */; };
 		2434F7FF2A5948E6006ED9FD /* Date+Week.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2434F7F92A5948E6006ED9FD /* Date+Week.swift */; };
 		2434F8002A5948E6006ED9FD /* View+Modifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2434F7FA2A5948E6006ED9FD /* View+Modifiers.swift */; };
 		2434F8012A5948E6006ED9FD /* Bundle+Dedode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2434F7FB2A5948E6006ED9FD /* Bundle+Dedode.swift */; };
@@ -50,6 +48,9 @@
 		243DB8862B120FF200265111 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 243DB8852B120FF200265111 /* Localizable.xcstrings */; };
 		246058682A5C48920081FEB0 /* GfroerliBackend in Frameworks */ = {isa = PBXBuildFile; productRef = 246058672A5C48920081FEB0 /* GfroerliBackend */; };
 		249F08C42B16531D007697A8 /* SortVariant+Localized.swift in Sources */ = {isa = PBXBuildFile; fileRef = 249F08C32B16531D007697A8 /* SortVariant+Localized.swift */; };
+		24B814032B39A34400577A09 /* ScreenshotKit in Resources */ = {isa = PBXBuildFile; fileRef = 24B814022B39A34400577A09 /* ScreenshotKit */; };
+		24B814052B39A37D00577A09 /* ScreenshotKit in Frameworks */ = {isa = PBXBuildFile; productRef = 24B814042B39A37D00577A09 /* ScreenshotKit */; };
+		24F7F28F2B13096000AA41BA /* GfroerliScreenshots.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F7F28E2B13096000AA41BA /* GfroerliScreenshots.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +72,7 @@
 
 /* Begin PBXFileReference section */
 		24031DF42A594AE10026B29C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		24198C7C2BC092890037ECB5 /* ScreenshotHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenshotHelper.swift; sourceTree = "<group>"; };
 		2434F7C92A594886006ED9FD /* Gfroerli.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Gfroerli.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2434F7CC2A594886006ED9FD /* GfroerliApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GfroerliApp.swift; sourceTree = "<group>"; };
 		2434F7D02A594888006ED9FD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -79,9 +81,6 @@
 		2434F7DA2A594888006ED9FD /* GfroerliTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GfroerliTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2434F7DE2A594888006ED9FD /* GfroerliTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GfroerliTests.swift; sourceTree = "<group>"; };
 		2434F7E42A594888006ED9FD /* GfroerliUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GfroerliUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		2434F7E82A594888006ED9FD /* GfroerliUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GfroerliUITests.swift; sourceTree = "<group>"; };
-		2434F7EA2A594888006ED9FD /* GfroerliUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GfroerliUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		2434F7F82A5948E6006ED9FD /* UIDevice+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIDevice+Extension.swift"; sourceTree = "<group>"; };
 		2434F7F92A5948E6006ED9FD /* Date+Week.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+Week.swift"; sourceTree = "<group>"; };
 		2434F7FA2A5948E6006ED9FD /* View+Modifiers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "View+Modifiers.swift"; sourceTree = "<group>"; };
 		2434F7FB2A5948E6006ED9FD /* Bundle+Dedode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Bundle+Dedode.swift"; sourceTree = "<group>"; };
@@ -124,6 +123,9 @@
 		246058652A5C48830081FEB0 /* GfroerliBackend */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = GfroerliBackend; sourceTree = "<group>"; };
 		2493C95F2A5C47D6007F7EA3 /* Gfroerli.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = Gfroerli.xctestplan; sourceTree = "<group>"; };
 		249F08C32B16531D007697A8 /* SortVariant+Localized.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SortVariant+Localized.swift"; sourceTree = "<group>"; };
+		24B814022B39A34400577A09 /* ScreenshotKit */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ScreenshotKit; sourceTree = SOURCE_ROOT; };
+		24F7F28E2B13096000AA41BA /* GfroerliScreenshots.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GfroerliScreenshots.swift; sourceTree = "<group>"; };
+		24F7F2902B130AA800AA41BA /* GfroerliScreenshots.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = GfroerliScreenshots.xctestplan; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,6 +148,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				24B814052B39A37D00577A09 /* ScreenshotKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -210,8 +213,8 @@
 		2434F7E72A594888006ED9FD /* GfroerliUITests */ = {
 			isa = PBXGroup;
 			children = (
-				2434F7E82A594888006ED9FD /* GfroerliUITests.swift */,
-				2434F7EA2A594888006ED9FD /* GfroerliUITestsLaunchTests.swift */,
+				24F7F2902B130AA800AA41BA /* GfroerliScreenshots.xctestplan */,
+				24F7F28E2B13096000AA41BA /* GfroerliScreenshots.swift */,
 			);
 			path = GfroerliUITests;
 			sourceTree = "<group>";
@@ -219,7 +222,6 @@
 		2434F7F72A5948E6006ED9FD /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				2434F7F82A5948E6006ED9FD /* UIDevice+Extension.swift */,
 				2434F7F92A5948E6006ED9FD /* Date+Week.swift */,
 				2434F7FA2A5948E6006ED9FD /* View+Modifiers.swift */,
 				2434F7FB2A5948E6006ED9FD /* Bundle+Dedode.swift */,
@@ -237,6 +239,7 @@
 				2434F8072A5948ED006ED9FD /* ChangeLog.swift */,
 				2434F8082A5948ED006ED9FD /* NewFeatures.swift */,
 				249F08C32B16531D007697A8 /* SortVariant+Localized.swift */,
+				24198C7C2BC092890037ECB5 /* ScreenshotHelper.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -355,6 +358,7 @@
 		246058662A5C48920081FEB0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				24B814022B39A34400577A09 /* ScreenshotKit */,
 				246058652A5C48830081FEB0 /* GfroerliBackend */,
 			);
 			name = Frameworks;
@@ -416,6 +420,9 @@
 				2434F7E62A594888006ED9FD /* PBXTargetDependency */,
 			);
 			name = GfroerliUITests;
+			packageProductDependencies = (
+				24B814042B39A37D00577A09 /* ScreenshotKit */,
+			);
 			productName = GfroerliUITests;
 			productReference = 2434F7E42A594888006ED9FD /* GfroerliUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
@@ -493,6 +500,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				24B814032B39A34400577A09 /* ScreenshotKit in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -571,8 +579,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2434F7EB2A594888006ED9FD /* GfroerliUITestsLaunchTests.swift in Sources */,
-				2434F7E92A594888006ED9FD /* GfroerliUITests.swift in Sources */,
+				24F7F28F2B13096000AA41BA /* GfroerliScreenshots.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -744,12 +751,13 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Gfroerli/Gfroerli.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 4006;
+				CURRENT_PROJECT_VERSION = 4008;
 				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"Gfroerli/Preview Content\"";
 				DEVELOPMENT_TEAM = T7M5358433;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
+				ENABLE_TESTING_SEARCH_PATHS = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Gfroerli/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Gfrör.li";
@@ -787,12 +795,13 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Gfroerli/Gfroerli.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 4006;
+				CURRENT_PROJECT_VERSION = 4008;
 				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"Gfroerli/Preview Content\"";
 				DEVELOPMENT_TEAM = T7M5358433;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
+				ENABLE_TESTING_SEARCH_PATHS = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Gfroerli/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Gfrör.li";
@@ -964,6 +973,10 @@
 		246058672A5C48920081FEB0 /* GfroerliBackend */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = GfroerliBackend;
+		};
+		24B814042B39A37D00577A09 /* ScreenshotKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = ScreenshotKit;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
