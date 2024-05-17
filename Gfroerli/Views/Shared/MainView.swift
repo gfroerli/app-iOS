@@ -125,6 +125,9 @@ struct MainView: View {
                     await locationsViewModel.loadAllLocations()
                 }
             }
+            .onOpenURL(perform: { url in
+                print(url)
+            })
 
             // MARK: - Navigation
 

@@ -61,6 +61,7 @@
 		24B814052B39A37D00577A09 /* ScreenshotKit in Frameworks */ = {isa = PBXBuildFile; productRef = 24B814042B39A37D00577A09 /* ScreenshotKit */; };
 		24BD89C22BF750C4003B8694 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 243DB8852B120FF200265111 /* Localizable.xcstrings */; };
 		24BD89C62BF75517003B8694 /* SingleLocationWidgetTimelineProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24BD89C52BF75517003B8694 /* SingleLocationWidgetTimelineProvider.swift */; };
+		24BD89C82BF76D25003B8694 /* WaveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24BD89C72BF76D25003B8694 /* WaveView.swift */; };
 		24F7F28F2B13096000AA41BA /* GfroerliScreenshots.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F7F28E2B13096000AA41BA /* GfroerliScreenshots.swift */; };
 /* End PBXBuildFile section */
 
@@ -176,6 +177,7 @@
 		24A77F982BF732CB0074D93D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		24B814022B39A34400577A09 /* ScreenshotKit */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ScreenshotKit; sourceTree = SOURCE_ROOT; };
 		24BD89C52BF75517003B8694 /* SingleLocationWidgetTimelineProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleLocationWidgetTimelineProvider.swift; sourceTree = "<group>"; };
+		24BD89C72BF76D25003B8694 /* WaveView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaveView.swift; sourceTree = "<group>"; };
 		24F7F28E2B13096000AA41BA /* GfroerliScreenshots.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GfroerliScreenshots.swift; sourceTree = "<group>"; };
 		24F7F2902B130AA800AA41BA /* GfroerliScreenshots.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = GfroerliScreenshots.xctestplan; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -464,6 +466,7 @@
 			isa = PBXGroup;
 			children = (
 				24A77F922BF732CA0074D93D /* GfroerliWidget.swift */,
+				24BD89C72BF76D25003B8694 /* WaveView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -736,6 +739,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				24A77F912BF732CA0074D93D /* GfroerliWidgetBundle.swift in Sources */,
+				24BD89C82BF76D25003B8694 /* WaveView.swift in Sources */,
 				248021E02BF74771008C3283 /* LocationAppEntity.swift in Sources */,
 				24A77F932BF732CA0074D93D /* GfroerliWidget.swift in Sources */,
 				24BD89C62BF75517003B8694 /* SingleLocationWidgetTimelineProvider.swift in Sources */,

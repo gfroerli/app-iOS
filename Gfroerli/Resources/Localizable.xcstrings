@@ -61,6 +61,9 @@
         }
       }
     },
+    "Debug " : {
+
+    },
     "general_space" : {
       "localizations" : {
         "de" : {
@@ -523,9 +526,6 @@
           }
         }
       }
-    },
-    "No data" : {
-
     },
     "screenshot_detail_description" : {
       "extractionState" : "manual",

@@ -14,13 +14,13 @@ public struct LocationAppEntity: AppEntity, Identifiable {
     public let id: Int
     let name: String
     let tempString: String
-    let lastTempDateString: String
+    let tempDate: Date?
 
     public init(location: Location) {
         self.id = location.id
         self.name = location.name ?? "NIL"
         self.tempString = location.latestTemperatureString
-        self.lastTempDateString = location.lastTemperatureDateString
+        self.tempDate = location.lastTemperatureDate
     }
 
     @MainActor
@@ -46,16 +46,20 @@ public struct LocationQuery: EntityQuery {
     }
     
     public func entities(for identifiers: [LocationAppEntity.ID]) async throws -> [LocationAppEntity] {
+        await locationsVM.loadAllLocations()
         let filtered = await locationsVM.allLocations.filter { identifiers.contains($0.id) }
         return filtered.map { LocationAppEntity(location: $0) }
     }
     
     public func suggestedEntities() async throws -> [LocationAppEntity] {
+        await locationsVM.loadAllLocations()
         let locations = await locationsVM.allLocations
         return locations.map { LocationAppEntity(location: $0) }
     }
     
     public func defaultResult() async -> LocationAppEntity? {
+        await locationsVM.loadAllLocations()
+
         guard let location = await locationsVM.activeLocations.randomElement() else {
             return nil
         }

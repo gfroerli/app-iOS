@@ -9,40 +9,56 @@ import GfroerliBackend
 import SwiftUI
 import WidgetKit
 
-struct GfroerliWidgetEntryView: View {
+struct SingleLocationWidgetView: View {
     var entry: SingleLocationWidgetTimelineProvider.Entry
 
     var body: some View {
         VStack {
-            if let location = entry.configuration.location {
-                Text(String(location.name))
-                Text(String(location.tempString))
-                
-                Text(String(location.lastTempDateString))
-                Text(String(location.id))
+            HStack {
+                Text(entry.configuration.location?.name ?? "")
+                    .font(.callout)
+                    .lineLimit(2, reservesSpace: true)
+                Spacer()
             }
-            Text("No data")
+            
+            HStack {
+                Spacer()
+                Text(entry.configuration.location?.tempString ?? "")
+                    .font(.title)
+                    .bold()
+            }
+            
+            Spacer()
+            
+            if let date = entry.configuration.location?.tempDate {
+                HStack {
+                    Spacer()
+                    VStack(alignment: .trailing) {
+                        Text(date.formatted(date: .omitted, time: .shortened))
+                        if !Calendar.current.isDateInToday(date) {
+                            Text(date.formatted(date: .numeric, time: .omitted))
+                        }
+                        Text("Debug ") + Text(entry.date, style: .time)
+                    }
+                    .font(.caption)
+                    .multilineTextAlignment(.trailing)
+                }
+            }
+        }
+        .fontWeight(.semibold)
+        .padding(0)
+        .foregroundStyle(.white)
+        .containerBackground(for: .widget) {
+            ZStack {
+                Color(.accent)
+                Wave(strength: 3, frequency: 7, offset: 0)
+                    .foregroundStyle(.cyan.opacity(0.5))
+                    .scaleEffect(x: -1, y: 1)
+                    .offset(y: 2)
+                Wave(strength: 5, frequency: 6, offset: 0)
+                    .foregroundStyle(.cyan.opacity(0.8))
+                    .offset(y: 6)
+            }
         }
     }
-}
-
-struct GfroerliWidget: Widget {
-    let kind = "GfroerliWidget"
-
-    var body: some WidgetConfiguration {
-        AppIntentConfiguration(
-            kind: kind,
-            intent: SingleLocationWidgetConfigurationIntent.self,
-            provider: SingleLocationWidgetTimelineProvider()
-        ) { entry in
-            GfroerliWidgetEntryView(entry: entry)
-                .containerBackground(.fill.tertiary, for: .widget)
-        }
-    }
-}
-
-#Preview(as: .systemSmall) {
-    GfroerliWidget()
-} timeline: {
-    LocationEntry(date: .now, configuration: .previewIntent)
 }

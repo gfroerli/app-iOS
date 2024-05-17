@@ -25,8 +25,8 @@ struct SingleLocationWidgetTimelineProvider: AppIntentTimelineProvider {
         for configuration: SingleLocationWidgetConfigurationIntent,
         in context: Context
     ) async -> Timeline<LocationEntry> {
-        let date = Date.now.addingTimeInterval(900)
-        let entry = LocationEntry(date: Date.now, configuration: configuration)
+        let date = Calendar.current.date(byAdding: .minute, value: 15, to: Date.now)!
+        let entry = LocationEntry(date: date, configuration: configuration)
         return Timeline(entries: [entry], policy: .after(date))
     }
 }

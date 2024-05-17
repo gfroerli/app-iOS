@@ -13,6 +13,27 @@ import WidgetKit
 @main
 struct GfroerliWidgetBundle: WidgetBundle {
     var body: some Widget {
-        GfroerliWidget()
+        SingleLocationWidget()
     }
+}
+
+struct SingleLocationWidget: Widget {
+    let kind = "GfroerliWidget"
+
+    var body: some WidgetConfiguration {
+        AppIntentConfiguration(
+            kind: kind,
+            intent: SingleLocationWidgetConfigurationIntent.self,
+            provider: SingleLocationWidgetTimelineProvider()
+        ) { entry in
+            SingleLocationWidgetView(entry: entry)
+        }
+        .supportedFamilies([.systemSmall])
+    }
+}
+
+#Preview(as: .systemSmall) {
+    SingleLocationWidget()
+} timeline: {
+    LocationEntry(date: .now, configuration: .previewIntent)
 }
