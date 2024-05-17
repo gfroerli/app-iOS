@@ -8,18 +8,18 @@
 import AppIntents
 import WidgetKit
 
-struct SelectLocationWidgetConfigurationIntent: WidgetConfigurationIntent {
+struct SingleLocationWidgetConfigurationIntent: WidgetConfigurationIntent {
     static var title: LocalizedStringResource = "intent_title_select_location"
     static var description = IntentDescription("intent_description_select_location")
 
     // An example configurable parameter.
     @Parameter(title: "location")
-    var location: LocationAppEntity
+    var location: LocationAppEntity?
     
     init() { }
     
-    static var previewIntent: SelectLocationWidgetConfigurationIntent {
-        let intent = SelectLocationWidgetConfigurationIntent()
+    static var previewIntent: SingleLocationWidgetConfigurationIntent {
+        let intent = SingleLocationWidgetConfigurationIntent()
         intent.location = LocationAppEntity.example
         return intent
     }
