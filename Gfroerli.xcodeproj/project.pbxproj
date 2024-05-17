@@ -47,9 +47,19 @@
 		2434F85A2A594905006ED9FD /* de.xcloc in Resources */ = {isa = PBXBuildFile; fileRef = 2434F8552A594905006ED9FD /* de.xcloc */; };
 		243DB8862B120FF200265111 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 243DB8852B120FF200265111 /* Localizable.xcstrings */; };
 		246058682A5C48920081FEB0 /* GfroerliBackend in Frameworks */ = {isa = PBXBuildFile; productRef = 246058672A5C48920081FEB0 /* GfroerliBackend */; };
+		248021DC2BF746F9008C3283 /* GfroerliBackend in Frameworks */ = {isa = PBXBuildFile; productRef = 248021DB2BF746F9008C3283 /* GfroerliBackend */; };
+		248021E02BF74771008C3283 /* LocationAppEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 248021DF2BF74771008C3283 /* LocationAppEntity.swift */; };
 		249F08C42B16531D007697A8 /* SortVariant+Localized.swift in Sources */ = {isa = PBXBuildFile; fileRef = 249F08C32B16531D007697A8 /* SortVariant+Localized.swift */; };
+		24A77F8C2BF732CA0074D93D /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24A77F8B2BF732CA0074D93D /* WidgetKit.framework */; };
+		24A77F8E2BF732CA0074D93D /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24A77F8D2BF732CA0074D93D /* SwiftUI.framework */; };
+		24A77F912BF732CA0074D93D /* GfroerliWidgetBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A77F902BF732CA0074D93D /* GfroerliWidgetBundle.swift */; };
+		24A77F932BF732CA0074D93D /* GfroerliWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A77F922BF732CA0074D93D /* GfroerliWidget.swift */; };
+		24A77F952BF732CA0074D93D /* SelectLocationWidgetConfigurationIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A77F942BF732CA0074D93D /* SelectLocationWidgetConfigurationIntent.swift */; };
+		24A77F972BF732CB0074D93D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 24A77F962BF732CB0074D93D /* Assets.xcassets */; };
+		24A77F9B2BF732CB0074D93D /* GfroerliWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 24A77F8A2BF732CA0074D93D /* GfroerliWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		24B814032B39A34400577A09 /* ScreenshotKit in Resources */ = {isa = PBXBuildFile; fileRef = 24B814022B39A34400577A09 /* ScreenshotKit */; };
 		24B814052B39A37D00577A09 /* ScreenshotKit in Frameworks */ = {isa = PBXBuildFile; productRef = 24B814042B39A37D00577A09 /* ScreenshotKit */; };
+		24BD89C22BF750C4003B8694 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 243DB8852B120FF200265111 /* Localizable.xcstrings */; };
 		24F7F28F2B13096000AA41BA /* GfroerliScreenshots.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F7F28E2B13096000AA41BA /* GfroerliScreenshots.swift */; };
 /* End PBXBuildFile section */
 
@@ -68,7 +78,38 @@
 			remoteGlobalIDString = 2434F7C82A594886006ED9FD;
 			remoteInfo = Gfroerli;
 		};
+		24A77F992BF732CB0074D93D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2434F7C12A594886006ED9FD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 24A77F892BF732CA0074D93D;
+			remoteInfo = GfroerliWidgetExtension;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		248021D72BF7466F008C3283 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		24A77F9C2BF732CB0074D93D /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				24A77F9B2BF732CB0074D93D /* GfroerliWidgetExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		24031DF42A594AE10026B29C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
@@ -121,8 +162,17 @@
 		2434F8552A594905006ED9FD /* de.xcloc */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = de.xcloc; sourceTree = "<group>"; };
 		243DB8852B120FF200265111 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		246058652A5C48830081FEB0 /* GfroerliBackend */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = GfroerliBackend; sourceTree = "<group>"; };
+		248021DF2BF74771008C3283 /* LocationAppEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationAppEntity.swift; sourceTree = "<group>"; };
 		2493C95F2A5C47D6007F7EA3 /* Gfroerli.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = Gfroerli.xctestplan; sourceTree = "<group>"; };
 		249F08C32B16531D007697A8 /* SortVariant+Localized.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SortVariant+Localized.swift"; sourceTree = "<group>"; };
+		24A77F8A2BF732CA0074D93D /* GfroerliWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = GfroerliWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		24A77F8B2BF732CA0074D93D /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		24A77F8D2BF732CA0074D93D /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		24A77F902BF732CA0074D93D /* GfroerliWidgetBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GfroerliWidgetBundle.swift; sourceTree = "<group>"; };
+		24A77F922BF732CA0074D93D /* GfroerliWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GfroerliWidget.swift; sourceTree = "<group>"; };
+		24A77F942BF732CA0074D93D /* SelectLocationWidgetConfigurationIntent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectLocationWidgetConfigurationIntent.swift; sourceTree = "<group>"; };
+		24A77F962BF732CB0074D93D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		24A77F982BF732CB0074D93D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		24B814022B39A34400577A09 /* ScreenshotKit */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ScreenshotKit; sourceTree = SOURCE_ROOT; };
 		24F7F28E2B13096000AA41BA /* GfroerliScreenshots.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GfroerliScreenshots.swift; sourceTree = "<group>"; };
 		24F7F2902B130AA800AA41BA /* GfroerliScreenshots.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = GfroerliScreenshots.xctestplan; sourceTree = "<group>"; };
@@ -152,6 +202,16 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		24A77F872BF732CA0074D93D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				248021DC2BF746F9008C3283 /* GfroerliBackend in Frameworks */,
+				24A77F8E2BF732CA0074D93D /* SwiftUI.framework in Frameworks */,
+				24A77F8C2BF732CA0074D93D /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -161,6 +221,7 @@
 				2434F7CB2A594886006ED9FD /* Gfroerli */,
 				2434F7DD2A594888006ED9FD /* GfroerliTests */,
 				2434F7E72A594888006ED9FD /* GfroerliUITests */,
+				24A77F8F2BF732CA0074D93D /* GfroerliWidget */,
 				2434F7CA2A594886006ED9FD /* Products */,
 				246058662A5C48920081FEB0 /* Frameworks */,
 			);
@@ -172,6 +233,7 @@
 				2434F7C92A594886006ED9FD /* Gfroerli.app */,
 				2434F7DA2A594888006ED9FD /* GfroerliTests.xctest */,
 				2434F7E42A594888006ED9FD /* GfroerliUITests.xctest */,
+				24A77F8A2BF732CA0074D93D /* GfroerliWidgetExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -360,8 +422,39 @@
 			children = (
 				24B814022B39A34400577A09 /* ScreenshotKit */,
 				246058652A5C48830081FEB0 /* GfroerliBackend */,
+				24A77F8B2BF732CA0074D93D /* WidgetKit.framework */,
+				24A77F8D2BF732CA0074D93D /* SwiftUI.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		248021DD2BF74719008C3283 /* AppEntities */ = {
+			isa = PBXGroup;
+			children = (
+				248021DF2BF74771008C3283 /* LocationAppEntity.swift */,
+			);
+			path = AppEntities;
+			sourceTree = "<group>";
+		};
+		248021DE2BF74734008C3283 /* WidgetIntent */ = {
+			isa = PBXGroup;
+			children = (
+				24A77F942BF732CA0074D93D /* SelectLocationWidgetConfigurationIntent.swift */,
+			);
+			path = WidgetIntent;
+			sourceTree = "<group>";
+		};
+		24A77F8F2BF732CA0074D93D /* GfroerliWidget */ = {
+			isa = PBXGroup;
+			children = (
+				24A77F902BF732CA0074D93D /* GfroerliWidgetBundle.swift */,
+				24A77F922BF732CA0074D93D /* GfroerliWidget.swift */,
+				248021DE2BF74734008C3283 /* WidgetIntent */,
+				248021DD2BF74719008C3283 /* AppEntities */,
+				24A77F962BF732CB0074D93D /* Assets.xcassets */,
+				24A77F982BF732CB0074D93D /* Info.plist */,
+			);
+			path = GfroerliWidget;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -374,10 +467,13 @@
 				2434F7C52A594886006ED9FD /* Sources */,
 				2434F7C62A594886006ED9FD /* Frameworks */,
 				2434F7C72A594886006ED9FD /* Resources */,
+				24A77F9C2BF732CB0074D93D /* Embed Foundation Extensions */,
+				248021D72BF7466F008C3283 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				24A77F9A2BF732CB0074D93D /* PBXTargetDependency */,
 			);
 			name = Gfroerli;
 			packageProductDependencies = (
@@ -427,6 +523,26 @@
 			productReference = 2434F7E42A594888006ED9FD /* GfroerliUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		24A77F892BF732CA0074D93D /* GfroerliWidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 24A77F9F2BF732CB0074D93D /* Build configuration list for PBXNativeTarget "GfroerliWidgetExtension" */;
+			buildPhases = (
+				24A77F862BF732CA0074D93D /* Sources */,
+				24A77F872BF732CA0074D93D /* Frameworks */,
+				24A77F882BF732CA0074D93D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GfroerliWidgetExtension;
+			packageProductDependencies = (
+				248021DB2BF746F9008C3283 /* GfroerliBackend */,
+			);
+			productName = GfroerliWidgetExtension;
+			productReference = 24A77F8A2BF732CA0074D93D /* GfroerliWidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -434,7 +550,7 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1500;
+				LastSwiftUpdateCheck = 1540;
 				LastUpgradeCheck = 1510;
 				TargetAttributes = {
 					2434F7C82A594886006ED9FD = {
@@ -447,6 +563,9 @@
 					2434F7E32A594888006ED9FD = {
 						CreatedOnToolsVersion = 15.0;
 						TestTargetID = 2434F7C82A594886006ED9FD;
+					};
+					24A77F892BF732CA0074D93D = {
+						CreatedOnToolsVersion = 15.4;
 					};
 				};
 			};
@@ -470,6 +589,7 @@
 				2434F7C82A594886006ED9FD /* Gfroerli */,
 				2434F7D92A594888006ED9FD /* GfroerliTests */,
 				2434F7E32A594888006ED9FD /* GfroerliUITests */,
+				24A77F892BF732CA0074D93D /* GfroerliWidgetExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -501,6 +621,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				24B814032B39A34400577A09 /* ScreenshotKit in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		24A77F882BF732CA0074D93D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				24BD89C22BF750C4003B8694 /* Localizable.xcstrings in Resources */,
+				24A77F972BF732CB0074D93D /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -583,6 +712,17 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		24A77F862BF732CA0074D93D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				24A77F912BF732CA0074D93D /* GfroerliWidgetBundle.swift in Sources */,
+				248021E02BF74771008C3283 /* LocationAppEntity.swift in Sources */,
+				24A77F932BF732CA0074D93D /* GfroerliWidget.swift in Sources */,
+				24A77F952BF732CA0074D93D /* SelectLocationWidgetConfigurationIntent.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -595,6 +735,11 @@
 			isa = PBXTargetDependency;
 			target = 2434F7C82A594886006ED9FD /* Gfroerli */;
 			targetProxy = 2434F7E52A594888006ED9FD /* PBXContainerItemProxy */;
+		};
+		24A77F9A2BF732CB0074D93D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 24A77F892BF732CA0074D93D /* GfroerliWidgetExtension */;
+			targetProxy = 24A77F992BF732CB0074D93D /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -747,6 +892,7 @@
 		2434F7EF2A594888006ED9FD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Gfroerli/Gfroerli.entitlements;
@@ -791,6 +937,7 @@
 		2434F7F02A594888006ED9FD /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Gfroerli/Gfroerli.entitlements;
@@ -928,6 +1075,65 @@
 			};
 			name = Release;
 		};
+		24A77F9D2BF732CB0074D93D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = T7M5358433;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = GfroerliWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = GfroerliWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ch.coredump.gfroerli.GfroerliWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		24A77F9E2BF732CB0074D93D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = T7M5358433;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = GfroerliWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = GfroerliWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ch.coredump.gfroerli.GfroerliWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -967,10 +1173,23 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		24A77F9F2BF732CB0074D93D /* Build configuration list for PBXNativeTarget "GfroerliWidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				24A77F9D2BF732CB0074D93D /* Debug */,
+				24A77F9E2BF732CB0074D93D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 /* End XCConfigurationList section */
 
 /* Begin XCSwiftPackageProductDependency section */
 		246058672A5C48920081FEB0 /* GfroerliBackend */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = GfroerliBackend;
+		};
+		248021DB2BF746F9008C3283 /* GfroerliBackend */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = GfroerliBackend;
 		};

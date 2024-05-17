@@ -4,7 +4,7 @@ import SwiftData
 public class GfroerliBackend {
     public static let modelContainer: ModelContainer = {
         do {
-            let container = try ModelContainer(for: Location.self, Sponsor.self)
+            let container = try ModelContainer(for: Sponsor.self)
             return container
         }
         catch {

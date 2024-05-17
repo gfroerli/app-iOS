@@ -17,9 +17,6 @@
         }
       }
     },
-    "%@_annotation" : {
-
-    },
     "changelog_view_app_title" : {
       "localizations" : {
         "de" : {
@@ -240,6 +237,50 @@
         }
       }
     },
+    "intent_description_select_location" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Wählt einen Standort fürs Widget aus."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Selects a location for the widget."
+          }
+        },
+        "gsw" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Wählt en Standort fürs Widget uus."
+          }
+        }
+      }
+    },
+    "intent_title_select_location" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Standort auswählen"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Select Location"
+          }
+        },
+        "gsw" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Standort uswähle."
+          }
+        }
+      }
+    },
     "latest_temperature_view_title" : {
       "localizations" : {
         "de" : {
@@ -258,6 +299,29 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Letschti"
+          }
+        }
+      }
+    },
+    "location" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Standort"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Location"
+          }
+        },
+        "gsw" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Standort"
           }
         }
       }

@@ -64,29 +64,31 @@ class LocationManager {
     // MARK: - Private Functions
 
     private func loadAllLocationsFromDB() -> [Location]? {
-        let predicate = #Predicate<Location> { $0.id > 0 }
-        let descriptor = FetchDescriptor<Location>(predicate: predicate)
-
-        do {
-            return try context.fetch(descriptor)
-        }
-        catch {
-            // TODO: Error handling
-            return nil
-        }
+//        let predicate = #Predicate<Location> { $0.id > 0 }
+//        let descriptor = FetchDescriptor<Location>(predicate: predicate)
+//
+//        do {
+//            return try context.fetch(descriptor)
+//        }
+//        catch {
+//            // TODO: Error handling
+//            return nil
+//        }
+        return nil
     }
 
     private func loadLocationFromDB(id: Int) -> Location? {
-        let predicate = #Predicate<Location> { $0.id == id }
-        let descriptor = FetchDescriptor<Location>(predicate: predicate)
-
-        do {
-            return try context.fetch(descriptor).first
-        }
-        catch {
-            // TODO: Error handling
-            return nil
-        }
+//        let predicate = #Predicate<Location> { $0.id == id }
+//        let descriptor = FetchDescriptor<Location>(predicate: predicate)
+//
+//        do {
+//            return try context.fetch(descriptor).first
+//        }
+//        catch {
+//            // TODO: Error handling
+//            return nil
+//        }
+        return nil
     }
 
     private func loadAllLocationsFromAPI() async -> [Location]? {
@@ -115,7 +117,7 @@ class LocationManager {
         }
         
         do {
-            context.insert(location)
+            // context.insert(location)
             try context.save()
         }
         catch {

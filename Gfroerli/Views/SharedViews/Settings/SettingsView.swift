@@ -190,7 +190,6 @@ struct SettingsOtherSectionView: View {
             
             Button(role: .destructive) {
                 do {
-                    try modelContext.delete(model: Location.self)
                     try modelContext.delete(model: Sponsor.self)
                     updateCacheSizeFooter()
                 }

@@ -7,12 +7,20 @@
 
 import CoreLocation
 import Foundation
-import SwiftData
+import Observation
 
-@Model public class Location {
-    // MARK: SwiftData Attributes
-
-    @Attribute(.unique) public let id: Int
+@Observable
+public class Location: Identifiable, Equatable, Hashable {
+    
+    public static func == (lhs: Location, rhs: Location) -> Bool {
+        lhs === rhs
+    }
+        
+    public func hash(into hasher: inout Hasher) {
+        hasher.combine(ObjectIdentifier(self))
+    }
+    
+    public let id: Int
     public var name: String?
     public var desc: String?
     public var latitude: Double?
