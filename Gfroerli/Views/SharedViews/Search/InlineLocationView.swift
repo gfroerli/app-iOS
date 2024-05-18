@@ -25,7 +25,7 @@ struct InlineLocationView: View {
                 HStack {
                     Text(location.name ?? "")
                         .bold()
-                        .foregroundColor(true ? .primary : .secondary)
+                        .foregroundColor(location.isActive ? .primary : .secondary)
                     if isFavorite {
                         Image(systemName: "star.fill")
                             .foregroundColor(.yellow)

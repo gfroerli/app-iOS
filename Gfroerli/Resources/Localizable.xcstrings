@@ -61,9 +61,6 @@
         }
       }
     },
-    "Debug " : {
-
-    },
     "general_space" : {
       "localizations" : {
         "de" : {
@@ -1660,6 +1657,50 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Insgsamt"
+          }
+        }
+      }
+    },
+    "widget_single_loc_description" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zeigt die Temperatur für einen ausgewählten Standort an."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Shows the latest temperature for a configurable location."
+          }
+        },
+        "gsw" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zeigt di letsti Temperatur für en uuswählbare Standort ah."
+          }
+        }
+      }
+    },
+    "widget_single_loc_display_name" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Einzelner Standort"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Single Location"
+          }
+        },
+        "gsw" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Einzelne Standort"
           }
         }
       }

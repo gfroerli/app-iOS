@@ -18,7 +18,7 @@ struct GfroerliWidgetBundle: WidgetBundle {
 }
 
 struct SingleLocationWidget: Widget {
-    let kind = "GfroerliWidget"
+    let kind = "GfroerliSingleLocationWidget"
 
     var body: some WidgetConfiguration {
         AppIntentConfiguration(
@@ -28,6 +28,8 @@ struct SingleLocationWidget: Widget {
         ) { entry in
             SingleLocationWidgetView(entry: entry)
         }
+        .configurationDisplayName("widget_single_loc_display_name")
+        .description("widget_single_loc_description")
         .supportedFamilies([.systemSmall])
     }
 }

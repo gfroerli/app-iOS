@@ -125,9 +125,23 @@ struct MainView: View {
                     await locationsViewModel.loadAllLocations()
                 }
             }
-            .onOpenURL(perform: { url in
-                print(url)
-            })
+            .onOpenURL { url in
+                guard let urlComponents = URLComponents(url: url, resolvingAgainstBaseURL: false),
+                      urlComponents.scheme == "gfroerli" else {
+                    return
+                }
+                
+                guard let queryItem = urlComponents.queryItems?.first as? URLQueryItem, queryItem.name == "locationID",
+                      let value = queryItem.value, let id = Int(value) else {
+                    return
+                }
+                
+                let location = locationsViewModel.allLocations.first { $0.id == id }
+                
+                if let location {
+                    navigationModel.navigationPath.append(location)
+                }
+            }
 
             // MARK: - Navigation
 
