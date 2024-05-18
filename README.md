@@ -1,9 +1,7 @@
 
 <p align="center">
-    <img src="https://github.com/nliechti/gfroerli-ios/blob/main/Shared/Assets.xcassets/AppIcon.appiconset/AppIcon-ipad-83.5%402x.png" />
+    <img src="https://github.com/gfroerli/app-iOS/Gfroerli/Assets.xcassets/AppIcon.appiconset/AppIcon-1024.png" />
 </p>
-
-# _IMPORTANT: This README and the main branch are deprecated and will be replaced once v4.0 is ready. Please refer to the [v4.0 branch](https://github.com/gfroerli/app-iOS/tree/v4.0) to see the work-in-progress code._
 
 
 ## Info
