@@ -7,6 +7,7 @@
 import Foundation
 import Observation
 import SwiftData
+import WidgetKit
 
 @MainActor
 @Observable public class AllLocationsViewModel {
@@ -47,6 +48,7 @@ import SwiftData
         activeLocations = locations.filter { $0.isActive }
         sortLocations(query: "")
         filterChanged()
+        WidgetCenter.shared.reloadAllTimelines()
     }
 
     public func sortLocations(query: String? = nil) {
