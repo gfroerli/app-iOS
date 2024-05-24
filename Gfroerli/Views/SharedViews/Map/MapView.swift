@@ -27,8 +27,6 @@ struct LocationMapView: View {
             ForEach(locationsViewModel.filteredLocations) { location in
                 Annotation("", coordinate: location.coordinates?.coordinate ?? config.defaultCoordinates.coordinate) {
                     GfroerliMapAnnotation(zoomed: $showBigAnnotations, location: location)
-                        .accessibilityLabel("\(location.name!)_annotation")
-                        .accessibilityElement()
                 }
                 .annotationTitles(.hidden)
                 .tag(location)

@@ -71,8 +71,8 @@ struct HistoryGraphView: View {
                         .foregroundStyle(.clear)
                         .accessibilityHidden(true)
                     }
-                    if hoveringIndex != nil {
-                        RuleMark(x: .value("", vm.averageTemperatures[hoveringIndex!].measurementDate))
+                    if let hoveringIndex, hoveringIndex < vm.averageTemperatures.count {
+                        RuleMark(x: .value("", vm.averageTemperatures[hoveringIndex].measurementDate))
                             .foregroundStyle(.gray.gradient)
                     }
                 }

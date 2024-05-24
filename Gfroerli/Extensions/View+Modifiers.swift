@@ -10,9 +10,7 @@ import SwiftUI
 
 extension View {
     func defaultBoxStyle() -> some View {
-        @Environment(\.colorScheme) var colorScheme
-
-        return background(backgroundColor())
+        background(backgroundColor())
             .cornerRadius(15)
             .shadow(color: .clear, radius: 0)
             .overlay {
