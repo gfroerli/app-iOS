@@ -15,7 +15,7 @@ struct SingleLocationWidgetView: View {
     var body: some View {
         VStack {
             HStack {
-                Text(entry.configuration.location?.name ?? "")
+                Text(entry.configuration.location?.name ?? "widget_no_data")
                     .font(.callout)
                     .lineLimit(2, reservesSpace: true)
                 Spacer()

@@ -13,12 +13,20 @@ public struct LocationAppEntity: AppEntity, Identifiable {
     
     public let id: Int
     let name: String
+    
+    /// Same as name until firs space or max 8 characters
+    let shortName: String
     let tempString: String
     let tempDate: Date?
 
     public init(location: Location) {
         self.id = location.id
-        self.name = location.name ?? "NIL"
+        
+        self.name = location.name ?? ""
+        let delimiter = " "
+        let splits = name.components(separatedBy: delimiter)
+        self.shortName = String((splits.first ?? "").prefix(8))
+        
         self.tempString = location.latestTemperatureString
         self.tempDate = location.lastTemperatureDate
     }
