@@ -10,21 +10,24 @@ import SwiftUI
 import WidgetKit
 
 struct SingleLocationWidgetView: View {
+    @Environment(\.showsWidgetContainerBackground) var showsBackground
     var entry: SingleLocationWidgetTimelineProvider.Entry
-
+    
     var body: some View {
         VStack {
             HStack {
                 Text(entry.configuration.location?.name ?? "widget_no_data")
-                    .font(.callout)
+                    .font(showsBackground ? .callout : .title3)
                     .lineLimit(2, reservesSpace: true)
+                
                 Spacer()
             }
             
             HStack {
                 Spacer()
+                
                 Text(entry.configuration.location?.tempString ?? "")
-                    .font(.title)
+                    .font(showsBackground ? .title : .largeTitle)
                     .bold()
             }
             
@@ -34,21 +37,22 @@ struct SingleLocationWidgetView: View {
                 Image(systemName: "thermometer.medium")
                     .symbolRenderingMode(.palette)
                     .foregroundStyle(.red, .white, .accent)
+                    .font(showsBackground ? .subheadline : .headline)
+                
                 Spacer()
-                if let date = entry.configuration.location?.tempDate {
-                    VStack(alignment: .trailing) {
-                        Text(date.formatted(date: .omitted, time: .shortened))
-                        if !Calendar.current.isDateInToday(date) {
-                            Text(date.formatted(date: .numeric, time: .omitted))
-                        }
-                    }
-                    
-                    .multilineTextAlignment(.trailing)
+                
+                ZStack {
+                    Text(entry.configuration.location?.tempDateString ?? "")
+                        .lineLimit(2)
+                    Text("")
+                        .lineLimit(2, reservesSpace: true)
                 }
+                .multilineTextAlignment(.trailing)
             }
+            .font(showsBackground ? .caption2 : .caption)
         }
         .fontWeight(.semibold)
-        .padding(0)
+        .padding(showsBackground ? 0 : 5)
         .foregroundStyle(.white)
         .containerBackground(for: .widget) {
             ZStack {
@@ -62,7 +66,7 @@ struct SingleLocationWidgetView: View {
                     .offset(y: 6)
             }
         }
-        .dynamicTypeSize(...DynamicTypeSize.xxLarge)
+        .dynamicTypeSize(...DynamicTypeSize.xLarge)
         .widgetURL(deepLinkURL())
     }
     

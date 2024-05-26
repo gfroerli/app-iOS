@@ -33,28 +33,6 @@
         }
       }
     },
-    " %@" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%@"
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : " %@"
-          }
-        },
-        "gsw" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%@"
-          }
-        }
-      }
-    },
     "… " : {
       "localizations" : {
         "de" : {
@@ -73,6 +51,28 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "… "
+          }
+        }
+      }
+    },
+    "%@ " : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : " %@"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : " %@"
+          }
+        },
+        "gsw" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : " %@"
           }
         }
       }
@@ -1739,6 +1739,28 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Kei Date verfügbar"
+          }
+        }
+      }
+    },
+    "widget_no_date" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "-"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "-"
+          }
+        },
+        "gsw" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "-"
           }
         }
       }

@@ -76,8 +76,9 @@ struct SingleLocationLockScreenWidgetView: View {
 
         var body: some View {
             VStack(alignment: .leading) {
-                HStack {
+                HStack(spacing: 5) {
                     Image(systemName: "thermometer.medium")
+                        .imageScale(.small)
                     Text(location.tempString)
                         .foregroundStyle(.white)
                     Spacer()
@@ -87,14 +88,8 @@ struct SingleLocationLockScreenWidgetView: View {
                     Text(location.name)
                 }
                
-                if let date = location.tempDate {
-                    HStack {
-                        if !Calendar.current.isDateInToday(date) {
-                            Text(date.formatted(date: .numeric, time: .omitted))
-                        }
-                        Text(date.formatted(date: .omitted, time: .shortened))
-                    }
-                }
+                Text(location.tempDateString)
+                    .multilineTextAlignment(.trailing)
             }
             .containerBackground(for: .widget) {
                 EmptyView()

@@ -17,7 +17,7 @@ public struct LocationAppEntity: AppEntity, Identifiable {
     /// Same as name until firs space or max 8 characters
     let shortName: String
     let tempString: String
-    let tempDate: Date?
+    let tempDateString: String
 
     public init(location: Location) {
         self.id = location.id
@@ -28,7 +28,19 @@ public struct LocationAppEntity: AppEntity, Identifiable {
         self.shortName = String((splits.first ?? "").prefix(8))
         
         self.tempString = location.latestTemperatureString
-        self.tempDate = location.lastTemperatureDate
+        
+        if let date = location.lastTemperatureDate {
+            let dateFormatter = Foundation.DateFormatter()
+            dateFormatter.locale = Locale.current
+            
+            dateFormatter.dateStyle = .medium
+            dateFormatter.timeStyle = .short
+            dateFormatter.doesRelativeDateFormatting = true
+            self.tempDateString = dateFormatter.string(from: date)
+        }
+        else {
+            self.tempDateString = String(localized: "widget_no_date")
+        }
     }
 
     @MainActor
