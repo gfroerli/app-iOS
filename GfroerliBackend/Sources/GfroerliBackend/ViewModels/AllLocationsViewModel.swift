@@ -16,6 +16,7 @@ import WidgetKit
     // swiftformat:disable:next all
     public var allLocations = [Location]()
     public var activeLocations = [Location]()
+    public var inactiveLocations = [Location]()
     public var filteredLocations = [Location]()
     public var sortedLocations = [Location]()
     public var sortedVariant: SortVariants = .mostRecent
@@ -46,6 +47,7 @@ import WidgetKit
 
         allLocations = locations
         activeLocations = locations.filter { $0.isActive }
+        inactiveLocations = locations.filter { !$0.isActive }
         sortLocations(query: "")
         filterChanged()
         WidgetCenter.shared.reloadAllTimelines()

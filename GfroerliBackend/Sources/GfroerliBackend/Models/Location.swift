@@ -180,7 +180,7 @@ extension Location: Decodable {
 extension Location {
     public static func exampleLocation() -> Location {
         Location(
-            id: 0,
+            id: 1,
             name: "Test Location",
             desc: "This is just a description for the test location",
             latitude: 47.0,

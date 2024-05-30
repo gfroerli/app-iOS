@@ -46,7 +46,19 @@
 		2434F8592A594905006ED9FD /* en.xcloc in Resources */ = {isa = PBXBuildFile; fileRef = 2434F8542A594905006ED9FD /* en.xcloc */; };
 		2434F85A2A594905006ED9FD /* de.xcloc in Resources */ = {isa = PBXBuildFile; fileRef = 2434F8552A594905006ED9FD /* de.xcloc */; };
 		243DB8862B120FF200265111 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 243DB8852B120FF200265111 /* Localizable.xcstrings */; };
+		244737A72C033EC3008CD013 /* GfroerliWatchApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244737A62C033EC3008CD013 /* GfroerliWatchApp.swift */; };
+		244737A92C033EC3008CD013 /* WatchMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244737A82C033EC3008CD013 /* WatchMainView.swift */; };
+		244737AB2C033EC4008CD013 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 244737AA2C033EC4008CD013 /* Assets.xcassets */; };
+		244737AE2C033EC4008CD013 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 244737AD2C033EC4008CD013 /* Preview Assets.xcassets */; };
+		244737B12C033EC4008CD013 /* GfroerliWatch Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 244737A42C033EC3008CD013 /* GfroerliWatch Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		246058682A5C48920081FEB0 /* GfroerliBackend in Frameworks */ = {isa = PBXBuildFile; productRef = 246058672A5C48920081FEB0 /* GfroerliBackend */; };
+		2478A3512C04ECAC00C5817C /* GfroerliBackend in Frameworks */ = {isa = PBXBuildFile; productRef = 2478A3502C04ECAC00C5817C /* GfroerliBackend */; };
+		2478A3522C04EFFD00C5817C /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 243DB8852B120FF200265111 /* Localizable.xcstrings */; };
+		2478A3552C04F15600C5817C /* WatchListContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2478A3542C04F15600C5817C /* WatchListContentView.swift */; };
+		2478A3572C04FAE500C5817C /* WatchLocationDetailTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2478A3562C04FAE500C5817C /* WatchLocationDetailTabView.swift */; };
+		2478A3592C04FBE000C5817C /* WaveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24BD89C72BF76D25003B8694 /* WaveView.swift */; };
+		2478A35A2C04FBE400C5817C /* WaveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24BD89C72BF76D25003B8694 /* WaveView.swift */; };
+		2478A35B2C04FBE400C5817C /* WaveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24BD89C72BF76D25003B8694 /* WaveView.swift */; };
 		248021DC2BF746F9008C3283 /* GfroerliBackend in Frameworks */ = {isa = PBXBuildFile; productRef = 248021DB2BF746F9008C3283 /* GfroerliBackend */; };
 		248021E02BF74771008C3283 /* LocationAppEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 248021DF2BF74771008C3283 /* LocationAppEntity.swift */; };
 		249F08C42B16531D007697A8 /* SortVariant+Localized.swift in Sources */ = {isa = PBXBuildFile; fileRef = 249F08C32B16531D007697A8 /* SortVariant+Localized.swift */; };
@@ -61,7 +73,9 @@
 		24B814052B39A37D00577A09 /* ScreenshotKit in Frameworks */ = {isa = PBXBuildFile; productRef = 24B814042B39A37D00577A09 /* ScreenshotKit */; };
 		24BD89C22BF750C4003B8694 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 243DB8852B120FF200265111 /* Localizable.xcstrings */; };
 		24BD89C62BF75517003B8694 /* SingleLocationWidgetTimelineProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24BD89C52BF75517003B8694 /* SingleLocationWidgetTimelineProvider.swift */; };
-		24BD89C82BF76D25003B8694 /* WaveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24BD89C72BF76D25003B8694 /* WaveView.swift */; };
+		24C8A02D2C08CE3300D45ABE /* WatchTemperatureSummaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C8A02C2C08CE3300D45ABE /* WatchTemperatureSummaryView.swift */; };
+		24C8A02F2C08D0B000D45ABE /* WatchTemperatureHistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C8A02E2C08D0B000D45ABE /* WatchTemperatureHistoryView.swift */; };
+		24CD49642C08D5EA00B652F9 /* WatchSponsorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24CD49632C08D5EA00B652F9 /* WatchSponsorView.swift */; };
 		24D0BCD92C00C9A300D5A93F /* SingleLocationWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24D0BCD82C00C9A300D5A93F /* SingleLocationWidget.swift */; };
 		24D0BCDB2C00C9F200D5A93F /* SingleLocationLockScreenWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24D0BCDA2C00C9F200D5A93F /* SingleLocationLockScreenWidget.swift */; };
 		24D0BCDD2C00CA8300D5A93F /* SingleLocationLockScreenWidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24D0BCDC2C00CA8300D5A93F /* SingleLocationLockScreenWidgetView.swift */; };
@@ -83,6 +97,13 @@
 			remoteGlobalIDString = 2434F7C82A594886006ED9FD;
 			remoteInfo = Gfroerli;
 		};
+		244737AF2C033EC4008CD013 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2434F7C12A594886006ED9FD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 244737A32C033EC3008CD013;
+			remoteInfo = "GfroerliWatch Watch App";
+		};
 		24A77F992BF732CB0074D93D /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 2434F7C12A594886006ED9FD /* Project object */;
@@ -93,6 +114,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		244737B52C033EC4008CD013 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				244737B12C033EC4008CD013 /* GfroerliWatch Watch App.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		248021D72BF7466F008C3283 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -166,7 +198,14 @@
 		2434F8542A594905006ED9FD /* en.xcloc */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = en.xcloc; sourceTree = "<group>"; };
 		2434F8552A594905006ED9FD /* de.xcloc */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = de.xcloc; sourceTree = "<group>"; };
 		243DB8852B120FF200265111 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
+		244737A42C033EC3008CD013 /* GfroerliWatch Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "GfroerliWatch Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		244737A62C033EC3008CD013 /* GfroerliWatchApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GfroerliWatchApp.swift; sourceTree = "<group>"; };
+		244737A82C033EC3008CD013 /* WatchMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchMainView.swift; sourceTree = "<group>"; };
+		244737AA2C033EC4008CD013 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		244737AD2C033EC4008CD013 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		246058652A5C48830081FEB0 /* GfroerliBackend */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = GfroerliBackend; sourceTree = "<group>"; };
+		2478A3542C04F15600C5817C /* WatchListContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchListContentView.swift; sourceTree = "<group>"; };
+		2478A3562C04FAE500C5817C /* WatchLocationDetailTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchLocationDetailTabView.swift; sourceTree = "<group>"; };
 		248021DF2BF74771008C3283 /* LocationAppEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationAppEntity.swift; sourceTree = "<group>"; };
 		2493C95F2A5C47D6007F7EA3 /* Gfroerli.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = Gfroerli.xctestplan; sourceTree = "<group>"; };
 		249F08C32B16531D007697A8 /* SortVariant+Localized.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SortVariant+Localized.swift"; sourceTree = "<group>"; };
@@ -181,6 +220,9 @@
 		24B814022B39A34400577A09 /* ScreenshotKit */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ScreenshotKit; sourceTree = SOURCE_ROOT; };
 		24BD89C52BF75517003B8694 /* SingleLocationWidgetTimelineProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleLocationWidgetTimelineProvider.swift; sourceTree = "<group>"; };
 		24BD89C72BF76D25003B8694 /* WaveView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaveView.swift; sourceTree = "<group>"; };
+		24C8A02C2C08CE3300D45ABE /* WatchTemperatureSummaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchTemperatureSummaryView.swift; sourceTree = "<group>"; };
+		24C8A02E2C08D0B000D45ABE /* WatchTemperatureHistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchTemperatureHistoryView.swift; sourceTree = "<group>"; };
+		24CD49632C08D5EA00B652F9 /* WatchSponsorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchSponsorView.swift; sourceTree = "<group>"; };
 		24D0BCD82C00C9A300D5A93F /* SingleLocationWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleLocationWidget.swift; sourceTree = "<group>"; };
 		24D0BCDA2C00C9F200D5A93F /* SingleLocationLockScreenWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleLocationLockScreenWidget.swift; sourceTree = "<group>"; };
 		24D0BCDC2C00CA8300D5A93F /* SingleLocationLockScreenWidgetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleLocationLockScreenWidgetView.swift; sourceTree = "<group>"; };
@@ -212,6 +254,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		244737A12C033EC3008CD013 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2478A3512C04ECAC00C5817C /* GfroerliBackend in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		24A77F872BF732CA0074D93D /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -232,6 +282,7 @@
 				2434F7DD2A594888006ED9FD /* GfroerliTests */,
 				2434F7E72A594888006ED9FD /* GfroerliUITests */,
 				24A77F8F2BF732CA0074D93D /* GfroerliWidget */,
+				244737A52C033EC3008CD013 /* GfroerliWatch Watch App */,
 				2434F7CA2A594886006ED9FD /* Products */,
 				246058662A5C48920081FEB0 /* Frameworks */,
 			);
@@ -244,6 +295,7 @@
 				2434F7DA2A594888006ED9FD /* GfroerliTests.xctest */,
 				2434F7E42A594888006ED9FD /* GfroerliUITests.xctest */,
 				24A77F8A2BF732CA0074D93D /* GfroerliWidgetExtension.appex */,
+				244737A42C033EC3008CD013 /* GfroerliWatch Watch App.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -401,6 +453,7 @@
 		2434F82C2A5948FC006ED9FD /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				24BD89C72BF76D25003B8694 /* WaveView.swift */,
 				2434F82F2A5948FC006ED9FD /* MainView.swift */,
 				2434F82D2A5948FC006ED9FD /* NavigationBaseView.swift */,
 			);
@@ -427,6 +480,25 @@
 			path = "gfroerli Localizations";
 			sourceTree = "<group>";
 		};
+		244737A52C033EC3008CD013 /* GfroerliWatch Watch App */ = {
+			isa = PBXGroup;
+			children = (
+				244737A62C033EC3008CD013 /* GfroerliWatchApp.swift */,
+				2478A3532C04F0AC00C5817C /* Views */,
+				244737AA2C033EC4008CD013 /* Assets.xcassets */,
+				244737AC2C033EC4008CD013 /* Preview Content */,
+			);
+			path = "GfroerliWatch Watch App";
+			sourceTree = "<group>";
+		};
+		244737AC2C033EC4008CD013 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				244737AD2C033EC4008CD013 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
 		246058662A5C48920081FEB0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -436,6 +508,19 @@
 				24A77F8D2BF732CA0074D93D /* SwiftUI.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2478A3532C04F0AC00C5817C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				244737A82C033EC3008CD013 /* WatchMainView.swift */,
+				2478A3542C04F15600C5817C /* WatchListContentView.swift */,
+				2478A3562C04FAE500C5817C /* WatchLocationDetailTabView.swift */,
+				24C8A02C2C08CE3300D45ABE /* WatchTemperatureSummaryView.swift */,
+				24C8A02E2C08D0B000D45ABE /* WatchTemperatureHistoryView.swift */,
+				24CD49632C08D5EA00B652F9 /* WatchSponsorView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		248021DD2BF74719008C3283 /* AppEntities */ = {
@@ -474,7 +559,6 @@
 			children = (
 				24A77F922BF732CA0074D93D /* SingleLocationWidgetView.swift */,
 				24D0BCDC2C00CA8300D5A93F /* SingleLocationLockScreenWidgetView.swift */,
-				24BD89C72BF76D25003B8694 /* WaveView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -508,11 +592,13 @@
 				2434F7C72A594886006ED9FD /* Resources */,
 				24A77F9C2BF732CB0074D93D /* Embed Foundation Extensions */,
 				248021D72BF7466F008C3283 /* Embed Frameworks */,
+				244737B52C033EC4008CD013 /* Embed Watch Content */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 				24A77F9A2BF732CB0074D93D /* PBXTargetDependency */,
+				244737B02C033EC4008CD013 /* PBXTargetDependency */,
 			);
 			name = Gfroerli;
 			packageProductDependencies = (
@@ -562,6 +648,27 @@
 			productReference = 2434F7E42A594888006ED9FD /* GfroerliUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		244737A32C033EC3008CD013 /* GfroerliWatch Watch App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 244737B22C033EC4008CD013 /* Build configuration list for PBXNativeTarget "GfroerliWatch Watch App" */;
+			buildPhases = (
+				2478A35C2C04FDB000C5817C /* SwiftFormat */,
+				244737A02C033EC3008CD013 /* Sources */,
+				244737A12C033EC3008CD013 /* Frameworks */,
+				244737A22C033EC3008CD013 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "GfroerliWatch Watch App";
+			packageProductDependencies = (
+				2478A3502C04ECAC00C5817C /* GfroerliBackend */,
+			);
+			productName = "GfroerliWatch Watch App";
+			productReference = 244737A42C033EC3008CD013 /* GfroerliWatch Watch App.app */;
+			productType = "com.apple.product-type.application";
+		};
 		24A77F892BF732CA0074D93D /* GfroerliWidgetExtension */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 24A77F9F2BF732CB0074D93D /* Build configuration list for PBXNativeTarget "GfroerliWidgetExtension" */;
@@ -603,6 +710,9 @@
 						CreatedOnToolsVersion = 15.0;
 						TestTargetID = 2434F7C82A594886006ED9FD;
 					};
+					244737A32C033EC3008CD013 = {
+						CreatedOnToolsVersion = 15.4;
+					};
 					24A77F892BF732CA0074D93D = {
 						CreatedOnToolsVersion = 15.4;
 					};
@@ -629,6 +739,7 @@
 				2434F7D92A594888006ED9FD /* GfroerliTests */,
 				2434F7E32A594888006ED9FD /* GfroerliUITests */,
 				24A77F892BF732CA0074D93D /* GfroerliWidgetExtension */,
+				244737A32C033EC3008CD013 /* GfroerliWatch Watch App */,
 			);
 		};
 /* End PBXProject section */
@@ -663,6 +774,16 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		244737A22C033EC3008CD013 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				244737AE2C033EC4008CD013 /* Preview Assets.xcassets in Resources */,
+				244737AB2C033EC4008CD013 /* Assets.xcassets in Resources */,
+				2478A3522C04EFFD00C5817C /* Localizable.xcstrings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		24A77F882BF732CA0074D93D /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -675,6 +796,24 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		2478A35C2C04FDB000C5817C /* SwiftFormat */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftFormat;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\"${SRCROOT}/Scripts/format.sh\" \"$SRCROOT\"\n";
+		};
 		24D8425D2A5C4C6E0099755D /* SwiftFormat */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -722,6 +861,7 @@
 				2434F8022A5948E6006ED9FD /* Array+Codable.swift in Sources */,
 				2434F8122A5948F5006ED9FD /* TemperaturesViewModel.swift in Sources */,
 				2434F8342A5948FC006ED9FD /* FAQView.swift in Sources */,
+				2478A3592C04FBE000C5817C /* WaveView.swift in Sources */,
 				2434F83B2A5948FC006ED9FD /* GfroerliMapAnnotation.swift in Sources */,
 				2434F7CD2A594886006ED9FD /* GfroerliApp.swift in Sources */,
 				2434F8112A5948F5006ED9FD /* NavigationModel.swift in Sources */,
@@ -751,18 +891,33 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		244737A02C033EC3008CD013 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2478A3572C04FAE500C5817C /* WatchLocationDetailTabView.swift in Sources */,
+				2478A35B2C04FBE400C5817C /* WaveView.swift in Sources */,
+				24C8A02D2C08CE3300D45ABE /* WatchTemperatureSummaryView.swift in Sources */,
+				244737A92C033EC3008CD013 /* WatchMainView.swift in Sources */,
+				244737A72C033EC3008CD013 /* GfroerliWatchApp.swift in Sources */,
+				24C8A02F2C08D0B000D45ABE /* WatchTemperatureHistoryView.swift in Sources */,
+				2478A3552C04F15600C5817C /* WatchListContentView.swift in Sources */,
+				24CD49642C08D5EA00B652F9 /* WatchSponsorView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		24A77F862BF732CA0074D93D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				24A77F912BF732CA0074D93D /* GfroerliWidgetBundle.swift in Sources */,
-				24BD89C82BF76D25003B8694 /* WaveView.swift in Sources */,
 				248021E02BF74771008C3283 /* LocationAppEntity.swift in Sources */,
 				24D0BCD92C00C9A300D5A93F /* SingleLocationWidget.swift in Sources */,
 				24A77F932BF732CA0074D93D /* SingleLocationWidgetView.swift in Sources */,
 				24D0BCDD2C00CA8300D5A93F /* SingleLocationLockScreenWidgetView.swift in Sources */,
 				24BD89C62BF75517003B8694 /* SingleLocationWidgetTimelineProvider.swift in Sources */,
 				24A77F952BF732CA0074D93D /* SingleLocationWidgetConfigurationIntent.swift in Sources */,
+				2478A35A2C04FBE400C5817C /* WaveView.swift in Sources */,
 				24D0BCDB2C00C9F200D5A93F /* SingleLocationLockScreenWidget.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -779,6 +934,11 @@
 			isa = PBXTargetDependency;
 			target = 2434F7C82A594886006ED9FD /* Gfroerli */;
 			targetProxy = 2434F7E52A594888006ED9FD /* PBXContainerItemProxy */;
+		};
+		244737B02C033EC4008CD013 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 244737A32C033EC3008CD013 /* GfroerliWatch Watch App */;
+			targetProxy = 244737AF2C033EC4008CD013 /* PBXContainerItemProxy */;
 		};
 		24A77F9A2BF732CB0074D93D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -850,7 +1010,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -915,7 +1075,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -941,7 +1101,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Gfroerli/Gfroerli.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 4200;
+				CURRENT_PROJECT_VERSION = 4300;
 				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"Gfroerli/Preview Content\"";
 				DEVELOPMENT_TEAM = T7M5358433;
@@ -966,7 +1126,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 14.0;
-				MARKETING_VERSION = 4.2;
+				MARKETING_VERSION = 4.3;
 				PRODUCT_BUNDLE_IDENTIFIER = ch.coredump.gfroerli;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
@@ -987,7 +1147,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Gfroerli/Gfroerli.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 4200;
+				CURRENT_PROJECT_VERSION = 4300;
 				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"Gfroerli/Preview Content\"";
 				DEVELOPMENT_TEAM = T7M5358433;
@@ -1012,7 +1172,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 14.0;
-				MARKETING_VERSION = 4.2;
+				MARKETING_VERSION = 4.3;
 				PRODUCT_BUNDLE_IDENTIFIER = ch.coredump.gfroerli;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
@@ -1121,6 +1281,69 @@
 			};
 			name = Release;
 		};
+		244737B32C033EC4008CD013 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1000;
+				DEVELOPMENT_ASSET_PATHS = "\"GfroerliWatch Watch App/Preview Content\"";
+				DEVELOPMENT_TEAM = T7M5358433;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = GfroerliWatch;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = ch.coredump.gfroerli;
+				INFOPLIST_KEY_WKRunsIndependentlyOfCompanionApp = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ch.coredump.gfroerli.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 10.0;
+			};
+			name = Debug;
+		};
+		244737B42C033EC4008CD013 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1000;
+				DEVELOPMENT_ASSET_PATHS = "\"GfroerliWatch Watch App/Preview Content\"";
+				DEVELOPMENT_TEAM = T7M5358433;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = GfroerliWatch;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = ch.coredump.gfroerli;
+				INFOPLIST_KEY_WKRunsIndependentlyOfCompanionApp = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ch.coredump.gfroerli.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 10.0;
+			};
+			name = Release;
+		};
 		24A77F9D2BF732CB0074D93D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1219,6 +1442,15 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		244737B22C033EC4008CD013 /* Build configuration list for PBXNativeTarget "GfroerliWatch Watch App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				244737B32C033EC4008CD013 /* Debug */,
+				244737B42C033EC4008CD013 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		24A77F9F2BF732CB0074D93D /* Build configuration list for PBXNativeTarget "GfroerliWidgetExtension" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -1232,6 +1464,10 @@
 
 /* Begin XCSwiftPackageProductDependency section */
 		246058672A5C48920081FEB0 /* GfroerliBackend */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = GfroerliBackend;
+		};
+		2478A3502C04ECAC00C5817C /* GfroerliBackend */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = GfroerliBackend;
 		};
