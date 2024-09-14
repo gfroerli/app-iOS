@@ -55,6 +55,9 @@
         }
       }
     },
+    "%@" : {
+
+    },
     "%@ " : {
       "localizations" : {
         "de" : {
@@ -904,6 +907,9 @@
         }
       }
     },
+    "Selected" : {
+
+    },
     "settings_email_text" : {
       "localizations" : {
         "de" : {
@@ -1744,6 +1750,7 @@
       }
     },
     "watch_nav_title" : {
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {

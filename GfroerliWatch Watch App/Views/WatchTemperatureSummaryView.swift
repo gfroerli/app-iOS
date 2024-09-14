@@ -7,6 +7,8 @@
 
 import GfroerliBackend
 import SwiftUI
+
+@MainActor
 struct WatchTemperatureSummaryView: View {
     let location: Location
     var body: some View {

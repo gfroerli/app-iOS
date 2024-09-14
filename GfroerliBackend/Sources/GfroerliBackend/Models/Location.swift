@@ -9,8 +9,7 @@ import CoreLocation
 import Foundation
 import Observation
 
-@Observable
-public class Location: Identifiable, Equatable, Hashable {
+public final class Location: Identifiable, Equatable, Hashable, Sendable {
     
     public static func == (lhs: Location, rhs: Location) -> Bool {
         lhs === rhs
@@ -21,22 +20,22 @@ public class Location: Identifiable, Equatable, Hashable {
     }
     
     public let id: Int
-    public var name: String?
-    public var desc: String?
-    public var latitude: Double?
-    public var longitude: Double?
-    public var creationDate: Date?
+    public let name: String?
+    public let desc: String?
+    public let latitude: Double?
+    public let longitude: Double?
+    public let creationDate: Date?
 
-    public var sponsorID: Int?
+    public let sponsorID: Int?
 
-    public var latestTemperature: Double?
-    public var lastTemperatureDate: Date?
+    public let latestTemperature: Double?
+    public let lastTemperatureDate: Date?
 
-    public var highestTemperature: Double?
-    public var lowestTemperature: Double?
-    public var averageTemperature: Double?
+    public let highestTemperature: Double?
+    public let lowestTemperature: Double?
+    public let averageTemperature: Double?
 
-    public var lastFetchDate: Date
+    public let lastFetchDate: Date
 
     // MARK: Lifecycle
 
@@ -178,9 +177,9 @@ extension Location: Decodable {
 // MARK: - Example
 
 extension Location {
-    public static func exampleLocation() -> Location {
+    public nonisolated static func exampleLocation() -> Location {
         Location(
-            id: 1,
+            id: 7,
             name: "Test Location",
             desc: "This is just a description for the test location",
             latitude: 47.0,

@@ -13,16 +13,16 @@ extension SortVariants {
     public var text: LocalizedStringKey {
         switch self {
         case .mostRecent:
-            return "search_view_sort_recent"
+            "search_view_sort_recent"
 
         case .highest:
-            return "search_view_sort_highest"
+            "search_view_sort_highest"
 
         case .lowest:
-            return "search_view_sort_lowest"
+            "search_view_sort_lowest"
 
         case .alphabet:
-            return "search_view_sort_alphabetical"
+            "search_view_sort_alphabetical"
         }
     }
 }

@@ -189,11 +189,7 @@ struct SettingsOtherSectionView: View {
             }
             
             Button(role: .destructive) {
-                do {
-                    try modelContext.delete(model: Sponsor.self)
-                    updateCacheSizeFooter()
-                }
-                catch { }
+                updateCacheSizeFooter()
             } label: {
                 Text("settings_view_item_cache_delete")
             }
@@ -226,7 +222,7 @@ struct SettingsOtherSectionView: View {
     }
     
     private func footerText(for size: Int64) -> String {
-        return String(localized: "settings_view_item_cache_footer_size") + " " + ByteCountFormatter
+        String(localized: "settings_view_item_cache_footer_size") + " " + ByteCountFormatter
             .string(fromByteCount: size, countStyle: .file) + " \n" +
             String(localized: "settings_view_item_cache_footer_note")
     }

@@ -19,12 +19,7 @@ struct WatchMainView: View {
                     ForEach(locationsViewModel.activeLocations) { location in
                         NavigationLink(value: location) {
                             WatchListContentView(location: location)
-                        }
-                    }
-                    ForEach(locationsViewModel.inactiveLocations) {
-                        location in
-                        NavigationLink(value: location) {
-                            WatchListContentView(location: location)
+                                .padding(.vertical, 6)
                         }
                     }
                 }
@@ -38,15 +33,41 @@ struct WatchMainView: View {
                         Wave(strength: 5, frequency: 6, offset: 0)
                             .foregroundStyle(.cyan.opacity(0.8))
                             .offset(y: 5)
-                            
-                    }.clipShape(.containerRelative)
+                    }
+                    .clipShape(.containerRelative)
+                    .padding(.vertical, 2)
+                )
+                Section("inline_location_view_inactive") {
+                    ForEach(locationsViewModel.inactiveLocations) {
+                        location in
+                        NavigationLink(value: location) {
+                            WatchListContentView(location: location)
+                                .padding(.vertical, 6)
+                        }
+                    }
+                }
+                .listRowBackground(
+                    ZStack {
+                        Color(.gfroerliBlue)
+                        Wave(strength: 3, frequency: 7, offset: 0)
+                            .foregroundStyle(.cyan.opacity(0.5))
+                            .scaleEffect(x: -1, y: 1)
+                            .offset(y: 3)
+                        Wave(strength: 5, frequency: 6, offset: 0)
+                            .foregroundStyle(.cyan.opacity(0.8))
+                            .offset(y: 5)
+                    }
+                    .clipShape(.containerRelative)
+                    .padding(.vertical, 2)
                 )
             }
             .listStyle(.carousel)
             .navigationDestination(for: Location.self) { location in
                 WatchLocationDetailTabView(locationID: location.id)
             }
-            .navigationTitle("watch_nav_title")
+            .task {
+                await locationsViewModel.loadAllLocations()
+            }
             
         } detail: {
             ContentUnavailableView("watch_nav_no_content", systemImage: "thermometer.medium")

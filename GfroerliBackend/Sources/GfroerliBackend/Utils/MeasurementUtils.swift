@@ -7,10 +7,10 @@
 
 import Foundation
 
-public class MeasurementUtils {
+public final class MeasurementUtils: Sendable {
     public static let shared = MeasurementUtils()
 
-    lazy var dateFormatter = DateFormatter()
+    let dateFormatter = DateFormatter()
 
     /// Creates a localized temperature string of a given double value
     /// - Parameters:
@@ -18,7 +18,7 @@ public class MeasurementUtils {
     ///   - precision: Desired precision of the double
     /// - Returns: String
     public func temperatureString(from double: Double?, precision: Int = 1) -> String {
-        guard let double = double else {
+        guard let double else {
             return "-°"
         }
         let measurementFormatter = MeasurementFormatter()

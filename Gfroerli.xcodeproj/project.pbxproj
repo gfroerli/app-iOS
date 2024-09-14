@@ -51,6 +51,7 @@
 		244737AB2C033EC4008CD013 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 244737AA2C033EC4008CD013 /* Assets.xcassets */; };
 		244737AE2C033EC4008CD013 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 244737AD2C033EC4008CD013 /* Preview Assets.xcassets */; };
 		244737B12C033EC4008CD013 /* GfroerliWatch Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 244737A42C033EC3008CD013 /* GfroerliWatch Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		2449D4F82C09B20700016B82 /* LocationTemperatureHistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2449D4F72C09B20700016B82 /* LocationTemperatureHistoryView.swift */; };
 		246058682A5C48920081FEB0 /* GfroerliBackend in Frameworks */ = {isa = PBXBuildFile; productRef = 246058672A5C48920081FEB0 /* GfroerliBackend */; };
 		2478A3512C04ECAC00C5817C /* GfroerliBackend in Frameworks */ = {isa = PBXBuildFile; productRef = 2478A3502C04ECAC00C5817C /* GfroerliBackend */; };
 		2478A3522C04EFFD00C5817C /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 243DB8852B120FF200265111 /* Localizable.xcstrings */; };
@@ -203,6 +204,7 @@
 		244737A82C033EC3008CD013 /* WatchMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchMainView.swift; sourceTree = "<group>"; };
 		244737AA2C033EC4008CD013 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		244737AD2C033EC4008CD013 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		2449D4F72C09B20700016B82 /* LocationTemperatureHistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationTemperatureHistoryView.swift; sourceTree = "<group>"; };
 		246058652A5C48830081FEB0 /* GfroerliBackend */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = GfroerliBackend; sourceTree = "<group>"; };
 		2478A3542C04F15600C5817C /* WatchListContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchListContentView.swift; sourceTree = "<group>"; };
 		2478A3562C04FAE500C5817C /* WatchLocationDetailTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchLocationDetailTabView.swift; sourceTree = "<group>"; };
@@ -434,6 +436,7 @@
 				2434F8242A5948FC006ED9FD /* SponsorView.swift */,
 				2434F8252A5948FC006ED9FD /* TemperatureSummaryView.swift */,
 				2434F8262A5948FC006ED9FD /* LocationDetailView.swift */,
+				2449D4F72C09B20700016B82 /* LocationTemperatureHistoryView.swift */,
 				2434F8272A5948FC006ED9FD /* LocationTemperatureHistory */,
 				2434F82A2A5948FC006ED9FD /* LocationMapPreviewView.swift */,
 				2434F82B2A5948FC006ED9FD /* LatestTemperatureView.swift */,
@@ -652,7 +655,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 244737B22C033EC4008CD013 /* Build configuration list for PBXNativeTarget "GfroerliWatch Watch App" */;
 			buildPhases = (
-				2478A35C2C04FDB000C5817C /* SwiftFormat */,
 				244737A02C033EC3008CD013 /* Sources */,
 				244737A12C033EC3008CD013 /* Frameworks */,
 				244737A22C033EC3008CD013 /* Resources */,
@@ -697,7 +699,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1540;
-				LastUpgradeCheck = 1510;
+				LastUpgradeCheck = 1600;
 				TargetAttributes = {
 					2434F7C82A594886006ED9FD = {
 						CreatedOnToolsVersion = 15.0;
@@ -796,26 +798,9 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		2478A35C2C04FDB000C5817C /* SwiftFormat */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			name = SwiftFormat;
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\"${SRCROOT}/Scripts/format.sh\" \"$SRCROOT\"\n";
-		};
 		24D8425D2A5C4C6E0099755D /* SwiftFormat */ = {
 			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
 			buildActionMask = 2147483647;
 			files = (
 			);
@@ -830,7 +815,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\"${SRCROOT}/Scripts/format.sh\" \"$SRCROOT\"\n";
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\"${SRCROOT}/Scripts/format.sh\" \"$SRCROOT\" --swiftversion \"6.0\"\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -849,6 +834,7 @@
 				2434F8412A5948FC006ED9FD /* LocationMapPreviewView.swift in Sources */,
 				2434F8332A5948FC006ED9FD /* SettingsView.swift in Sources */,
 				2434F80A2A5948ED006ED9FD /* DefaultsCoordinator.swift in Sources */,
+				2449D4F82C09B20700016B82 /* LocationTemperatureHistoryView.swift in Sources */,
 				2434F83E2A5948FC006ED9FD /* LocationDetailView.swift in Sources */,
 				2434F8422A5948FC006ED9FD /* LatestTemperatureView.swift in Sources */,
 				2434F8132A5948F5006ED9FD /* ViewModelState.swift in Sources */,
@@ -1033,6 +1019,8 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 6.0;
+				WATCHOS_DEPLOYMENT_TARGET = 10.0;
 			};
 			name = Debug;
 		};
@@ -1090,13 +1078,14 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_VERSION = 6.0;
+				WATCHOS_DEPLOYMENT_TARGET = 10.0;
 			};
 			name = Release;
 		};
 		2434F7EF2A594888006ED9FD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Gfroerli/Gfroerli.entitlements;
@@ -1134,7 +1123,8 @@
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
+				SWIFT_STRICT_CONCURRENCY = complete;
+				SWIFT_VERSION = 6.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -1142,7 +1132,6 @@
 		2434F7F02A594888006ED9FD /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Gfroerli/Gfroerli.entitlements;
@@ -1180,7 +1169,8 @@
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
+				SWIFT_STRICT_CONCURRENCY = complete;
+				SWIFT_VERSION = 6.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -1188,7 +1178,6 @@
 		2434F7F22A594888006ED9FD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -1213,7 +1202,6 @@
 		2434F7F32A594888006ED9FD /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -1238,7 +1226,6 @@
 		2434F7F52A594888006ED9FD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = YES;
@@ -1261,7 +1248,6 @@
 		2434F7F62A594888006ED9FD /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = YES;
@@ -1287,12 +1273,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1000;
+				CURRENT_PROJECT_VERSION = 4300;
 				DEVELOPMENT_ASSET_PATHS = "\"GfroerliWatch Watch App/Preview Content\"";
 				DEVELOPMENT_TEAM = T7M5358433;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_CFBundleDisplayName = GfroerliWatch;
+				INFOPLIST_KEY_CFBundleDisplayName = Gfroerli;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = ch.coredump.gfroerli;
 				INFOPLIST_KEY_WKRunsIndependentlyOfCompanionApp = YES;
@@ -1300,15 +1286,26 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 4.3;
 				PRODUCT_BUNDLE_IDENTIFIER = ch.coredump.gfroerli.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
+				SWIFT_STRICT_CONCURRENCY = complete;
+				SWIFT_UPCOMING_FEATURE_CONCISE_MAGIC_FILE = YES;
+				SWIFT_UPCOMING_FEATURE_DEPRECATE_APPLICATION_MAIN = YES;
+				SWIFT_UPCOMING_FEATURE_DISABLE_OUTWARD_ACTOR_ISOLATION = YES;
+				SWIFT_UPCOMING_FEATURE_FORWARD_TRAILING_CLOSURES = YES;
+				SWIFT_UPCOMING_FEATURE_GLOBAL_CONCURRENCY = YES;
+				SWIFT_UPCOMING_FEATURE_IMPLICIT_OPEN_EXISTENTIALS = YES;
+				SWIFT_UPCOMING_FEATURE_IMPORT_OBJC_FORWARD_DECLS = YES;
+				SWIFT_UPCOMING_FEATURE_INFER_SENDABLE_FROM_CAPTURES = YES;
+				SWIFT_UPCOMING_FEATURE_ISOLATED_DEFAULT_VALUES = YES;
+				SWIFT_UPCOMING_FEATURE_REGION_BASED_ISOLATION = YES;
+				SWIFT_VERSION = 6.0;
 				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 10.0;
+				WATCHOS_DEPLOYMENT_TARGET = 11.0;
 			};
 			name = Debug;
 		};
@@ -1318,12 +1315,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1000;
+				CURRENT_PROJECT_VERSION = 4300;
 				DEVELOPMENT_ASSET_PATHS = "\"GfroerliWatch Watch App/Preview Content\"";
 				DEVELOPMENT_TEAM = T7M5358433;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_CFBundleDisplayName = GfroerliWatch;
+				INFOPLIST_KEY_CFBundleDisplayName = Gfroerli;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = ch.coredump.gfroerli;
 				INFOPLIST_KEY_WKRunsIndependentlyOfCompanionApp = YES;
@@ -1331,16 +1328,27 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 4.3;
 				PRODUCT_BUNDLE_IDENTIFIER = ch.coredump.gfroerli.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
+				SWIFT_STRICT_CONCURRENCY = complete;
+				SWIFT_UPCOMING_FEATURE_CONCISE_MAGIC_FILE = YES;
+				SWIFT_UPCOMING_FEATURE_DEPRECATE_APPLICATION_MAIN = YES;
+				SWIFT_UPCOMING_FEATURE_DISABLE_OUTWARD_ACTOR_ISOLATION = YES;
+				SWIFT_UPCOMING_FEATURE_FORWARD_TRAILING_CLOSURES = YES;
+				SWIFT_UPCOMING_FEATURE_GLOBAL_CONCURRENCY = YES;
+				SWIFT_UPCOMING_FEATURE_IMPLICIT_OPEN_EXISTENTIALS = YES;
+				SWIFT_UPCOMING_FEATURE_IMPORT_OBJC_FORWARD_DECLS = YES;
+				SWIFT_UPCOMING_FEATURE_INFER_SENDABLE_FROM_CAPTURES = YES;
+				SWIFT_UPCOMING_FEATURE_ISOLATED_DEFAULT_VALUES = YES;
+				SWIFT_UPCOMING_FEATURE_REGION_BASED_ISOLATION = YES;
+				SWIFT_VERSION = 6.0;
 				TARGETED_DEVICE_FAMILY = 4;
 				VALIDATE_PRODUCT = YES;
-				WATCHOS_DEPLOYMENT_TARGET = 10.0;
+				WATCHOS_DEPLOYMENT_TARGET = 11.0;
 			};
 			name = Release;
 		};
@@ -1350,7 +1358,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 4300;
 				DEVELOPMENT_TEAM = T7M5358433;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = GfroerliWidget/Info.plist;
@@ -1362,13 +1370,14 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 4.3;
 				PRODUCT_BUNDLE_IDENTIFIER = ch.coredump.gfroerli.GfroerliWidget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
+				SWIFT_STRICT_CONCURRENCY = complete;
+				SWIFT_VERSION = 6.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -1379,7 +1388,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 4300;
 				DEVELOPMENT_TEAM = T7M5358433;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = GfroerliWidget/Info.plist;
@@ -1391,13 +1400,14 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 4.3;
 				PRODUCT_BUNDLE_IDENTIFIER = ch.coredump.gfroerli.GfroerliWidget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
+				SWIFT_STRICT_CONCURRENCY = complete;
+				SWIFT_VERSION = 6.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};

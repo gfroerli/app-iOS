@@ -13,6 +13,7 @@ struct WatchSponsorView: View {
     var sponsorVM: SponsorViewModel
 
     var body: some View {
+        
         ScrollView {
             VStack {
                 AsyncImage(url: sponsorVM.sponsor?.imageURL) { image in
@@ -22,7 +23,7 @@ struct WatchSponsorView: View {
                         .padding()
                         .background(.white)
                         .cornerRadius(10)
-                
+                        
                 } placeholder: {
                     VStack {
                         Spacer()
@@ -34,8 +35,8 @@ struct WatchSponsorView: View {
                         Spacer()
                     }
                 }
-            
-                Text(sponsorVM.sponsor?.desc ?? "sponsor_view_no_descriptionn")
+                    
+                Text(sponsorVM.sponsor?.desc ?? "sponsor_view_no_description")
                     .padding(.horizontal)
                     .padding(.bottom)
             }

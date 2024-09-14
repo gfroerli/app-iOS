@@ -22,7 +22,7 @@ import SwiftUI
     public init(id: Int) {
         self.id = id
 
-        Task {
+        Task { @MainActor in
             await loadSponsor()
         }
     }
@@ -44,32 +44,32 @@ import SwiftUI
     /// Loads the Sponsor with the ID the ViewModel was initialized with
     public func loadSponsor() async {
         // Try to load from SwiftData
-        if useCache, let dbSponsor = loadFromDB() {
-            sponsor = dbSponsor
-            // TODO: Outdated
-            return
-        }
+//        if useCache, let dbSponsor = loadFromDB() {
+//            sponsor = dbSponsor
+//            // TODO: Outdated
+//            return
+//        }
 
         // If non-existent in SwiftData or outdated, we load from API
         if let apiSponsor = await loadFromAPI() {
-            persistAndAssign(apiSponsor)
+            sponsor = apiSponsor
         }
     }
 
     // MARK: - Private Functions
 
-    private func loadFromDB() -> Sponsor? {
-        let predicate = #Predicate<Sponsor> { $0.id == id }
-        let descriptor = FetchDescriptor<Sponsor>(predicate: predicate)
-
-        do {
-            return try context.fetch(descriptor).first
-        }
-        catch {
-            // TODO: Error handling
-            return nil
-        }
-    }
+//    private func loadFromDB() -> Sponsor? {
+//        let predicate = #Predicate<Sponsor> { $0.id == id }
+//        let descriptor = FetchDescriptor<Sponsor>(predicate: predicate)
+//
+//        do {
+//            return try context.fetch(descriptor).first
+//        }
+//        catch {
+//            // TODO: Error handling
+//            return nil
+//        }
+//    }
 
     private func loadFromAPI() async -> Sponsor? {
         do {
@@ -81,17 +81,17 @@ import SwiftUI
         }
     }
 
-    private func persistAndAssign(_ apiSponsor: Sponsor) {
-        do {
-            sponsor = apiSponsor
-            
-            if useCache {
-                context.insert(sponsor!)
-                try context.save()
-            }
-        }
-        catch {
-            // TODO: Error handling
-        }
-    }
+//    private func persistAndAssign(_ apiSponsor: Sponsor) {
+//        do {
+//            sponsor = apiSponsor
+//
+//            if useCache {
+//                context.insert(sponsor!)
+//                try context.save()
+//            }
+//        }
+//        catch {
+//            // TODO: Error handling
+//        }
+//    }
 }

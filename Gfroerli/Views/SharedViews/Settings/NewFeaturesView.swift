@@ -51,7 +51,7 @@ struct NewFeaturesView: View {
             Spacer()
 
             Button("new_features_view_button") {
-                self.presentationMode.wrappedValue.dismiss()
+                presentationMode.wrappedValue.dismiss()
             }
             .tint(.accentColor)
             .buttonStyle(.bordered)

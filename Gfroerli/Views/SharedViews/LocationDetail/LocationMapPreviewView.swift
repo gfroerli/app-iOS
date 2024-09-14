@@ -44,9 +44,10 @@ struct LocationMapPreviewView: View {
             ZStack {
                 Map(position: $position) {
                     if hasLocation {
+                        
                         Marker(
                             location?.name ?? "",
-                            image: "thermometer.medium",
+                            systemImage: "thermometer.medium",
                             coordinate: location?.coordinates?.coordinate ?? AppConfiguration.MapPreviewView
                                 .defaultCoordinates.coordinate
                         )

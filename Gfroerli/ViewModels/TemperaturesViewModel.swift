@@ -15,21 +15,20 @@ enum ChartSpan {
     case month
 }
 
+@MainActor
 class TemperaturesViewModel: ObservableObject {
     /// Used to make the graph full width even when we do not have measurements in all time slots
     public var placeholderTemperatures = [TemperatureMeasurement]()
 
     /// Used to disable the forward button
     public var isAtMostRecentInterval: Bool {
-        var isAtMostRecentInterval: Bool!
-
-        switch interval {
+        let isAtMostRecentInterval: Bool = switch interval {
         case .day:
-            isAtMostRecentInterval = Calendar.current.isDate(initialDate, inSameDayAs: currentDate)
+            Calendar.current.isDate(initialDate, inSameDayAs: currentDate)
         case .week:
-            isAtMostRecentInterval = initialDate.isEqual(to: currentDate, toGranularity: .weekOfYear)
+            initialDate.isEqual(to: currentDate, toGranularity: .weekOfYear)
         case .month:
-            isAtMostRecentInterval = initialDate.isEqual(to: currentDate, toGranularity: .month)
+            initialDate.isEqual(to: currentDate, toGranularity: .month)
         }
         return isAtMostRecentInterval
     }
@@ -81,40 +80,36 @@ class TemperaturesViewModel: ObservableObject {
 
     /// Steps back and loads measurements
     public func stepBack() {
-        Task {
-            await removeMeasurements()
-            await reduceCurrentDate()
-            loadMeasurements()
-        }
+        removeMeasurements()
+        reduceCurrentDate()
+        loadMeasurements()
     }
 
     /// Steps forward and loads measurements
     public func stepForward() {
-        Task {
-            await removeMeasurements()
-            await advanceCurrentDate()
-            loadMeasurements()
-        }
+        removeMeasurements()
+        advanceCurrentDate()
+        loadMeasurements()
     }
 
     // MARK: - Private Functions
 
     private func loadMeasurements() {
         Task {
-            var fetchType: FetchType!
+            let fetchType: FetchType
 
-            // Create FetchType to fetch
-            switch interval {
+                // Create FetchType to fetch
+                = switch interval {
             case .day:
-                fetchType = .hourlyTemperatures(locationID: id, of: currentDate)
+                .hourlyTemperatures(locationID: id, of: currentDate)
             case .week:
-                fetchType = .dailyTemperatures(
+                .dailyTemperatures(
                     locationID: id,
                     from: currentDate,
                     to: Calendar.current.date(byAdding: .day, value: 7, to: currentDate)!
                 )
             case .month:
-                fetchType = .dailyTemperatures(
+                .dailyTemperatures(
                     locationID: id,
                     from: currentDate,
                     to: Calendar.current.date(byAdding: .month, value: 1, to: currentDate)!
@@ -127,19 +122,17 @@ class TemperaturesViewModel: ObservableObject {
             else {
                 return
             }
-            Task {
-                // Assign fetched changes
-                await insertMeasurements(measurements)
-                await createPlaceholderMeasurements()
-                await calculateYAxisZoomedValues()
-                await updateXAxisLabel()
-                await checkHasDataPoints()
-                await calculateAvgTemp()
-            }
+           
+            // Assign fetched changes
+            insertMeasurements(measurements)
+            createPlaceholderMeasurements()
+            calculateYAxisZoomedValues()
+            updateXAxisLabel()
+            checkHasDataPoints()
+            calculateAvgTemp()
         }
     }
 
-    @MainActor
     private func advanceCurrentDate() {
         switch interval {
         case .day:
@@ -151,7 +144,6 @@ class TemperaturesViewModel: ObservableObject {
         }
     }
 
-    @MainActor
     private func reduceCurrentDate() {
         switch interval {
         case .day:
@@ -163,14 +155,12 @@ class TemperaturesViewModel: ObservableObject {
         }
     }
 
-    @MainActor
     private func removeMeasurements() {
         lowestTemperatures.removeAll()
         averageTemperatures.removeAll()
         highestTemperatures.removeAll()
     }
 
-    @MainActor
     private func insertMeasurements(_ measurements: [TemperatureMeasurementCollection]) {
         var tempMinTemps = [TemperatureMeasurement]()
         var tempAvgTemps = [TemperatureMeasurement]()
@@ -250,7 +240,6 @@ class TemperaturesViewModel: ObservableObject {
         highestTemperatures = tempMaxTemps
     }
 
-    @MainActor
     private func checkHasDataPoints() {
         if !lowestTemperatures.isEmpty || !averageTemperatures.isEmpty || !highestTemperatures.isEmpty {
             hasDataPoints = true
@@ -260,7 +249,6 @@ class TemperaturesViewModel: ObservableObject {
         }
     }
 
-    @MainActor
     private func calculateAvgTemp() {
         guard !averageTemperatures.isEmpty else {
             averageTemp = 15.0
@@ -271,13 +259,11 @@ class TemperaturesViewModel: ObservableObject {
         averageTemp = sum / Double(averageTemperatures.count)
     }
 
-    @MainActor
     private func calculateYAxisZoomedValues() {
         zoomedYAxisMinValue = Int((lowestTemperatures.min { $0.value < $1.value }?.value ?? 0.0).rounded(.down))
         zoomedYAxisMaxValue = Int((highestTemperatures.max { $0.value < $1.value }?.value ?? 30.0).rounded(.up))
     }
 
-    @MainActor
     private func updateXAxisLabel() {
         switch interval {
         case .day:
@@ -290,20 +276,17 @@ class TemperaturesViewModel: ObservableObject {
         }
     }
 
-    @MainActor
     private func createPlaceholderMeasurements() {
         placeholderTemperatures.removeAll()
         var placeholders = [TemperatureMeasurement]()
 
-        var rangeMax: Int!
-
-        switch interval {
+        let rangeMax: Int = switch interval {
         case .day:
-            rangeMax = 23
+            23
         case .week:
-            rangeMax = 6
+            6
         case .month:
-            rangeMax = (Calendar.current.range(of: .day, in: .month, for: currentDate)?.count ?? 30) - 1
+            (Calendar.current.range(of: .day, in: .month, for: currentDate)?.count ?? 30) - 1
         }
 
         switch interval {

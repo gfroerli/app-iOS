@@ -19,16 +19,16 @@ public enum SortVariants: CaseIterable, Identifiable {
     public var symbolName: String {
         switch self {
         case .mostRecent:
-            return "clock"
+            "clock"
 
         case .highest:
-            return "thermometer.sun.fill"
+            "thermometer.sun.fill"
 
         case .lowest:
-            return "thermometer.snowflake"
+            "thermometer.snowflake"
 
         case .alphabet:
-            return "abc"
+            "abc"
         }
     }
 }
