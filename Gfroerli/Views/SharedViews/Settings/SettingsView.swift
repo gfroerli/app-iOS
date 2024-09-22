@@ -95,6 +95,17 @@ struct SettingsGeneralSectionView: View {
                     SettingsThumbnailView(imageName: "globe", backgroundColor: .accentColor)
                 }
             }
+            
+            // Icon
+            NavigationLink {
+                ChangeIconView()
+            } label: {
+                Label {
+                    Text("settings_view_item_icon")
+                } icon: {
+                    SettingsThumbnailView(imageName: "globe", backgroundColor: .accentColor)
+                }
+            }
         }
         .buttonStyle(.plain)
     }

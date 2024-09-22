@@ -139,7 +139,7 @@ struct LocationTemperatureChartView: View {
             if let selectedTemperatureEntry {
                 RuleMark(
                     x: .value(
-                        "Selected",
+                        "history_graph_view_legend_selected",
                         selectedTemperatureEntry.min.measurementDate,
                         unit: chartVM.timeSpan.chartXUnit
                     )

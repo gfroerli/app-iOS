@@ -11,6 +11,8 @@ import WidgetKit
 
 struct SingleLocationWidgetView: View {
     @Environment(\.showsWidgetContainerBackground) var showsBackground
+    @Environment(\.colorScheme) var colorScheme
+
     var entry: SingleLocationWidgetTimelineProvider.Entry
     
     var body: some View {
@@ -19,7 +21,8 @@ struct SingleLocationWidgetView: View {
                 Text(entry.configuration.location?.name ?? "widget_no_data")
                     .font(showsBackground ? .callout : .title3)
                     .lineLimit(2, reservesSpace: true)
-                
+                    .widgetAccentable()
+
                 Spacer()
             }
             
@@ -29,6 +32,7 @@ struct SingleLocationWidgetView: View {
                 Text(entry.configuration.location?.tempString ?? "")
                     .font(showsBackground ? .title : .largeTitle)
                     .bold()
+                    .widgetAccentable()
             }
             
             Spacer()
@@ -38,12 +42,13 @@ struct SingleLocationWidgetView: View {
                     .symbolRenderingMode(.palette)
                     .foregroundStyle(.red, .white, .accent)
                     .font(showsBackground ? .subheadline : .headline)
-                
+                    .widgetAccentable()
                 Spacer()
                 
                 ZStack {
                     Text(entry.configuration.location?.tempDateString ?? "")
                         .lineLimit(2)
+                        .widgetAccentable()
                     Text("")
                         .lineLimit(2, reservesSpace: true)
                 }
@@ -58,11 +63,12 @@ struct SingleLocationWidgetView: View {
             ZStack {
                 Color(.accent)
                 Wave(strength: 3, frequency: 7, offset: 0)
-                    .foregroundStyle(.cyan.opacity(0.5))
+                    .foregroundStyle(waveColor().opacity(0.5))
                     .scaleEffect(x: -1, y: 1)
                     .offset(y: 2)
+                    .widgetAccentable()
                 Wave(strength: 5, frequency: 6, offset: 0)
-                    .foregroundStyle(.cyan.opacity(0.8))
+                    .foregroundStyle(waveColor().opacity(0.8))
                     .offset(y: 6)
             }
         }
@@ -75,5 +81,14 @@ struct SingleLocationWidgetView: View {
         let queryItems = [URLQueryItem(name: "locationID", value: String(entry.configuration.location?.id ?? -1))]
         url.queryItems = queryItems
         return url.url
+    }
+    
+    private func waveColor() -> Color {
+        if colorScheme == .light {
+            .cyan
+        }
+        else {
+            .blue
+        }
     }
 }

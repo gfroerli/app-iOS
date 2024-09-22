@@ -17,5 +17,47 @@
 	</array>
 	<key>ITSAppUsesNonExemptEncryption</key>
 	<false/>
+    <key>CFBundleIcons</key>
+    <dict>
+        <key>CFBundlePrimaryIcon</key>
+        <dict>
+            <key>CFBundleIconFiles</key>
+            <array>
+                <string>IconOriginal</string>
+            </array>
+            <key>UIPrerenderedIcon</key>
+            <false/>
+        </dict>
+        <key>CFBundleAlternateIcons</key>
+        <dict>
+            <key>Night</key>
+            <dict>
+                <key>CFBundleIconFiles</key>
+                <array>
+                    <string>IconNight</string>
+                </array>
+                <key>UIPrerenderedIcon</key>
+                <false/>
+            </dict>
+            <key>SummerSunset</key>
+            <dict>
+                <key>CFBundleIconFiles</key>
+                <array>
+                    <string>IconSummerSunset</string>
+                </array>
+                <key>UIPrerenderedIcon</key>
+                <false/>
+            </dict>
+            <key>WinterSunset</key>
+            <dict>
+                <key>CFBundleIconFiles</key>
+                <array>
+                    <string>IconWinterSunset</string>
+                </array>
+                <key>UIPrerenderedIcon</key>
+                <false/>
+            </dict>
+        </dict>
+    </dict>
 </dict>
 </plist>
