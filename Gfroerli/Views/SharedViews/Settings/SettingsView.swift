@@ -42,7 +42,7 @@ struct SettingsHeaderView: View {
     var body: some View {
         Section {
             HStack {
-                Image("IconBig")
+                Image(.defaultIcon)
                     .resizable()
                     .aspectRatio(contentMode: .fit)
                     .cornerRadius(15)
@@ -103,7 +103,7 @@ struct SettingsGeneralSectionView: View {
                 Label {
                     Text("settings_view_item_icon")
                 } icon: {
-                    SettingsThumbnailView(imageName: "globe", backgroundColor: .accentColor)
+                    SettingsThumbnailView(imageName: "sparkles.square.filled.on.square", backgroundColor: .accentColor)
                 }
             }
         }
