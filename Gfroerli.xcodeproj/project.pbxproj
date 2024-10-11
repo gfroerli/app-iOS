@@ -3,21 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 77;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		240553BE2C987E0900A72395 /* ChangeIconView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 240553BD2C987E0900A72395 /* ChangeIconView.swift */; };
-		240553E32C99BD3C00A72395 /* IconWinterSunset@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 240553E12C99BD3C00A72395 /* IconWinterSunset@2x.png */; };
-		240553E42C99BD3C00A72395 /* IconWinterSunsetFull.png in Resources */ = {isa = PBXBuildFile; fileRef = 240553E02C99BD3C00A72395 /* IconWinterSunsetFull.png */; };
-		240553E52C99BD3C00A72395 /* IconWinterSunset@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 240553E22C99BD3C00A72395 /* IconWinterSunset@3x.png */; };
-		240553E92C99BD4B00A72395 /* IconSummerSunset@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 240553E82C99BD4B00A72395 /* IconSummerSunset@3x.png */; };
-		240553EA2C99BD4B00A72395 /* IconSummerSunsetFull.png in Resources */ = {isa = PBXBuildFile; fileRef = 240553E62C99BD4B00A72395 /* IconSummerSunsetFull.png */; };
-		240553EB2C99BD4B00A72395 /* IconSummerSunset@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 240553E72C99BD4B00A72395 /* IconSummerSunset@2x.png */; };
-		240553EF2C99BD5F00A72395 /* IconNight@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 240553ED2C99BD5F00A72395 /* IconNight@2x.png */; };
-		240553F02C99BD5F00A72395 /* IconNightFull.png in Resources */ = {isa = PBXBuildFile; fileRef = 240553EC2C99BD5F00A72395 /* IconNightFull.png */; };
-		240553F12C99BD5F00A72395 /* IconNight@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 240553EE2C99BD5F00A72395 /* IconNight@3x.png */; };
-		240553F32C99BDFF00A72395 /* IconOriginal.png in Resources */ = {isa = PBXBuildFile; fileRef = 240553F22C99BDFF00A72395 /* IconOriginal.png */; };
 		2434F7CD2A594886006ED9FD /* GfroerliApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2434F7CC2A594886006ED9FD /* GfroerliApp.swift */; };
 		2434F7D12A594888006ED9FD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2434F7D02A594888006ED9FD /* Assets.xcassets */; };
 		2434F7D52A594888006ED9FD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2434F7D42A594888006ED9FD /* Preview Assets.xcassets */; };
@@ -173,16 +163,6 @@
 /* Begin PBXFileReference section */
 		24031DF42A594AE10026B29C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		240553BD2C987E0900A72395 /* ChangeIconView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeIconView.swift; sourceTree = "<group>"; };
-		240553E02C99BD3C00A72395 /* IconWinterSunsetFull.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = IconWinterSunsetFull.png; sourceTree = "<group>"; };
-		240553E12C99BD3C00A72395 /* IconWinterSunset@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "IconWinterSunset@2x.png"; sourceTree = "<group>"; };
-		240553E22C99BD3C00A72395 /* IconWinterSunset@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "IconWinterSunset@3x.png"; sourceTree = "<group>"; };
-		240553E62C99BD4B00A72395 /* IconSummerSunsetFull.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = IconSummerSunsetFull.png; sourceTree = "<group>"; };
-		240553E72C99BD4B00A72395 /* IconSummerSunset@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "IconSummerSunset@2x.png"; sourceTree = "<group>"; };
-		240553E82C99BD4B00A72395 /* IconSummerSunset@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "IconSummerSunset@3x.png"; sourceTree = "<group>"; };
-		240553EC2C99BD5F00A72395 /* IconNightFull.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = IconNightFull.png; sourceTree = "<group>"; };
-		240553ED2C99BD5F00A72395 /* IconNight@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "IconNight@2x.png"; sourceTree = "<group>"; };
-		240553EE2C99BD5F00A72395 /* IconNight@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "IconNight@3x.png"; sourceTree = "<group>"; };
-		240553F22C99BDFF00A72395 /* IconOriginal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = IconOriginal.png; sourceTree = "<group>"; };
 		24198C7C2BC092890037ECB5 /* ScreenshotHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenshotHelper.swift; sourceTree = "<group>"; };
 		2434F7C92A594886006ED9FD /* Gfroerli.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Gfroerli.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2434F7CC2A594886006ED9FD /* GfroerliApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GfroerliApp.swift; sourceTree = "<group>"; };
@@ -309,47 +289,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		240553BF2C987E6000A72395 /* Icons */ = {
-			isa = PBXGroup;
-			children = (
-				240553F22C99BDFF00A72395 /* IconOriginal.png */,
-				240553D22C98823100A72395 /* WinterSunset */,
-				240553CD2C9881EA00A72395 /* SummerSunset */,
-				240553CC2C98802D00A72395 /* Night */,
-			);
-			path = Icons;
-			sourceTree = "<group>";
-		};
-		240553CC2C98802D00A72395 /* Night */ = {
-			isa = PBXGroup;
-			children = (
-				240553EC2C99BD5F00A72395 /* IconNightFull.png */,
-				240553ED2C99BD5F00A72395 /* IconNight@2x.png */,
-				240553EE2C99BD5F00A72395 /* IconNight@3x.png */,
-			);
-			path = Night;
-			sourceTree = "<group>";
-		};
-		240553CD2C9881EA00A72395 /* SummerSunset */ = {
-			isa = PBXGroup;
-			children = (
-				240553E62C99BD4B00A72395 /* IconSummerSunsetFull.png */,
-				240553E72C99BD4B00A72395 /* IconSummerSunset@2x.png */,
-				240553E82C99BD4B00A72395 /* IconSummerSunset@3x.png */,
-			);
-			path = SummerSunset;
-			sourceTree = "<group>";
-		};
-		240553D22C98823100A72395 /* WinterSunset */ = {
-			isa = PBXGroup;
-			children = (
-				240553E02C99BD3C00A72395 /* IconWinterSunsetFull.png */,
-				240553E12C99BD3C00A72395 /* IconWinterSunset@2x.png */,
-				240553E22C99BD3C00A72395 /* IconWinterSunset@3x.png */,
-			);
-			path = WinterSunset;
-			sourceTree = "<group>";
-		};
 		2434F7C02A594886006ED9FD = {
 			isa = PBXGroup;
 			children = (
@@ -540,7 +479,6 @@
 		2434F8462A594905006ED9FD /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				240553BF2C987E6000A72395 /* Icons */,
 				243DB8852B120FF200265111 /* Localizable.xcstrings */,
 				2434F8472A594905006ED9FD /* NewFeatures.json */,
 				2434F84B2A594905006ED9FD /* ChangeLog.json */,
@@ -797,7 +735,6 @@
 				};
 			};
 			buildConfigurationList = 2434F7C42A594886006ED9FD /* Build configuration list for PBXProject "Gfroerli" */;
-			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -809,6 +746,7 @@
 			mainGroup = 2434F7C02A594886006ED9FD;
 			packageReferences = (
 			);
+			preferredProjectObjectVersion = 77;
 			productRefGroup = 2434F7CA2A594886006ED9FD /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -827,21 +765,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				240553F32C99BDFF00A72395 /* IconOriginal.png in Resources */,
 				2434F85A2A594905006ED9FD /* de.xcloc in Resources */,
 				2434F8582A594905006ED9FD /* ChangeLog.json in Resources */,
 				243DB8862B120FF200265111 /* Localizable.xcstrings in Resources */,
 				2434F8562A594905006ED9FD /* NewFeatures.json in Resources */,
-				240553E32C99BD3C00A72395 /* IconWinterSunset@2x.png in Resources */,
-				240553E42C99BD3C00A72395 /* IconWinterSunsetFull.png in Resources */,
-				240553E52C99BD3C00A72395 /* IconWinterSunset@3x.png in Resources */,
 				2434F7D52A594888006ED9FD /* Preview Assets.xcassets in Resources */,
-				240553E92C99BD4B00A72395 /* IconSummerSunset@3x.png in Resources */,
-				240553EA2C99BD4B00A72395 /* IconSummerSunsetFull.png in Resources */,
-				240553EF2C99BD5F00A72395 /* IconNight@2x.png in Resources */,
-				240553F02C99BD5F00A72395 /* IconNightFull.png in Resources */,
-				240553F12C99BD5F00A72395 /* IconNight@3x.png in Resources */,
-				240553EB2C99BD4B00A72395 /* IconSummerSunset@2x.png in Resources */,
 				2434F8592A594905006ED9FD /* en.xcloc in Resources */,
 				2434F7D12A594888006ED9FD /* Assets.xcassets in Resources */,
 			);
@@ -1173,11 +1101,13 @@
 		2434F7EF2A594888006ED9FD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_ALTERNATE_APPICON_NAMES = "IconMidnight IconSummerSunset IconWinterSunset";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_ENTITLEMENTS = Gfroerli/Gfroerli.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 4300;
+				CURRENT_PROJECT_VERSION = 5000;
 				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"Gfroerli/Preview Content\"";
 				DEVELOPMENT_TEAM = T7M5358433;
@@ -1202,7 +1132,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 14.0;
-				MARKETING_VERSION = 4.3;
+				MARKETING_VERSION = 5.0;
 				PRODUCT_BUNDLE_IDENTIFIER = ch.coredump.gfroerli;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
@@ -1219,11 +1149,13 @@
 		2434F7F02A594888006ED9FD /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_ALTERNATE_APPICON_NAMES = "IconMidnight IconSummerSunset IconWinterSunset";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_ENTITLEMENTS = Gfroerli/Gfroerli.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 4300;
+				CURRENT_PROJECT_VERSION = 5000;
 				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"Gfroerli/Preview Content\"";
 				DEVELOPMENT_TEAM = T7M5358433;
@@ -1248,7 +1180,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 14.0;
-				MARKETING_VERSION = 4.3;
+				MARKETING_VERSION = 5.0;
 				PRODUCT_BUNDLE_IDENTIFIER = ch.coredump.gfroerli;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
@@ -1357,10 +1289,12 @@
 		244737B32C033EC4008CD013 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_ALTERNATE_APPICON_NAMES = "";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 4300;
+				CURRENT_PROJECT_VERSION = 5000;
 				DEVELOPMENT_ASSET_PATHS = "\"GfroerliWatch Watch App/Preview Content\"";
 				DEVELOPMENT_TEAM = T7M5358433;
 				ENABLE_PREVIEWS = YES;
@@ -1373,7 +1307,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 4.3;
+				MARKETING_VERSION = 5.0;
 				PRODUCT_BUNDLE_IDENTIFIER = ch.coredump.gfroerli.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
@@ -1399,10 +1333,12 @@
 		244737B42C033EC4008CD013 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_ALTERNATE_APPICON_NAMES = "";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 4300;
+				CURRENT_PROJECT_VERSION = 5000;
 				DEVELOPMENT_ASSET_PATHS = "\"GfroerliWatch Watch App/Preview Content\"";
 				DEVELOPMENT_TEAM = T7M5358433;
 				ENABLE_PREVIEWS = YES;
@@ -1415,7 +1351,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 4.3;
+				MARKETING_VERSION = 5.0;
 				PRODUCT_BUNDLE_IDENTIFIER = ch.coredump.gfroerli.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
@@ -1445,7 +1381,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 4300;
+				CURRENT_PROJECT_VERSION = 5000;
 				DEVELOPMENT_TEAM = T7M5358433;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = GfroerliWidget/Info.plist;
@@ -1457,7 +1393,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 4.3;
+				MARKETING_VERSION = 5.0;
 				PRODUCT_BUNDLE_IDENTIFIER = ch.coredump.gfroerli.GfroerliWidget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
@@ -1475,7 +1411,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 4300;
+				CURRENT_PROJECT_VERSION = 5000;
 				DEVELOPMENT_TEAM = T7M5358433;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = GfroerliWidget/Info.plist;
@@ -1487,7 +1423,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 4.3;
+				MARKETING_VERSION = 5.0;
 				PRODUCT_BUNDLE_IDENTIFIER = ch.coredump.gfroerli.GfroerliWidget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;

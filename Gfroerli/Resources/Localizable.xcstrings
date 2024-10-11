@@ -143,28 +143,6 @@
         }
       }
     },
-    "Default" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Standard"
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Standard"
-          }
-        },
-        "gsw" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Standard"
-          }
-        }
-      }
-    },
     "general_space" : {
       "localizations" : {
         "de" : {
@@ -337,6 +315,28 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Kei Date verfüegbar"
+          }
+        }
+      }
+    },
+    "icon_default" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Standard"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Default"
+          }
+        },
+        "gsw" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Standard"
           }
         }
       }

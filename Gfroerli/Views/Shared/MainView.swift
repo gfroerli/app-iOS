@@ -47,7 +47,7 @@ struct MainView: View {
 
                 ToolbarItem(placement: .principal) {
                     HStack {
-                        Image(.iconBig)
+                        Image(.defaultIcon)
                             .resizable()
                             .aspectRatio(contentMode: .fit)
                             .frame(width: 30)
