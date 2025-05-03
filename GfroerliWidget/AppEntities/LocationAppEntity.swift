@@ -12,8 +12,15 @@ import GfroerliBackend
 public struct LocationAppEntity: AppEntity, Identifiable {
     
     public let id: Int
-    let name: String
     
+    public static let defaultQuery = LocationQuery()
+    public static let example = LocationAppEntity(location: Location.exampleLocation())
+    
+    public static let typeDisplayRepresentation = TypeDisplayRepresentation(name: "location")
+    
+    public let displayRepresentation: DisplayRepresentation
+    let name: String
+
     /// Same as name until firs space or max 8 characters
     let shortName: String
     let tempString: String
@@ -41,43 +48,31 @@ public struct LocationAppEntity: AppEntity, Identifiable {
         else {
             self.tempDateString = String(localized: "widget_no_date")
         }
+        
+        self.displayRepresentation = DisplayRepresentation(stringLiteral: name)
     }
-
-    @MainActor
-    public static var defaultQuery = LocationQuery()
-
-    public static var typeDisplayRepresentation: TypeDisplayRepresentation {
-        TypeDisplayRepresentation(name: "location")
-    }
-    
-    public var displayRepresentation: DisplayRepresentation {
-        DisplayRepresentation(stringLiteral: name)
-    }
-
-    public static var example = LocationAppEntity(location: Location.exampleLocation())
 }
 
 public struct LocationQuery: EntityQuery {
-    private let locationsVM: AllLocationsViewModel
 
-    @MainActor
-    public init() {
-        self.locationsVM = AllLocationsViewModel()
-    }
+    public init() { }
     
     public func entities(for identifiers: [LocationAppEntity.ID]) async throws -> [LocationAppEntity] {
+        let locationsVM = await AllLocationsViewModel()
         await locationsVM.loadAllLocations()
         let filtered = await locationsVM.allLocations.filter { identifiers.contains($0.id) }
         return filtered.map { LocationAppEntity(location: $0) }
     }
     
     public func suggestedEntities() async throws -> [LocationAppEntity] {
+        let locationsVM = await AllLocationsViewModel()
         await locationsVM.loadAllLocations()
         let locations = await locationsVM.allLocations
         return locations.map { LocationAppEntity(location: $0) }
     }
     
     public func defaultResult() async -> LocationAppEntity? {
+        let locationsVM = await AllLocationsViewModel()
         await locationsVM.loadAllLocations()
 
         guard let location = await locationsVM.activeLocations.randomElement() else {

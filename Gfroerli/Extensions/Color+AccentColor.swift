@@ -8,5 +8,5 @@
 import SwiftUI
 
 extension Color {
-    static var accentColor = Color(UIColor.tintColor)
+    static let accentColor = Color(UIColor.tintColor)
 }

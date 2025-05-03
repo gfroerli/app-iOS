@@ -7,7 +7,8 @@
 
 import Foundation
 
-class DefaultsCoordinator {
+@MainActor
+final class DefaultsCoordinator: Sendable {
     static let shared = DefaultsCoordinator()
 
     private let defaults = UserDefaults.standard
@@ -25,7 +26,7 @@ class DefaultsCoordinator {
         func key() -> String {
             switch self {
             case .latestVersion:
-                return "latestVersion"
+                "latestVersion"
             }
         }
     }

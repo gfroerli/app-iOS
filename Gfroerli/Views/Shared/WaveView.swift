@@ -9,10 +9,10 @@ import Foundation
 import SwiftUI
 
 struct Wave: Shape {
-    var strength: Double
-    var frequency: Double
+    let strength: Double
+    let frequency: Double
 
-    var offset: Double
+    let offset: Double
     func path(in rect: CGRect) -> Path {
         var path = Path()
 

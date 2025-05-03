@@ -7,7 +7,18 @@
 
 import Foundation
 
-public struct TemperatureMeasurementCollection: Identifiable, Hashable {
+public struct TemperatureMeasurementCollection: Identifiable, Hashable, Sendable {
+   
+    // MARK: Properties
+    
+    public let id: String
+    public let measurementDate: Date
+    public let lowest: Double
+    public let average: Double
+    public let highest: Double
+    
+    // MARK: - Lifecycle
+    
     public init(id: String, measurementDate: Date, lowest: Double, average: Double, highest: Double) {
         self.id = id
         self.measurementDate = measurementDate
@@ -15,14 +26,6 @@ public struct TemperatureMeasurementCollection: Identifiable, Hashable {
         self.average = average
         self.highest = highest
     }
-
-    // MARK: Properties
-
-    public let id: String
-    public let measurementDate: Date
-    public let lowest: Double
-    public let average: Double
-    public let highest: Double
 }
 
 // MARK: - Decodable

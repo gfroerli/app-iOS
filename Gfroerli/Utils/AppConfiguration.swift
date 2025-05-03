@@ -62,6 +62,7 @@ enum AppConfiguration {
         static let fontWeight: Font.Weight = .semibold
     }
 
+    @MainActor
     enum Settings {
         /// String containing current version number, e.g. 1.0
         static let lastVersion = " " + (Bundle.main.infoDictionary?["CFBundleShortVersionString"] as! String)
@@ -76,6 +77,7 @@ enum AppConfiguration {
             components?.queryItems = [
                 URLQueryItem(name: "action", value: "write-review"),
             ]
+            
             return components!.url!
         }()
 
@@ -91,7 +93,7 @@ enum AppConfiguration {
         }()
 
         /// Email body
-        private static let emailBody: String = {
+        static let emailBody: String = {
             let version =
                 "App-Version: \(Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String ?? "unkown")"
             let systemVersion = "OS-Version: \(UIDevice.current.systemName) \(UIDevice.current.systemVersion)"

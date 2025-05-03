@@ -1,4 +1,4 @@
-// swift-tools-version: 5.9
+// swift-tools-version: 6.0
 
 import PackageDescription
 
@@ -16,11 +16,20 @@ let package = Package(
     ],
     targets: [
         .target(
-            name: "GfroerliBackend"
+            name: "GfroerliBackend",
+            swiftSettings: [
+                .unsafeFlags([
+                    "-Xfrontend", "-strict-concurrency=complete",
+                    "-Xfrontend", "-enable-actor-data-race-checks",
+                    "-Xfrontend", "-warn-long-function-bodies=100",
+                    "-Xfrontend", "-warn-long-expression-type-checking=100",
+                ]),
+            ]
         ),
         .testTarget(
             name: "GfroerliBackendTests",
             dependencies: ["GfroerliBackend"]
         ),
-    ]
+    ],
+    swiftLanguageVersions: [.version("6")]
 )

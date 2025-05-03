@@ -42,7 +42,7 @@ struct SettingsHeaderView: View {
     var body: some View {
         Section {
             HStack {
-                Image("IconBig")
+                Image(.defaultIcon)
                     .resizable()
                     .aspectRatio(contentMode: .fit)
                     .cornerRadius(15)
@@ -93,6 +93,17 @@ struct SettingsGeneralSectionView: View {
                     Text("settings_view_item_language")
                 } icon: {
                     SettingsThumbnailView(imageName: "globe", backgroundColor: .accentColor)
+                }
+            }
+            
+            // Icon
+            NavigationLink {
+                ChangeIconView()
+            } label: {
+                Label {
+                    Text("settings_view_item_icon")
+                } icon: {
+                    SettingsThumbnailView(imageName: "sparkles.square.filled.on.square", backgroundColor: .accentColor)
                 }
             }
         }
@@ -189,11 +200,7 @@ struct SettingsOtherSectionView: View {
             }
             
             Button(role: .destructive) {
-                do {
-                    try modelContext.delete(model: Sponsor.self)
-                    updateCacheSizeFooter()
-                }
-                catch { }
+                updateCacheSizeFooter()
             } label: {
                 Text("settings_view_item_cache_delete")
             }
@@ -226,7 +233,7 @@ struct SettingsOtherSectionView: View {
     }
     
     private func footerText(for size: Int64) -> String {
-        return String(localized: "settings_view_item_cache_footer_size") + " " + ByteCountFormatter
+        String(localized: "settings_view_item_cache_footer_size") + " " + ByteCountFormatter
             .string(fromByteCount: size, countStyle: .file) + " \n" +
             String(localized: "settings_view_item_cache_footer_note")
     }

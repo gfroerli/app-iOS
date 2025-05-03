@@ -123,7 +123,7 @@ struct TemperatureHistoryView: View {
 
 struct TemperatureHistoryView_Previews: PreviewProvider {
     static var previews: some View {
-        TemperatureHistoryView(locationID: 1)
+        TemperatureHistoryView(locationID: 6)
     }
 }
 

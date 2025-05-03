@@ -32,7 +32,7 @@ struct HistoryGraphView: View {
                 }
 
                 Chart {
-                    ForEach(vm.lowestTemperatures, id: \.id) {
+                    ForEach(vm.lowestTemperatures) {
                         LineMark(
                             x: .value("history_graph_view_legend_date", $0.measurementDate),
                             y: .value("history_graph_view_legend_minimum", $0.animate ? $0.value : vm.averageTemp),

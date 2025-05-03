@@ -14,13 +14,12 @@ import SwiftData
 @Observable public class SingleLocationViewModel {
     // MARK: - Public Properties
 
-    // swiftformat:disable:next all
-    public var location: Location? = nil
+    public let id: Int
+    public var location: Location?
 
     // MARK: - Private Properties
 
     private let context = GfroerliBackend.modelContainer.mainContext
-    private let id: Int
 
     // MARK: - Lifecycle
 
@@ -38,14 +37,6 @@ import SwiftData
 
     /// Updates the local `Location`, if set, with freshly fetched data from the server
     public func refreshLocation() async {
-        guard var location else {
-            // TODO: Error handling
-            return
-        }
-        await LocationManager.shared.refreshLocation(location: &location)
-    }
-
-    public func getID() -> Int {
-        id
+        location = await LocationManager.shared.location(for: id)
     }
 }

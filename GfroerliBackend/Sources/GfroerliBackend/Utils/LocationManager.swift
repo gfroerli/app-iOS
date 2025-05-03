@@ -22,13 +22,13 @@ class LocationManager {
 
     public func location(for id: Int) async -> Location? {
         // Try to load from SwiftData
-        if useCache, var dbLocation = loadLocationFromDB(id: id) {
-            // We check if the date we last tried to update the location, is smaller then the defined interval
-            if dbLocation.lastFetchDate < Date.now.addingTimeInterval(-60) {
-                await refreshLocation(location: &dbLocation)
-            }
-            return dbLocation
-        }
+//        if useCache, var dbLocation = loadLocationFromDB(id: id) {
+//            // We check if the date we last tried to update the location, is smaller then the defined interval
+//            if dbLocation.lastFetchDate < Date.now.addingTimeInterval(-60) {
+//                await refreshLocation(location: &dbLocation)
+//            }
+//            return dbLocation
+//        }
 
         // If non-existent in SwiftData we newly load from API
         guard let fetchedLocation = await loadLocationFromAPI(id: id) else {
@@ -47,14 +47,14 @@ class LocationManager {
 
         var allLocations = [Location]()
         for location in fetchedLocations {
-            guard useCache, var dbLocation = dbLocations?.first(where: { dbLoc in
+            guard useCache, let dbLocation = dbLocations?.first(where: { dbLoc in
                 dbLoc.id == location.id
             }) else {
                 persistAndAssign(location)
                 allLocations.append(location)
                 continue
             }
-            await refreshLocation(location: &dbLocation)
+            // await refreshLocation(location: &dbLocation)
             allLocations.append(dbLocation)
         }
 
@@ -74,7 +74,7 @@ class LocationManager {
 //            // TODO: Error handling
 //            return nil
 //        }
-        return nil
+        nil
     }
 
     private func loadLocationFromDB(id: Int) -> Location? {
@@ -88,7 +88,7 @@ class LocationManager {
 //            // TODO: Error handling
 //            return nil
 //        }
-        return nil
+        nil
     }
 
     private func loadAllLocationsFromAPI() async -> [Location]? {
@@ -124,26 +124,5 @@ class LocationManager {
             // TODO: Error handling
             fatalError(error.localizedDescription)
         }
-    }
-
-    public func refreshLocation(location: inout Location) async {
-        // If non-existent in SwiftData or outdated, we load from API
-        guard let apiLocation = await loadLocationFromAPI(id: location.id) else {
-            return
-        }
-
-        // TODO: See if bug in swift data is resolved
-        location.name = apiLocation.name
-        location.desc = apiLocation.desc
-        location.latitude = apiLocation.latitude
-        location.longitude = apiLocation.longitude
-        location.creationDate = apiLocation.creationDate
-        location.sponsorID = apiLocation.sponsorID
-        location.latestTemperature = apiLocation.latestTemperature
-        location.lastTemperatureDate = apiLocation.lastTemperatureDate
-        location.highestTemperature = apiLocation.highestTemperature
-        location.lowestTemperature = apiLocation.lowestTemperature
-        location.averageTemperature = apiLocation.averageTemperature
-        location.lastFetchDate = apiLocation.lastFetchDate
     }
 }

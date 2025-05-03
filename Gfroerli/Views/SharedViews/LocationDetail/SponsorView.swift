@@ -91,7 +91,7 @@ struct SponsorView: View {
         }
         
         VStack {
-            Text(sponsorVM.sponsor?.desc ?? "sponsor_view_no_descriptionn")
+            Text(sponsorVM.sponsor?.desc ?? "sponsor_view_no_description")
         }
         .redacted(reason: sponsorVM.sponsor == nil ? .placeholder : [])
     }

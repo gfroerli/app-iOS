@@ -12,7 +12,6 @@ extension View {
     func defaultBoxStyle() -> some View {
         background(backgroundColor())
             .cornerRadius(15)
-            .shadow(color: .clear, radius: 0)
             .overlay {
                 RoundedRectangle(cornerRadius: 15)
                     .stroke(Color.accentColor.opacity(0.4), lineWidth: 0.5)

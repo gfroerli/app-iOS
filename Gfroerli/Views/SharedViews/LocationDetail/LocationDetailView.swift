@@ -48,7 +48,7 @@ struct LocationDetailView: View {
                         .padding(.top)
                     }
 
-                    TemperatureHistoryView(locationID: locationVM.getID())
+                    LocationTemperatureHistoryView(locationID: locationVM.id)
 
                     if horizontalSizeClass == .compact {
                         if locationVM.location!.sponsorID != nil {

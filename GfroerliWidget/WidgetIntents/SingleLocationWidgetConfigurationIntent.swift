@@ -9,8 +9,8 @@ import AppIntents
 import WidgetKit
 
 struct SingleLocationWidgetConfigurationIntent: WidgetConfigurationIntent {
-    static var title: LocalizedStringResource = "intent_title_select_location"
-    static var description = IntentDescription("intent_description_select_location")
+    static let title: LocalizedStringResource = "intent_title_select_location"
+    static let description = IntentDescription("intent_description_select_location")
 
     // An example configurable parameter.
     @Parameter(title: "location")

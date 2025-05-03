@@ -47,7 +47,7 @@ struct MainView: View {
 
                 ToolbarItem(placement: .principal) {
                     HStack {
-                        Image(.iconBig)
+                        Image(.defaultIcon)
                             .resizable()
                             .aspectRatio(contentMode: .fit)
                             .frame(width: 30)
@@ -94,11 +94,9 @@ struct MainView: View {
 
             // MARK: - Change observers
 
-//            .onAppear {
-//                if DefaultsCoordinator.shared.showNewFeatures() {
-//                    showNewFeatures = true
-//                }
-//            }
+            .task {
+                await locationsViewModel.loadAllLocations()
+            }
             .onChange(of: query) { _, _ in
                 withAnimation {
                     locationsViewModel.sortLocations(query: query)

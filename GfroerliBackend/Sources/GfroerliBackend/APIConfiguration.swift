@@ -11,7 +11,7 @@ import Foundation
 public enum APIConfiguration {
     // MARK: Date handling
 
-    static var formatter = DateFormatter()
+    static let formatter = DateFormatter()
     static let dateFormat = "yyyy-MM-dd"
 
     /// Removes given days from date and formats it to the `dateFormat` style

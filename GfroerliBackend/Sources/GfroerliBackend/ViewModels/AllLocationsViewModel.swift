@@ -13,9 +13,9 @@ import WidgetKit
 @Observable public class AllLocationsViewModel {
     // MARK: - Public Properties
 
-    // swiftformat:disable:next all
     public var allLocations = [Location]()
     public var activeLocations = [Location]()
+    public var inactiveLocations = [Location]()
     public var filteredLocations = [Location]()
     public var sortedLocations = [Location]()
     public var sortedVariant: SortVariants = .mostRecent
@@ -31,11 +31,7 @@ import WidgetKit
 
     // MARK: - Lifecycle
 
-    public init() {
-        Task {
-            await loadAllLocations()
-        }
-    }
+    public init() { }
 
     // MARK: - Public Functions
 
@@ -45,10 +41,10 @@ import WidgetKit
         }
 
         allLocations = locations
-        activeLocations = locations.filter { $0.isActive }
+        activeLocations = locations.filter(\.isActive)
+        inactiveLocations = locations.filter { !$0.isActive }
         sortLocations(query: "")
         filterChanged()
-        WidgetCenter.shared.reloadAllTimelines()
     }
 
     public func sortLocations(query: String? = nil) {

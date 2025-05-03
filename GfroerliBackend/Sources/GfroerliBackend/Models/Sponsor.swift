@@ -8,13 +8,13 @@
 import Foundation
 import SwiftData
 
-@Model public class Sponsor {
+public final class Sponsor: Sendable {
     // MARK: SwiftData Attributes
 
-    @Attribute(.unique) public var id: Int
-    public var name: String?
-    public var desc: String?
-    public var imageURL: URL?
+    public let id: Int
+    public let name: String?
+    public let desc: String?
+    public let imageURL: URL?
 
     // MARK: Lifecycle
 
