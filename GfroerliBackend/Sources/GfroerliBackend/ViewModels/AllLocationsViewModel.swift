@@ -57,7 +57,7 @@ import WidgetKit
         switch sortedVariant {
         case .mostRecent:
             sortedLocations = tempLocations.sorted {
-                $0.lastTemperatureDate! > $1.lastTemperatureDate!
+                $0.lastTemperatureDate ?? .distantPast > $1.lastTemperatureDate ?? .distantPast
             }
         case .highest:
             sortedLocations = tempLocations.sorted {

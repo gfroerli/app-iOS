@@ -121,7 +121,7 @@ extension Location {
 //    }
 
     public var isActive: Bool {
-        DateUtil.wasInLast72Hours(givenDate: lastTemperatureDate!)
+        DateUtil.wasInLast72Hours(givenDate: lastTemperatureDate ?? .distantPast)
     }
 
     /// String of  date of last measurement relative to now
