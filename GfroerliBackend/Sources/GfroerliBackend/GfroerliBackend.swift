@@ -1,17 +1,8 @@
 import Foundation
 import SwiftData
 
+@available(*, deprecated, message: "The old backend will be replaced by `GfroerliBusiness` and z GfroerliAPI` packages in an upcoming release.")
 public class GfroerliBackend {
-    public static let modelContainer: ModelContainer = {
-        do {
-            let container = try ModelContainer()
-            return container
-        }
-        catch {
-            fatalError()
-        }
-    }()
-
     public init() { }
 
     private lazy var decoder: JSONDecoder = {

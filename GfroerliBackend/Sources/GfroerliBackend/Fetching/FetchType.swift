@@ -9,17 +9,6 @@ import Foundation
 
 /// Defines common API Calls to the Gfrör.li server
 public enum FetchType: Sendable {
-    /// Used for fetching all locations
-    case allLocations
-
-    /// Used for fetching single location
-    /// - Parameter id: Sensor ID as Int
-    case singleLocation(id: Int)
-
-    /// Used for fetching single sponsor
-    /// - Parameter id: Sponsor ID as Int
-    case sponsor(id: Int)
-
     /// Used for fetching date interval of hourly temperatures for a sensor
     /// - Parameter sensorID: Int of location ID
     /// - Parameter of: Date
@@ -34,15 +23,6 @@ public enum FetchType: Sendable {
     /// The assembled URL for the given case
     public var assembledURL: URL {
         switch self {
-        case .allLocations:
-            return Foundation.URL(string: "https://api.gfrör.li/api/mobile_app/sensors")!
-
-        case let .singleLocation(id: id):
-            return Foundation.URL(string: "https://api.gfrör.li//api/mobile_app/sensors/\(id)")!
-
-        case let .sponsor(id: id):
-            return Foundation.URL(string: "https://api.gfrör.li//api/mobile_app/sensors/\(id)/sponsor")!
-
         case let .hourlyTemperatures(locationID: locationID, of: date):
 
             // Due to the sensors not being Located in GMT timezones, we also must fetch the day before to be able to

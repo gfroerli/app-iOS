@@ -25,8 +25,8 @@ extension Date {
 }
 
 extension Calendar {
-    static let iso8601 = Calendar(identifier: .iso8601)
-    static let iso8601UTC: Calendar = {
+    fileprivate static let iso8601 = Calendar(identifier: .iso8601)
+    fileprivate static let iso8601UTC: Calendar = {
         var calendar = Calendar(identifier: .iso8601)
         calendar.timeZone = TimeZone(identifier: "UTC")!
         return calendar

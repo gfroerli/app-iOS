@@ -1,0 +1,60 @@
+//
+//  InlineLocationView.swift
+//  gfroerli
+//
+//  Created by Marc on 15.10.22.
+//
+
+import GfroerliBusinessProtocols
+import SwiftUI
+
+struct InlineLocationView: View {
+    @Environment(\.isSearching) var isSearching
+
+    @AppStorage("favorites") private var favorites = [Int]()
+
+    @State private var isFavorite = false
+
+    let location: BusinessLocationProtocol
+
+    // MARK: - Body
+
+    var body: some View {
+        HStack {
+            VStack(alignment: .leading) {
+                HStack {
+                    Text(location.name)
+                        .bold()
+                        .foregroundColor(location.isActive ? .primary : .secondary)
+                    if isFavorite {
+                        Image(systemName: "star.fill")
+                            .foregroundColor(.yellow)
+                            .imageScale(.small)
+                    }
+                }
+                if !location.isActive {
+                    Text("inline_location_view_inactive")
+                        .font(.callout)
+                        .foregroundColor(.secondary)
+                }
+                else {
+                    Text("")
+                        .font(.callout)
+                }
+            }
+           
+            Spacer()
+
+            VStack(alignment: .trailing) {
+                Text(location.lastTemperatureString)
+                Text(location.lastTemperatureDateString)
+            }
+            .font(.callout)
+            .foregroundColor(.secondary)
+        }
+        .contentShape(Rectangle())
+        .onAppear {
+            isFavorite = favorites.contains(location.id)
+        }
+    }
+}

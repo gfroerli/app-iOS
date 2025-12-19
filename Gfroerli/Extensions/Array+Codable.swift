@@ -7,6 +7,7 @@
 
 import Foundation
 
+/// This is used to save the favorites as an array to `UserDefaults`
 extension Array: @retroactive RawRepresentable where Element: Codable {
     public init?(rawValue: String) {
         guard let data = rawValue.data(using: .utf8),
