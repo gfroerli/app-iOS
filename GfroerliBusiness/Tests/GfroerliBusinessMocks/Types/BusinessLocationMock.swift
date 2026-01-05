@@ -62,15 +62,15 @@ public struct BusinessLocationMock: BusinessLocationProtocol, Sendable {
         creationDate: .distantPast,
         sponsorID: 0,
         lastTemperature: 25.0,
-        lastTemperatureString: "",
+        lastTemperatureString: "25.0°C",
         lastTemperatureDate: .now,
         lastTemperatureDateString: "now",
         highestTemperature: 35.0,
-        highestTemperatureString: "",
+        highestTemperatureString: "35.0°C",
         lowestTemperature: -0.1,
-        lowestTemperatureString: "",
+        lowestTemperatureString: "-0.1°C",
         averageTemperature: 20.5,
-        averageTemperatureString: "",
+        averageTemperatureString: "20.0°C",
         isActive: true
     )
     
