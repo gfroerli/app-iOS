@@ -21,6 +21,7 @@
 		24B9A8072F0567830087926F /* GfroerliBackend in Frameworks */ = {isa = PBXBuildFile; productRef = 24B9A8062F0567830087926F /* GfroerliBackend */; };
 		24B9A8092F0567890087926F /* GfroerliBusiness in Frameworks */ = {isa = PBXBuildFile; productRef = 24B9A8082F0567890087926F /* GfroerliBusiness */; };
 		24EFE77C2F0C168F00363168 /* GfroerliBusinessMocks in Frameworks */ = {isa = PBXBuildFile; productRef = 24EFE77B2F0C168F00363168 /* GfroerliBusinessMocks */; };
+		24EFE77E2F0C397400363168 /* GfroerliBusinessMocks in Frameworks */ = {isa = PBXBuildFile; productRef = 24EFE77D2F0C397400363168 /* GfroerliBusinessMocks */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -271,6 +272,7 @@
 			files = (
 				241336052F05155F007DA222 /* GfroerliBusiness in Frameworks */,
 				2413360B2F0517AB007DA222 /* GfroerliBackend in Frameworks */,
+				24EFE77E2F0C397400363168 /* GfroerliBusinessMocks in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -424,6 +426,7 @@
 			packageProductDependencies = (
 				241336042F05155F007DA222 /* GfroerliBusiness */,
 				2413360A2F0517AB007DA222 /* GfroerliBackend */,
+				24EFE77D2F0C397400363168 /* GfroerliBusinessMocks */,
 			);
 			productName = "GfroerliWatch Watch App";
 			productReference = 2424A6972F0561E20000AD06 /* GfroerliWatchApp.app */;
@@ -1188,6 +1191,10 @@
 			productName = GfroerliBusiness;
 		};
 		24EFE77B2F0C168F00363168 /* GfroerliBusinessMocks */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = GfroerliBusinessMocks;
+		};
+		24EFE77D2F0C397400363168 /* GfroerliBusinessMocks */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = GfroerliBusinessMocks;
 		};

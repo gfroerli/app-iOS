@@ -26,7 +26,8 @@ struct WatchTemperatureHistoryView: View {
                 WatchTemperatureHistoryChartView(locationID: locationID, timeSpan: .month)
                     .tag(2)
             }
-            .padding(2)
+            .padding(.horizontal)
+            .padding(.bottom)
             .tabViewStyle(.page)
         }
       
@@ -57,11 +58,10 @@ struct WatchTemperatureHistoryChartView: View {
                     .bold()
             }
             LocationTemperatureChartView(locationID: locationID, chartVM: chartVM)
-                .padding(8)
+                .padding(10)
                 .background(.ultraThinMaterial)
                 .cornerRadius(4)
         }
-        .padding(.bottom, 15)
     }
 }
 
@@ -97,11 +97,11 @@ struct LocationTemperatureChartView: View {
             }
         }
         .chartForegroundStyleScale([
-            NSLocalizedString("history_graph_view_legend_minimum", comment: ""): .blue,
-            NSLocalizedString("history_graph_view_legend_average", comment: ""): .green,
-            NSLocalizedString("history_graph_view_legend_maximum", comment: ""): .red,
+            NSLocalizedString("history_graph_view_legend_minimum_short", comment: ""): .blue,
+            NSLocalizedString("history_graph_view_legend_average_short", comment: ""): .green,
+            NSLocalizedString("history_graph_view_legend_maximum_short", comment: ""): .red,
         ])
-        .chartLegend(position: .bottom, alignment: .center, spacing: 10)
+        .chartLegend(position: .bottom, alignment: .center, spacing: 4)
         .chartYScale(domain: chartVM.lowestTemp...chartVM.highestTemp)
     }
 }

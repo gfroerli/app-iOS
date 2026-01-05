@@ -165,6 +165,28 @@
         }
       }
     },
+    "history_graph_view_legend_average_short" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Durch."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Avg."
+          }
+        },
+        "gsw" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Durch."
+          }
+        }
+      }
+    },
     "history_graph_view_legend_date" : {
       "localizations" : {
         "de" : {
@@ -209,6 +231,28 @@
         }
       }
     },
+    "history_graph_view_legend_maximum_short" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Max."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Max."
+          }
+        },
+        "gsw" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Max."
+          }
+        }
+      }
+    },
     "history_graph_view_legend_minimum" : {
       "localizations" : {
         "de" : {
@@ -227,6 +271,22 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Minimum"
+          }
+        }
+      }
+    },
+    "history_graph_view_legend_minimum_short" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Min."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Min."
           }
         }
       }
