@@ -54,6 +54,7 @@ let package = Package(
             dependencies: [
                 "GfroerliBusiness",
                 "GfroerliBusinessProtocols",
+                "GfroerliBusinessMocks",
             ]
         ),
     ]

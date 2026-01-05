@@ -5,14 +5,13 @@
 //  Created by Marc Kramer on 24.06.22.
 //
 
+import GfroerliBusinessMocks
 import Observation
 import SwiftUI
 
 @MainActor
 struct LocationDetailView: View {
     @AppStorage("favorites") private var favorites = [Int]()
-
-    @Environment(\.horizontalSizeClass) var horizontalSizeClass
     
     @State private var viewModel: LocationDetailViewModel
 
@@ -92,5 +91,19 @@ struct LocationDetailView: View {
         }
         favorites.remove(at: index)
         isFavorite = false
+    }
+}
+
+#Preview {
+    @Previewable @State var viewModel = LocationDetailViewModel(
+        locationID: 0,
+        locationManager: BusinessLocationManagerMock(),
+        sponsorManager: BusinessSponsorManagerMock()
+    )
+    
+    NavigationStack {
+        LocationDetailView(
+            viewModel: viewModel
+        )
     }
 }

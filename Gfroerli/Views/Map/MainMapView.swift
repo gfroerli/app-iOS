@@ -7,6 +7,7 @@
 
 import ClusterMapSwiftUI
 import Foundation
+import GfroerliBusinessMocks
 import MapKit
 import SwiftUI
 
@@ -89,4 +90,15 @@ struct MainMapView: View {
             }
         }
     }
+}
+
+#Preview {
+    @Previewable @State var viewModel = MainMapViewModel(allLocationsManager: BusinessAllLocationsManagerMock())
+
+    MainMapView(viewModel: $viewModel, navigationPath: .constant([]))
+        .onAppear {
+            Task {
+                try? await viewModel.loadLocations()
+            }
+        }
 }

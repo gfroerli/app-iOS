@@ -5,6 +5,7 @@
 //  Created by Marc on 15.10.22.
 //
 
+import GfroerliBusinessMocks
 import GfroerliBusinessProtocols
 import SwiftUI
 
@@ -56,5 +57,11 @@ struct InlineLocationView: View {
         .onAppear {
             isFavorite = favorites.contains(location.id)
         }
+    }
+}
+
+#Preview {
+    List {
+        InlineLocationView(location: BusinessLocationMock.exampleLocation1)
     }
 }

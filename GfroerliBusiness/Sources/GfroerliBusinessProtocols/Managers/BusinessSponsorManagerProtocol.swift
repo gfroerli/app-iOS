@@ -7,6 +7,6 @@
 
 import Foundation
 
-public protocol BusinessSponsorManagerProtocol {
+public protocol BusinessSponsorManagerProtocol: Sendable {
     func loadSponsor(with locationID: Int) async throws -> BusinessSponsorProtocol?
 }

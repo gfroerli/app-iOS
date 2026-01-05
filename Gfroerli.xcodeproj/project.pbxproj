@@ -20,6 +20,7 @@
 		24B814052B39A37D00577A09 /* ScreenshotKit in Frameworks */ = {isa = PBXBuildFile; productRef = 24B814042B39A37D00577A09 /* ScreenshotKit */; };
 		24B9A8072F0567830087926F /* GfroerliBackend in Frameworks */ = {isa = PBXBuildFile; productRef = 24B9A8062F0567830087926F /* GfroerliBackend */; };
 		24B9A8092F0567890087926F /* GfroerliBusiness in Frameworks */ = {isa = PBXBuildFile; productRef = 24B9A8082F0567890087926F /* GfroerliBusiness */; };
+		24EFE77C2F0C168F00363168 /* GfroerliBusinessMocks in Frameworks */ = {isa = PBXBuildFile; productRef = 24EFE77B2F0C168F00363168 /* GfroerliBusinessMocks */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -242,6 +243,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				243EA7362F01466F0038B7C9 /* ClusterMapSwiftUI in Frameworks */,
+				24EFE77C2F0C168F00363168 /* GfroerliBusinessMocks in Frameworks */,
 				2445360F2EFAEDAC007D1466 /* GfroerliBusiness in Frameworks */,
 				246058682A5C48920081FEB0 /* GfroerliBackend in Frameworks */,
 				243EA7342F01402B0038B7C9 /* ClusterMap in Frameworks */,
@@ -356,6 +358,7 @@
 				2445360E2EFAEDAC007D1466 /* GfroerliBusiness */,
 				243EA7332F01402B0038B7C9 /* ClusterMap */,
 				243EA7352F01466F0038B7C9 /* ClusterMapSwiftUI */,
+				24EFE77B2F0C168F00363168 /* GfroerliBusinessMocks */,
 			);
 			productName = Gfroerli;
 			productReference = 2424A6982F0561F90000AD06 /* Gfroerli.app */;
@@ -1183,6 +1186,10 @@
 		24B9A8082F0567890087926F /* GfroerliBusiness */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = GfroerliBusiness;
+		};
+		24EFE77B2F0C168F00363168 /* GfroerliBusinessMocks */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = GfroerliBusinessMocks;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

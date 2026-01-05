@@ -32,6 +32,9 @@
             reference = "container:GfroerliTests/Gfroerli.xctestplan"
             default = "YES">
          </TestPlanReference>
+         <TestPlanReference
+            reference = "container:GfroerliUITests/GfroerliScreenshots.xctestplan">
+         </TestPlanReference>
       </TestPlans>
    </TestAction>
    <LaunchAction

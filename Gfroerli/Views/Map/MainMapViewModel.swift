@@ -89,14 +89,18 @@ final class MainMapViewModel {
     // MARK: - Private properties
 
     @ObservationIgnored
-    private let allLocationsManager = BusinessAllLocationsManager()
+    private let allLocationsManager: BusinessAllLocationsManagerProtocol
     
     @ObservationIgnored
     private let clusterManager = ClusterManager<MapLocation>()
     
     // MARK: - Lifecycle
     
-    init() { }
+    init(
+        allLocationsManager: BusinessAllLocationsManagerProtocol = BusinessAllLocationsManager()
+    ) {
+        self.allLocationsManager = allLocationsManager
+    }
     
     // MARK: - Public functions
     
