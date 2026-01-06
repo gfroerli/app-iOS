@@ -21,11 +21,11 @@ public struct LocationAppEntity: AppEntity, Identifiable {
     
     public let displayRepresentation: DisplayRepresentation
     let name: String
-
-    /// Same as name until firs space or max 8 characters
     let shortName: String
     let tempString: String
+    let tempValue: Double
     let tempDateString: String
+    let isActive: Bool
 
     public init(location: any BusinessLocationProtocol) {
         self.id = location.id
@@ -34,6 +34,7 @@ public struct LocationAppEntity: AppEntity, Identifiable {
         self.shortName = location.shortName
         
         self.tempString = location.lastTemperatureString
+        self.tempValue = location.lastTemperature
         
         let dateFormatter = Foundation.DateFormatter()
         dateFormatter.locale = Locale.current
@@ -43,17 +44,27 @@ public struct LocationAppEntity: AppEntity, Identifiable {
         dateFormatter.doesRelativeDateFormatting = true
         self.tempDateString = dateFormatter.string(from: location.lastTemperatureDate)
         
+        self.isActive = location.isActive
         self.displayRepresentation = DisplayRepresentation(stringLiteral: name)
     }
     
-    public init(id: Int, name: String, shortName: String, tempString: String, date: Date) {
+    public init(
+        id: Int,
+        name: String,
+        shortName: String,
+        tempString: String,
+        tempValue: Double,
+        date: Date,
+        isActive: Bool
+    ) {
         self.id = id
         
         self.name = name
         self.shortName = shortName
         
         self.tempString = tempString
-        
+        self.tempValue = tempValue
+
         let dateFormatter = Foundation.DateFormatter()
         dateFormatter.locale = Locale.current
         
@@ -61,6 +72,8 @@ public struct LocationAppEntity: AppEntity, Identifiable {
         dateFormatter.timeStyle = .short
         dateFormatter.doesRelativeDateFormatting = true
         self.tempDateString = dateFormatter.string(from: date)
+        
+        self.isActive = isActive
         
         self.displayRepresentation = DisplayRepresentation(stringLiteral: name)
     }

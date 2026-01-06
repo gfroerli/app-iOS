@@ -13,6 +13,10 @@ struct SingleLocationWidgetTimelineProvider: AppIntentTimelineProvider {
     func placeholder(in context: Context) -> LocationEntry {
         LocationEntry(date: Date.now, configuration: SingleLocationWidgetConfigurationIntent())
     }
+    
+    func recommendations() -> [AppIntentRecommendation<SingleLocationWidgetConfigurationIntent>] {
+        []
+    }
 
     func snapshot(
         for configuration: SingleLocationWidgetConfigurationIntent,

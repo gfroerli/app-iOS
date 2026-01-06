@@ -76,7 +76,7 @@ public struct BusinessLocationMock: BusinessLocationProtocol, Sendable {
     
     public static let exampleLocation2 = BusinessLocationMock(
         id: 1,
-        name: "Test Location2 ",
+        name: "Test Location2",
         shortName: "TST",
         description: "This is a simple test location.",
         latitude: 47.252206999999997,
@@ -94,5 +94,27 @@ public struct BusinessLocationMock: BusinessLocationProtocol, Sendable {
         averageTemperature: 20.5,
         averageTemperatureString: "",
         isActive: true
+    )
+    
+    public static let exampleInactiveLocation1 = BusinessLocationMock(
+        id: 2,
+        name: "Test Location dslkf;ldsakf ;k3",
+        shortName: "TST",
+        description: "This is a simple test location.",
+        latitude: 47.252206999999997,
+        longitude: 8.8557829999999997,
+        creationDate: .distantPast,
+        sponsorID: 0,
+        lastTemperature: 25.0,
+        lastTemperatureString: "25.0°C",
+        lastTemperatureDate: .now,
+        lastTemperatureDateString: "now",
+        highestTemperature: 35.0,
+        highestTemperatureString: "35.0°C",
+        lowestTemperature: -0.1,
+        lowestTemperatureString: "-0.1°C",
+        averageTemperature: 20.5,
+        averageTemperatureString: "20.0°C",
+        isActive: false
     )
 }

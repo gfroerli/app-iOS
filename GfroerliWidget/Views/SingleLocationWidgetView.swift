@@ -18,7 +18,7 @@ struct SingleLocationWidgetView: View {
     var body: some View {
         VStack {
             HStack {
-                Text(entry.configuration.location?.name ?? "widget_no_data")
+                Text(entry.configuration.location?.name ?? String(localized: "widget_no_data"))
                     .font(showsBackground ? .callout : .title3)
                     .lineLimit(2, reservesSpace: true)
                     .widgetAccentable()
