@@ -10,22 +10,11 @@ import SwiftUI
 
 extension View {
     func defaultBoxStyle() -> some View {
-        background(backgroundColor())
+        background(Color.accentColor.opacity(0.05))
             .cornerRadius(15)
             .overlay {
                 RoundedRectangle(cornerRadius: 15)
                     .stroke(Color.accentColor.opacity(0.4), lineWidth: 0.5)
             }
-    }
-    
-    private func backgroundColor() -> Color {
-        @Environment(\.colorScheme) var colorScheme
-
-        if colorScheme == .light {
-            return Color.accentColor.opacity(0.05)
-        }
-        else {
-            return Color.accentColor.opacity(0.5)
-        }
     }
 }

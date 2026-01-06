@@ -7,84 +7,29 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		240553BE2C987E0900A72395 /* ChangeIconView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 240553BD2C987E0900A72395 /* ChangeIconView.swift */; };
-		2434F7CD2A594886006ED9FD /* GfroerliApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2434F7CC2A594886006ED9FD /* GfroerliApp.swift */; };
-		2434F7D12A594888006ED9FD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2434F7D02A594888006ED9FD /* Assets.xcassets */; };
-		2434F7D52A594888006ED9FD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2434F7D42A594888006ED9FD /* Preview Assets.xcassets */; };
-		2434F7DF2A594888006ED9FD /* GfroerliTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2434F7DE2A594888006ED9FD /* GfroerliTests.swift */; };
-		2434F7FF2A5948E6006ED9FD /* Date+Week.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2434F7F92A5948E6006ED9FD /* Date+Week.swift */; };
-		2434F8002A5948E6006ED9FD /* View+Modifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2434F7FA2A5948E6006ED9FD /* View+Modifiers.swift */; };
-		2434F8012A5948E6006ED9FD /* Bundle+Dedode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2434F7FB2A5948E6006ED9FD /* Bundle+Dedode.swift */; };
-		2434F8022A5948E6006ED9FD /* Array+Codable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2434F7FC2A5948E6006ED9FD /* Array+Codable.swift */; };
-		2434F8032A5948E6006ED9FD /* Color+AccentColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2434F7FD2A5948E6006ED9FD /* Color+AccentColor.swift */; };
-		2434F8092A5948ED006ED9FD /* AppConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2434F8052A5948ED006ED9FD /* AppConfiguration.swift */; };
-		2434F80A2A5948ED006ED9FD /* DefaultsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2434F8062A5948ED006ED9FD /* DefaultsCoordinator.swift */; };
-		2434F80B2A5948ED006ED9FD /* ChangeLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2434F8072A5948ED006ED9FD /* ChangeLog.swift */; };
-		2434F80C2A5948ED006ED9FD /* NewFeatures.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2434F8082A5948ED006ED9FD /* NewFeatures.swift */; };
-		2434F8112A5948F5006ED9FD /* NavigationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2434F80E2A5948F5006ED9FD /* NavigationModel.swift */; };
-		2434F8122A5948F5006ED9FD /* TemperaturesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2434F80F2A5948F5006ED9FD /* TemperaturesViewModel.swift */; };
-		2434F8132A5948F5006ED9FD /* ViewModelState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2434F8102A5948F5006ED9FD /* ViewModelState.swift */; };
-		2434F8322A5948FC006ED9FD /* NewFeaturesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2434F8172A5948FC006ED9FD /* NewFeaturesView.swift */; };
-		2434F8332A5948FC006ED9FD /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2434F8182A5948FC006ED9FD /* SettingsView.swift */; };
-		2434F8342A5948FC006ED9FD /* FAQView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2434F8192A5948FC006ED9FD /* FAQView.swift */; };
-		2434F8352A5948FC006ED9FD /* SettingsThumbnailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2434F81A2A5948FC006ED9FD /* SettingsThumbnailView.swift */; };
-		2434F8362A5948FC006ED9FD /* ChangeLogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2434F81B2A5948FC006ED9FD /* ChangeLogView.swift */; };
-		2434F8372A5948FC006ED9FD /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2434F81D2A5948FC006ED9FD /* SearchView.swift */; };
-		2434F8382A5948FC006ED9FD /* InlineLocationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2434F81E2A5948FC006ED9FD /* InlineLocationView.swift */; };
-		2434F83A2A5948FC006ED9FD /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2434F8212A5948FC006ED9FD /* MapView.swift */; };
-		2434F83B2A5948FC006ED9FD /* GfroerliMapAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2434F8222A5948FC006ED9FD /* GfroerliMapAnnotation.swift */; };
-		2434F83C2A5948FC006ED9FD /* SponsorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2434F8242A5948FC006ED9FD /* SponsorView.swift */; };
-		2434F83D2A5948FC006ED9FD /* TemperatureSummaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2434F8252A5948FC006ED9FD /* TemperatureSummaryView.swift */; };
-		2434F83E2A5948FC006ED9FD /* LocationDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2434F8262A5948FC006ED9FD /* LocationDetailView.swift */; };
-		2434F83F2A5948FC006ED9FD /* HistoryGraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2434F8282A5948FC006ED9FD /* HistoryGraphView.swift */; };
-		2434F8402A5948FC006ED9FD /* TemperatureHistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2434F8292A5948FC006ED9FD /* TemperatureHistoryView.swift */; };
-		2434F8412A5948FC006ED9FD /* LocationMapPreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2434F82A2A5948FC006ED9FD /* LocationMapPreviewView.swift */; };
-		2434F8422A5948FC006ED9FD /* LatestTemperatureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2434F82B2A5948FC006ED9FD /* LatestTemperatureView.swift */; };
-		2434F8432A5948FC006ED9FD /* NavigationBaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2434F82D2A5948FC006ED9FD /* NavigationBaseView.swift */; };
-		2434F8442A5948FC006ED9FD /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2434F82F2A5948FC006ED9FD /* MainView.swift */; };
-		2434F8562A594905006ED9FD /* NewFeatures.json in Resources */ = {isa = PBXBuildFile; fileRef = 2434F8472A594905006ED9FD /* NewFeatures.json */; };
-		2434F8582A594905006ED9FD /* ChangeLog.json in Resources */ = {isa = PBXBuildFile; fileRef = 2434F84B2A594905006ED9FD /* ChangeLog.json */; };
-		2434F8592A594905006ED9FD /* en.xcloc in Resources */ = {isa = PBXBuildFile; fileRef = 2434F8542A594905006ED9FD /* en.xcloc */; };
-		2434F85A2A594905006ED9FD /* de.xcloc in Resources */ = {isa = PBXBuildFile; fileRef = 2434F8552A594905006ED9FD /* de.xcloc */; };
-		243DB8862B120FF200265111 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 243DB8852B120FF200265111 /* Localizable.xcstrings */; };
-		244737A72C033EC3008CD013 /* GfroerliWatchApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244737A62C033EC3008CD013 /* GfroerliWatchApp.swift */; };
-		244737A92C033EC3008CD013 /* WatchMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244737A82C033EC3008CD013 /* WatchMainView.swift */; };
-		244737AB2C033EC4008CD013 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 244737AA2C033EC4008CD013 /* Assets.xcassets */; };
-		244737AE2C033EC4008CD013 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 244737AD2C033EC4008CD013 /* Preview Assets.xcassets */; };
-		244737B12C033EC4008CD013 /* GfroerliWatch Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 244737A42C033EC3008CD013 /* GfroerliWatch Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		2449D4F82C09B20700016B82 /* LocationTemperatureHistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2449D4F72C09B20700016B82 /* LocationTemperatureHistoryView.swift */; };
+		241336052F05155F007DA222 /* GfroerliBusiness in Frameworks */ = {isa = PBXBuildFile; productRef = 241336042F05155F007DA222 /* GfroerliBusiness */; };
+		2413360B2F0517AB007DA222 /* GfroerliBackend in Frameworks */ = {isa = PBXBuildFile; productRef = 2413360A2F0517AB007DA222 /* GfroerliBackend */; };
+		2424A73E2F0566E20000AD06 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24A77F8B2BF732CA0074D93D /* WidgetKit.framework */; };
+		2424A73F2F0566E20000AD06 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24A77F8D2BF732CA0074D93D /* SwiftUI.framework */; };
+		2424A74A2F0566E30000AD06 /* GfroerliWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 2424A73D2F0566E20000AD06 /* GfroerliWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		243EA7342F01402B0038B7C9 /* ClusterMap in Frameworks */ = {isa = PBXBuildFile; productRef = 243EA7332F01402B0038B7C9 /* ClusterMap */; };
+		243EA7362F01466F0038B7C9 /* ClusterMapSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 243EA7352F01466F0038B7C9 /* ClusterMapSwiftUI */; };
+		2445360F2EFAEDAC007D1466 /* GfroerliBusiness in Frameworks */ = {isa = PBXBuildFile; productRef = 2445360E2EFAEDAC007D1466 /* GfroerliBusiness */; };
 		246058682A5C48920081FEB0 /* GfroerliBackend in Frameworks */ = {isa = PBXBuildFile; productRef = 246058672A5C48920081FEB0 /* GfroerliBackend */; };
-		2478A3512C04ECAC00C5817C /* GfroerliBackend in Frameworks */ = {isa = PBXBuildFile; productRef = 2478A3502C04ECAC00C5817C /* GfroerliBackend */; };
-		2478A3522C04EFFD00C5817C /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 243DB8852B120FF200265111 /* Localizable.xcstrings */; };
-		2478A3552C04F15600C5817C /* WatchListContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2478A3542C04F15600C5817C /* WatchListContentView.swift */; };
-		2478A3572C04FAE500C5817C /* WatchLocationDetailTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2478A3562C04FAE500C5817C /* WatchLocationDetailTabView.swift */; };
-		2478A3592C04FBE000C5817C /* WaveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24BD89C72BF76D25003B8694 /* WaveView.swift */; };
-		2478A35A2C04FBE400C5817C /* WaveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24BD89C72BF76D25003B8694 /* WaveView.swift */; };
-		2478A35B2C04FBE400C5817C /* WaveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24BD89C72BF76D25003B8694 /* WaveView.swift */; };
-		248021DC2BF746F9008C3283 /* GfroerliBackend in Frameworks */ = {isa = PBXBuildFile; productRef = 248021DB2BF746F9008C3283 /* GfroerliBackend */; };
-		248021E02BF74771008C3283 /* LocationAppEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 248021DF2BF74771008C3283 /* LocationAppEntity.swift */; };
-		249F08C42B16531D007697A8 /* SortVariant+Localized.swift in Sources */ = {isa = PBXBuildFile; fileRef = 249F08C32B16531D007697A8 /* SortVariant+Localized.swift */; };
-		24A77F8C2BF732CA0074D93D /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24A77F8B2BF732CA0074D93D /* WidgetKit.framework */; };
-		24A77F8E2BF732CA0074D93D /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24A77F8D2BF732CA0074D93D /* SwiftUI.framework */; };
-		24A77F912BF732CA0074D93D /* GfroerliWidgetBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A77F902BF732CA0074D93D /* GfroerliWidgetBundle.swift */; };
-		24A77F932BF732CA0074D93D /* SingleLocationWidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A77F922BF732CA0074D93D /* SingleLocationWidgetView.swift */; };
-		24A77F952BF732CA0074D93D /* SingleLocationWidgetConfigurationIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A77F942BF732CA0074D93D /* SingleLocationWidgetConfigurationIntent.swift */; };
-		24A77F972BF732CB0074D93D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 24A77F962BF732CB0074D93D /* Assets.xcassets */; };
-		24A77F9B2BF732CB0074D93D /* GfroerliWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 24A77F8A2BF732CA0074D93D /* GfroerliWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		24B814032B39A34400577A09 /* ScreenshotKit in Resources */ = {isa = PBXBuildFile; fileRef = 24B814022B39A34400577A09 /* ScreenshotKit */; };
 		24B814052B39A37D00577A09 /* ScreenshotKit in Frameworks */ = {isa = PBXBuildFile; productRef = 24B814042B39A37D00577A09 /* ScreenshotKit */; };
-		24BD89C22BF750C4003B8694 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 243DB8852B120FF200265111 /* Localizable.xcstrings */; };
-		24BD89C62BF75517003B8694 /* SingleLocationWidgetTimelineProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24BD89C52BF75517003B8694 /* SingleLocationWidgetTimelineProvider.swift */; };
-		24C8A02D2C08CE3300D45ABE /* WatchTemperatureSummaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C8A02C2C08CE3300D45ABE /* WatchTemperatureSummaryView.swift */; };
-		24C8A02F2C08D0B000D45ABE /* WatchTemperatureHistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C8A02E2C08D0B000D45ABE /* WatchTemperatureHistoryView.swift */; };
-		24CD49642C08D5EA00B652F9 /* WatchSponsorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24CD49632C08D5EA00B652F9 /* WatchSponsorView.swift */; };
-		24D0BCD92C00C9A300D5A93F /* SingleLocationWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24D0BCD82C00C9A300D5A93F /* SingleLocationWidget.swift */; };
-		24D0BCDB2C00C9F200D5A93F /* SingleLocationLockScreenWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24D0BCDA2C00C9F200D5A93F /* SingleLocationLockScreenWidget.swift */; };
-		24D0BCDD2C00CA8300D5A93F /* SingleLocationLockScreenWidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24D0BCDC2C00CA8300D5A93F /* SingleLocationLockScreenWidgetView.swift */; };
-		24F7F28F2B13096000AA41BA /* GfroerliScreenshots.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F7F28E2B13096000AA41BA /* GfroerliScreenshots.swift */; };
+		24B9A8072F0567830087926F /* GfroerliBackend in Frameworks */ = {isa = PBXBuildFile; productRef = 24B9A8062F0567830087926F /* GfroerliBackend */; };
+		24B9A8092F0567890087926F /* GfroerliBusiness in Frameworks */ = {isa = PBXBuildFile; productRef = 24B9A8082F0567890087926F /* GfroerliBusiness */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		2424A7482F0566E30000AD06 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2434F7C12A594886006ED9FD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2424A73C2F0566E20000AD06;
+			remoteInfo = GfroerliWidgetExtension;
+		};
 		2434F7DB2A594888006ED9FD /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 2434F7C12A594886006ED9FD /* Project object */;
@@ -106,13 +51,6 @@
 			remoteGlobalIDString = 244737A32C033EC3008CD013;
 			remoteInfo = "GfroerliWatch Watch App";
 		};
-		24A77F992BF732CB0074D93D /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 2434F7C12A594886006ED9FD /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 24A77F892BF732CA0074D93D;
-			remoteInfo = GfroerliWidgetExtension;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -122,7 +60,6 @@
 			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
 			dstSubfolderSpec = 16;
 			files = (
-				244737B12C033EC4008CD013 /* GfroerliWatch Watch App.app in Embed Watch Content */,
 			);
 			name = "Embed Watch Content";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -139,11 +76,11 @@
 		};
 		24A77F9C2BF732CB0074D93D /* Embed Foundation Extensions */ = {
 			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
+			buildActionMask = 12;
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				24A77F9B2BF732CB0074D93D /* GfroerliWidgetExtension.appex in Embed Foundation Extensions */,
+				2424A74A2F0566E30000AD06 /* GfroerliWidgetExtension.appex in Embed Foundation Extensions */,
 			);
 			name = "Embed Foundation Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -161,95 +98,153 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		24031DF42A594AE10026B29C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
-		240553BD2C987E0900A72395 /* ChangeIconView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeIconView.swift; sourceTree = "<group>"; };
-		24198C7C2BC092890037ECB5 /* ScreenshotHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenshotHelper.swift; sourceTree = "<group>"; };
-		2434F7C92A594886006ED9FD /* Gfroerli.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Gfroerli.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		2434F7CC2A594886006ED9FD /* GfroerliApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GfroerliApp.swift; sourceTree = "<group>"; };
-		2434F7D02A594888006ED9FD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		2434F7D22A594888006ED9FD /* Gfroerli.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Gfroerli.entitlements; sourceTree = "<group>"; };
-		2434F7D42A594888006ED9FD /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		2434F7DA2A594888006ED9FD /* GfroerliTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GfroerliTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		2434F7DE2A594888006ED9FD /* GfroerliTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GfroerliTests.swift; sourceTree = "<group>"; };
-		2434F7E42A594888006ED9FD /* GfroerliUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GfroerliUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		2434F7F92A5948E6006ED9FD /* Date+Week.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+Week.swift"; sourceTree = "<group>"; };
-		2434F7FA2A5948E6006ED9FD /* View+Modifiers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "View+Modifiers.swift"; sourceTree = "<group>"; };
-		2434F7FB2A5948E6006ED9FD /* Bundle+Dedode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Bundle+Dedode.swift"; sourceTree = "<group>"; };
-		2434F7FC2A5948E6006ED9FD /* Array+Codable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+Codable.swift"; sourceTree = "<group>"; };
-		2434F7FD2A5948E6006ED9FD /* Color+AccentColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Color+AccentColor.swift"; sourceTree = "<group>"; };
-		2434F8052A5948ED006ED9FD /* AppConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppConfiguration.swift; sourceTree = "<group>"; };
-		2434F8062A5948ED006ED9FD /* DefaultsCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefaultsCoordinator.swift; sourceTree = "<group>"; };
-		2434F8072A5948ED006ED9FD /* ChangeLog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangeLog.swift; sourceTree = "<group>"; };
-		2434F8082A5948ED006ED9FD /* NewFeatures.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewFeatures.swift; sourceTree = "<group>"; };
-		2434F80E2A5948F5006ED9FD /* NavigationModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationModel.swift; sourceTree = "<group>"; };
-		2434F80F2A5948F5006ED9FD /* TemperaturesViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TemperaturesViewModel.swift; sourceTree = "<group>"; };
-		2434F8102A5948F5006ED9FD /* ViewModelState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewModelState.swift; sourceTree = "<group>"; };
-		2434F8172A5948FC006ED9FD /* NewFeaturesView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewFeaturesView.swift; sourceTree = "<group>"; };
-		2434F8182A5948FC006ED9FD /* SettingsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
-		2434F8192A5948FC006ED9FD /* FAQView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FAQView.swift; sourceTree = "<group>"; };
-		2434F81A2A5948FC006ED9FD /* SettingsThumbnailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsThumbnailView.swift; sourceTree = "<group>"; };
-		2434F81B2A5948FC006ED9FD /* ChangeLogView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangeLogView.swift; sourceTree = "<group>"; };
-		2434F81D2A5948FC006ED9FD /* SearchView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
-		2434F81E2A5948FC006ED9FD /* InlineLocationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InlineLocationView.swift; sourceTree = "<group>"; };
-		2434F8212A5948FC006ED9FD /* MapView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
-		2434F8222A5948FC006ED9FD /* GfroerliMapAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GfroerliMapAnnotation.swift; sourceTree = "<group>"; };
-		2434F8242A5948FC006ED9FD /* SponsorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SponsorView.swift; sourceTree = "<group>"; };
-		2434F8252A5948FC006ED9FD /* TemperatureSummaryView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TemperatureSummaryView.swift; sourceTree = "<group>"; };
-		2434F8262A5948FC006ED9FD /* LocationDetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationDetailView.swift; sourceTree = "<group>"; };
-		2434F8282A5948FC006ED9FD /* HistoryGraphView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryGraphView.swift; sourceTree = "<group>"; };
-		2434F8292A5948FC006ED9FD /* TemperatureHistoryView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TemperatureHistoryView.swift; sourceTree = "<group>"; };
-		2434F82A2A5948FC006ED9FD /* LocationMapPreviewView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationMapPreviewView.swift; sourceTree = "<group>"; };
-		2434F82B2A5948FC006ED9FD /* LatestTemperatureView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LatestTemperatureView.swift; sourceTree = "<group>"; };
-		2434F82D2A5948FC006ED9FD /* NavigationBaseView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationBaseView.swift; sourceTree = "<group>"; };
-		2434F82F2A5948FC006ED9FD /* MainView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
-		2434F8482A594905006ED9FD /* de */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = de; path = de.lproj/NewFeatures.json; sourceTree = "<group>"; };
-		2434F84C2A594905006ED9FD /* de */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = de; path = de.lproj/ChangeLog.json; sourceTree = "<group>"; };
-		2434F84D2A594905006ED9FD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = en; path = en.lproj/NewFeatures.json; sourceTree = "<group>"; };
-		2434F84F2A594905006ED9FD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = en; path = en.lproj/ChangeLog.json; sourceTree = "<group>"; };
-		2434F8502A594905006ED9FD /* gsw */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = gsw; path = gsw.lproj/NewFeatures.json; sourceTree = "<group>"; };
-		2434F8522A594905006ED9FD /* gsw */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = gsw; path = gsw.lproj/ChangeLog.json; sourceTree = "<group>"; };
-		2434F8542A594905006ED9FD /* en.xcloc */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = en.xcloc; sourceTree = "<group>"; };
-		2434F8552A594905006ED9FD /* de.xcloc */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = de.xcloc; sourceTree = "<group>"; };
-		243DB8852B120FF200265111 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
-		244737A42C033EC3008CD013 /* GfroerliWatch Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "GfroerliWatch Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		244737A62C033EC3008CD013 /* GfroerliWatchApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GfroerliWatchApp.swift; sourceTree = "<group>"; };
-		244737A82C033EC3008CD013 /* WatchMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchMainView.swift; sourceTree = "<group>"; };
-		244737AA2C033EC4008CD013 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		244737AD2C033EC4008CD013 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		2449D4F72C09B20700016B82 /* LocationTemperatureHistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationTemperatureHistoryView.swift; sourceTree = "<group>"; };
+		241581052EF45A8300A954A6 /* GfroerliAPI */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = GfroerliAPI; sourceTree = "<group>"; };
+		2424A6972F0561E20000AD06 /* GfroerliWatchApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GfroerliWatchApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2424A6982F0561F90000AD06 /* Gfroerli.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Gfroerli.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2424A69B2F05663B0000AD06 /* GfroerliTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GfroerliTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2424A69C2F05663B0000AD06 /* GfroerliUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GfroerliUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2424A73D2F0566E20000AD06 /* GfroerliWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = GfroerliWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		246058652A5C48830081FEB0 /* GfroerliBackend */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = GfroerliBackend; sourceTree = "<group>"; };
-		2478A3542C04F15600C5817C /* WatchListContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchListContentView.swift; sourceTree = "<group>"; };
-		2478A3562C04FAE500C5817C /* WatchLocationDetailTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchLocationDetailTabView.swift; sourceTree = "<group>"; };
-		248021DF2BF74771008C3283 /* LocationAppEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationAppEntity.swift; sourceTree = "<group>"; };
-		2493C95F2A5C47D6007F7EA3 /* Gfroerli.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = Gfroerli.xctestplan; sourceTree = "<group>"; };
-		249F08C32B16531D007697A8 /* SortVariant+Localized.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SortVariant+Localized.swift"; sourceTree = "<group>"; };
-		24A77F8A2BF732CA0074D93D /* GfroerliWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = GfroerliWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		24A77F8B2BF732CA0074D93D /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		24A77F8D2BF732CA0074D93D /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
-		24A77F902BF732CA0074D93D /* GfroerliWidgetBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GfroerliWidgetBundle.swift; sourceTree = "<group>"; };
-		24A77F922BF732CA0074D93D /* SingleLocationWidgetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleLocationWidgetView.swift; sourceTree = "<group>"; };
-		24A77F942BF732CA0074D93D /* SingleLocationWidgetConfigurationIntent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleLocationWidgetConfigurationIntent.swift; sourceTree = "<group>"; };
-		24A77F962BF732CB0074D93D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		24A77F982BF732CB0074D93D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		24B814022B39A34400577A09 /* ScreenshotKit */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ScreenshotKit; sourceTree = SOURCE_ROOT; };
-		24BD89C52BF75517003B8694 /* SingleLocationWidgetTimelineProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleLocationWidgetTimelineProvider.swift; sourceTree = "<group>"; };
-		24BD89C72BF76D25003B8694 /* WaveView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaveView.swift; sourceTree = "<group>"; };
-		24C8A02C2C08CE3300D45ABE /* WatchTemperatureSummaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchTemperatureSummaryView.swift; sourceTree = "<group>"; };
-		24C8A02E2C08D0B000D45ABE /* WatchTemperatureHistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchTemperatureHistoryView.swift; sourceTree = "<group>"; };
-		24CD49632C08D5EA00B652F9 /* WatchSponsorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchSponsorView.swift; sourceTree = "<group>"; };
-		24D0BCD82C00C9A300D5A93F /* SingleLocationWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleLocationWidget.swift; sourceTree = "<group>"; };
-		24D0BCDA2C00C9F200D5A93F /* SingleLocationLockScreenWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleLocationLockScreenWidget.swift; sourceTree = "<group>"; };
-		24D0BCDC2C00CA8300D5A93F /* SingleLocationLockScreenWidgetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleLocationLockScreenWidgetView.swift; sourceTree = "<group>"; };
-		24F7F28E2B13096000AA41BA /* GfroerliScreenshots.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GfroerliScreenshots.swift; sourceTree = "<group>"; };
-		24F7F2902B130AA800AA41BA /* GfroerliScreenshots.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = GfroerliScreenshots.xctestplan; sourceTree = "<group>"; };
+		24B814022B39A34400577A09 /* ScreenshotKit */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = wrapper; path = ScreenshotKit; sourceTree = SOURCE_ROOT; };
+		24F0DC0B2EF6B41700300B8D /* GfroerliBusiness */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = GfroerliBusiness; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		2415808D2EF459B600A954A6 /* Exceptions for "GfroerliTests" folder in "GfroerliTests" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				GfroerliTests.swift,
+			);
+			target = 2434F7D92A594888006ED9FD /* GfroerliTests */;
+		};
+		2415808F2EF459B600A954A6 /* Exceptions for "GfroerliUITests" folder in "GfroerliUITests" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				GfroerliScreenshots.swift,
+			);
+			target = 2434F7E32A594888006ED9FD /* GfroerliUITests */;
+		};
+		241581022EF459EF00A954A6 /* Exceptions for "Gfroerli" folder in "Gfroerli" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+				Utils/ScreenshotHelper.swift,
+			);
+			target = 2434F7C82A594886006ED9FD /* Gfroerli */;
+		};
+		2424A6942F0560A40000AD06 /* Exceptions for "Shared" folder in "Gfroerli" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Resources/Localizable.xcstrings,
+				Views/WaveView.swift,
+			);
+			target = 2434F7C82A594886006ED9FD /* Gfroerli */;
+		};
+		2424A6952F0560A40000AD06 /* Exceptions for "Shared" folder in "GfroerliWatchApp" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Resources/Localizable.xcstrings,
+				Views/WaveView.swift,
+			);
+			target = 244737A32C033EC3008CD013 /* GfroerliWatchApp */;
+		};
+		24B9A80B2F0567910087926F /* Exceptions for "Shared" folder in "GfroerliWidgetExtension" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Resources/Localizable.xcstrings,
+				Views/WaveView.swift,
+			);
+			target = 2424A73C2F0566E20000AD06 /* GfroerliWidgetExtension */;
+		};
+		24B9A80E2F0568310087926F /* Exceptions for "GfroerliWidget" folder in "GfroerliWidgetExtension" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				AppEntities/LocationAppEntity.swift,
+				Assets.xcassets,
+				GfroerliWidgetBundle.swift,
+				TimelineProviders/SingleLocationWidgetTimelineProvider.swift,
+				Views/SingleLocationLockScreenWidgetView.swift,
+				Views/SingleLocationWidgetView.swift,
+				WidgetIntents/SingleLocationWidgetConfigurationIntent.swift,
+				Widgets/SingleLocationLockScreenWidget.swift,
+				Widgets/SingleLocationWidget.swift,
+			);
+			target = 2424A73C2F0566E20000AD06 /* GfroerliWidgetExtension */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		241580722EF459B500A954A6 /* GfroerliUITests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				2415808F2EF459B600A954A6 /* Exceptions for "GfroerliUITests" folder in "GfroerliUITests" target */,
+			);
+			path = GfroerliUITests;
+			sourceTree = "<group>";
+		};
+		2415807F2EF459B500A954A6 /* GfroerliWatchApp */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = GfroerliWatchApp;
+			sourceTree = "<group>";
+		};
+		2415808B2EF459B500A954A6 /* GfroerliTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				2415808D2EF459B600A954A6 /* Exceptions for "GfroerliTests" folder in "GfroerliTests" target */,
+			);
+			path = GfroerliTests;
+			sourceTree = "<group>";
+		};
+		241580D12EF459EF00A954A6 /* Gfroerli */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				241581022EF459EF00A954A6 /* Exceptions for "Gfroerli" folder in "Gfroerli" target */,
+			);
+			path = Gfroerli;
+			sourceTree = "<group>";
+		};
+		2424A5252F0537950000AD06 /* GfroerliWidget */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				24B9A80E2F0568310087926F /* Exceptions for "GfroerliWidget" folder in "GfroerliWidgetExtension" target */,
+			);
+			path = GfroerliWidget;
+			sourceTree = "<group>";
+		};
+		2424A6922F05608C0000AD06 /* Shared */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				2424A6942F0560A40000AD06 /* Exceptions for "Shared" folder in "Gfroerli" target */,
+				2424A6952F0560A40000AD06 /* Exceptions for "Shared" folder in "GfroerliWatchApp" target */,
+				24B9A80B2F0567910087926F /* Exceptions for "Shared" folder in "GfroerliWidgetExtension" target */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
 /* Begin PBXFrameworksBuildPhase section */
+		2424A73A2F0566E20000AD06 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				24B9A8072F0567830087926F /* GfroerliBackend in Frameworks */,
+				2424A73F2F0566E20000AD06 /* SwiftUI.framework in Frameworks */,
+				24B9A8092F0567890087926F /* GfroerliBusiness in Frameworks */,
+				2424A73E2F0566E20000AD06 /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		2434F7C62A594886006ED9FD /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				243EA7362F01466F0038B7C9 /* ClusterMapSwiftUI in Frameworks */,
+				2445360F2EFAEDAC007D1466 /* GfroerliBusiness in Frameworks */,
 				246058682A5C48920081FEB0 /* GfroerliBackend in Frameworks */,
+				243EA7342F01402B0038B7C9 /* ClusterMap in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -272,17 +267,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2478A3512C04ECAC00C5817C /* GfroerliBackend in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		24A77F872BF732CA0074D93D /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				248021DC2BF746F9008C3283 /* GfroerliBackend in Frameworks */,
-				24A77F8E2BF732CA0074D93D /* SwiftUI.framework in Frameworks */,
-				24A77F8C2BF732CA0074D93D /* WidgetKit.framework in Frameworks */,
+				241336052F05155F007DA222 /* GfroerliBusiness in Frameworks */,
+				2413360B2F0517AB007DA222 /* GfroerliBackend in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -292,313 +278,58 @@
 		2434F7C02A594886006ED9FD = {
 			isa = PBXGroup;
 			children = (
-				2434F7CB2A594886006ED9FD /* Gfroerli */,
-				2434F7DD2A594888006ED9FD /* GfroerliTests */,
-				2434F7E72A594888006ED9FD /* GfroerliUITests */,
-				24A77F8F2BF732CA0074D93D /* GfroerliWidget */,
-				244737A52C033EC3008CD013 /* GfroerliWatch Watch App */,
-				2434F7CA2A594886006ED9FD /* Products */,
+				241580D12EF459EF00A954A6 /* Gfroerli */,
+				2415807F2EF459B500A954A6 /* GfroerliWatchApp */,
+				2424A5252F0537950000AD06 /* GfroerliWidget */,
+				2424A6922F05608C0000AD06 /* Shared */,
+				24F0DC0B2EF6B41700300B8D /* GfroerliBusiness */,
+				241581052EF45A8300A954A6 /* GfroerliAPI */,
+				246058652A5C48830081FEB0 /* GfroerliBackend */,
+				24B814022B39A34400577A09 /* ScreenshotKit */,
+				2415808B2EF459B500A954A6 /* GfroerliTests */,
+				241580722EF459B500A954A6 /* GfroerliUITests */,
 				246058662A5C48920081FEB0 /* Frameworks */,
+				2424A6972F0561E20000AD06 /* GfroerliWatchApp.app */,
+				2424A6982F0561F90000AD06 /* Gfroerli.app */,
+				2424A69B2F05663B0000AD06 /* GfroerliTests.xctest */,
+				2424A69C2F05663B0000AD06 /* GfroerliUITests.xctest */,
+				2424A73D2F0566E20000AD06 /* GfroerliWidgetExtension.appex */,
 			);
-			sourceTree = "<group>";
-		};
-		2434F7CA2A594886006ED9FD /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				2434F7C92A594886006ED9FD /* Gfroerli.app */,
-				2434F7DA2A594888006ED9FD /* GfroerliTests.xctest */,
-				2434F7E42A594888006ED9FD /* GfroerliUITests.xctest */,
-				24A77F8A2BF732CA0074D93D /* GfroerliWidgetExtension.appex */,
-				244737A42C033EC3008CD013 /* GfroerliWatch Watch App.app */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		2434F7CB2A594886006ED9FD /* Gfroerli */ = {
-			isa = PBXGroup;
-			children = (
-				2434F7CC2A594886006ED9FD /* GfroerliApp.swift */,
-				2434F8142A5948FC006ED9FD /* Views */,
-				2434F7D02A594888006ED9FD /* Assets.xcassets */,
-				2434F7D22A594888006ED9FD /* Gfroerli.entitlements */,
-				24031DF42A594AE10026B29C /* Info.plist */,
-				2434F80D2A5948F5006ED9FD /* ViewModels */,
-				2434F7F72A5948E6006ED9FD /* Extensions */,
-				2434F8042A5948ED006ED9FD /* Utils */,
-				2434F8462A594905006ED9FD /* Resources */,
-				2434F7D32A594888006ED9FD /* Preview Content */,
-			);
-			path = Gfroerli;
-			sourceTree = "<group>";
-		};
-		2434F7D32A594888006ED9FD /* Preview Content */ = {
-			isa = PBXGroup;
-			children = (
-				2434F7D42A594888006ED9FD /* Preview Assets.xcassets */,
-			);
-			path = "Preview Content";
-			sourceTree = "<group>";
-		};
-		2434F7DD2A594888006ED9FD /* GfroerliTests */ = {
-			isa = PBXGroup;
-			children = (
-				2493C95F2A5C47D6007F7EA3 /* Gfroerli.xctestplan */,
-				2434F7DE2A594888006ED9FD /* GfroerliTests.swift */,
-			);
-			path = GfroerliTests;
-			sourceTree = "<group>";
-		};
-		2434F7E72A594888006ED9FD /* GfroerliUITests */ = {
-			isa = PBXGroup;
-			children = (
-				24F7F2902B130AA800AA41BA /* GfroerliScreenshots.xctestplan */,
-				24F7F28E2B13096000AA41BA /* GfroerliScreenshots.swift */,
-			);
-			path = GfroerliUITests;
-			sourceTree = "<group>";
-		};
-		2434F7F72A5948E6006ED9FD /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				2434F7F92A5948E6006ED9FD /* Date+Week.swift */,
-				2434F7FA2A5948E6006ED9FD /* View+Modifiers.swift */,
-				2434F7FB2A5948E6006ED9FD /* Bundle+Dedode.swift */,
-				2434F7FC2A5948E6006ED9FD /* Array+Codable.swift */,
-				2434F7FD2A5948E6006ED9FD /* Color+AccentColor.swift */,
-			);
-			path = Extensions;
-			sourceTree = "<group>";
-		};
-		2434F8042A5948ED006ED9FD /* Utils */ = {
-			isa = PBXGroup;
-			children = (
-				2434F8052A5948ED006ED9FD /* AppConfiguration.swift */,
-				2434F8062A5948ED006ED9FD /* DefaultsCoordinator.swift */,
-				2434F8072A5948ED006ED9FD /* ChangeLog.swift */,
-				2434F8082A5948ED006ED9FD /* NewFeatures.swift */,
-				249F08C32B16531D007697A8 /* SortVariant+Localized.swift */,
-				24198C7C2BC092890037ECB5 /* ScreenshotHelper.swift */,
-			);
-			path = Utils;
-			sourceTree = "<group>";
-		};
-		2434F80D2A5948F5006ED9FD /* ViewModels */ = {
-			isa = PBXGroup;
-			children = (
-				2434F80E2A5948F5006ED9FD /* NavigationModel.swift */,
-				2434F80F2A5948F5006ED9FD /* TemperaturesViewModel.swift */,
-				2434F8102A5948F5006ED9FD /* ViewModelState.swift */,
-			);
-			path = ViewModels;
-			sourceTree = "<group>";
-		};
-		2434F8142A5948FC006ED9FD /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				2434F8152A5948FC006ED9FD /* SharedViews */,
-				2434F82C2A5948FC006ED9FD /* Shared */,
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
-		2434F8152A5948FC006ED9FD /* SharedViews */ = {
-			isa = PBXGroup;
-			children = (
-				2434F8162A5948FC006ED9FD /* Settings */,
-				2434F81C2A5948FC006ED9FD /* Search */,
-				2434F8202A5948FC006ED9FD /* Map */,
-				2434F8232A5948FC006ED9FD /* LocationDetail */,
-			);
-			path = SharedViews;
-			sourceTree = "<group>";
-		};
-		2434F8162A5948FC006ED9FD /* Settings */ = {
-			isa = PBXGroup;
-			children = (
-				2434F8172A5948FC006ED9FD /* NewFeaturesView.swift */,
-				240553BD2C987E0900A72395 /* ChangeIconView.swift */,
-				2434F8182A5948FC006ED9FD /* SettingsView.swift */,
-				2434F8192A5948FC006ED9FD /* FAQView.swift */,
-				2434F81A2A5948FC006ED9FD /* SettingsThumbnailView.swift */,
-				2434F81B2A5948FC006ED9FD /* ChangeLogView.swift */,
-			);
-			path = Settings;
-			sourceTree = "<group>";
-		};
-		2434F81C2A5948FC006ED9FD /* Search */ = {
-			isa = PBXGroup;
-			children = (
-				2434F81D2A5948FC006ED9FD /* SearchView.swift */,
-				2434F81E2A5948FC006ED9FD /* InlineLocationView.swift */,
-			);
-			path = Search;
-			sourceTree = "<group>";
-		};
-		2434F8202A5948FC006ED9FD /* Map */ = {
-			isa = PBXGroup;
-			children = (
-				2434F8212A5948FC006ED9FD /* MapView.swift */,
-				2434F8222A5948FC006ED9FD /* GfroerliMapAnnotation.swift */,
-			);
-			path = Map;
-			sourceTree = "<group>";
-		};
-		2434F8232A5948FC006ED9FD /* LocationDetail */ = {
-			isa = PBXGroup;
-			children = (
-				2434F8242A5948FC006ED9FD /* SponsorView.swift */,
-				2434F8252A5948FC006ED9FD /* TemperatureSummaryView.swift */,
-				2434F8262A5948FC006ED9FD /* LocationDetailView.swift */,
-				2449D4F72C09B20700016B82 /* LocationTemperatureHistoryView.swift */,
-				2434F8272A5948FC006ED9FD /* LocationTemperatureHistory */,
-				2434F82A2A5948FC006ED9FD /* LocationMapPreviewView.swift */,
-				2434F82B2A5948FC006ED9FD /* LatestTemperatureView.swift */,
-			);
-			path = LocationDetail;
-			sourceTree = "<group>";
-		};
-		2434F8272A5948FC006ED9FD /* LocationTemperatureHistory */ = {
-			isa = PBXGroup;
-			children = (
-				2434F8282A5948FC006ED9FD /* HistoryGraphView.swift */,
-				2434F8292A5948FC006ED9FD /* TemperatureHistoryView.swift */,
-			);
-			path = LocationTemperatureHistory;
-			sourceTree = "<group>";
-		};
-		2434F82C2A5948FC006ED9FD /* Shared */ = {
-			isa = PBXGroup;
-			children = (
-				24BD89C72BF76D25003B8694 /* WaveView.swift */,
-				2434F82F2A5948FC006ED9FD /* MainView.swift */,
-				2434F82D2A5948FC006ED9FD /* NavigationBaseView.swift */,
-			);
-			path = Shared;
-			sourceTree = "<group>";
-		};
-		2434F8462A594905006ED9FD /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				243DB8852B120FF200265111 /* Localizable.xcstrings */,
-				2434F8472A594905006ED9FD /* NewFeatures.json */,
-				2434F84B2A594905006ED9FD /* ChangeLog.json */,
-				2434F8532A594905006ED9FD /* gfroerli Localizations */,
-			);
-			path = Resources;
-			sourceTree = "<group>";
-		};
-		2434F8532A594905006ED9FD /* gfroerli Localizations */ = {
-			isa = PBXGroup;
-			children = (
-				2434F8542A594905006ED9FD /* en.xcloc */,
-				2434F8552A594905006ED9FD /* de.xcloc */,
-			);
-			path = "gfroerli Localizations";
-			sourceTree = "<group>";
-		};
-		244737A52C033EC3008CD013 /* GfroerliWatch Watch App */ = {
-			isa = PBXGroup;
-			children = (
-				244737A62C033EC3008CD013 /* GfroerliWatchApp.swift */,
-				2478A3532C04F0AC00C5817C /* Views */,
-				244737AA2C033EC4008CD013 /* Assets.xcassets */,
-				244737AC2C033EC4008CD013 /* Preview Content */,
-			);
-			path = "GfroerliWatch Watch App";
-			sourceTree = "<group>";
-		};
-		244737AC2C033EC4008CD013 /* Preview Content */ = {
-			isa = PBXGroup;
-			children = (
-				244737AD2C033EC4008CD013 /* Preview Assets.xcassets */,
-			);
-			path = "Preview Content";
 			sourceTree = "<group>";
 		};
 		246058662A5C48920081FEB0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				24B814022B39A34400577A09 /* ScreenshotKit */,
-				246058652A5C48830081FEB0 /* GfroerliBackend */,
 				24A77F8B2BF732CA0074D93D /* WidgetKit.framework */,
 				24A77F8D2BF732CA0074D93D /* SwiftUI.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		2478A3532C04F0AC00C5817C /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				244737A82C033EC3008CD013 /* WatchMainView.swift */,
-				2478A3542C04F15600C5817C /* WatchListContentView.swift */,
-				2478A3562C04FAE500C5817C /* WatchLocationDetailTabView.swift */,
-				24C8A02C2C08CE3300D45ABE /* WatchTemperatureSummaryView.swift */,
-				24C8A02E2C08D0B000D45ABE /* WatchTemperatureHistoryView.swift */,
-				24CD49632C08D5EA00B652F9 /* WatchSponsorView.swift */,
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
-		248021DD2BF74719008C3283 /* AppEntities */ = {
-			isa = PBXGroup;
-			children = (
-				248021DF2BF74771008C3283 /* LocationAppEntity.swift */,
-			);
-			path = AppEntities;
-			sourceTree = "<group>";
-		};
-		248021DE2BF74734008C3283 /* WidgetIntents */ = {
-			isa = PBXGroup;
-			children = (
-				24A77F942BF732CA0074D93D /* SingleLocationWidgetConfigurationIntent.swift */,
-			);
-			path = WidgetIntents;
-			sourceTree = "<group>";
-		};
-		24A77F8F2BF732CA0074D93D /* GfroerliWidget */ = {
-			isa = PBXGroup;
-			children = (
-				24A77F902BF732CA0074D93D /* GfroerliWidgetBundle.swift */,
-				24D0BCD72C00C99500D5A93F /* Widgets */,
-				24BD89C42BF754C2003B8694 /* TimelineProviders */,
-				24BD89C32BF754A4003B8694 /* Views */,
-				248021DE2BF74734008C3283 /* WidgetIntents */,
-				248021DD2BF74719008C3283 /* AppEntities */,
-				24A77F962BF732CB0074D93D /* Assets.xcassets */,
-				24A77F982BF732CB0074D93D /* Info.plist */,
-			);
-			path = GfroerliWidget;
-			sourceTree = "<group>";
-		};
-		24BD89C32BF754A4003B8694 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				24A77F922BF732CA0074D93D /* SingleLocationWidgetView.swift */,
-				24D0BCDC2C00CA8300D5A93F /* SingleLocationLockScreenWidgetView.swift */,
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
-		24BD89C42BF754C2003B8694 /* TimelineProviders */ = {
-			isa = PBXGroup;
-			children = (
-				24BD89C52BF75517003B8694 /* SingleLocationWidgetTimelineProvider.swift */,
-			);
-			path = TimelineProviders;
-			sourceTree = "<group>";
-		};
-		24D0BCD72C00C99500D5A93F /* Widgets */ = {
-			isa = PBXGroup;
-			children = (
-				24D0BCD82C00C9A300D5A93F /* SingleLocationWidget.swift */,
-				24D0BCDA2C00C9F200D5A93F /* SingleLocationLockScreenWidget.swift */,
-			);
-			path = Widgets;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		2424A73C2F0566E20000AD06 /* GfroerliWidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2424A74B2F0566E30000AD06 /* Build configuration list for PBXNativeTarget "GfroerliWidgetExtension" */;
+			buildPhases = (
+				2424A7392F0566E20000AD06 /* Sources */,
+				2424A73A2F0566E20000AD06 /* Frameworks */,
+				2424A73B2F0566E20000AD06 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GfroerliWidgetExtension;
+			packageProductDependencies = (
+				24B9A8062F0567830087926F /* GfroerliBackend */,
+				24B9A8082F0567890087926F /* GfroerliBusiness */,
+			);
+			productName = GfroerliWidgetExtension;
+			productReference = 2424A73D2F0566E20000AD06 /* GfroerliWidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		2434F7C82A594886006ED9FD /* Gfroerli */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2434F7EE2A594888006ED9FD /* Build configuration list for PBXNativeTarget "Gfroerli" */;
@@ -613,15 +344,21 @@
 			buildRules = (
 			);
 			dependencies = (
-				24A77F9A2BF732CB0074D93D /* PBXTargetDependency */,
 				244737B02C033EC4008CD013 /* PBXTargetDependency */,
+				2424A7492F0566E30000AD06 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				241580D12EF459EF00A954A6 /* Gfroerli */,
 			);
 			name = Gfroerli;
 			packageProductDependencies = (
 				246058672A5C48920081FEB0 /* GfroerliBackend */,
+				2445360E2EFAEDAC007D1466 /* GfroerliBusiness */,
+				243EA7332F01402B0038B7C9 /* ClusterMap */,
+				243EA7352F01466F0038B7C9 /* ClusterMapSwiftUI */,
 			);
 			productName = Gfroerli;
-			productReference = 2434F7C92A594886006ED9FD /* Gfroerli.app */;
+			productReference = 2424A6982F0561F90000AD06 /* Gfroerli.app */;
 			productType = "com.apple.product-type.application";
 		};
 		2434F7D92A594888006ED9FD /* GfroerliTests */ = {
@@ -640,7 +377,7 @@
 			);
 			name = GfroerliTests;
 			productName = GfroerliTests;
-			productReference = 2434F7DA2A594888006ED9FD /* GfroerliTests.xctest */;
+			productReference = 2424A69B2F05663B0000AD06 /* GfroerliTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		2434F7E32A594888006ED9FD /* GfroerliUITests */ = {
@@ -661,12 +398,12 @@
 				24B814042B39A37D00577A09 /* ScreenshotKit */,
 			);
 			productName = GfroerliUITests;
-			productReference = 2434F7E42A594888006ED9FD /* GfroerliUITests.xctest */;
+			productReference = 2424A69C2F05663B0000AD06 /* GfroerliUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
-		244737A32C033EC3008CD013 /* GfroerliWatch Watch App */ = {
+		244737A32C033EC3008CD013 /* GfroerliWatchApp */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 244737B22C033EC4008CD013 /* Build configuration list for PBXNativeTarget "GfroerliWatch Watch App" */;
+			buildConfigurationList = 244737B22C033EC4008CD013 /* Build configuration list for PBXNativeTarget "GfroerliWatchApp" */;
 			buildPhases = (
 				244737A02C033EC3008CD013 /* Sources */,
 				244737A12C033EC3008CD013 /* Frameworks */,
@@ -677,33 +414,17 @@
 			);
 			dependencies = (
 			);
-			name = "GfroerliWatch Watch App";
+			fileSystemSynchronizedGroups = (
+				2415807F2EF459B500A954A6 /* GfroerliWatchApp */,
+			);
+			name = GfroerliWatchApp;
 			packageProductDependencies = (
-				2478A3502C04ECAC00C5817C /* GfroerliBackend */,
+				241336042F05155F007DA222 /* GfroerliBusiness */,
+				2413360A2F0517AB007DA222 /* GfroerliBackend */,
 			);
 			productName = "GfroerliWatch Watch App";
-			productReference = 244737A42C033EC3008CD013 /* GfroerliWatch Watch App.app */;
+			productReference = 2424A6972F0561E20000AD06 /* GfroerliWatchApp.app */;
 			productType = "com.apple.product-type.application";
-		};
-		24A77F892BF732CA0074D93D /* GfroerliWidgetExtension */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 24A77F9F2BF732CB0074D93D /* Build configuration list for PBXNativeTarget "GfroerliWidgetExtension" */;
-			buildPhases = (
-				24A77F862BF732CA0074D93D /* Sources */,
-				24A77F872BF732CA0074D93D /* Frameworks */,
-				24A77F882BF732CA0074D93D /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = GfroerliWidgetExtension;
-			packageProductDependencies = (
-				248021DB2BF746F9008C3283 /* GfroerliBackend */,
-			);
-			productName = GfroerliWidgetExtension;
-			productReference = 24A77F8A2BF732CA0074D93D /* GfroerliWidgetExtension.appex */;
-			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -712,9 +433,12 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1600;
-				LastUpgradeCheck = 1600;
+				LastSwiftUpdateCheck = 2620;
+				LastUpgradeCheck = 2620;
 				TargetAttributes = {
+					2424A73C2F0566E20000AD06 = {
+						CreatedOnToolsVersion = 26.2;
+					};
 					2434F7C82A594886006ED9FD = {
 						CreatedOnToolsVersion = 15.0;
 					};
@@ -727,9 +451,6 @@
 						TestTargetID = 2434F7C82A594886006ED9FD;
 					};
 					244737A32C033EC3008CD013 = {
-						CreatedOnToolsVersion = 15.4;
-					};
-					24A77F892BF732CA0074D93D = {
 						CreatedOnToolsVersion = 15.4;
 					};
 				};
@@ -745,33 +466,34 @@
 			);
 			mainGroup = 2434F7C02A594886006ED9FD;
 			packageReferences = (
+				241BCE9C2F013B1E0008BBCC /* XCRemoteSwiftPackageReference "ClusterMap" */,
 			);
 			preferredProjectObjectVersion = 77;
-			productRefGroup = 2434F7CA2A594886006ED9FD /* Products */;
+			productRefGroup = 2434F7C02A594886006ED9FD;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				2434F7C82A594886006ED9FD /* Gfroerli */,
 				2434F7D92A594888006ED9FD /* GfroerliTests */,
 				2434F7E32A594888006ED9FD /* GfroerliUITests */,
-				24A77F892BF732CA0074D93D /* GfroerliWidgetExtension */,
-				244737A32C033EC3008CD013 /* GfroerliWatch Watch App */,
+				244737A32C033EC3008CD013 /* GfroerliWatchApp */,
+				2424A73C2F0566E20000AD06 /* GfroerliWidgetExtension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		2424A73B2F0566E20000AD06 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		2434F7C72A594886006ED9FD /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2434F85A2A594905006ED9FD /* de.xcloc in Resources */,
-				2434F8582A594905006ED9FD /* ChangeLog.json in Resources */,
-				243DB8862B120FF200265111 /* Localizable.xcstrings in Resources */,
-				2434F8562A594905006ED9FD /* NewFeatures.json in Resources */,
-				2434F7D52A594888006ED9FD /* Preview Assets.xcassets in Resources */,
-				2434F8592A594905006ED9FD /* en.xcloc in Resources */,
-				2434F7D12A594888006ED9FD /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -794,18 +516,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				244737AE2C033EC4008CD013 /* Preview Assets.xcassets in Resources */,
-				244737AB2C033EC4008CD013 /* Assets.xcassets in Resources */,
-				2478A3522C04EFFD00C5817C /* Localizable.xcstrings in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		24A77F882BF732CA0074D93D /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				24BD89C22BF750C4003B8694 /* Localizable.xcstrings in Resources */,
-				24A77F972BF732CB0074D93D /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -834,45 +544,17 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		2424A7392F0566E20000AD06 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		2434F7C52A594886006ED9FD /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2434F8382A5948FC006ED9FD /* InlineLocationView.swift in Sources */,
-				2434F83C2A5948FC006ED9FD /* SponsorView.swift in Sources */,
-				2434F8432A5948FC006ED9FD /* NavigationBaseView.swift in Sources */,
-				2434F83A2A5948FC006ED9FD /* MapView.swift in Sources */,
-				2434F8092A5948ED006ED9FD /* AppConfiguration.swift in Sources */,
-				2434F8032A5948E6006ED9FD /* Color+AccentColor.swift in Sources */,
-				2434F8322A5948FC006ED9FD /* NewFeaturesView.swift in Sources */,
-				2434F8412A5948FC006ED9FD /* LocationMapPreviewView.swift in Sources */,
-				2434F8332A5948FC006ED9FD /* SettingsView.swift in Sources */,
-				2434F80A2A5948ED006ED9FD /* DefaultsCoordinator.swift in Sources */,
-				2449D4F82C09B20700016B82 /* LocationTemperatureHistoryView.swift in Sources */,
-				240553BE2C987E0900A72395 /* ChangeIconView.swift in Sources */,
-				2434F83E2A5948FC006ED9FD /* LocationDetailView.swift in Sources */,
-				2434F8422A5948FC006ED9FD /* LatestTemperatureView.swift in Sources */,
-				2434F8132A5948F5006ED9FD /* ViewModelState.swift in Sources */,
-				2434F8352A5948FC006ED9FD /* SettingsThumbnailView.swift in Sources */,
-				2434F80C2A5948ED006ED9FD /* NewFeatures.swift in Sources */,
-				2434F8372A5948FC006ED9FD /* SearchView.swift in Sources */,
-				2434F83F2A5948FC006ED9FD /* HistoryGraphView.swift in Sources */,
-				2434F80B2A5948ED006ED9FD /* ChangeLog.swift in Sources */,
-				2434F8012A5948E6006ED9FD /* Bundle+Dedode.swift in Sources */,
-				2434F8022A5948E6006ED9FD /* Array+Codable.swift in Sources */,
-				2434F8122A5948F5006ED9FD /* TemperaturesViewModel.swift in Sources */,
-				2434F8342A5948FC006ED9FD /* FAQView.swift in Sources */,
-				2478A3592C04FBE000C5817C /* WaveView.swift in Sources */,
-				2434F83B2A5948FC006ED9FD /* GfroerliMapAnnotation.swift in Sources */,
-				2434F7CD2A594886006ED9FD /* GfroerliApp.swift in Sources */,
-				2434F8112A5948F5006ED9FD /* NavigationModel.swift in Sources */,
-				249F08C42B16531D007697A8 /* SortVariant+Localized.swift in Sources */,
-				2434F8362A5948FC006ED9FD /* ChangeLogView.swift in Sources */,
-				2434F8402A5948FC006ED9FD /* TemperatureHistoryView.swift in Sources */,
-				2434F8002A5948E6006ED9FD /* View+Modifiers.swift in Sources */,
-				2434F8442A5948FC006ED9FD /* MainView.swift in Sources */,
-				2434F7FF2A5948E6006ED9FD /* Date+Week.swift in Sources */,
-				2434F83D2A5948FC006ED9FD /* TemperatureSummaryView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -880,7 +562,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2434F7DF2A594888006ED9FD /* GfroerliTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -888,7 +569,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				24F7F28F2B13096000AA41BA /* GfroerliScreenshots.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -896,36 +576,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2478A3572C04FAE500C5817C /* WatchLocationDetailTabView.swift in Sources */,
-				2478A35B2C04FBE400C5817C /* WaveView.swift in Sources */,
-				24C8A02D2C08CE3300D45ABE /* WatchTemperatureSummaryView.swift in Sources */,
-				244737A92C033EC3008CD013 /* WatchMainView.swift in Sources */,
-				244737A72C033EC3008CD013 /* GfroerliWatchApp.swift in Sources */,
-				24C8A02F2C08D0B000D45ABE /* WatchTemperatureHistoryView.swift in Sources */,
-				2478A3552C04F15600C5817C /* WatchListContentView.swift in Sources */,
-				24CD49642C08D5EA00B652F9 /* WatchSponsorView.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		24A77F862BF732CA0074D93D /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				24A77F912BF732CA0074D93D /* GfroerliWidgetBundle.swift in Sources */,
-				248021E02BF74771008C3283 /* LocationAppEntity.swift in Sources */,
-				24D0BCD92C00C9A300D5A93F /* SingleLocationWidget.swift in Sources */,
-				24A77F932BF732CA0074D93D /* SingleLocationWidgetView.swift in Sources */,
-				24D0BCDD2C00CA8300D5A93F /* SingleLocationLockScreenWidgetView.swift in Sources */,
-				24BD89C62BF75517003B8694 /* SingleLocationWidgetTimelineProvider.swift in Sources */,
-				24A77F952BF732CA0074D93D /* SingleLocationWidgetConfigurationIntent.swift in Sources */,
-				2478A35A2C04FBE400C5817C /* WaveView.swift in Sources */,
-				24D0BCDB2C00C9F200D5A93F /* SingleLocationLockScreenWidget.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		2424A7492F0566E30000AD06 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2424A73C2F0566E20000AD06 /* GfroerliWidgetExtension */;
+			targetProxy = 2424A7482F0566E30000AD06 /* PBXContainerItemProxy */;
+		};
 		2434F7DC2A594888006ED9FD /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 2434F7C82A594886006ED9FD /* Gfroerli */;
@@ -938,40 +599,77 @@
 		};
 		244737B02C033EC4008CD013 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 244737A32C033EC3008CD013 /* GfroerliWatch Watch App */;
+			target = 244737A32C033EC3008CD013 /* GfroerliWatchApp */;
 			targetProxy = 244737AF2C033EC4008CD013 /* PBXContainerItemProxy */;
-		};
-		24A77F9A2BF732CB0074D93D /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 24A77F892BF732CA0074D93D /* GfroerliWidgetExtension */;
-			targetProxy = 24A77F992BF732CB0074D93D /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
-/* Begin PBXVariantGroup section */
-		2434F8472A594905006ED9FD /* NewFeatures.json */ = {
-			isa = PBXVariantGroup;
-			children = (
-				2434F8482A594905006ED9FD /* de */,
-				2434F84D2A594905006ED9FD /* en */,
-				2434F8502A594905006ED9FD /* gsw */,
-			);
-			name = NewFeatures.json;
-			sourceTree = "<group>";
-		};
-		2434F84B2A594905006ED9FD /* ChangeLog.json */ = {
-			isa = PBXVariantGroup;
-			children = (
-				2434F84C2A594905006ED9FD /* de */,
-				2434F84F2A594905006ED9FD /* en */,
-				2434F8522A594905006ED9FD /* gsw */,
-			);
-			name = ChangeLog.json;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
-
 /* Begin XCBuildConfiguration section */
+		2424A74C2F0566E30000AD06 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 6000;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = GfroerliWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = GfroerliWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 6.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ch.coredump.gfroerli.GfroerliWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		2424A74D2F0566E30000AD06 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 6000;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = GfroerliWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = GfroerliWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 6.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ch.coredump.gfroerli.GfroerliWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
 		2434F7EC2A594888006ED9FD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1009,6 +707,7 @@
 				COPY_PHASE_STRIP = NO;
 				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = T7M5358433;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
@@ -1032,6 +731,7 @@
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 6.0;
@@ -1076,6 +776,7 @@
 				COPY_PHASE_STRIP = NO;
 				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = T7M5358433;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
@@ -1092,6 +793,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_VERSION = 6.0;
 				WATCHOS_DEPLOYMENT_TARGET = 10.0;
@@ -1107,16 +809,18 @@
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_ENTITLEMENTS = Gfroerli/Gfroerli.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 5010;
+				CURRENT_PROJECT_VERSION = 6000;
 				DEAD_CODE_STRIPPING = YES;
-				DEVELOPMENT_ASSET_PATHS = "\"Gfroerli/Preview Content\"";
-				DEVELOPMENT_TEAM = T7M5358433;
+				DEVELOPMENT_ASSET_PATHS = "";
+				ENABLE_APP_SANDBOX = YES;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				ENABLE_TESTING_SEARCH_PATHS = NO;
+				ENABLE_USER_SELECTED_FILES = readonly;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Gfroerli/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Gfrör.li";
+				INFOPLIST_KEY_ITSAppUsesNonExemptEncryption = NO;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.weather";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
@@ -1128,11 +832,11 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 14.0;
-				MARKETING_VERSION = 5.1;
+				MARKETING_VERSION = 6.0;
 				PRODUCT_BUNDLE_IDENTIFIER = ch.coredump.gfroerli;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
@@ -1155,16 +859,18 @@
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_ENTITLEMENTS = Gfroerli/Gfroerli.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 5010;
+				CURRENT_PROJECT_VERSION = 6000;
 				DEAD_CODE_STRIPPING = YES;
-				DEVELOPMENT_ASSET_PATHS = "\"Gfroerli/Preview Content\"";
-				DEVELOPMENT_TEAM = T7M5358433;
+				DEVELOPMENT_ASSET_PATHS = "";
+				ENABLE_APP_SANDBOX = YES;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				ENABLE_TESTING_SEARCH_PATHS = NO;
+				ENABLE_USER_SELECTED_FILES = readonly;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Gfroerli/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Gfrör.li";
+				INFOPLIST_KEY_ITSAppUsesNonExemptEncryption = NO;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.weather";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
@@ -1176,11 +882,11 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 14.0;
-				MARKETING_VERSION = 5.1;
+				MARKETING_VERSION = 6.0;
 				PRODUCT_BUNDLE_IDENTIFIER = ch.coredump.gfroerli;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
@@ -1201,7 +907,6 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = YES;
-				DEVELOPMENT_TEAM = T7M5358433;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
@@ -1225,7 +930,6 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = YES;
-				DEVELOPMENT_TEAM = T7M5358433;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
@@ -1248,7 +952,6 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = YES;
-				DEVELOPMENT_TEAM = T7M5358433;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				MACOSX_DEPLOYMENT_TARGET = 14.0;
@@ -1270,7 +973,6 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = YES;
-				DEVELOPMENT_TEAM = T7M5358433;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				MACOSX_DEPLOYMENT_TARGET = 14.0;
@@ -1294,12 +996,11 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 5010;
-				DEVELOPMENT_ASSET_PATHS = "\"GfroerliWatch Watch App/Preview Content\"";
-				DEVELOPMENT_TEAM = T7M5358433;
+				CURRENT_PROJECT_VERSION = 6000;
+				DEVELOPMENT_ASSET_PATHS = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_CFBundleDisplayName = Gfroer.li;
+				INFOPLIST_KEY_CFBundleDisplayName = "Gfrör.li";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = ch.coredump.gfroerli;
 				INFOPLIST_KEY_WKRunsIndependentlyOfCompanionApp = YES;
@@ -1307,7 +1008,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 5.1;
+				MARKETING_VERSION = 6.0;
 				PRODUCT_BUNDLE_IDENTIFIER = ch.coredump.gfroerli.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
@@ -1326,7 +1027,7 @@
 				SWIFT_UPCOMING_FEATURE_REGION_BASED_ISOLATION = YES;
 				SWIFT_VERSION = 6.0;
 				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 11.0;
+				WATCHOS_DEPLOYMENT_TARGET = 26.0;
 			};
 			name = Debug;
 		};
@@ -1338,12 +1039,11 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 5010;
-				DEVELOPMENT_ASSET_PATHS = "\"GfroerliWatch Watch App/Preview Content\"";
-				DEVELOPMENT_TEAM = T7M5358433;
+				CURRENT_PROJECT_VERSION = 6000;
+				DEVELOPMENT_ASSET_PATHS = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_CFBundleDisplayName = Gfroer.li;
+				INFOPLIST_KEY_CFBundleDisplayName = "Gfrör.li";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = ch.coredump.gfroerli;
 				INFOPLIST_KEY_WKRunsIndependentlyOfCompanionApp = YES;
@@ -1351,7 +1051,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 5.1;
+				MARKETING_VERSION = 6.0;
 				PRODUCT_BUNDLE_IDENTIFIER = ch.coredump.gfroerli.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
@@ -1371,74 +1071,22 @@
 				SWIFT_VERSION = 6.0;
 				TARGETED_DEVICE_FAMILY = 4;
 				VALIDATE_PRODUCT = YES;
-				WATCHOS_DEPLOYMENT_TARGET = 11.0;
-			};
-			name = Release;
-		};
-		24A77F9D2BF732CB0074D93D /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 5010;
-				DEVELOPMENT_TEAM = T7M5358433;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = GfroerliWidget/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = GfroerliWidget;
-				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@executable_path/../../Frameworks",
-				);
-				MARKETING_VERSION = 5.1;
-				PRODUCT_BUNDLE_IDENTIFIER = ch.coredump.gfroerli.GfroerliWidget;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_STRICT_CONCURRENCY = complete;
-				SWIFT_VERSION = 6.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		24A77F9E2BF732CB0074D93D /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 5010;
-				DEVELOPMENT_TEAM = T7M5358433;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = GfroerliWidget/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = GfroerliWidget;
-				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@executable_path/../../Frameworks",
-				);
-				MARKETING_VERSION = 5.1;
-				PRODUCT_BUNDLE_IDENTIFIER = ch.coredump.gfroerli.GfroerliWidget;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_STRICT_CONCURRENCY = complete;
-				SWIFT_VERSION = 6.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 26.0;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		2424A74B2F0566E30000AD06 /* Build configuration list for PBXNativeTarget "GfroerliWidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2424A74C2F0566E30000AD06 /* Debug */,
+				2424A74D2F0566E30000AD06 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		2434F7C42A594886006ED9FD /* Build configuration list for PBXProject "Gfroerli" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -1475,7 +1123,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		244737B22C033EC4008CD013 /* Build configuration list for PBXNativeTarget "GfroerliWatch Watch App" */ = {
+		244737B22C033EC4008CD013 /* Build configuration list for PBXNativeTarget "GfroerliWatchApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				244737B32C033EC4008CD013 /* Debug */,
@@ -1484,33 +1132,57 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		24A77F9F2BF732CB0074D93D /* Build configuration list for PBXNativeTarget "GfroerliWidgetExtension" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				24A77F9D2BF732CB0074D93D /* Debug */,
-				24A77F9E2BF732CB0074D93D /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 /* End XCConfigurationList section */
 
+/* Begin XCRemoteSwiftPackageReference section */
+		241BCE9C2F013B1E0008BBCC /* XCRemoteSwiftPackageReference "ClusterMap" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/vospennikov/ClusterMap.git";
+			requirement = {
+				kind = exactVersion;
+				version = 2.1.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
 /* Begin XCSwiftPackageProductDependency section */
+		241336042F05155F007DA222 /* GfroerliBusiness */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = GfroerliBusiness;
+		};
+		2413360A2F0517AB007DA222 /* GfroerliBackend */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = GfroerliBackend;
+		};
+		243EA7332F01402B0038B7C9 /* ClusterMap */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 241BCE9C2F013B1E0008BBCC /* XCRemoteSwiftPackageReference "ClusterMap" */;
+			productName = ClusterMap;
+		};
+		243EA7352F01466F0038B7C9 /* ClusterMapSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 241BCE9C2F013B1E0008BBCC /* XCRemoteSwiftPackageReference "ClusterMap" */;
+			productName = ClusterMapSwiftUI;
+		};
+		2445360E2EFAEDAC007D1466 /* GfroerliBusiness */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = GfroerliBusiness;
+		};
 		246058672A5C48920081FEB0 /* GfroerliBackend */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = GfroerliBackend;
-		};
-		2478A3502C04ECAC00C5817C /* GfroerliBackend */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = GfroerliBackend;
-		};
-		248021DB2BF746F9008C3283 /* GfroerliBackend */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = GfroerliBackend;
 		};
 		24B814042B39A37D00577A09 /* ScreenshotKit */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = ScreenshotKit;
+		};
+		24B9A8062F0567830087926F /* GfroerliBackend */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = GfroerliBackend;
+		};
+		24B9A8082F0567890087926F /* GfroerliBusiness */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = GfroerliBusiness;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

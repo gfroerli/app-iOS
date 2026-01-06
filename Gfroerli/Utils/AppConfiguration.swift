@@ -25,11 +25,6 @@ enum AppConfiguration {
         static let verticalBoxPadding = 10.0
     }
 
-    enum LocationDetails {
-        /// Height of the top boxes in location details view
-        static let topBoxHeight = 180.0
-    }
-
     enum MapPreviewView {
         // Default coordinates to display if coordinate of Location is nil
         static let defaultCoordinates = CLLocation(latitude: 46.80121, longitude: 8.226692)
@@ -55,7 +50,7 @@ enum AppConfiguration {
             longitudinalMeters: defaultMapSpan
         )
         // Default span of map in meters
-        static let defaultMapSpan = 100_000.0
+        static let defaultMapSpan = 400_000.0
         // Zoomed in span of map in meters
         static let zoomedMapSpan = 5000.0
         // Font weight of text and images in annotations

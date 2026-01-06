@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "1600"
+   LastUpgradeVersion = "2620"
    wasCreatedForAppExtension = "YES"
    version = "2.0">
    <BuildAction
@@ -16,7 +16,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "24A77F892BF732CA0074D93D"
+               BlueprintIdentifier = "2424A73C2F0566E20000AD06"
                BuildableName = "GfroerliWidgetExtension.appex"
                BlueprintName = "GfroerliWidgetExtension"
                ReferencedContainer = "container:Gfroerli.xcodeproj">
@@ -62,7 +62,7 @@
          BundleIdentifier = "com.apple.springboard">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "24A77F892BF732CA0074D93D"
+            BlueprintIdentifier = "2424A73C2F0566E20000AD06"
             BuildableName = "GfroerliWidgetExtension.appex"
             BlueprintName = "GfroerliWidgetExtension"
             ReferencedContainer = "container:Gfroerli.xcodeproj">
@@ -80,17 +80,17 @@
       <EnvironmentVariables>
          <EnvironmentVariable
             key = "_XCWidgetKind"
-            value = ""
+            value = "GfroerliSingleLocationWidget"
             isEnabled = "YES">
          </EnvironmentVariable>
          <EnvironmentVariable
             key = "_XCWidgetDefaultView"
-            value = "timeline"
+            value = "info"
             isEnabled = "YES">
          </EnvironmentVariable>
          <EnvironmentVariable
             key = "_XCWidgetFamily"
-            value = "systemMedium"
+            value = "systemSmall"
             isEnabled = "YES">
          </EnvironmentVariable>
       </EnvironmentVariables>

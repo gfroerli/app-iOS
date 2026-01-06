@@ -22,58 +22,6 @@ final class FetchTypeTests: XCTestCase {
         XCTAssertEqual(url.description, "https://api.gfrör.li/api/mobile_app/sensors")
     }
 
-    // MARK: - .singleLocation
-
-    func testSingleLocationURLIDIs1() {
-        // Arrange
-        let id = 1
-        let url = FetchType.singleLocation(id: id).assembledURL
-
-        // Act
-        // Nothing to do
-
-        // Assert
-        XCTAssertEqual(url.description, "https://api.gfrör.li/api/mobile_app/sensors/\(id)")
-    }
-
-    func testSingleLocationURLIDIs2() {
-        // Arrange
-        let id = 2
-        let url = FetchType.singleLocation(id: id).assembledURL
-
-        // Act
-        // Nothing to do
-
-        // Assert
-        XCTAssertEqual(url.description, "https://api.gfrör.li/api/mobile_app/sensors/\(id)")
-    }
-
-    // MARK: - .sponsor
-
-    func testSponsorURLIDIs1() {
-        // Arrange
-        let id = 1
-        let url = FetchType.sponsor(id: id).assembledURL
-
-        // Act
-        // Nothing to do
-
-        // Assert
-        XCTAssertEqual(url.description, "https://api.gfrör.li/api/mobile_app/sensors/\(id)/sponsor")
-    }
-
-    func testSponsorURLIDIs2() {
-        // Arrange
-        let id = 2
-        let url = FetchType.sponsor(id: id).assembledURL
-
-        // Act
-        // Nothing to do
-
-        // Assert
-        XCTAssertEqual(url.description, "https://api.gfrör.li/api/mobile_app/sensors/\(id)/sponsor")
-    }
-
     // MARK: - .hourlyTemperatures
 
     func testhourlyTemperatures() {

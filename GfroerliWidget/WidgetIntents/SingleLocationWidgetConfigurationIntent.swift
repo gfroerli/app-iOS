@@ -20,7 +20,7 @@ struct SingleLocationWidgetConfigurationIntent: WidgetConfigurationIntent {
     
     static var previewIntent: SingleLocationWidgetConfigurationIntent {
         let intent = SingleLocationWidgetConfigurationIntent()
-        intent.location = LocationAppEntity.example
+        //   intent.location = LocationAppEntity.example
         return intent
     }
 }

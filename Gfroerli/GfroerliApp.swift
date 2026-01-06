@@ -5,7 +5,6 @@
 //  Created by Marc on 08.07.2023.
 //
 
-import GfroerliBackend
 import SwiftData
 import SwiftUI
 
@@ -16,9 +15,8 @@ struct GfroerliApp: App {
     var body: some Scene {
         WindowGroup {
             MainView()
-                .environment(NavigationModel())
-                .environment(AllLocationsViewModel())
-                .modelContainer(GfroerliBackend.modelContainer)
+                // Generally use rounded font
+                .fontDesign(.rounded)
         }
     }
 }
