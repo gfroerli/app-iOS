@@ -6,6 +6,7 @@
 //
 
 import AppIntents
+import GfroerliBusinessMocks
 import WidgetKit
 
 struct SingleLocationWidgetConfigurationIntent: WidgetConfigurationIntent {
@@ -20,7 +21,7 @@ struct SingleLocationWidgetConfigurationIntent: WidgetConfigurationIntent {
     
     static var previewIntent: SingleLocationWidgetConfigurationIntent {
         let intent = SingleLocationWidgetConfigurationIntent()
-        //   intent.location = LocationAppEntity.example
+        intent.location = LocationAppEntity(location: BusinessLocationMock.exampleLocation1)
         return intent
     }
 }

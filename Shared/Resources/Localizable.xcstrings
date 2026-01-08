@@ -17,44 +17,6 @@
         }
       }
     },
-    " " : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : " "
-          }
-        },
-        "gsw" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : " "
-          }
-        }
-      }
-    },
-    "… " : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "… "
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "… "
-          }
-        },
-        "gsw" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "… "
-          }
-        }
-      }
-    },
     "%@" : {
       "localizations" : {
         "de" : {
@@ -73,28 +35,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "%@"
-          }
-        }
-      }
-    },
-    "%@ " : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : " %@"
-          }
-        },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : " %@"
-          }
-        },
-        "gsw" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : " %@"
           }
         }
       }
@@ -165,6 +105,28 @@
         }
       }
     },
+    "history_graph_view_legend_average_short" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Durch."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Avg."
+          }
+        },
+        "gsw" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Durch."
+          }
+        }
+      }
+    },
     "history_graph_view_legend_date" : {
       "localizations" : {
         "de" : {
@@ -209,6 +171,28 @@
         }
       }
     },
+    "history_graph_view_legend_maximum_short" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Max."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Max."
+          }
+        },
+        "gsw" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Max."
+          }
+        }
+      }
+    },
     "history_graph_view_legend_minimum" : {
       "localizations" : {
         "de" : {
@@ -227,6 +211,22 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Minimum"
+          }
+        }
+      }
+    },
+    "history_graph_view_legend_minimum_short" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Min."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Min."
           }
         }
       }
@@ -1545,6 +1545,28 @@
         }
       }
     },
+    "widget_inactive" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Inaktiv"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Inactive"
+          }
+        },
+        "gsw" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Inaktiv"
+          }
+        }
+      }
+    },
     "widget_no_data" : {
       "localizations" : {
         "de" : {
@@ -1563,6 +1585,16 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Kei Date verfügbar"
+          }
+        }
+      }
+    },
+    "widget_no_data_short" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No Data"
           }
         }
       }

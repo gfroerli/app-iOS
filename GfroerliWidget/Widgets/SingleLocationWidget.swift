@@ -23,12 +23,26 @@ struct SingleLocationWidget: Widget {
         }
         .configurationDisplayName("widget_single_loc_display_name")
         .description("widget_single_loc_description")
-        .supportedFamilies([.systemSmall])
+        #if os(watchOS)
+            .supportedFamilies([])
+        #else
+            .supportedFamilies([.systemSmall])
+        #endif
     }
 }
 
-#Preview(as: .systemSmall) {
-    SingleLocationWidget()
-} timeline: {
-    LocationEntry(date: .now, configuration: .previewIntent)
-}
+#if os(iOS)
+    #Preview(as: .systemSmall) {
+        SingleLocationWidget()
+    } timeline: {
+        LocationEntry(date: .now, configuration: .previewIntent)
+    }
+#endif
+
+#if os(watchOS)
+    #Preview(as: .accessoryCircular) {
+        SingleLocationWidget()
+    } timeline: {
+        LocationEntry(date: .now, configuration: .previewIntent)
+    }
+#endif

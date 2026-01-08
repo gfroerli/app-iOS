@@ -5,6 +5,7 @@
 //  Created by Marc Kramer on 25.06.22.
 //
 
+import GfroerliBusinessMocks
 import GfroerliBusinessProtocols
 import SwiftUI
 
@@ -39,4 +40,8 @@ struct LocationDetailLastTemperatureView: View {
         .padding(.vertical, AppConfiguration.General.verticalBoxPadding)
         .defaultBoxStyle()
     }
+}
+
+#Preview {
+    LocationDetailLastTemperatureView(location: BusinessLocationMock.exampleLocation1)
 }

@@ -5,6 +5,7 @@
 //  Created by Marc on 15.10.22.
 //
 
+import GfroerliBusinessMocks
 import GfroerliBusinessProtocols
 import SwiftUI
 
@@ -20,7 +21,7 @@ struct InlineLocationView: View {
     // MARK: - Body
 
     var body: some View {
-        HStack {
+        HStack(alignment: .top) {
             VStack(alignment: .leading) {
                 HStack {
                     Text(location.name)
@@ -37,24 +38,27 @@ struct InlineLocationView: View {
                         .font(.callout)
                         .foregroundColor(.secondary)
                 }
-                else {
-                    Text("")
-                        .font(.callout)
-                }
             }
            
             Spacer()
 
             VStack(alignment: .trailing) {
                 Text(location.lastTemperatureString)
+                    .bold()
                 Text(location.lastTemperatureDateString)
+                    .font(.callout)
+                    .foregroundColor(.secondary)
             }
-            .font(.callout)
-            .foregroundColor(.secondary)
         }
         .contentShape(Rectangle())
         .onAppear {
             isFavorite = favorites.contains(location.id)
         }
+    }
+}
+
+#Preview {
+    List {
+        InlineLocationView(location: BusinessLocationMock.exampleLocation1)
     }
 }

@@ -23,21 +23,65 @@ struct SingleLocationLockScreenWidget: Widget {
         }
         .configurationDisplayName("widget_single_loc_display_name")
         .description("widget_single_loc_description")
-        .supportedFamilies([
-            .accessoryInline,
-            .accessoryRectangular,
-        ])
+        #if os(iOS)
+            .supportedFamilies([
+                .accessoryInline,
+                .accessoryRectangular,
+                .accessoryCircular,
+            ])
+        #elseif os(watchOS)
+            .supportedFamilies([
+                .accessoryCircular,
+                .accessoryCorner,
+                .accessoryInline,
+                .accessoryRectangular,
+            ])
+        #endif
     }
 }
 
-#Preview(as: .accessoryInline) {
-    SingleLocationLockScreenWidget()
-} timeline: {
-    LocationEntry(date: .now, configuration: .previewIntent)
-}
+#if os(iOS)
 
-#Preview(as: .accessoryRectangular) {
-    SingleLocationLockScreenWidget()
-} timeline: {
-    LocationEntry(date: .now, configuration: .previewIntent)
-}
+    #Preview(as: .accessoryInline) {
+        SingleLocationLockScreenWidget()
+    } timeline: {
+        LocationEntry(date: .now, configuration: .previewIntent)
+    }
+
+    #Preview(as: .accessoryRectangular) {
+        SingleLocationLockScreenWidget()
+    } timeline: {
+        LocationEntry(date: .now, configuration: .previewIntent)
+    }
+
+    #Preview(as: .accessoryCircular) {
+        SingleLocationLockScreenWidget()
+    } timeline: {
+        LocationEntry(date: .now, configuration: .previewIntent)
+    }
+#else
+
+    #Preview(as: .accessoryCircular) {
+        SingleLocationLockScreenWidget()
+    } timeline: {
+        LocationEntry(date: .now, configuration: .previewIntent)
+    }
+
+    #Preview(as: .accessoryCorner) {
+        SingleLocationLockScreenWidget()
+    } timeline: {
+        LocationEntry(date: .now, configuration: .previewIntent)
+    }
+
+    #Preview(as: .accessoryInline) {
+        SingleLocationLockScreenWidget()
+    } timeline: {
+        LocationEntry(date: .now, configuration: .previewIntent)
+    }
+
+    #Preview(as: .accessoryRectangular) {
+        SingleLocationLockScreenWidget()
+    } timeline: {
+        LocationEntry(date: .now, configuration: .previewIntent)
+    }
+#endif

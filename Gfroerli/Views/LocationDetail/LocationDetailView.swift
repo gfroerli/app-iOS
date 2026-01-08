@@ -5,14 +5,13 @@
 //  Created by Marc Kramer on 24.06.22.
 //
 
+import GfroerliBusinessMocks
 import Observation
 import SwiftUI
 
 @MainActor
 struct LocationDetailView: View {
     @AppStorage("favorites") private var favorites = [Int]()
-
-    @Environment(\.horizontalSizeClass) var horizontalSizeClass
     
     @State private var viewModel: LocationDetailViewModel
 
@@ -62,7 +61,7 @@ struct LocationDetailView: View {
             Task {
                 try? await viewModel.loadLocation()
             }
-            // isFavorite = favorites.contains(locationID)
+            isFavorite = favorites.contains(viewModel.locationID)
         }
         .onReceive(
             NotificationCenter.default
@@ -77,20 +76,30 @@ struct LocationDetailView: View {
     // MARK: - Private Functions
 
     @MainActor private func markAsFavorite() {
-        guard let locationID: Int = viewModel.location?.id else {
-            return
-        }
-        favorites.append(locationID)
+        favorites.append(viewModel.locationID)
         isFavorite = true
     }
 
     @MainActor private func removeFavorite() {
-        guard let locationID = viewModel.location?.id,
-              let index = favorites.firstIndex(of: locationID)
+        guard let index = favorites.firstIndex(of: viewModel.locationID)
         else {
             return
         }
         favorites.remove(at: index)
         isFavorite = false
+    }
+}
+
+#Preview {
+    @Previewable @State var viewModel = LocationDetailViewModel(
+        locationID: 0,
+        locationManager: BusinessLocationManagerMock(),
+        sponsorManager: BusinessSponsorManagerMock()
+    )
+    
+    NavigationStack {
+        LocationDetailView(
+            viewModel: viewModel
+        )
     }
 }

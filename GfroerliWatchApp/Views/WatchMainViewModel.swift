@@ -22,7 +22,7 @@ final class MainMapViewModel {
     // MARK: - Private properties
 
     @ObservationIgnored
-    private let allLocationsManager = BusinessAllLocationsManager()
+    private let allLocationsManager: BusinessAllLocationsManagerProtocol = BusinessAllLocationsManager()
     
     // MARK: - Lifecycle
     

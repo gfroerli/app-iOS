@@ -1,5 +1,5 @@
 //
-//  BusinessLocationManager.swift
+//  BusinessAllLocationsManager.swift
 //  GfroerliBusiness
 //
 //  Created by Marc on 20.12.2025.

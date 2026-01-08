@@ -7,4 +7,4 @@
 
 import Foundation
 
-public protocol BusinessMeasurementManagerProtocol { }
+public protocol BusinessMeasurementManagerProtocol: Sendable { }

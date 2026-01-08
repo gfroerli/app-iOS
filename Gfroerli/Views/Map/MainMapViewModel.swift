@@ -65,6 +65,7 @@ final class MainMapViewModel {
     private(set) var filteredLocations = [BusinessLocationProtocol]() {
         didSet {
             updateAnnotations()
+            updatePosition()
         }
     }
     
@@ -89,14 +90,21 @@ final class MainMapViewModel {
     // MARK: - Private properties
 
     @ObservationIgnored
-    private let allLocationsManager = BusinessAllLocationsManager()
+    private let allLocationsManager: BusinessAllLocationsManagerProtocol
     
     @ObservationIgnored
     private let clusterManager = ClusterManager<MapLocation>()
     
     // MARK: - Lifecycle
     
-    init() { }
+    init(
+        allLocationsManager: BusinessAllLocationsManagerProtocol = BusinessAllLocationsManager()
+    ) {
+        self.allLocationsManager = allLocationsManager
+        Task {
+            try? await self.loadLocations()
+        }
+    }
     
     // MARK: - Public functions
     
@@ -183,6 +191,14 @@ final class MainMapViewModel {
                 ))
             }
         }
+    }
+    
+    private func updatePosition() {
+        currentRegion.span = MKCoordinateSpan(
+            latitudeDelta: currentRegion.span.latitudeDelta + 0.5,
+            longitudeDelta: currentRegion.span.longitudeDelta + 0.5
+        )
+        position = .region(currentRegion)
     }
 }
 

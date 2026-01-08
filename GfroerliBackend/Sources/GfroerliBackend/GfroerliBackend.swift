@@ -1,7 +1,11 @@
 import Foundation
 import SwiftData
 
-@available(*, deprecated, message: "The old backend will be replaced by `GfroerliBusiness` and z GfroerliAPI` packages in an upcoming release.")
+@available(
+    *,
+    deprecated,
+    message: "The old backend will be replaced by `GfroerliBusiness` and `GfroerliAPI` packages in an upcoming release."
+)
 public class GfroerliBackend {
     public init() { }
 

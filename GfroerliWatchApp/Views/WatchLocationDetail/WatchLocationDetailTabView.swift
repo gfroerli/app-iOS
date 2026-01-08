@@ -5,6 +5,7 @@
 //  Created by Marc on 27.05.2024.
 //
 
+import GfroerliBusinessMocks
 import SwiftUI
 
 struct WatchLocationDetailTabView: View {
@@ -44,9 +45,6 @@ struct WatchLocationDetailTabView: View {
                 }
             }
         }
-        .containerBackground(for: .tabView) {
-            WatchLocationDetailTabViewBackground()
-        }
         .tabViewStyle(.verticalPage)
         .onAppear {
             Task {
@@ -79,5 +77,16 @@ private struct WatchLocationDetailTabViewBackground: View {
         .onDisappear {
             waveAnimation = false
         }
+    }
+}
+
+#Preview {
+    @Previewable @State var viewModel = WatchLocationDetailViewModel(
+        locationID: 0,
+        locationManager: BusinessLocationManagerMock(),
+        sponsorManager: BusinessSponsorManagerMock()
+    )
+    NavigationView {
+        WatchLocationDetailTabView(viewModel: viewModel)
     }
 }

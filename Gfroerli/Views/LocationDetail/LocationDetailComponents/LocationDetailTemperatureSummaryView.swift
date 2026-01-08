@@ -5,6 +5,7 @@
 //  Created by Marc Kramer on 25.06.22.
 //
 
+import GfroerliBusinessMocks
 import GfroerliBusinessProtocols
 import SwiftUI
 
@@ -51,4 +52,8 @@ struct LocationDetailTemperatureSummaryView: View {
         .padding(.vertical, AppConfiguration.General.verticalBoxPadding)
         .defaultBoxStyle()
     }
+}
+
+#Preview {
+    LocationDetailTemperatureSummaryView(location: BusinessLocationMock.exampleLocation1)
 }

@@ -23,10 +23,9 @@ struct WatchTemperatureSummaryView: View {
             Text(location.lastTemperatureString)
                 .font(.system(size: 45))
                 .bold()
-                .padding()
+                .padding(2)
             Text(location.lastTemperatureDateString)
                 .font(.subheadline)
-            Spacer()
         }
         .frame(maxHeight: .infinity)
     }

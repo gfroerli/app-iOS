@@ -24,14 +24,20 @@ final class LocationDetailViewModel {
     // MARK: - Private properties
 
     @ObservationIgnored
-    private let locationManager = BusinessLocationManager()
+    private let locationManager: BusinessLocationManagerProtocol
     @ObservationIgnored
-    private let sponsorManager = BusinessSponsorManager()
+    private let sponsorManager: BusinessSponsorManagerProtocol
     
     // MARK: - Lifecycle
     
-    init(locationID: Int) {
+    init(
+        locationID: Int,
+        locationManager: BusinessLocationManagerProtocol = BusinessLocationManager(),
+        sponsorManager: BusinessSponsorManagerProtocol = BusinessSponsorManager()
+    ) {
         self.locationID = locationID
+        self.locationManager = locationManager
+        self.sponsorManager = sponsorManager
     }
     
     // MARK: - Public functions
@@ -42,7 +48,7 @@ final class LocationDetailViewModel {
            
             var fetchedSponsor: BusinessSponsorProtocol?
             if fetchedLocation?.sponsorID != nil {
-                fetchedSponsor = try await self.sponsorManager.loadSponsor(with: self.locationID)
+                fetchedSponsor = try? await self.sponsorManager.loadSponsor(with: self.locationID)
             }
             
             Task { @MainActor in

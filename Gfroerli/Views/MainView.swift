@@ -78,10 +78,7 @@ struct MainView: View {
             }
             
             // MARK: - Change observers
-            
-            .task {
-                try? await viewModel.loadLocations()
-            }
+
             .onChange(of: query) { _, _ in
                 withAnimation {
                     viewModel.updateSearchLocations(for: query)

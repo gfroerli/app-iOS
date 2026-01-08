@@ -5,6 +5,7 @@
 //  Created by Marc on 03.09.22.
 //
 
+import GfroerliBusinessMocks
 import GfroerliBusinessProtocols
 import SwiftUI
 
@@ -12,8 +13,6 @@ struct SponsorView: View {
     typealias Config = AppConfiguration.MapPreviewView
 
     var sponsor: BusinessSponsorProtocol
-    @Environment(\.modelContext) var modelContext
-    @Environment(\.horizontalSizeClass) var horizontalSizeClass
 
     // MARK: - Body
 
@@ -60,4 +59,8 @@ struct SponsorView: View {
             Text(sponsor.description)
         }
     }
+}
+
+#Preview {
+    SponsorView(sponsor: BusinessSponsorMock.exampleSponsor1)
 }
