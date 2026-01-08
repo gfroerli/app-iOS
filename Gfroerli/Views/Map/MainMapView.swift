@@ -76,6 +76,7 @@ struct MainMapView: View {
             
             if viewModel.expandAnnotations {
                 navigationPath.append(newSelection.id)
+                viewModel.selectedLocation = nil
             }
             else {
                 withAnimation {

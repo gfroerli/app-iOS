@@ -23,7 +23,7 @@ struct LocationValidator: ValidatorProtocol {
         guard let name = input.name, !name.isEmpty else {
             return nil
         }
-        let shortName = input.shortName ?? String(name.prefix(3))
+        let shortName = (input.shortName ?? String(name.prefix(3))).uppercased()
         
         // We do not allow locations without a proper coordinates
         guard let latitude = input.latitude, let longitude = input.longitude else {

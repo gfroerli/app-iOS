@@ -61,7 +61,7 @@ struct LocationDetailView: View {
             Task {
                 try? await viewModel.loadLocation()
             }
-            // isFavorite = favorites.contains(locationID)
+            isFavorite = favorites.contains(viewModel.locationID)
         }
         .onReceive(
             NotificationCenter.default
@@ -76,16 +76,12 @@ struct LocationDetailView: View {
     // MARK: - Private Functions
 
     @MainActor private func markAsFavorite() {
-        guard let locationID: Int = viewModel.location?.id else {
-            return
-        }
-        favorites.append(locationID)
+        favorites.append(viewModel.locationID)
         isFavorite = true
     }
 
     @MainActor private func removeFavorite() {
-        guard let locationID = viewModel.location?.id,
-              let index = favorites.firstIndex(of: locationID)
+        guard let index = favorites.firstIndex(of: viewModel.locationID)
         else {
             return
         }
