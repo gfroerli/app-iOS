@@ -16,23 +16,30 @@ struct LocationDetailLastTemperatureView: View {
     // MARK: - Body
 
     var body: some View {
-        HStack(alignment: .top) {
-            Text("latest_temperature_view_title")
-                .font(.title3)
-                .bold()
-                .minimumScaleFactor(0.1)
-                
+        VStack(alignment: .leading) {
+            HStack {
+                Text("latest_temperature_view_title")
+                    .font(.title3)
+                    .bold()
+                    .minimumScaleFactor(0.1)
+                Spacer()
+            }
+            
             Spacer()
             
-            VStack(alignment: .trailing) {
-                Text(location.lastTemperatureString)
-                    .bold()
-                    .font(.title3)
-                Text(location.lastTemperatureDateString)
-                    .font(.caption)
-                    .foregroundColor(.secondary)
-                    .minimumScaleFactor(0.1)
-                    .lineLimit(2)
+            HStack {
+                Spacer()
+
+                VStack(alignment: .trailing) {
+                    Text(location.lastTemperatureString)
+                        .bold()
+                        .font(.title)
+                    Text(location.lastTemperatureDateString)
+                        .font(.caption)
+                        .foregroundColor(.secondary)
+                      //  .minimumScaleFactor(0.5)
+                        .lineLimit(2)
+                }
             }
         }
         .frame(maxHeight: .infinity)

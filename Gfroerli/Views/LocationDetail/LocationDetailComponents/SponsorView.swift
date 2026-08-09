@@ -14,27 +14,34 @@ struct SponsorView: View {
 
     var sponsor: BusinessSponsorProtocol
 
+    /// Compact vertical height means a landscape phone layout, where we cap the logo width.
+    @Environment(\.verticalSizeClass) private var verticalSizeClass
+
     // MARK: - Body
 
     var body: some View {
         VStack(alignment: .leading) {
-            VStack(alignment: .leading) {
-                Text("sponsor_view_title")
-                Text(sponsor.name)
-            }
-            .font(.title3)
-            .bold()
-            
-            sponsorContentView()
+            Text("sponsor_view_title")
+                .font(.title3)
+                .bold()
+
+            sponsorImageView()
+                .frame(maxWidth: verticalSizeClass == .compact ? 250 : .infinity)
+
+            Text(sponsor.name)
+                .font(.title3)
+                .bold()
+
+            Text(sponsor.description)
         }
         .padding(.horizontal, AppConfiguration.General.horizontalBoxPadding)
         .padding(.vertical, AppConfiguration.General.verticalBoxPadding)
         .defaultBoxStyle()
     }
-    
+
     @MainActor
     @ViewBuilder
-    func sponsorContentView() -> some View {
+    func sponsorImageView() -> some View {
         AsyncImage(url: sponsor.imageURL) { image in
             image
                 .resizable()
@@ -42,7 +49,7 @@ struct SponsorView: View {
                 .padding()
                 .background(.white)
                 .cornerRadius(AppConfiguration.General.cornerRadius)
-            
+
         } placeholder: {
             VStack {
                 Spacer()
@@ -53,10 +60,6 @@ struct SponsorView: View {
                 }
                 Spacer()
             }
-        }
-        
-        VStack {
-            Text(sponsor.description)
         }
     }
 }
