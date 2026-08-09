@@ -28,10 +28,14 @@ public class ScreenshotProcessor {
         name: String,
         @ViewBuilder content: (UIImage, DeviceMetrics) -> some View
     ) -> XCTAttachment? {
-        guard let metrics = ScreenshotParameters.current else { return nil }
+        guard let metrics = ScreenshotParameters.current else {
+            return nil
+        }
 
         let renderer = ImageRenderer(content: content(screenshot.image, metrics))
-        guard let image = renderer.uiImage else { return nil }
+        guard let image = renderer.uiImage else {
+            return nil
+        }
 
         let attachment = XCTAttachment(image: image)
         attachment.lifetime = .keepAlways

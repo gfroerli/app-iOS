@@ -55,7 +55,9 @@ public enum ScreenshotParameters {
     /// Metrics for the current simulator, or `nil` when the device is not a supported screenshot
     /// target (the caller should skip it rather than crash).
     public static var current: DeviceMetrics? {
-        guard case let .simulator(model) = Device.current else { return nil }
+        guard case let .simulator(model) = Device.current else {
+            return nil
+        }
 
         switch model {
 

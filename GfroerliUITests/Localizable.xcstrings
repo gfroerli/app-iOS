@@ -1,63 +1,105 @@
 {
   "sourceLanguage" : "en",
   "strings" : {
-    "screenshot_location_subtitle" : {
+    "screenshot_favorite_subtitle" : {
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
-          "stringUnit" : { "state" : "translated", "value" : "Zeigt den Temperaturverlauf sowie verschiedene andere Werte an." }
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Deine liebsten Seen und Flüsse – nur einen Tipp entfernt."
+          }
         },
         "en" : {
-          "stringUnit" : { "state" : "translated", "value" : "See the temperature history and other values." }
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Keep the lakes and rivers you love one tap away."
+          }
+        }
+      }
+    },
+    "screenshot_favorite_title" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Merk dir deine Favoriten"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Star your favourites"
+          }
+        }
+      }
+    },
+    "screenshot_location_subtitle" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Verlauf, Durchschnitt und Rekordwerte."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "History, averages and record temperatures."
+          }
         }
       }
     },
     "screenshot_location_title" : {
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
-          "stringUnit" : { "state" : "translated", "value" : "Verschiedene Infos" }
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sieh den Verlauf"
+          }
         },
         "en" : {
-          "stringUnit" : { "state" : "translated", "value" : "Lots of Information" }
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "See the trend"
+          }
         }
       }
     },
     "screenshot_main_subtitle" : {
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
-          "stringUnit" : { "state" : "translated", "value" : "Wassertemperaturen verschiedener Standorte in Echtzeit." }
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Wisse immer, wie kalt das Wasser ist."
+          }
         },
         "en" : {
-          "stringUnit" : { "state" : "translated", "value" : "Realtime watertemperatures at various locations." }
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Always know how cold the water is."
+          }
         }
       }
     },
     "screenshot_main_title" : {
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
-          "stringUnit" : { "state" : "translated", "value" : "Gfrör.li" }
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gfrör.li"
+          }
         },
         "en" : {
-          "stringUnit" : { "state" : "translated", "value" : "Gfrör.li" }
-        }
-      }
-    },
-    "screenshot_search_subtitle" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : { "state" : "translated", "value" : "Suche und filtere Standorte anhand verschiedener Werte." }
-        },
-        "en" : {
-          "stringUnit" : { "state" : "translated", "value" : "Search and filter locations using different parameters." }
-        }
-      }
-    },
-    "screenshot_search_title" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : { "state" : "translated", "value" : "Suche nach deinen Favoriten" }
-        },
-        "en" : {
-          "stringUnit" : { "state" : "translated", "value" : "Search for your favorites" }
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gfrör.li"
+          }
         }
       }
     }

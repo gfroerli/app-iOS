@@ -17,6 +17,7 @@ public final class BusinessAllLocationsManagerMock: BusinessAllLocationsManagerP
     // MARK: - BusinessAllLocationsManagerProtocol
 
     public func loadAllLocations() async throws -> [any GfroerliBusinessProtocols.BusinessLocationProtocol] {
-        BusinessLocationMock.screenshotLocations
+        // A small, spread, favorites-first set: an uncluttered map and a starred-favorites search list.
+        BusinessLocationMock.screenshotCuratedLocations
     }
 }

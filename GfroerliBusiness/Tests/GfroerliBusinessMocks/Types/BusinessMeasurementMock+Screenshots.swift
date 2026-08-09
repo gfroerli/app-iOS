@@ -8,14 +8,14 @@
 
 import Foundation
 
-public extension BusinessMeasurementMock {
+extension BusinessMeasurementMock {
 
     /// A believable min/avg/max value template (matches "Bern, Aare"), used as the source for
     /// screenshot measurements. `BusinessMeasurementManagerMock` re-bases these values onto whatever
     /// date range it is asked for, so the graph is never empty regardless of the current day.
     ///
     /// - Note: The dates are placeholders; the mock manager overwrites them per requested range.
-    static let screenshotTemplate: [BusinessMeasurementMock] = [
+    public static let screenshotTemplate: [BusinessMeasurementMock] = [
         BusinessMeasurementMock(date: .distantPast, highest: 23.01, lowest: 21.80, average: 22.41),
         BusinessMeasurementMock(date: .distantPast, highest: 23.83, lowest: 22.18, average: 22.94),
         BusinessMeasurementMock(date: .distantPast, highest: 23.42, lowest: 22.57, average: 22.90),

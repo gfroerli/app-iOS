@@ -23,12 +23,12 @@ public struct BusinessMeasurementMock: BusinessMeasurementProtocol, Sendable {
     public var averageString: String
 }
 
-public extension BusinessMeasurementMock {
+extension BusinessMeasurementMock {
 
     /// Convenience initializer for fixtures: derives the display strings from the raw values so only
     /// the server-shaped fields need to be provided. Formatting matches the real `MeasurementHelper`
     /// (1 fraction digit, localized unit style), while always displaying Celsius.
-    init(date: Date, highest: Double, lowest: Double, average: Double) {
+    public init(date: Date, highest: Double, lowest: Double, average: Double) {
         let formatter = MeasurementFormatter()
         formatter.numberFormatter.minimumFractionDigits = 1
         formatter.numberFormatter.maximumFractionDigits = 1

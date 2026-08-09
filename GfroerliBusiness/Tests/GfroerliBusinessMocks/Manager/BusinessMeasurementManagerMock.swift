@@ -36,7 +36,11 @@ public final class BusinessMeasurementManagerMock: BusinessMeasurementManagerPro
 
     /// Produces the handmade temperature series, re-based onto the requested date range so it always
     /// falls inside the app's current day / week / month and the graph renders populated.
-    private func rebasedTemplate(from startDate: Date, to endDate: Date, component: Calendar.Component) -> [any BusinessMeasurementProtocol] {
+    private func rebasedTemplate(
+        from startDate: Date,
+        to endDate: Date,
+        component: Calendar.Component
+    ) -> [any BusinessMeasurementProtocol] {
         let template = BusinessMeasurementMock.screenshotTemplate
         guard !template.isEmpty else {
             return []

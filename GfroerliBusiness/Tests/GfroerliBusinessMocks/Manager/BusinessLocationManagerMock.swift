@@ -17,6 +17,7 @@ public final class BusinessLocationManagerMock: BusinessLocationManagerProtocol 
     // MARK: - BusinessLocationManagerProtocol
 
     public func loadLocation(with id: Int) async throws -> (any BusinessLocationProtocol)? {
-        BusinessLocationMock.screenshotLocations.first { $0.id == id } ?? BusinessLocationMock.screenshotDetail
+        // Curated set so the detail fixture shares the relative date and sponsor-less treatment.
+        BusinessLocationMock.screenshotCuratedLocations.first { $0.id == id } ?? BusinessLocationMock.screenshotDetail
     }
 }
