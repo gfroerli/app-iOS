@@ -77,7 +77,6 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "24D054312F0C456F001F1646"
             BuildableName = "GfroerliWatchWidgetExtension.appex"
-            BlueprintName = "GfroerliWatchWidgetExtension"
             ReferencedContainer = "container:Gfroerli.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -120,7 +119,6 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "24D054312F0C456F001F1646"
             BuildableName = "GfroerliWatchWidgetExtension.appex"
-            BlueprintName = "GfroerliWatchWidgetExtension"
             ReferencedContainer = "container:Gfroerli.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>

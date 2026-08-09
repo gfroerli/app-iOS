@@ -38,7 +38,9 @@ public final class BusinessMeasurementManagerMock: BusinessMeasurementManagerPro
     /// falls inside the app's current day / week / month and the graph renders populated.
     private func rebasedTemplate(from startDate: Date, to endDate: Date, component: Calendar.Component) -> [any BusinessMeasurementProtocol] {
         let template = BusinessMeasurementMock.screenshotTemplate
-        guard !template.isEmpty else { return [] }
+        guard !template.isEmpty else {
+            return []
+        }
 
         let calendar = Calendar.current
         var result = [BusinessMeasurementMock]()
@@ -57,7 +59,9 @@ public final class BusinessMeasurementManagerMock: BusinessMeasurementManagerPro
                     average: source.average
                 )
             )
-            guard let next = calendar.date(byAdding: component, value: 1, to: current) else { break }
+            guard let next = calendar.date(byAdding: component, value: 1, to: current) else {
+                break
+            }
             current = next
             index += 1
         }

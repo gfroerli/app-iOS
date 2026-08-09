@@ -60,7 +60,6 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "244737A32C033EC3008CD013"
             BuildableName = "GfroerliWatchApp.app"
-            BlueprintName = "GfroerliWatchApp"
             ReferencedContainer = "container:Gfroerli.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -77,7 +76,6 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "244737A32C033EC3008CD013"
             BuildableName = "GfroerliWatchApp.app"
-            BlueprintName = "GfroerliWatchApp"
             ReferencedContainer = "container:Gfroerli.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>

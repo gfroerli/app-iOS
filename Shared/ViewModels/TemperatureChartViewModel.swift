@@ -2,10 +2,7 @@
 //  TemperatureChartViewModel.swift
 //  Gfroerli
 //
-//  Backs the temperature-history chart shared by the iOS app and the watch app. Loads measurements
-//  through `BusinessMeasurementManager` and shapes them into the min / avg / max series the chart
-//  plots.
-//
+//  Backs the temperature-history chart shared various targets
 
 import Charts
 import Foundation
@@ -20,7 +17,7 @@ enum ChartTimeSpan: Int, Equatable {
     case week
     case month
 
-    /// Granularity used to decide whether a measurement belongs to the currently shown interval.
+    
     var granularity: Calendar.Component {
         switch self {
         case .day:
@@ -31,8 +28,7 @@ enum ChartTimeSpan: Int, Equatable {
             .month
         }
     }
-
-    /// Unit the chart's x-axis is bucketed by.
+    
     var chartXUnit: Calendar.Component {
         switch self {
         case .day:
@@ -61,14 +57,13 @@ enum TemperatureSeriesType: String {
     }
 }
 
-/// A single plottable point (one temperature value at one point in time).
+
 struct TemperatureChartPoint: Identifiable {
     let id = UUID()
     let measurementDate: Date
     let value: Double
 }
 
-/// One line of the chart.
 struct TemperatureSeries: Identifiable {
     let type: TemperatureSeriesType
     let values: [TemperatureChartPoint]

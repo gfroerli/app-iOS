@@ -8,3 +8,6 @@ Scripts
 gfroerliUITests/Blacksmith
 .DS_Store
 GfroerliAppIcons
+Gfroerli.xcodeproj/-Xcc
+build
+Output
