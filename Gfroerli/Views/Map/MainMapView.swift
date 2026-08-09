@@ -40,24 +40,36 @@ struct MainMapView: View {
                 Annotation("", coordinate: cluster.coordinate) {
                     ClusterAnnotation(locations: cluster.locations)
                         .onTapGesture {
-                            withAnimation {
-                                viewModel.position = .region(MKCoordinateRegion(
-                                    center: cluster.coordinate,
-                                    latitudinalMeters: 20000.0,
-                                    longitudinalMeters: 20000.0
-                                ))
-                            } completion: {
-                                viewModel.selectedLocation = nil
-                            }
+                            viewModel.selectedLocation = nil
+                            viewModel.zoom(into: cluster)
                         }
                 }
                 .annotationTitles(.hidden)
             }
+
+            UserAnnotation()
         }
         .mapControls {
             MapCompass()
             MapScaleView()
             MapPitchToggle()
+        }
+        .overlay(alignment: .bottomTrailing) {
+            if viewModel.canFocusOnUserLocation {
+                Button {
+                    viewModel.focusOnUserAndClosestLocations()
+                } label: {
+                    Image(systemName: "location.fill")
+                        .imageScale(.large)
+                        .padding(12)
+                }
+                .glassEffect(.regular)
+                .padding()
+                .accessibilityLabel("main_view_locate_label")
+            }
+        }
+        .onAppear {
+            viewModel.requestUserLocation()
         }
         .readSize { newValue in
             viewModel.mapSize = newValue

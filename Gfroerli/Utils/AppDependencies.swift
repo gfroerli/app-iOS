@@ -33,6 +33,10 @@ enum AppDependencies {
         isScreenshotMode ? BusinessMeasurementManagerMock() : BusinessMeasurementManager()
     }
 
+    static func makeUserLocationProvider() -> UserLocationProviding {
+        isScreenshotMode ? EmptyUserLocationProvider() : LiveUserLocationProvider()
+    }
+
     // MARK: - Launch
 
     /// Wires up launch-time state. Call once from the app entry point.
