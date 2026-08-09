@@ -6,7 +6,6 @@
 //
 
 import Charts
-import GfroerliBackend
 import SwiftUI
 
 struct WatchTemperatureHistoryView: View {

@@ -6,7 +6,6 @@
 //
 
 import Charts
-import GfroerliBackend
 import SwiftUI
 
 struct LocationTemperatureHistoryView: View {
@@ -19,7 +18,11 @@ struct LocationTemperatureHistoryView: View {
     init(locationID: Int) {
         self.locationID = locationID
         self.timeSpan = .week
-        self.chartVM = TemperatureChartViewModel(locationID: locationID, timeSpan: .week)
+        self.chartVM = TemperatureChartViewModel(
+            locationID: locationID,
+            timeSpan: .week,
+            measurementManager: AppDependencies.makeMeasurementManager()
+        )
     }
     
     var body: some View {
@@ -140,7 +143,7 @@ struct LocationTemperatureChartView: View {
                 RuleMark(
                     x: .value(
                         "history_graph_view_legend_selected",
-                        selectedTemperatureEntry.min.measurementDate,
+                        selectedTemperatureEntry.date,
                         unit: chartVM.timeSpan.chartXUnit
                     )
                 )
@@ -178,17 +181,17 @@ struct LocationTemperatureChartLollipopView: View {
             switch chartVM.timeSpan {
             case .day:
                 Text(
-                    tempEntry.min.measurementDate
+                    tempEntry.date
                         .formatted(.dateTime.day().month().hour().minute())
                 ).font(.headline)
             case .week:
                 Text(
-                    tempEntry.min.measurementDate
+                    tempEntry.date
                         .formatted(.dateTime.weekday(.wide).day().month())
                 ).font(.headline)
             case .month:
                 Text(
-                    tempEntry.min.measurementDate
+                    tempEntry.date
                         .formatted(.dateTime.day().month(.abbreviated))
                 ).font(.headline)
             }
@@ -196,15 +199,15 @@ struct LocationTemperatureChartLollipopView: View {
             HStack {
                 Image(systemName: "circle.fill")
                     .foregroundStyle(.red)
-                Text("\(MeasurementUtils.shared.temperatureString(from: tempEntry.max.value))")
-               
+                Text(tempEntry.maxString)
+
                 Image(systemName: "circle.fill")
                     .foregroundStyle(.green)
-                Text("\(MeasurementUtils.shared.temperatureString(from: tempEntry.avg.value))")
-              
+                Text(tempEntry.avgString)
+
                 Image(systemName: "circle.fill")
                     .foregroundStyle(.blue)
-                Text("\(MeasurementUtils.shared.temperatureString(from: tempEntry.min.value))")
+                Text(tempEntry.minString)
             }
             .font(.subheadline)
             .fixedSize()

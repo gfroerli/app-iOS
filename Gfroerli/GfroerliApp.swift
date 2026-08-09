@@ -10,6 +10,12 @@ import SwiftUI
 
 @main
 struct GfroerliApp: App {
+    // MARK: - Lifecycle
+
+    init() {
+        AppDependencies.bootstrap()
+    }
+
     // MARK: - Body
 
     var body: some Scene {

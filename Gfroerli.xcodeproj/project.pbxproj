@@ -151,6 +151,7 @@
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				Resources/Localizable.xcstrings,
+				ViewModels/TemperatureChartViewModel.swift,
 				Views/WaveView.swift,
 			);
 			target = 2434F7C82A594886006ED9FD /* Gfroerli */;
@@ -159,6 +160,7 @@
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				Resources/Localizable.xcstrings,
+				ViewModels/TemperatureChartViewModel.swift,
 				Views/WaveView.swift,
 			);
 			target = 244737A32C033EC3008CD013 /* GfroerliWatchApp */;

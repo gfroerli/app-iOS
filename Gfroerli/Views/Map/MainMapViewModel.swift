@@ -98,7 +98,7 @@ final class MainMapViewModel {
     // MARK: - Lifecycle
     
     init(
-        allLocationsManager: BusinessAllLocationsManagerProtocol = BusinessAllLocationsManager()
+        allLocationsManager: BusinessAllLocationsManagerProtocol = AppDependencies.makeAllLocationsManager()
     ) {
         self.allLocationsManager = allLocationsManager
         Task {

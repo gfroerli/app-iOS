@@ -13,8 +13,12 @@ public struct BusinessMeasurement: BusinessMeasurementProtocol {
     // MARK: - Properties
 
     public let date: Date
-    
+
     public let highest: Double
     public let lowest: Double
     public let average: Double
+
+    public let highestString: String
+    public let lowestString: String
+    public let averageString: String
 }

@@ -5,7 +5,6 @@
 //  Created by Marc on 17.05.2024.
 //
 
-import GfroerliBackend
 import SwiftUI
 import WidgetKit
 

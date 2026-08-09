@@ -6,7 +6,6 @@
 //
 
 import AppIntents
-import GfroerliBackend
 import SwiftUI
 import WidgetKit
 

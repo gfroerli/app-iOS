@@ -32,8 +32,8 @@ final class LocationDetailViewModel {
     
     init(
         locationID: Int,
-        locationManager: BusinessLocationManagerProtocol = BusinessLocationManager(),
-        sponsorManager: BusinessSponsorManagerProtocol = BusinessSponsorManager()
+        locationManager: BusinessLocationManagerProtocol = AppDependencies.makeLocationManager(),
+        sponsorManager: BusinessSponsorManagerProtocol = AppDependencies.makeSponsorManager()
     ) {
         self.locationID = locationID
         self.locationManager = locationManager
