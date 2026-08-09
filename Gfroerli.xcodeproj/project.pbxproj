@@ -8,25 +8,21 @@
 
 /* Begin PBXBuildFile section */
 		241336052F05155F007DA222 /* GfroerliBusiness in Frameworks */ = {isa = PBXBuildFile; productRef = 241336042F05155F007DA222 /* GfroerliBusiness */; };
-		2413360B2F0517AB007DA222 /* GfroerliBackend in Frameworks */ = {isa = PBXBuildFile; productRef = 2413360A2F0517AB007DA222 /* GfroerliBackend */; };
 		2424A73E2F0566E20000AD06 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24A77F8B2BF732CA0074D93D /* WidgetKit.framework */; };
 		2424A73F2F0566E20000AD06 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24A77F8D2BF732CA0074D93D /* SwiftUI.framework */; };
 		2424A74A2F0566E30000AD06 /* GfroerliWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 2424A73D2F0566E20000AD06 /* GfroerliWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		243EA7342F01402B0038B7C9 /* ClusterMap in Frameworks */ = {isa = PBXBuildFile; productRef = 243EA7332F01402B0038B7C9 /* ClusterMap */; };
 		243EA7362F01466F0038B7C9 /* ClusterMapSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 243EA7352F01466F0038B7C9 /* ClusterMapSwiftUI */; };
 		2445360F2EFAEDAC007D1466 /* GfroerliBusiness in Frameworks */ = {isa = PBXBuildFile; productRef = 2445360E2EFAEDAC007D1466 /* GfroerliBusiness */; };
-		246058682A5C48920081FEB0 /* GfroerliBackend in Frameworks */ = {isa = PBXBuildFile; productRef = 246058672A5C48920081FEB0 /* GfroerliBackend */; };
 		246287FB2F0D036F00D66551 /* GfroerliBusinessMocks in Frameworks */ = {isa = PBXBuildFile; productRef = 246287FA2F0D036F00D66551 /* GfroerliBusinessMocks */; };
 		246287FD2F0D03EF00D66551 /* GfroerliBusinessMocks in Frameworks */ = {isa = PBXBuildFile; productRef = 246287FC2F0D03EF00D66551 /* GfroerliBusinessMocks */; };
 		24B814032B39A34400577A09 /* ScreenshotKit in Resources */ = {isa = PBXBuildFile; fileRef = 24B814022B39A34400577A09 /* ScreenshotKit */; };
 		24B814052B39A37D00577A09 /* ScreenshotKit in Frameworks */ = {isa = PBXBuildFile; productRef = 24B814042B39A37D00577A09 /* ScreenshotKit */; };
-		24B9A8072F0567830087926F /* GfroerliBackend in Frameworks */ = {isa = PBXBuildFile; productRef = 24B9A8062F0567830087926F /* GfroerliBackend */; };
 		24B9A8092F0567890087926F /* GfroerliBusiness in Frameworks */ = {isa = PBXBuildFile; productRef = 24B9A8082F0567890087926F /* GfroerliBusiness */; };
 		24D054332F0C456F001F1646 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24A77F8B2BF732CA0074D93D /* WidgetKit.framework */; };
 		24D054342F0C456F001F1646 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24A77F8D2BF732CA0074D93D /* SwiftUI.framework */; };
 		24D0543F2F0C4570001F1646 /* GfroerliWatchWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 24D054322F0C456F001F1646 /* GfroerliWatchWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		24D054522F0C497A001F1646 /* GfroerliBusiness in Frameworks */ = {isa = PBXBuildFile; productRef = 24D054512F0C497A001F1646 /* GfroerliBusiness */; };
-		24D054542F0C498B001F1646 /* GfroerliBackend in Frameworks */ = {isa = PBXBuildFile; productRef = 24D054532F0C498B001F1646 /* GfroerliBackend */; };
 		24EFE77C2F0C168F00363168 /* GfroerliBusinessMocks in Frameworks */ = {isa = PBXBuildFile; productRef = 24EFE77B2F0C168F00363168 /* GfroerliBusinessMocks */; };
 		24EFE77E2F0C397400363168 /* GfroerliBusinessMocks in Frameworks */ = {isa = PBXBuildFile; productRef = 24EFE77D2F0C397400363168 /* GfroerliBusinessMocks */; };
 /* End PBXBuildFile section */
@@ -121,7 +117,6 @@
 		2424A69B2F05663B0000AD06 /* GfroerliTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GfroerliTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2424A69C2F05663B0000AD06 /* GfroerliUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GfroerliUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2424A73D2F0566E20000AD06 /* GfroerliWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = GfroerliWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
-		246058652A5C48830081FEB0 /* GfroerliBackend */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = GfroerliBackend; sourceTree = "<group>"; };
 		24A77F8B2BF732CA0074D93D /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		24A77F8D2BF732CA0074D93D /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
 		24B814022B39A34400577A09 /* ScreenshotKit */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = wrapper; path = ScreenshotKit; sourceTree = SOURCE_ROOT; };
@@ -296,7 +291,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				24B9A8072F0567830087926F /* GfroerliBackend in Frameworks */,
 				246287FD2F0D03EF00D66551 /* GfroerliBusinessMocks in Frameworks */,
 				2424A73F2F0566E20000AD06 /* SwiftUI.framework in Frameworks */,
 				24B9A8092F0567890087926F /* GfroerliBusiness in Frameworks */,
@@ -311,7 +305,6 @@
 				243EA7362F01466F0038B7C9 /* ClusterMapSwiftUI in Frameworks */,
 				24EFE77C2F0C168F00363168 /* GfroerliBusinessMocks in Frameworks */,
 				2445360F2EFAEDAC007D1466 /* GfroerliBusiness in Frameworks */,
-				246058682A5C48920081FEB0 /* GfroerliBackend in Frameworks */,
 				243EA7342F01402B0038B7C9 /* ClusterMap in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -336,7 +329,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				241336052F05155F007DA222 /* GfroerliBusiness in Frameworks */,
-				2413360B2F0517AB007DA222 /* GfroerliBackend in Frameworks */,
 				24EFE77E2F0C397400363168 /* GfroerliBusinessMocks in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -347,7 +339,6 @@
 			files = (
 				24D054522F0C497A001F1646 /* GfroerliBusiness in Frameworks */,
 				246287FB2F0D036F00D66551 /* GfroerliBusinessMocks in Frameworks */,
-				24D054542F0C498B001F1646 /* GfroerliBackend in Frameworks */,
 				24D054342F0C456F001F1646 /* SwiftUI.framework in Frameworks */,
 				24D054332F0C456F001F1646 /* WidgetKit.framework in Frameworks */,
 			);
@@ -365,7 +356,6 @@
 				2424A6922F05608C0000AD06 /* Shared */,
 				24F0DC0B2EF6B41700300B8D /* GfroerliBusiness */,
 				241581052EF45A8300A954A6 /* GfroerliAPI */,
-				246058652A5C48830081FEB0 /* GfroerliBackend */,
 				24B814022B39A34400577A09 /* ScreenshotKit */,
 				2415808B2EF459B500A954A6 /* GfroerliTests */,
 				241580722EF459B500A954A6 /* GfroerliUITests */,
@@ -406,7 +396,6 @@
 			);
 			name = GfroerliWidgetExtension;
 			packageProductDependencies = (
-				24B9A8062F0567830087926F /* GfroerliBackend */,
 				24B9A8082F0567890087926F /* GfroerliBusiness */,
 				246287FC2F0D03EF00D66551 /* GfroerliBusinessMocks */,
 			);
@@ -436,7 +425,6 @@
 			);
 			name = Gfroerli;
 			packageProductDependencies = (
-				246058672A5C48920081FEB0 /* GfroerliBackend */,
 				2445360E2EFAEDAC007D1466 /* GfroerliBusiness */,
 				243EA7332F01402B0038B7C9 /* ClusterMap */,
 				243EA7352F01466F0038B7C9 /* ClusterMapSwiftUI */,
@@ -506,7 +494,6 @@
 			name = GfroerliWatchApp;
 			packageProductDependencies = (
 				241336042F05155F007DA222 /* GfroerliBusiness */,
-				2413360A2F0517AB007DA222 /* GfroerliBackend */,
 				24EFE77D2F0C397400363168 /* GfroerliBusinessMocks */,
 			);
 			productName = "GfroerliWatch Watch App";
@@ -531,7 +518,6 @@
 			name = GfroerliWatchWidgetExtension;
 			packageProductDependencies = (
 				24D054512F0C497A001F1646 /* GfroerliBusiness */,
-				24D054532F0C498B001F1646 /* GfroerliBackend */,
 				246287FA2F0D036F00D66551 /* GfroerliBusinessMocks */,
 			);
 			productName = GfroerliWatchWidgetExtension;
@@ -1361,10 +1347,6 @@
 			isa = XCSwiftPackageProductDependency;
 			productName = GfroerliBusiness;
 		};
-		2413360A2F0517AB007DA222 /* GfroerliBackend */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = GfroerliBackend;
-		};
 		243EA7332F01402B0038B7C9 /* ClusterMap */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 241BCE9C2F013B1E0008BBCC /* XCRemoteSwiftPackageReference "ClusterMap" */;
@@ -1379,10 +1361,6 @@
 			isa = XCSwiftPackageProductDependency;
 			productName = GfroerliBusiness;
 		};
-		246058672A5C48920081FEB0 /* GfroerliBackend */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = GfroerliBackend;
-		};
 		246287FA2F0D036F00D66551 /* GfroerliBusinessMocks */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = GfroerliBusinessMocks;
@@ -1395,10 +1373,6 @@
 			isa = XCSwiftPackageProductDependency;
 			productName = ScreenshotKit;
 		};
-		24B9A8062F0567830087926F /* GfroerliBackend */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = GfroerliBackend;
-		};
 		24B9A8082F0567890087926F /* GfroerliBusiness */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = GfroerliBusiness;
@@ -1406,10 +1380,6 @@
 		24D054512F0C497A001F1646 /* GfroerliBusiness */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = GfroerliBusiness;
-		};
-		24D054532F0C498B001F1646 /* GfroerliBackend */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = GfroerliBackend;
 		};
 		24EFE77B2F0C168F00363168 /* GfroerliBusinessMocks */ = {
 			isa = XCSwiftPackageProductDependency;
