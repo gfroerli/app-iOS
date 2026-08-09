@@ -30,13 +30,12 @@ struct MeasurementValidator: ValidatorProtocol {
         }
 
         // Hourly measurements carry the hour separately from the date, combine them into one date.
-        let date: Date
-        if let hour = input.measurementHour {
-            date = MeasurementValidator.utcCalendar
+        let date: Date = if let hour = input.measurementHour {
+            MeasurementValidator.utcCalendar
                 .date(bySettingHour: hour, minute: 0, second: 0, of: input.measurementDate) ?? input.measurementDate
         }
         else {
-            date = input.measurementDate
+            input.measurementDate
         }
 
         return BusinessMeasurement(
