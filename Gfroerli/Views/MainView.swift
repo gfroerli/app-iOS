@@ -19,6 +19,9 @@ struct MainView: View {
     @State private var showSettings = false
     @State private var query = ""
 
+    // Favorites, kept in sync so the favorites map filter updates live when a location is starred.
+    @AppStorage("favorites") private var favorites = [Int]()
+
     // MARK: - Body
 
     var body: some View {
@@ -84,6 +87,11 @@ struct MainView: View {
                     viewModel.updateSearchLocations(for: query)
                 }
             }
+            .onChange(of: favorites) { _, _ in
+                withAnimation {
+                    viewModel.refreshFavoritesFilterIfNeeded()
+                }
+            }
             .onAppear {
                 DefaultsCoordinator.shared.registerAppUsage()
             }
@@ -113,6 +121,7 @@ struct MainView: View {
             // MARK: - Navigation
             
             .navigationBarTitleDisplayMode(.inline)
+            .toolbarBackgroundVisibility(.hidden, for: .navigationBar)
             .navigationDestination(for: Int.self) { id in
                 LocationDetailView(viewModel: LocationDetailViewModel(locationID: id))
             }
