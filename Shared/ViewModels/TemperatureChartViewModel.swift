@@ -64,6 +64,12 @@ struct TemperatureChartPoint: Identifiable {
     let value: Double
 }
 
+struct TemperatureBandPoint: Identifiable {
+    let id = UUID()
+    let date: Date
+    let min: Double
+    let max: Double
+}
 struct TemperatureSeries: Identifiable {
     let type: TemperatureSeriesType
     let values: [TemperatureChartPoint]
@@ -98,6 +104,9 @@ final class TemperatureChartViewModel {
         return [data.min, data.avg, data.max, data.placeholder]
     }
 
+    /// The min–max range plotted as a filled band (used by the iOS chart instead of separate lines).
+    var band = [TemperatureBandPoint]()
+
     var timeSpan: ChartTimeSpan = .day {
         didSet {
             switch timeSpan {
@@ -123,15 +132,16 @@ final class TemperatureChartViewModel {
         }
     }
 
-    /// Used to disable the forward button.
+    /// Used to disable the forward button. Compares against the present moment so the user can never
+    /// advance past the current day / week / month, regardless of which timespan the chart started in.
     var isAtMostRecentInterval: Bool {
         switch timeSpan {
         case .day:
-            Calendar.current.isDate(initialDate, inSameDayAs: currentDate)
+            Calendar.current.isDate(.now, inSameDayAs: currentDate)
         case .week:
-            isEqual(initialDate, currentDate, .weekOfYear)
+            isEqual(.now, currentDate, .weekOfYear)
         case .month:
-            isEqual(initialDate, currentDate, .month)
+            isEqual(.now, currentDate, .month)
         }
     }
 
@@ -142,7 +152,6 @@ final class TemperatureChartViewModel {
     // MARK: - Private properties
 
     private let locationID: Int
-    private let initialDate: Date
     private let measurementManager: any BusinessMeasurementManagerProtocol
 
     /// The measurements backing the currently shown interval (used to build the lollipop entries).
@@ -179,7 +188,6 @@ final class TemperatureChartViewModel {
             startDate = calendar.date(from: calendar.dateComponents([.year, .month], from: .now))!
         }
 
-        self.initialDate = startDate
         self.currentDate = startDate
 
         Task {
@@ -236,13 +244,13 @@ final class TemperatureChartViewModel {
         let fetched: [any BusinessMeasurementProtocol]
         switch timeSpan {
         case .day:
-            fetched = (try? await measurementManager.loadHourlyMeasurements(
+            fetched = await (try? measurementManager.loadHourlyMeasurements(
                 for: locationID,
                 startDate: start,
                 endDate: end
             )) ?? []
         case .week, .month:
-            fetched = (try? await measurementManager.loadDailyMeasurements(
+            fetched = await (try? measurementManager.loadDailyMeasurements(
                 for: locationID,
                 startDate: start,
                 endDate: end
@@ -255,14 +263,13 @@ final class TemperatureChartViewModel {
     /// The padded date range to request from the backend for the currently shown interval.
     private func requestedRange() -> (start: Date, end: Date) {
         let calendar = Calendar.current
-        let intervalEnd: Date
-        switch timeSpan {
+        let intervalEnd: Date = switch timeSpan {
         case .day:
-            intervalEnd = currentDate
+            currentDate
         case .week:
-            intervalEnd = calendar.date(byAdding: .day, value: 7, to: currentDate)!
+            calendar.date(byAdding: .day, value: 7, to: currentDate)!
         case .month:
-            intervalEnd = calendar.date(byAdding: .month, value: 1, to: currentDate)!
+            calendar.date(byAdding: .month, value: 1, to: currentDate)!
         }
 
         let start = calendar.date(byAdding: .day, value: -1, to: currentDate)!
@@ -278,6 +285,8 @@ final class TemperatureChartViewModel {
         let minValues = relevant.map { TemperatureChartPoint(measurementDate: $0.date, value: $0.lowest) }
         let avgValues = relevant.map { TemperatureChartPoint(measurementDate: $0.date, value: $0.average) }
         let maxValues = relevant.map { TemperatureChartPoint(measurementDate: $0.date, value: $0.highest) }
+
+        band = relevant.map { TemperatureBandPoint(date: $0.date, min: $0.lowest, max: $0.highest) }
 
         data = (
             min: TemperatureSeries(type: .min, values: minValues),
@@ -302,14 +311,13 @@ final class TemperatureChartViewModel {
     private func createPlaceholderMeasurements() -> [TemperatureChartPoint] {
         var placeholders = [TemperatureChartPoint]()
 
-        let rangeMax: Int
-        switch timeSpan {
+        let rangeMax: Int = switch timeSpan {
         case .day:
-            rangeMax = 23
+            23
         case .week:
-            rangeMax = 6
+            6
         case .month:
-            rangeMax = (Calendar.current.range(of: .day, in: .month, for: currentDate)?.count ?? 30) - 1
+            (Calendar.current.range(of: .day, in: .month, for: currentDate)?.count ?? 30) - 1
         }
 
         switch timeSpan {
