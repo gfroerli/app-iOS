@@ -1,0 +1,15 @@
+{
+  "images" : [
+    {
+      "filename" : "iPad Pro (M5) 13\" - Space Black - Landscape.png",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  },
+  "properties" : {
+    "preserves-vector-representation" : true
+  }
+}

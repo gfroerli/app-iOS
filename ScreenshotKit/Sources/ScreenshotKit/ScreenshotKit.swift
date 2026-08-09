@@ -4,63 +4,38 @@
 import SwiftUI
 import XCTest
 
+/// Renders a captured `XCUIScreenshot` into a framed marketing image and wraps it as an
+/// `XCTAttachment`.
+///
+/// The framing view is supplied by the caller, keeping this package project-agnostic: it only owns
+/// device detection (`ScreenshotParameters`) and the render-to-attachment plumbing.
 @MainActor
 public class ScreenshotProcessor {
-    
+
     public init() { }
 
-    public func process(_ screenshot: XCUIScreenshot, type: ScreenshotType) -> XCTAttachment {
-        
-        let attachment = XCTAttachment(image: embeddInSwiftui(screenshot, type: type)!)
-        attachment.lifetime = .keepAlways
-        attachment.name = ScreenshotParameters.name + type.nameAppendix
-        return attachment
-    }
-    
-    private func embeddInSwiftui(_ screenshot: XCUIScreenshot, type: ScreenshotType) -> UIImage? {
-        let renderer = ImageRenderer(content: ScreenshotView(contentImage: screenshot.image, type: type))
+    /// Frames `screenshot` using the caller-provided `content` view and returns it as an attachment.
+    ///
+    /// Returns `nil` when the current device is not a supported screenshot target, so the caller can
+    /// skip it instead of crashing.
+    ///
+    /// - Parameters:
+    ///   - screenshot: The raw captured screenshot.
+    ///   - name: A short identifier for the shot (e.g. `"main"`), used to build the attachment name.
+    ///   - content: Builds the framing view from the screenshot image and the resolved device metrics.
+    public func process(
+        _ screenshot: XCUIScreenshot,
+        name: String,
+        @ViewBuilder content: (UIImage, DeviceMetrics) -> some View
+    ) -> XCTAttachment? {
+        guard let metrics = ScreenshotParameters.current else { return nil }
 
-        if let uiImage = renderer.uiImage {
-            return uiImage
-        }
-        fatalError()
-        return nil
-    }
-    
-    public enum ScreenshotType {
-        case main, search, location
-        
-        public var nameAppendix: String {
-            switch self {
-            case .main:
-                "main"
-            case .search:
-                "search"
-            case .location:
-                "location"
-            }
-        }
-        
-        public var title: String {
-            switch self {
-            case .main:
-                String(localized: "title_main", bundle: .module)
-            case .search:
-                String(localized: "title_search", bundle: .module)
-            case .location:
-                String(localized: "title_location", bundle: .module)
-            }
-        }
-        
-        public var text: String {
-            switch self {
-            case .main:
-                String(localized: "text_main", bundle: .module)
-            case .search:
-                String(localized: "text_search", bundle: .module)
-            case .location:
-                String(localized: "text_location", bundle: .module)
-            }
-        }
+        let renderer = ImageRenderer(content: content(screenshot.image, metrics))
+        guard let image = renderer.uiImage else { return nil }
+
+        let attachment = XCTAttachment(image: image)
+        attachment.lifetime = .keepAlways
+        attachment.name = metrics.identifier + "_" + name
+        return attachment
     }
 }

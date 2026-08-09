@@ -17,9 +17,6 @@ public final class BusinessAllLocationsManagerMock: BusinessAllLocationsManagerP
     // MARK: - BusinessAllLocationsManagerProtocol
 
     public func loadAllLocations() async throws -> [any GfroerliBusinessProtocols.BusinessLocationProtocol] {
-        [
-            BusinessLocationMock.exampleLocation1,
-            BusinessLocationMock.exampleLocation2,
-        ]
+        BusinessLocationMock.screenshotLocations
     }
 }

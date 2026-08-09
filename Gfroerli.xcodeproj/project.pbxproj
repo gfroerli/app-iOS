@@ -136,6 +136,9 @@
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				GfroerliScreenshots.swift,
+				GfroerliScreenshots.xctestplan,
+				Localizable.xcstrings,
+				ScreenshotFrameView.swift,
 			);
 			target = 2434F7E32A594888006ED9FD /* GfroerliUITests */;
 		};
@@ -143,7 +146,6 @@
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				Info.plist,
-				Utils/ScreenshotHelper.swift,
 			);
 			target = 2434F7C82A594886006ED9FD /* Gfroerli */;
 		};
