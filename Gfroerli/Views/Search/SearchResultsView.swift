@@ -35,6 +35,7 @@ struct SearchResultsView: View {
                 }
                 .background(.thinMaterial)
                 .scrollContentBackground(.hidden)
+                .scrollDismissesKeyboard(.immediately)
             }
             else {
                 EmptyView()

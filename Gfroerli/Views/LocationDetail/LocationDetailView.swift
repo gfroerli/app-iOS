@@ -35,9 +35,19 @@ struct LocationDetailView: View {
         ScrollView(showsIndicators: false) {
             VStack(spacing: 12) {
                 if let location = viewModel.location {
-                    LocationDetailLastTemperatureView(location: location)
-                    LocationDetailTemperatureSummaryView(location: location)
-                    
+                    HStack(spacing: 12) {
+                        LocationDetailLastTemperatureView(location: location)
+                            .frame(maxWidth: .infinity)
+                        LocationDetailTemperatureSummaryView(location: location)
+                            .frame(maxWidth: .infinity)
+                    }
+                    .fixedSize(horizontal: false, vertical: true)
+
+                    if let description = location.description,
+                       !description.isEmpty {
+                        LocationDetailDescriptionView(description: description)
+                    }
+
                     LocationTemperatureHistoryView(locationID: viewModel.locationID)
                     
                     if let sponsor = viewModel.sponsor {

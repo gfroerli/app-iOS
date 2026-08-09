@@ -112,40 +112,71 @@ struct LocationTemperatureChartView: View {
         return chartVM.temperatureEntry(for: rawSelectedDate)
     }
     
+    /// Snaps a date to the start of its x-axis bucket (hour for the day view, day otherwise). Plotting the
+    /// raw date on a continuous scale makes each point sit at the leading edge of its slot instead of
+    /// being centered inside it (which is what the `unit:` binning of `PlottableValue` does).
+    private func binStart(_ date: Date) -> Date {
+        let calendar = Calendar.current
+        switch chartVM.timeSpan.chartXUnit {
+        case .hour:
+            return calendar.dateInterval(of: .hour, for: date)?.start ?? date
+        default:
+            return calendar.startOfDay(for: date)
+        }
+    }
+
     var body: some View {
-  
-        Chart(chartVM.dataArray) { dataSeries in
-            ForEach(dataSeries.values) {
-                LineMark(
-                    x: .value(
-                        "history_graph_view_legend_date",
-                        $0.measurementDate,
-                        unit: chartVM.timeSpan.chartXUnit
-                    ),
-                    y: .value(dataSeries.id, $0.value),
-                    series: .value("history_graph_view_legend_maximum", dataSeries.id)
+
+        Chart {
+            // Min–max range drawn as a semi-transparent gradient band.
+            ForEach(chartVM.band) { point in
+                AreaMark(
+                    x: .value("history_graph_view_legend_date", binStart(point.date)),
+                    yStart: .value("history_graph_view_legend_minimum", point.min),
+                    yEnd: .value("history_graph_view_legend_maximum", point.max)
                 )
-                .foregroundStyle(dataSeries.type.chartColor)
                 .interpolationMethod(.catmullRom)
-                .symbol {
-                    if dataSeries.values.count == 1 {
-                        Circle().frame(width: 6)
-                            .foregroundColor(dataSeries.type.chartColor)
-                    }
-                    else {
-                        Circle().frame(width: 0)
-                            .foregroundColor(dataSeries.type.chartColor)
+                .foregroundStyle(Color.accentColor.opacity(0.2))
+            }
+
+            if let data = chartVM.data {
+                // Average line on top of the band.
+                ForEach(data.avg.values) { point in
+                    LineMark(
+                        x: .value("history_graph_view_legend_date", binStart(point.measurementDate)),
+                        y: .value("history_graph_view_legend_average", point.value),
+                        series: .value("history_graph_view_legend_average", data.avg.id)
+                    )
+                    .foregroundStyle(Color.accentColor)
+                    .interpolationMethod(.catmullRom)
+                    .lineStyle(StrokeStyle(lineWidth: 2, lineCap: .butt, lineJoin: .round))
+                    .symbol {
+                        if data.avg.values.count == 1 {
+                            Circle().frame(width: 6)
+                                .foregroundColor(Color.accentColor)
+                        }
+                        else {
+                            Circle().frame(width: 0)
+                                .foregroundColor(Color.accentColor)
+                        }
                     }
                 }
+
+                // Transparent placeholder series: gives Charts a point at every bucket so the x-axis
+                // grid adapts the same way it does elsewhere (a tick every couple of days / hours).
+                ForEach(data.placeholder.values) { point in
+                    LineMark(
+                        x: .value("history_graph_view_legend_date", binStart(point.measurementDate)),
+                        y: .value("placeholder", point.value),
+                        series: .value("placeholder", data.placeholder.id)
+                    )
+                    .foregroundStyle(.clear)
+                }
             }
-            
+
             if let selectedTemperatureEntry {
                 RuleMark(
-                    x: .value(
-                        "history_graph_view_legend_selected",
-                        selectedTemperatureEntry.date,
-                        unit: chartVM.timeSpan.chartXUnit
-                    )
+                    x: .value("history_graph_view_legend_selected", binStart(selectedTemperatureEntry.date))
                 )
                 .foregroundStyle(Color.gray.opacity(0.3))
                 .offset(yStart: -10)
@@ -161,12 +192,7 @@ struct LocationTemperatureChartView: View {
                 }
             }
         }
-        .chartForegroundStyleScale([
-            NSLocalizedString("history_graph_view_legend_minimum", comment: ""): .blue,
-            NSLocalizedString("history_graph_view_legend_average", comment: ""): .green,
-            NSLocalizedString("history_graph_view_legend_maximum", comment: ""): .red,
-        ])
-        .chartLegend(position: .bottom, alignment: .center, spacing: 10)
+        .chartLegend(.hidden)
         .chartXSelection(value: $rawSelectedDate)
         .chartYScale(domain: chartVM.zoomed ? chartVM.lowestTemp...chartVM.highestTemp : 0...30)
     }
@@ -196,18 +222,24 @@ struct LocationTemperatureChartLollipopView: View {
                 ).font(.headline)
             }
             Spacer()
-            HStack {
-                Image(systemName: "circle.fill")
-                    .foregroundStyle(.red)
-                Text(tempEntry.maxString)
+            HStack(spacing: 10) {
+                HStack(spacing: 3) {
+                    Text("history_graph_view_legend_maximum_short")
+                        .foregroundStyle(.secondary)
+                    Text(tempEntry.maxString)
+                }
 
-                Image(systemName: "circle.fill")
-                    .foregroundStyle(.green)
-                Text(tempEntry.avgString)
+                HStack(spacing: 3) {
+                    Text("history_graph_view_legend_average_short")
+                        .foregroundStyle(.secondary)
+                    Text(tempEntry.avgString)
+                }
 
-                Image(systemName: "circle.fill")
-                    .foregroundStyle(.blue)
-                Text(tempEntry.minString)
+                HStack(spacing: 3) {
+                    Text("history_graph_view_legend_minimum_short")
+                        .foregroundStyle(.secondary)
+                    Text(tempEntry.minString)
+                }
             }
             .font(.subheadline)
             .fixedSize()
