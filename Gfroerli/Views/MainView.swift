@@ -84,10 +84,14 @@ struct MainView: View {
                     viewModel.updateSearchLocations(for: query)
                 }
             }
+            .onAppear {
+                DefaultsCoordinator.shared.registerAppUsage()
+            }
             .onReceive(
                 NotificationCenter.default
                     .publisher(for: UIApplication.willEnterForegroundNotification)
             ) { _ in
+                DefaultsCoordinator.shared.registerAppUsage()
                 Task {
                     try? await viewModel.loadLocations()
                 }
