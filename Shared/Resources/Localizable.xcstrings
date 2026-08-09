@@ -1,1651 +1,1718 @@
 {
-  "sourceLanguage" : "en",
-  "strings" : {
-    "" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : ""
+  "sourceLanguage": "en",
+  "strings": {
+    "": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": ""
           }
         },
-        "gsw" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : ""
+        "gsw": {
+          "stringUnit": {
+            "state": "translated",
+            "value": ""
           }
         }
       }
     },
-    "%@" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%@"
+    "%@": {
+      "extractionState": "stale",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@"
           }
         },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : " %@"
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": " %@"
           }
         },
-        "gsw" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%@"
+        "gsw": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@"
           }
         }
       }
     },
-    "general_space" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : " "
+    "general_space": {
+      "extractionState": "stale",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": " "
           }
         },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : " "
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": " "
           }
         },
-        "gsw" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : " "
+        "gsw": {
+          "stringUnit": {
+            "state": "translated",
+            "value": " "
           }
         }
       }
     },
-    "Gfrör.li" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Gfrör.li"
+    "Gfrör.li": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Gfrör.li"
           }
         },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Gfrör.li"
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Gfrör.li"
           }
         },
-        "gsw" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Gfrör.li"
+        "gsw": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Gfrör.li"
           }
         }
       }
     },
-    "history_graph_view_legend_average" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Durchschnitt"
+    "history_graph_view_legend_average": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Durchschnitt"
           }
         },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Average"
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Average"
           }
         },
-        "gsw" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Durchschnitt"
+        "gsw": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Durchschnitt"
           }
         }
       }
     },
-    "history_graph_view_legend_average_short" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Durch."
+    "history_graph_view_legend_average_short": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Durch."
           }
         },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Avg."
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Avg."
           }
         },
-        "gsw" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Durch."
+        "gsw": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Durch."
           }
         }
       }
     },
-    "history_graph_view_legend_date" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Datum"
+    "history_graph_view_legend_date": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Datum"
           }
         },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Date"
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Date"
           }
         },
-        "gsw" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Datum"
+        "gsw": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Datum"
           }
         }
       }
     },
-    "history_graph_view_legend_maximum" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Höchste"
+    "history_graph_view_legend_maximum": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Höchste"
           }
         },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Maximum"
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Maximum"
           }
         },
-        "gsw" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Maximum"
+        "gsw": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Maximum"
           }
         }
       }
     },
-    "history_graph_view_legend_maximum_short" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Max."
+    "history_graph_view_legend_maximum_short": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Max."
           }
         },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Max."
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Max."
           }
         },
-        "gsw" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Max."
+        "gsw": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Max."
           }
         }
       }
     },
-    "history_graph_view_legend_minimum" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Tiefste"
+    "history_graph_view_legend_minimum": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tiefste"
           }
         },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Minimum"
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Minimum"
           }
         },
-        "gsw" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Minimum"
+        "gsw": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Minimum"
           }
         }
       }
     },
-    "history_graph_view_legend_minimum_short" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Min."
+    "history_graph_view_legend_minimum_short": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Min."
           }
         },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Min."
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Min."
           }
         }
       }
     },
-    "history_graph_view_legend_selected" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Ausgewählt"
+    "history_graph_view_legend_selected": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ausgewählt"
           }
         },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Selected"
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Selected"
           }
         },
-        "gsw" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Uusgwählt"
+        "gsw": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Uusgwählt"
           }
         }
       }
     },
-    "history_graph_view_no_data_label" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Keine Daten"
+    "history_graph_view_no_data_label": {
+      "extractionState": "stale",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Keine Daten"
           }
         },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "No data available"
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "No data available"
           }
         },
-        "gsw" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Kei Date verfüegbar"
+        "gsw": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Kei Date verfüegbar"
           }
         }
       }
     },
-    "icon_default" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Standard"
+    "icon_default": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Standard"
           }
         },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Default"
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Default"
           }
         },
-        "gsw" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Standard"
+        "gsw": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Standard"
           }
         }
       }
     },
-    "icon_midnight" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Mitternacht"
+    "icon_midnight": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mitternacht"
           }
         },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Midnight"
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Midnight"
           }
         },
-        "gsw" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Mitternacht"
+        "gsw": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mitternacht"
           }
         }
       }
     },
-    "icon_summer_sunset" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Sonnenuntergang Sommer"
+    "icon_summer_sunset": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sonnenuntergang Sommer"
           }
         },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Summer Sunset"
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Summer Sunset"
           }
         },
-        "gsw" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Sunneuntergang Summer"
+        "gsw": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sunneuntergang Summer"
           }
         }
       }
     },
-    "icon_winter_sunset" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Sonnenuntergang Winter"
+    "icon_winter_sunset": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sonnenuntergang Winter"
           }
         },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Winter Sunset"
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Winter Sunset"
           }
         },
-        "gsw" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Sunneuntergang Winter"
+        "gsw": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sunneuntergang Winter"
           }
         }
       }
     },
-    "inline_location_view_inactive" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Inaktiv"
+    "inline_location_view_inactive": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Inaktiv"
           }
         },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Inactive"
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Inactive"
           }
         },
-        "gsw" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Inaktiv"
+        "gsw": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Inaktiv"
           }
         }
       }
     },
-    "intent_description_select_location" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Wählt einen Standort fürs Widget aus."
+    "intent_description_select_location": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Wählt einen Standort fürs Widget aus."
           }
         },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Selects a location for the widget."
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Selects a location for the widget."
           }
         },
-        "gsw" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Wählt en Standort fürs Widget uus."
+        "gsw": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Wählt en Standort fürs Widget uus."
           }
         }
       }
     },
-    "intent_title_select_location" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Standort auswählen"
+    "intent_title_select_location": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Standort auswählen"
           }
         },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Select Location"
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Select Location"
           }
         },
-        "gsw" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Standort uswähle."
+        "gsw": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Standort uswähle."
           }
         }
       }
     },
-    "latest_temperature_view_title" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Letzte"
+    "latest_temperature_view_title": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Letzte"
           }
         },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Latest"
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Latest"
           }
         },
-        "gsw" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Letschti"
+        "gsw": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Letschti"
           }
         }
       }
     },
-    "location" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Standort"
+    "location": {
+      "extractionState": "manual",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Standort"
           }
         },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Location"
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Location"
           }
         },
-        "gsw" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Standort"
+        "gsw": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Standort"
           }
         }
       }
     },
-    "main_view_filter_active" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Aktiv"
+    "location_description_view_title": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Beschreibung"
           }
         },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Active"
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Description"
           }
         },
-        "gsw" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Aktivi"
+        "gsw": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Beschribig"
           }
         }
       }
     },
-    "main_view_filter_all" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Alle"
+    "main_view_filter_active": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Aktiv"
           }
         },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "All"
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Active"
           }
         },
-        "gsw" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Alli"
+        "gsw": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Aktivi"
           }
         }
       }
     },
-    "main_view_filter_label" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Filter"
+    "main_view_filter_all": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Alle"
           }
         },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Filter"
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "All"
           }
         },
-        "gsw" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Filter"
+        "gsw": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Alli"
           }
         }
       }
     },
-    "main_view_search_prompt" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Suchen"
+    "main_view_filter_label": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Filter"
           }
         },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Search"
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Filter"
           }
         },
-        "gsw" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Suechi"
+        "gsw": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Filter"
           }
         }
       }
     },
-    "main_view_settings_label" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Einstellungen"
+    "main_view_locate_label": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Meinen Standort anzeigen"
           }
         },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Settings"
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Show my location"
           }
         },
-        "gsw" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Istellige"
+        "gsw": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mis Standort azeige"
           }
         }
       }
     },
-    "screenshot_detail_description" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Zeigt den Temperaturverlauf sowie verschiedene andere Werte."
+    "main_view_search_prompt": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Suchen"
           }
         },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Check the temperature history and other information of locations."
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Search"
           }
         },
-        "gsw" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : ""
+        "gsw": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Suechi"
           }
         }
       }
     },
-    "screenshot_detail_title" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Verschiedene Infos"
+    "main_view_settings_label": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Einstellungen"
           }
         },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Various Infos"
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Settings"
           }
         },
-        "gsw" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : ""
+        "gsw": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Istellige"
           }
         }
       }
     },
-    "screenshot_overview_description" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Wassertempaturen verschiedener Standorte in Echtzeit."
+    "placeholder": {},
+    "screenshot_detail_description": {
+      "extractionState": "manual",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Zeigt den Temperaturverlauf sowie verschiedene andere Werte."
           }
         },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Watertemperatures at different locations in realtime."
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Check the temperature history and other information of locations."
           }
         },
-        "gsw" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : ""
+        "gsw": {
+          "stringUnit": {
+            "state": "translated",
+            "value": ""
           }
         }
       }
     },
-    "screenshot_overview_title" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Gfrör.li"
+    "screenshot_detail_title": {
+      "extractionState": "manual",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Verschiedene Infos"
           }
         },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Gfrör.li"
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Various Infos"
           }
         },
-        "gsw" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Gfrör.li"
+        "gsw": {
+          "stringUnit": {
+            "state": "translated",
+            "value": ""
           }
         }
       }
     },
-    "screenshot_search_description" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Suche und filtere Standorte anhand verschiedener Werte."
+    "screenshot_overview_description": {
+      "extractionState": "manual",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Wassertempaturen verschiedener Standorte in Echtzeit."
           }
         },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Search and filter locations using different parameters."
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Watertemperatures at different locations in realtime."
           }
         },
-        "gsw" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : ""
+        "gsw": {
+          "stringUnit": {
+            "state": "translated",
+            "value": ""
           }
         }
       }
     },
-    "screenshot_search_title" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Verbesserte Suche"
+    "screenshot_overview_title": {
+      "extractionState": "manual",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Gfrör.li"
           }
         },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Improved Search"
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Gfrör.li"
           }
         },
-        "gsw" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : ""
+        "gsw": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Gfrör.li"
           }
         }
       }
     },
-    "search_view_navigation_title" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Suche"
+    "screenshot_search_description": {
+      "extractionState": "manual",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Suche und filtere Standorte anhand verschiedener Werte."
           }
         },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Search"
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Search and filter locations using different parameters."
           }
         },
-        "gsw" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Suechi"
+        "gsw": {
+          "stringUnit": {
+            "state": "translated",
+            "value": ""
           }
         }
       }
     },
-    "search_view_results_title" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Resultate"
+    "screenshot_search_title": {
+      "extractionState": "manual",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Verbesserte Suche"
           }
         },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Results"
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Improved Search"
           }
         },
-        "gsw" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Resultat"
+        "gsw": {
+          "stringUnit": {
+            "state": "translated",
+            "value": ""
           }
         }
       }
     },
-    "search_view_sort_alphabetical" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Alphabetisch"
+    "search_view_navigation_title": {
+      "extractionState": "manual",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Suche"
           }
         },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Alphabetical"
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Search"
           }
         },
-        "gsw" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Alphabetisch"
+        "gsw": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Suechi"
           }
         }
       }
     },
-    "search_view_sort_highest" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Wärmste"
+    "search_view_results_title": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Resultate"
           }
         },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Warmest"
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Results"
           }
         },
-        "gsw" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Wärmsti"
+        "gsw": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Resultat"
           }
         }
       }
     },
-    "search_view_sort_lowest" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Kälteste"
+    "search_view_sort_alphabetical": {
+      "extractionState": "manual",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Alphabetisch"
           }
         },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Coldest"
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Alphabetical"
           }
         },
-        "gsw" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Chältischti"
+        "gsw": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Alphabetisch"
           }
         }
       }
     },
-    "search_view_sort_recent" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Zuletzt"
+    "search_view_sort_highest": {
+      "extractionState": "manual",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Wärmste"
           }
         },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Most Recent"
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Warmest"
           }
         },
-        "gsw" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Z'letscht"
+        "gsw": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Wärmsti"
           }
         }
       }
     },
-    "search_view_sort_title" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Sortieren"
+    "search_view_sort_lowest": {
+      "extractionState": "manual",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Kälteste"
           }
         },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Sort"
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Coldest"
           }
         },
-        "gsw" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Sortiere"
+        "gsw": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Chältischti"
           }
         }
       }
     },
-    "settings_email_text" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "TODO"
+    "search_view_sort_recent": {
+      "extractionState": "manual",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Zuletzt"
           }
         },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "TODO"
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Most Recent"
           }
         },
-        "gsw" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "TODO"
+        "gsw": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Z'letscht"
           }
         }
       }
     },
-    "settings_view_app_coredump" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "für Coredump Rapperswil"
+    "search_view_sort_title": {
+      "extractionState": "manual",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sortieren"
           }
         },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "for Coredump Rapperswil"
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sort"
           }
         },
-        "gsw" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "für Coredump Rapperswil"
+        "gsw": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sortiere"
           }
         }
       }
     },
-    "settings_view_app_creator" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "von Marc"
+    "settings_email_text": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "TODO"
           }
         },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "by Marc"
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "TODO"
           }
         },
-        "gsw" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "vom Marc"
+        "gsw": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "TODO"
           }
         }
       }
     },
-    "settings_view_app_title" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Gfrör.li"
+    "settings_view_app_coredump": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "für Coredump Rapperswil"
           }
         },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Gfrör.li"
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "for Coredump Rapperswil"
           }
         },
-        "gsw" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Gfrör.li"
+        "gsw": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "für Coredump Rapperswil"
           }
         }
       }
     },
-    "settings_view_app_version %@" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Version:%@"
+    "settings_view_app_creator": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "von Marc"
           }
         },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Version:%@"
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "by Marc"
           }
         },
-        "gsw" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Version:%@"
+        "gsw": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "vom Marc"
           }
         }
       }
     },
-    "settings_view_header_general" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Allgemein"
+    "settings_view_app_title": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Gfrör.li"
           }
         },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "General"
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Gfrör.li"
           }
         },
-        "gsw" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Allgemein"
+        "gsw": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Gfrör.li"
           }
         }
       }
     },
-    "settings_view_header_links" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Links"
+    "settings_view_app_version %@": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Version:%@"
           }
         },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Links"
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Version:%@"
           }
         },
-        "gsw" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Links"
+        "gsw": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Version:%@"
           }
         }
       }
     },
-    "settings_view_item_coredump_mastodon" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Coredump auf Mastodon"
+    "settings_view_header_general": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Allgemein"
           }
         },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Coredump on Mastodon"
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "General"
           }
         },
-        "gsw" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Coredump uf Mastodon"
+        "gsw": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Allgemein"
           }
         }
       }
     },
-    "settings_view_item_coredump_web" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Coredump Website"
+    "settings_view_header_links": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Links"
           }
         },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Coredump Website"
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Links"
           }
         },
-        "gsw" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Coredump Website"
+        "gsw": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Links"
           }
         }
       }
     },
-    "settings_view_item_FAQ" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "FAQ"
+    "settings_view_item_coredump_mastodon": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Coredump auf Mastodon"
           }
         },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "FAQ"
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Coredump on Mastodon"
           }
         },
-        "gsw" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "FAQ"
+        "gsw": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Coredump uf Mastodon"
           }
         }
       }
     },
-    "settings_view_item_gfroerli_web" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Gfrör.li Website"
+    "settings_view_item_coredump_web": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Coredump Website"
           }
         },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Gfrör.li Website"
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Coredump Website"
           }
         },
-        "gsw" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Gfrör.li Website"
+        "gsw": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Coredump Website"
           }
         }
       }
     },
-    "settings_view_item_github" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Code auf GitHub"
+    "settings_view_item_FAQ": {
+      "extractionState": "manual",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "FAQ"
           }
         },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Code on GitHub"
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "FAQ"
           }
         },
-        "gsw" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Code uf GitHub"
+        "gsw": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "FAQ"
           }
         }
       }
     },
-    "settings_view_item_icon" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "App-Icons"
+    "settings_view_item_gfroerli_web": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Gfrör.li Website"
           }
         },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "App Icon"
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Gfrör.li Website"
           }
         },
-        "gsw" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "App-Icon"
+        "gsw": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Gfrör.li Website"
           }
         }
       }
     },
-    "settings_view_item_language" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Sprache Ändern"
+    "settings_view_item_github": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Code auf GitHub"
           }
         },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Change Language"
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Code on GitHub"
           }
         },
-        "gsw" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Sprach wechsle"
+        "gsw": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Code uf GitHub"
           }
         }
       }
     },
-    "settings_view_item_policy" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Datenschutzbestimmungen"
+    "settings_view_item_icon": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "App-Icons"
           }
         },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Privacy Policy"
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "App Icon"
           }
         },
-        "gsw" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Dateschutzerchlärig"
+        "gsw": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "App-Icon"
           }
         }
       }
     },
-    "settings_view_item_review" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Bewerten"
+    "settings_view_item_language": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sprache Ändern"
           }
         },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Review"
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Change Language"
           }
         },
-        "gsw" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Bewerte"
+        "gsw": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sprach wechsle"
           }
         }
       }
     },
-    "settings_view_title" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Einstellungen"
+    "settings_view_item_policy": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Datenschutzbestimmungen"
           }
         },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Settings"
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Privacy Policy"
           }
         },
-        "gsw" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Istellige"
+        "gsw": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dateschutzerchlärig"
           }
         }
       }
     },
-    "sponsor_view_no_description" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Keine Beschreibung"
+    "settings_view_item_review": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Bewerten"
           }
         },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "No Description"
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Review"
           }
         },
-        "gsw" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Kei Beschriebig"
+        "gsw": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Bewerte"
           }
         }
       }
     },
-    "sponsor_view_no_name" : {
-      "extractionState" : "manual",
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Kein Name"
+    "settings_view_title": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Einstellungen"
           }
         },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "No Name"
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Settings"
           }
         },
-        "gsw" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Kein Name"
+        "gsw": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Istellige"
           }
         }
       }
     },
-    "sponsor_view_title" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Gesponsert durch:"
+    "sponsor_view_no_description": {
+      "extractionState": "manual",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Keine Beschreibung"
           }
         },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Sponsored by:"
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "No Description"
           }
         },
-        "gsw" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Gsponseret vo:"
+        "gsw": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Kei Beschriebig"
           }
         }
       }
     },
-    "temperature_history_view_picker_day" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Tag"
+    "sponsor_view_no_name": {
+      "extractionState": "manual",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Kein Name"
           }
         },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Day"
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "No Name"
           }
         },
-        "gsw" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Tag"
+        "gsw": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Kein Name"
           }
         }
       }
     },
-    "temperature_history_view_picker_month" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Monat"
+    "sponsor_view_title": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Gesponsert durch:"
           }
         },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Month"
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sponsored by:"
           }
         },
-        "gsw" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Monat"
+        "gsw": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Gsponseret vo:"
           }
         }
       }
     },
-    "temperature_history_view_picker_title" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Zeitspanne wählen"
+    "temperature_history_view_picker_day": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tag"
           }
         },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Choose time span"
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Day"
           }
         },
-        "gsw" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Ziitspanni uswähle"
+        "gsw": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tag"
           }
         }
       }
     },
-    "temperature_history_view_picker_week" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Woche"
+    "temperature_history_view_picker_month": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Monat"
           }
         },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Week"
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Month"
           }
         },
-        "gsw" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Wuche"
+        "gsw": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Monat"
           }
         }
       }
     },
-    "temperature_history_view_title" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Verlauf"
+    "temperature_history_view_picker_title": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Zeitspanne wählen"
           }
         },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "History"
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Choose time span"
           }
         },
-        "gsw" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Verlauf"
+        "gsw": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ziitspanni uswähle"
           }
         }
       }
     },
-    "temperature_summary_view_average" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Durchschnitt"
+    "temperature_history_view_picker_week": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Woche"
           }
         },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Average"
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Week"
           }
         },
-        "gsw" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Durchschnitt"
+        "gsw": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Wuche"
           }
         }
       }
     },
-    "temperature_summary_view_highest" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Höchste"
+    "temperature_history_view_title": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Verlauf"
           }
         },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Highest"
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "History"
           }
         },
-        "gsw" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Höchsti"
+        "gsw": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Verlauf"
           }
         }
       }
     },
-    "temperature_summary_view_lowest" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Tiefste"
+    "temperature_summary_view_average": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Durchschnitt"
           }
         },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Lowest"
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Average"
           }
         },
-        "gsw" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Tüüfsti"
+        "gsw": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Durchschnitt"
           }
         }
       }
     },
-    "temperature_summary_view_title" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Insgesamt"
+    "temperature_summary_view_highest": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Höchste"
           }
         },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "All time"
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Highest"
           }
         },
-        "gsw" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Insgsamt"
+        "gsw": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Höchsti"
           }
         }
       }
     },
-    "watch_nav_no_content" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Wähle einen Standort aus"
+    "temperature_summary_view_lowest": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tiefste"
           }
         },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Choose a location"
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Lowest"
           }
         },
-        "gsw" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Wähl en Standort uus"
+        "gsw": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tüüfsti"
           }
         }
       }
     },
-    "widget_inactive" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Inaktiv"
+    "temperature_summary_view_title": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Insgesamt"
           }
         },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Inactive"
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "All time"
           }
         },
-        "gsw" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Inaktiv"
+        "gsw": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Insgsamt"
           }
         }
       }
     },
-    "widget_no_data" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Keine Daten verfügbar"
+    "watch_nav_no_content": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Wähle einen Standort aus"
           }
         },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "No Data available"
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Choose a location"
           }
         },
-        "gsw" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Kei Date verfügbar"
+        "gsw": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Wähl en Standort uus"
           }
         }
       }
     },
-    "widget_no_data_short" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "No Data"
+    "widget_inactive": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Inaktiv"
           }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Inactive"
+          }
+        },
+        "gsw": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Inaktiv"
+          }
+        }
+      }
+    },
+    "widget_no_data": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Keine Daten verfügbar"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "No Data available"
+          }
+        },
+        "gsw": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Kei Date verfügbar"
+          }
+        }
+      }
+    },
+    "widget_no_data_short": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "No Data"
+          }
+        }
+      }
+    },
+    "widget_single_loc_description": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Zeigt die Temperatur für einen ausgewählten Standort an."
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Shows the latest temperature for a configurable location."
+          }
+        },
+        "gsw": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Zeigt di letsti Temperatur für en uuswählbare Standort ah."
+          }
         }
       }
     },
-    "widget_single_loc_description" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Zeigt die Temperatur für einen ausgewählten Standort an."
+    "widget_single_loc_display_name": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Einzelner Standort"
           }
         },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Shows the latest temperature for a configurable location."
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Single Location"
           }
         },
-        "gsw" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Zeigt di letsti Temperatur für en uuswählbare Standort ah."
+        "gsw": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Einzelne Standort"
           }
         }
       }
     },
-    "widget_single_loc_display_name" : {
-      "localizations" : {
-        "de" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Einzelner Standort"
+    "main_view_filter_favorites": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Favoriten"
           }
         },
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Single Location"
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Favorites"
           }
         },
-        "gsw" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Einzelne Standort"
+        "gsw": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Favorite"
           }
         }
       }
     }
   },
-  "version" : "1.0"
+  "version": "1.0"
 }
